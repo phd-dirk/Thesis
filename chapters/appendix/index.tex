@@ -1,0 +1,51 @@
+\documentclass[../../index.tex]{subfiles}
+
+\begin{document}
+  \chapter{Derivation of the used inverse covariance matrix from the Aleph
+    data}
+  While performing a \textbf{Generalized least squares} (GLS) we estimate our
+  regression coefficients $\hat\beta$ as follows:
+  \begin{equation}
+    \hat\beta = \underset{b}{\operatorname {argmin}}(\mathbf{y} - \mathbf{X} \mathbf{b}
+    )^{\mathtt{T}} \mathbf{\Omega}^{-1} (\mathbf{y} - \mathbf{X} \mathbf{b}),
+  \end{equation}
+  with $\mathbf{b}$ being an candidate estimate of $\beta$, $\mathbf{X}$ being the
+  design matrix, $\mathbf{y}$ being the response values and
+  $\mathbf{\Omega}^{-1}$ being the \textbf{inverse covariance matrix}.
+
+  The Aleph data includes the \textbf{standard error} (SE), which
+  are equal to the \textbf{standard deviation} as per definition. Furthermore
+  Aleph provides the \textbf{correlation coefficients} of the errors. We will
+  use these two quantities in combination with \textbf{Gaussian error
+    propagation} to derive derive an approximation of the covariance matrix.
+
+  \section{Propagation of experimental errors and correlation}
+  Let $\{f_k(x_1, x_2, \cdots x_n)\}$ be a set of $m$ functions, which a linear
+  combinations of n variables $x_1, x_2, \cdots x_n$ with combination
+  coefficients $A_{k1}, A_{k2}, \cdots A_{kn}$, where $k \in \{1, 2, \cdots,
+  m\}$. Let the covariance matrix of $x_n$ be denoted by
+  \begin{equation}
+    \Sigma^x =
+    \begin{pmatrix}
+      \sigma_{1}^2 & \sigma_{12}  & \sigma_{13}  & \cdots \\
+      \sigma_{12}  & \sigma_{2}^2 & \sigma_{23}  & \cdots \\
+      \sigma_{13}  & \sigma_{23}  & \sigma_{3}^2 & \cdots \\
+      \vdots      & \vdots       & \vdots      &  \ddots
+    \end{pmatrix}.
+  \end{equation}
+  Then the covariance matrix of the functions $\Sigma^f$ is given by
+  \begin{equation}
+    \Sigma_{ij}^f = \sum_k^n \sum_l^n A_{ik} \sum_{kl}^x A_{jl}, \quad \Sigma^f= A \Sigma^x A^{\mathtt{T}}.
+  \end{equation}
+
+  In our case we are dealing with non-linear functions, which we will
+  linearized with the help of the \textbf{Taylor expansion}
+  \begin{equation}
+    f_k \approx f_k^0 + \sum_i^n \frac{\partial f_k}{\partial x_i} x_i, \quad f \approx f^0 + Jx.
+  \end{equation}
+  Therefore, the propagation of error follows from the linear case, replacing
+  the Jacobian matrix with the combination coefficients ($J = A$)
+  % \begin{equation}
+  %   \Sigma^f = J \Sigma^x J^{\mathtt{T}}.
+
+  \end{document}

@@ -1,0 +1,34 @@
+\documentclass{report}
+
+% font
+\usepackage[sc,osf]{mathpazo}   % With old-style figures and real smallcaps.
+\usepackage[euler-digits,small]{eulervm}
+
+\usepackage{subfiles}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{booktabs} % \toprule, \midrule
+\usepackage{bm} % bold math
+\usepackage{float} % [H] for floats
+
+
+
+% relativ graphic paths
+\makeatletter
+\let\org@subfile\subfile
+\renewcommand*{\subfile}[1]{%
+  \filename@parse{#1}% LaTeX's file name parser
+  \expandafter
+  \graphicspath\expandafter{\expandafter{\filename@area}}%
+  \org@subfile{#1}%
+}
+\makeatother
+
+
+\begin{document}
+  \subfile{chapters/introduction/index}
+  \subfile{chapters/appendix/index}
+\end{document}
