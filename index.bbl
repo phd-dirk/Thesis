@@ -19,37 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{PDG2018}{article}{}
-      \name{author}{1}{}{%
-        {{hash=3ebf53e52a3ce84f0ffb8553200a6a63}{%
-           family={Einstein},
-           familyi={E\bibinitperiod},
-           given={Albert},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \strng{fullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \strng{bibnamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \strng{authorbibnamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \strng{authornamehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \strng{authorfullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
-      \field{sortinit}{E}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Annalen der Physik}
-      \field{number}{10}
-      \field{title}{{Zur Elektrodynamik bewegter K{ö}rper}. ({German}) [{On} the electrodynamics of moving bodies]}
-      \field{volume}{322}
-      \field{year}{1905}
-      \field{pages}{891\bibrangedash 921}
-      \range{pages}{31}
-      \verb{doi}
-      \verb http://dx.doi.org/10.1002/andp.19053221004
-      \endverb
-      \keyw{physics}
-    \endentry
-    \entry{Jamin2006}{article}{}
+    \entry{Jamin2006}{misc}{}
       \name{author}{1}{}{%
         {{hash=72230fc82f996168d6a1dec89ad8a246}{%
            family={Jamin},
@@ -67,7 +37,41 @@
       \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{QCD and Renormalisation Group Methods}
+      \field{month}{9}
+      \field{note}{Lecture presented at Herbstschule für Hochenergiephysik Maria Laach}
+      \field{title}{{QCD and Renormalisation Group Methods}}
+      \field{year}{2006}
+    \endentry
+    \entry{PDG2018}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=468dd31f33955bc12b7c31e820de613d}{%
+           family={Tanabashi},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e75186424113a4ab28ae7972b480cbd6}
+      \strng{fullhash}{e75186424113a4ab28ae7972b480cbd6}
+      \strng{bibnamehash}{e75186424113a4ab28ae7972b480cbd6}
+      \strng{authorbibnamehash}{e75186424113a4ab28ae7972b480cbd6}
+      \strng{authornamehash}{e75186424113a4ab28ae7972b480cbd6}
+      \strng{authorfullhash}{e75186424113a4ab28ae7972b480cbd6}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev.}
+      \field{number}{3}
+      \field{title}{{Review of Particle Physics}}
+      \field{volume}{D98}
+      \field{year}{2018}
+      \field{pages}{030001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.98.030001
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
