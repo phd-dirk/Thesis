@@ -45,9 +45,9 @@ will be investigated within this work.
 
 \section{Quantumchromodynamics}
 \label{sec:quantumchromodynamics}
-QCD describes the strong interaction. Strong interactions
-occur between \textit{quarks} and are transmitted through \textit{gluons}. A
-list of quarks can be found in \ref{table:quarkList}.
+QCD describes the strong interaction, which occur between \textit{quarks} and
+are transmitted through \textit{gluons}. A list of quarks can be found in
+\ref{table:quarkList}.
 \begin{table}
   \label{table:quarkList}
   \centering
@@ -69,19 +69,86 @@ list of quarks can be found in \ref{table:quarkList}.
 The QCD Lagrange density is similar to that of QED\cite{Jamin2006},
 \begin{equation}
   \label{eq:qcdLagrangian}
-  \mathcal{L}_{QCD}(x) = -\frac{1}{4}G_{\mu\nu}^a(x)G^{\mu\nu a}(x) + \sum_A \left[ \frac{i}{2} \bar{q}^A(x) \gamma^\mu \overleftrightarrow{D}_\mu q^A(x) - m_A\bar{q}^A(x) a^A(x) \right].
+  \mathcal{L}_{QCD}(x) = -\frac{1}{4}G_{\mu\nu}^a(x)G^{\mu\nu a}(x) + \sum_A \left[ \frac{i}{2} \bar{q}^A(x) \gamma^\mu \overleftrightarrow{D}_\mu q^A(x) - m_A\bar{q}^A(x) a^A(x) \right],
 \end{equation}
+where $q^A(x)$ represents the quark fields and $G_{\mu\nu}^a$ being the \textit{gluon field strength tensor} given by:
 \begin{equation}
   \label{eq:gluonField}
-  G_{\mu\nu}^a(x) \equiv \partial_\mu B_\nu^a(x) - \partial_\nu^a(x) + g f^{abc} B_\mu^b(x) B_\nu^c(x)
+  G_{\mu\nu}^a(x) \equiv \partial_\mu B_\nu^a(x) - \partial_\nu^a(x) + g f^{abc} B_\mu^b(x) B_\nu^c(x),
 \end{equation}
+where $B_\mu^a$ are the \textit{gluon fields}, given in the \textit{adjoint
+  representation} of the SU(3) gauge group with $f^{abc}$ as \textit{structure
+  constants}. Furthermore we have used $A, B, \dots$ as flavour indeces, $a,
+b, \dots$ as color indeces and $\mu, \nu, \dots$ as lorentz indeces.
 
 
+\subsection{Renormalisation Group}
+The perurbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to divergencies, which have to be
+\textit{renormalized}. There are different aproaches to 'make' these
+divergencies finite. The most popular one is \textit{dimensional
+  regularisation}.
+In \textit{Dimensional regularisation} we expand the four space-time dimensions
+to arbitrary dimensions. Consequently the in QCD calculations appearing
+$\textit{Feyman integrals}$ have to be continued to $D$-dimensions like
+\begin{equation}
+  \label{eq:dimRegFeynmanIntegral}
+  \mu^{2\epsilon} \int \frac{\dif^D p}{(2\pi)^D}\frac{1}{[p^2-m^2+i0][(q-p)^2=m^2+i0]},
+\end{equation}
+where we introduced the scale parameter $\mu$ to account for the extra
+dimensions and conserve the mass dimension of the non continued integral.
 
+In addition \textit{physical quantities}\footnote{Observables that can be
+  measured.} cannot depend on the renormalisation scale $\mu$. Thus examining a \textit{physical quantity} $R(q, a_s, m)$ that depends on the
+external momentum q, the renormalised coupling $a_s=\alpha_s/\pi$ and the renormalized quark mass $m$ 
+\begin{equation}
+  \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0
+\end{equation}
+we can define the \textit{renormalisation group functions}:
+\begin{align}
+  \beta(a_s) &\equiv -\mu \od{a_s}{\mu} = \beta_1 a_s^2 + \beta_2 a_s^3 + \dots & \beta-\text{function}
+  \label{eq:betaFunction} \\
+  \gamma(a_s) &\equiv - \frac{\mu}{m} \od{m}{\mu} = \gamma_1 a_s + \gamma_2 a_s^2 + \dots & \text{anomalous mass dimension}.
+  \label{eq:anomalousMassDimension}
+\end{align}
 
+\subsubsection{Running gauge coupling}
+Regarding the $\beta$-function we notice, that $a_s(\mu)$ is not a constant, but
+\textit{runs} by varying the scale $\mu$. Integrating the $\beta$-function yields 
+\begin{equation}
+  \int_{a_s(\mu_1)}^{a_s(\mu_2)}\frac{\dif a_s}{\beta(a_s)} = - \int_{\mu_1}^{\mu_2} \frac{\dif \mu}{\mu} = \log \frac{\mu_1}{\mu_2}.
+\end{equation}
+To analytically evaluate the above integral we can approximate the $\beta$-function to first order, with the known
+coefficient
+\begin{equation}
+  \beta_1 = \frac{1}{6}(11 N_c - 2 N_f),
+\end{equation}
+yielding
+\begin{equation}
+  a_s(\mu_2) = \frac{a_s(\mu_1)}{\left( 1 - a_s(\mu_1) \beta_1 \log\frac{\mu_1}{\mu_2} \right)}.
+\end{equation}
+As we have three colours $N_c=3$ and six flavours $N_f=6$ the first
+$\beta$-function \ref{eq:betaFunction} is positive. Thus for $\mu_2>\mu_1$ $a_s(\mu_2)$ decreases
+logarithmically and vanishes for $\mu_2 \to \infty$. This behaviour is known as
+\textit{asymptotic freedom}.
+The coefficients of the $\beta$-function are currently known up to the 5th
+order, which are displayed in the appendix \ref{sec:betaCoefficients}.
 
-
-
-
-
+\subsubsection{Running quark mass}
+The properties of the running quark mass can be derived similar to the gauge
+coupling. Starting from integrating the \textit{anomalous mass dimension} \ref{eq:anomalousMassDimension}
+\begin{equation}
+  \log \frac{m(\mu_2)}{m(\mu_1)} = \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}
+\end{equation}
+we can approximate the \textit{anomalous mass dimension} to first order and
+solve the integral analytically \cite{Schwab2002}
+\begin{equation}
+  m(\mu_2) = m(\mu_1)\left( \frac{a(\mu_2)}{a(\mu_1)} \right)^{\frac{\gamma_1}{\beta_1}} \left( 1 + \mathcal{O}(\beta_2, \gamma_2) \right).
+\end{equation}
+As $\beta_1$ and $\gamma_1$ (see \ref{app:gammaCoefficients}) are positive the
+quark mass decreases with increasing $\mu$.
+The general relation between different scales is given by
+\begin{equation}
+  m(\mu_2) = m(\mu_1) \exp \left( \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}  \right)
+\end{equation}
+and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
 \end{document}

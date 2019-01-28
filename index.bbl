@@ -19,6 +19,32 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Boito2011}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=ae9fff79cad50d98a50e02294255dcc0}{%
+           family={Boito},
+           familyi={B\bibinitperiod},
+           given={Diogo},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universitat Autònoma de Barcelona}%
+      }
+      \strng{namehash}{ae9fff79cad50d98a50e02294255dcc0}
+      \strng{fullhash}{ae9fff79cad50d98a50e02294255dcc0}
+      \strng{bibnamehash}{ae9fff79cad50d98a50e02294255dcc0}
+      \strng{authorbibnamehash}{ae9fff79cad50d98a50e02294255dcc0}
+      \strng{authornamehash}{ae9fff79cad50d98a50e02294255dcc0}
+      \strng{authorfullhash}{ae9fff79cad50d98a50e02294255dcc0}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{QCD phenomenology with $\tau$ and charm decays}
+      \field{type}{phdthesis}
+      \field{year}{2011}
+    \endentry
     \entry{Jamin2006}{misc}{}
       \name{author}{1}{}{%
         {{hash=72230fc82f996168d6a1dec89ad8a246}{%
@@ -41,6 +67,34 @@
       \field{note}{Lecture presented at Herbstschule für Hochenergiephysik Maria Laach}
       \field{title}{{QCD and Renormalisation Group Methods}}
       \field{year}{2006}
+    \endentry
+    \entry{Schwab2002}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e463b28e06b39c50e487392bea457820}{%
+           family={Schwab},
+           familyi={S\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {somewhere}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \strng{namehash}{e463b28e06b39c50e487392bea457820}
+      \strng{fullhash}{e463b28e06b39c50e487392bea457820}
+      \strng{bibnamehash}{e463b28e06b39c50e487392bea457820}
+      \strng{authorbibnamehash}{e463b28e06b39c50e487392bea457820}
+      \strng{authornamehash}{e463b28e06b39c50e487392bea457820}
+      \strng{authorfullhash}{e463b28e06b39c50e487392bea457820}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Strange Quark Mass Determination From Sum Rules For Hadronic $\tau$-Decays}
+      \field{type}{mathesis}
+      \field{year}{2002}
     \endentry
     \entry{PDG2018}{article}{}
       \true{moreauthor}
