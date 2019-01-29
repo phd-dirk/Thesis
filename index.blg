@@ -1,15 +1,15 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'index.blg'
-[46] biber-darwin:315> INFO - === Mon Jan 28, 2019, 17:32:24
-[72] Biber.pm:371> INFO - Reading 'index.bcf'
-[174] Biber.pm:889> INFO - Found 4 citekeys in bib section 0
-[188] Biber.pm:4093> INFO - Processing section 0
-[199] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
-[200] bibtex.pm:1523> INFO - LaTeX decoding ...
-[217] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
-[248] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[249] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[249] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[249] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[255] bbl.pm:636> INFO - Writing 'index.bbl' with encoding 'UTF-8'
-[257] bbl.pm:739> INFO - Output to index.bbl
+[45] biber-darwin:315> INFO - === Tue Jan 29, 2019, 12:42:41
+[73] Biber.pm:371> INFO - Reading 'index.bcf'
+[176] Biber.pm:889> INFO - Found 5 citekeys in bib section 0
+[189] Biber.pm:4093> INFO - Processing section 0
+[202] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[203] bibtex.pm:1523> INFO - LaTeX decoding ...
+[222] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[262] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[262] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[263] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[273] bbl.pm:636> INFO - Writing 'index.bbl' with encoding 'UTF-8'
+[276] bbl.pm:739> INFO - Output to index.bbl

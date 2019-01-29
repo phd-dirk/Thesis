@@ -1996,9 +1996,14 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">PDG2018</bcf:citekey>
-    <bcf:citekey order="2">Jamin2006</bcf:citekey>
-    <bcf:citekey order="3">Schwab2002</bcf:citekey>
-    <bcf:citekey order="4">Boito2011</bcf:citekey>
+    <bcf:citekey order="2">Davier2006</bcf:citekey>
+    <bcf:citekey order="3">PDG2018</bcf:citekey>
+    <bcf:citekey order="4">Davier2006</bcf:citekey>
+    <bcf:citekey order="5">PDG2018</bcf:citekey>
+    <bcf:citekey order="6">PDG2018</bcf:citekey>
+    <bcf:citekey order="7">Jamin2006</bcf:citekey>
+    <bcf:citekey order="8">Schwab2002</bcf:citekey>
+    <bcf:citekey order="9">Boito2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -45,6 +45,55 @@
       \field{type}{phdthesis}
       \field{year}{2011}
     \endentry
+    \entry{Davier2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5cd2144dba3646e37cb56664ca234ef3}{%
+           family={Davier},
+           familyi={D\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2db9b18cb3d230a00ac57fb890714963}{%
+           family={Höcker},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=369f6a50665d3dc1b7814c64f8cdc33f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhiqing},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \strng{fullhash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \strng{bibnamehash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \strng{authorbibnamehash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \strng{authornamehash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \strng{authorfullhash}{0623cc56d860d8d7b54f832a1dcb2ef1}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{4}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{month}{10}
+      \field{title}{The physics of hadronic tau decays}
+      \field{volume}{78}
+      \field{year}{2006}
+      \field{pages}{1043\bibrangedash 1109}
+      \range{pages}{67}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.78.1043
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.78.1043
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.78.1043
+      \endverb
+    \endentry
     \entry{Jamin2006}{misc}{}
       \name{author}{1}{}{%
         {{hash=72230fc82f996168d6a1dec89ad8a246}{%
