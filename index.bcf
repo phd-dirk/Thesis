@@ -2003,7 +2003,10 @@
     <bcf:citekey order="6">PDG2018</bcf:citekey>
     <bcf:citekey order="7">Jamin2006</bcf:citekey>
     <bcf:citekey order="8">Schwab2002</bcf:citekey>
-    <bcf:citekey order="9">Boito2011</bcf:citekey>
+    <bcf:citekey order="9">Schwab2002</bcf:citekey>
+    <bcf:citekey order="10">Kallen1952</bcf:citekey>
+    <bcf:citekey order="11">Lehmann1954</bcf:citekey>
+    <bcf:citekey order="12">Boito2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

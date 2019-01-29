@@ -117,6 +117,64 @@
       \field{title}{{QCD and Renormalisation Group Methods}}
       \field{year}{2006}
     \endentry
+    \entry{Kallen1952}{article}{}
+      \name{author}{1}{}{%
+        {{hash=64f4894e9a206040a4d5a6e18a955f46}{%
+           family={Kallen},
+           familyi={K\bibinitperiod},
+           given={Gunnar},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{64f4894e9a206040a4d5a6e18a955f46}
+      \strng{fullhash}{64f4894e9a206040a4d5a6e18a955f46}
+      \strng{bibnamehash}{64f4894e9a206040a4d5a6e18a955f46}
+      \strng{authorbibnamehash}{64f4894e9a206040a4d5a6e18a955f46}
+      \strng{authornamehash}{64f4894e9a206040a4d5a6e18a955f46}
+      \strng{authorfullhash}{64f4894e9a206040a4d5a6e18a955f46}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Helv. Phys. Acta}
+      \field{note}{[,509(1952)]}
+      \field{number}{4}
+      \field{title}{{On the definition of the Renormalization Constants in Quantum Electrodynamics}}
+      \field{volume}{25}
+      \field{year}{1952}
+      \field{pages}{417}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/978-3-319-00627-7_90
+      \endverb
+    \endentry
+    \entry{Lehmann1954}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cee2fdd1aece3c37d33d9eb170d9e72d}{%
+           family={Lehmann},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \strng{fullhash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \strng{bibnamehash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \strng{authorbibnamehash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \strng{authornamehash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \strng{authorfullhash}{cee2fdd1aece3c37d33d9eb170d9e72d}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nuovo Cim.}
+      \field{title}{{On the Properties of propagation functions and renormalization contants of quantized fields}}
+      \field{volume}{11}
+      \field{year}{1954}
+      \field{pages}{342\bibrangedash 357}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/BF02783624
+      \endverb
+    \endentry
     \entry{Schwab2002}{thesis}{}
       \name{author}{1}{}{%
         {{hash=e463b28e06b39c50e487392bea457820}{%
