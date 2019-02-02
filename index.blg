@@ -1,15 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'index.blg'
-[53] biber-darwin:315> INFO - === Tue Jan 29, 2019, 18:17:52
-[86] Biber.pm:371> INFO - Reading 'index.bcf'
-[179] Biber.pm:889> INFO - Found 7 citekeys in bib section 0
-[194] Biber.pm:4093> INFO - Processing section 0
-[209] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
-[210] bibtex.pm:1523> INFO - LaTeX decoding ...
-[227] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
-[273] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[273] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[273] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[273] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[290] bbl.pm:636> INFO - Writing 'index.bbl' with encoding 'UTF-8'
-[292] bbl.pm:739> INFO - Output to index.bbl
+[52] biber-darwin:315> INFO - === Sat Feb  2, 2019, 16:48:58
+[82] Biber.pm:371> INFO - Reading 'index.bcf'
+[195] Biber.pm:889> INFO - Found 8 citekeys in bib section 0
+[211] Biber.pm:4093> INFO - Processing section 0
+[226] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[227] bibtex.pm:1523> INFO - LaTeX decoding ...
+[247] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[303] Utils.pm:193> WARN - ISBN '9780201503975, 0201503972' in entry 'Peskin1995' is invalid - run biber with '--validate_datamodel' for details.
+[326] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[326] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[326] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[327] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[340] bbl.pm:636> INFO - Writing 'index.bbl' with encoding 'UTF-8'
+[343] bbl.pm:739> INFO - Output to index.bbl
+[343] Biber.pm:110> INFO - WARNINGS: 1

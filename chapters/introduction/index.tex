@@ -201,11 +201,35 @@ and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
 \subsection{Operator Product Expansion}
 
 \subsection{Sum Rules}
-following \cite{Schwab2002}
-Källén-Lehmann spectral representation \cite{Kallen1952}\cite{Lehmann1954}
+We need to relate the measurable hadronic final states of a QCD process (e.g.
+$\tau$-decays into Hadrons) to a theoretical calculable value. To do this we
+have to combine a \textit{dispersion relation} and the \textit{optical theorem}.
+We will start with the \textit{Two-point function} (Correlator):
 \begin{equation}
-  \Pi(p^2) = \int_0^\infty \diff s \frac{\rho(s)}{s - p^2 - i \epsilon}
+  \label{eq:twoPointFunction}
+  \Pi(q^2) = \langle  0 | J_\mu(x) J_\nu(y) | 0 \rangle,
 \end{equation}
+where $J_\mu(x)$ is the conserved noether current
+\begin{equation}
+  J_\mu(x) = \Psi^\dagger(x)\gamma_\mu\Psi(x).
+\end{equation}
+We can rewrite the Correlator into the so called \textit{Källén-Lehmann spectral representation}
+\cite{Kallen1952}\cite{Lehmann1954}
+\begin{equation}
+  \Pi(q^2) = \int_0^\infty \diff s \frac{\rho(s)}{s - q^2 - i \epsilon},
+\end{equation}
+which is a \textit{dispersion relation}. The \textit{spectral function} $\rho(s)$ is given by the sum over all Hadronic
+states squared 
+\begin{equation}
+  2 \pi \rho(m^2) = \sum_n \langle  0 | J_\mu(x) | n \rangle \langle n | J_\nu(y) \rangle (2 \pi^2)^4 \delta^{(4)}(p - p_n)
+\end{equation}
+and has poles on the positive real axis, see Fig. \ref{fig:analyticStructureCorrelator}. 
+\begin{figure}[h]
+  \centering
+  \label{fig:analyticStructureCorrelator}
+  \includegraphics[width=0.8\textwidth]{./images/analyticStructureCorrelator.eps}
+  \caption{Analytic structure of the \cite{Peskin1995}}
+\end{figure}
 
 \begin{equation}
   f(t) = \frac{1}{2 \pi i} \int_{\mathcal{C}} \dif z \frac{f(z)}{z - t}
