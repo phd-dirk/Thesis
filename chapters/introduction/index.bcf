@@ -2000,12 +2000,15 @@
     <bcf:citekey order="3">PDG2018</bcf:citekey>
     <bcf:citekey order="4">Davier2006</bcf:citekey>
     <bcf:citekey order="5">PDG2018</bcf:citekey>
-    <bcf:citekey order="6">PDG2018</bcf:citekey>
-    <bcf:citekey order="7">Jamin2006</bcf:citekey>
-    <bcf:citekey order="8">Schwab2002</bcf:citekey>
-    <bcf:citekey order="9">Kallen1952</bcf:citekey>
-    <bcf:citekey order="10">Lehmann1954</bcf:citekey>
-    <bcf:citekey order="11">Peskin1995</bcf:citekey>
+    <bcf:citekey order="6">Pich2006</bcf:citekey>
+    <bcf:citekey order="7">PDG2018</bcf:citekey>
+    <bcf:citekey order="8">Jamin2006</bcf:citekey>
+    <bcf:citekey order="9">Schwab2002</bcf:citekey>
+    <bcf:citekey order="10">Shiftman1978</bcf:citekey>
+    <bcf:citekey order="11">Kallen1952</bcf:citekey>
+    <bcf:citekey order="12">Lehmann1954</bcf:citekey>
+    <bcf:citekey order="13">Peskin1995</bcf:citekey>
+    <bcf:citekey order="14">Peskin1995</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
