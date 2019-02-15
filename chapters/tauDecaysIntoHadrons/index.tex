@@ -1,0 +1,39 @@
+\documentclass[../../index.tex]{subfiles}
+
+\begin{document}
+\chapter{$\tau$ decays into hadrons}
+
+\cite{Tsai1971}
+\begin{equation}
+  R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
+  \left( 1 - \frac{s}{m_\tau^2} \right)
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)} \right]
+\end{equation}
+
+Cauchy's Theorem
+\begin{equation}
+  \int_{\mathcal{C}} f(z) \dif z = 0
+\end{equation}
+
+\begin{equation}
+  \begin{split}
+  \oint_{s=m_\tau} \Pi(s) &= \int_0^{m_\tau} \Pi(s + i \epsilon) + \int_{\mathcal{C}_2}\Pi(s) \dif s + \int_{m_\tau}^0 \Pi(s - i \epsilon) \dif s + \int_{\mathcal{C}_4} \Pi(s) \dif s \\
+  &= \int_0^{m_\tau} \Pi(s+i \epsilon) - \Pi(s - i \epsilon) \dif s  + \int_{\mathcal{C}_2}\Pi(s) \dif s + \int_{\mathcal{C}_4} \Pi(s) \dif s \\
+  &= \int_0^{m_\tau} \Pi(s + i \epsilon) - \overline{\Pi(s + i \epsilon)} + \int_{\mathcal{C}_2}\Pi(s) \dif s + \int_{\mathcal{C}_4} \Pi(s) \dif s \\
+  &\overset{\lim \epsilon \to 0}{=} 2 i \int_0^{m_\tau} \Ima \Pi(s) \dif s + \oint_{s=m_\tau} \Pi(s) \dif s
+  \end{split}
+\end{equation}
+where we made use of $\Pi(z) = \overline{\Pi(\overline z)}$, because $\Pi(s)$ is analytic and
+$\Pi(z) - \overline{\Pi(z)} = 2 i \Ima \Pi(z)$
+
+\begin{equation}
+  \int_0^{m_\tau} \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \Pi(s) \dif s
+\end{equation}
+
+\begin{equation}
+  R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
+  \left( 1 - \frac{s}{m_\tau^2} \right)
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
+\end{equation}
+
+\end{document}
