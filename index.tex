@@ -1,5 +1,6 @@
 \documentclass{report}
 
+
 % font - Palatino
 \usepackage[sc,osf]{mathpazo}   % With old-style figures and real smallcaps.
 \usepackage[euler-digits,small]{eulervm}
@@ -19,6 +20,7 @@
 \hypersetup{colorlinks,linkcolor=[rgb]{0.2,0.6,0.86}}
 \usepackage[nameinlink]{cleveref} % \ref{eq:1} => eq. 1
 
+
 % References
 \usepackage[
   style=numeric
@@ -26,7 +28,7 @@
 \addbibresource{references.bib}
 
 \DeclareMathOperator{\Ima}{Im}
-
+\newcommand*\anti[1]{\overline{#1}}
 
 
 % relativ graphic paths

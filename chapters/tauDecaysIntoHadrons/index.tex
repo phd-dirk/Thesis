@@ -6,6 +6,48 @@
   R_\tau = \frac{\Gamma(\tau \to \nu_\tau + \text{Hadrons})}{\Gamma(\tau \to \nu_\tau e^+ e^-)}
 \end{equation}
 
+in terms of V/A, S/P \cite{Broadhurst1975}
+\begin{equation}
+  \begin{split}
+    \Pi^{\mu\nu}(q^2) &= (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi^{V,A}(q^2) + \frac{g^{\mu\nu}}{q^2} (m_i \mp m_j)\Pi^{S,P}(q^2) \\
+    &+ g^{\mu\nu}\frac{(m_i \mp m_j)}{q^2} [ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+\end{equation}
+
+in terms of T and L
+\begin{equation}
+  (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2)
+\end{equation}
+
+\begin{equation}
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s),
+\end{equation}
+where $s \equiv q^2$
+
+relation L and S,P
+\begin{equation}
+  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+\end{equation}
+
+need relation T and V,A
+\begin{equation}
+  \begin{split}
+    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) + (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu} q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s)
+  \end{split} 
+\end{equation}
+where $\Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)$
+\begin{equation}
+  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)}
+\end{equation}
+
+\begin{equation}
+  q_\mu q_nu
+\end{equation}
+
 The theoretical expression of the hadronic $\tau$-decay ratio was first derived
 by \cite{Tsai1971} (using current algebra, a more recent derivation making use
 of the *optical theorem* can be taken from \cite{Schwab2002}):
@@ -54,6 +96,7 @@ where we made use of $\Pi(z) = \overline{\Pi(\overline z)}$ (due to $\Pi(s)$ is 
 $\Pi(z) - \overline{\Pi(z)} = 2 i \Ima \Pi(z)$. The result can be rewritten in a
 more intuitive form, which we also visualized in \cref{fig:rTauCauchysTheorem}
 \begin{equation}
+  \label{eq:correlatorContourIntegral}
   \int_0^{m_\tau} \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \Pi(s) \dif s
 \end{equation}
 \begin{figure}
@@ -64,21 +107,33 @@ more intuitive form, which we also visualized in \cref{fig:rTauCauchysTheorem}
   of radius $m_\tau^2$.}
   \label{fig:rTauCauchysTheorem}
 \end{figure}
-
-
-
+Finally combining \cref{eq:correlatorContourIntegral} with
+\cref{eq:hadronicTauDecayRatio} we get
 \begin{equation}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
 \end{equation}
+for the hadronic $\tau$-decay ratio.
+
+The contour integral obtained is an import result as we can now theoretically
+evaluate the hadronic $\tau$-decay ratio sufficiently large energy scales
+($m_\tau \approx \SI{1.78}{\mega\electronvolt}$) at which
+$\alpha_s(m_\tau)\approx 0.33$ \cite{Pich2016} is tolerable heigh for applying
+perturbation theory and the OPE. Obviously we would benefit from a contour integral over a
+bigger circunference, but $\tau$-decays are limited by the $m_\tau$.
+Nevertheless there are promising $e^+e^-$ annihilation data, which yields
+valuable R-ratio values up to $\SI{2}{\giga\electronvolt}$
+\cite{Boito2018}\cite{Keshavarzi2018}.
+
+It is convenient to rewrite the 
 
 \begin{equation}
   \Pi^{(L+T)} = \Pi^{(L)} + \Pi^{(T)}
 \end{equation}
 
 \begin{equation}
-  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
+  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
 \end{equation}
 \begin{equation}
   D^{(L+T)}(s) \equiv -s \od{}{s} \Pi^{(L+T)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s))
