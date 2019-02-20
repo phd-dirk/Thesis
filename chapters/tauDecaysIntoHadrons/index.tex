@@ -10,24 +10,38 @@ The theoretical expression of the hadronic $\tau$-decay ratio was first derived
 by \cite{Tsai1971} (using current algebra, a more recent derivation making use
 of the *optical theorem* can be taken from \cite{Schwab2002}):
 \begin{equation}
+  \label{eq:hadronicTauDecayRatio}
   R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)} \right].
 \end{equation}
 $R_\tau$ introduces a problematic integral over the real axis of $\Pi(s)$ from $0$ up to
-$m_\tau$ for two reasons:
+$m_\tau$. The integral is problematic for two reasons:
 \begin{itemize}
   \item The \textit{perturbative Quantum Chromodynamcs} (\textbf{pQCD}) and the OPE breaks down for low
     energies (over which we have to integrate).
   \item The positive euclidean axis of $\Pi(s)$ has a discontinuity cut and can
     theoretically not be evaluated.
 \end{itemize}
-
-Cauchy's Theorem
+To literally circunvent these issues we make use of \textit{Cauchy's Theorem}
 \begin{equation}
-  \int_{\mathcal{C}} f(z) \dif z = 0
+  \int_{\mathcal{C}} f(z) \dif z = 0,
 \end{equation}
+where $f(z)$ is an analytic function on a closed contour $\mathcal{C}$.
 
+In our case we have to deal with the two-point correlator $\Pi(s)$, which is analytic
+except for the positive real axis (with which we will deal with to a later
+point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
+  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
+  \to m_\tau$.}) Consequently, to rewrite we can rewrite the definite integral of
+\cref{eq:hadronicTauDecayRatio} into a contour integral over a closed circle
+with
+radius $m_\tau^2$. The closed contour consists of four line integrals,
+which have been visualized in \cref{fig:rTauCauchysTheorem}. Summing over the
+four line integrals, performing a \textit{analytic continuation} of the
+two-point correlator $\Pi(s) \to \Pi(s + i \epsilon)$ and finally taking the
+limit of $\epsilon \to 0$ gives us the needed relation between
+\cref{eq:hadronicTauDecayRatio} and the closed contour:
 \begin{equation}
   \begin{split}
   \oint_{s=m_\tau} \Pi(s) &= \int_0^{m_\tau} \Pi(s + i \epsilon) + \int_{\mathcal{C}_2}\Pi(s) \dif s + \int_{m_\tau}^0 \Pi(s - i \epsilon) \dif s + \int_{\mathcal{C}_4} \Pi(s) \dif s \\
@@ -36,22 +50,31 @@ Cauchy's Theorem
   &\overset{\lim \epsilon \to 0}{=} 2 i \int_0^{m_\tau} \Ima \Pi(s) \dif s + \oint_{s=m_\tau} \Pi(s) \dif s
   \end{split}
 \end{equation}
-where we made use of $\Pi(z) = \overline{\Pi(\overline z)}$, because $\Pi(s)$ is analytic and
-$\Pi(z) - \overline{\Pi(z)} = 2 i \Ima \Pi(z)$
-
+where we made use of $\Pi(z) = \overline{\Pi(\overline z)}$ (due to $\Pi(s)$ is analytic) and
+$\Pi(z) - \overline{\Pi(z)} = 2 i \Ima \Pi(z)$. The result can be rewritten in a
+more intuitive form, which we also visualized in \cref{fig:rTauCauchysTheorem}
 \begin{equation}
   \int_0^{m_\tau} \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \Pi(s) \dif s
 \end{equation}
-
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{./images/rTauCauchysTheorem.eps}
+  \caption{Visualization of the usage of Cauchy's theorem to transform
+    \cref{eq:hadronicTauDecayRatio} into a closed contour integral over a circle
+  of radius $m_\tau^2$.}
+  \label{fig:rTauCauchysTheorem}
 \end{figure}
+
+
 
 \begin{equation}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
+\end{equation}
+
+\begin{equation}
+  \Pi^{(L+T)} = \Pi^{(L)} + \Pi^{(T)}
 \end{equation}
 
 \begin{equation}
@@ -93,7 +116,7 @@ where $s \to m_\tau^2 e^{-i \phi}$ and $(1 - e^{-i \cdot 0}) = (1 - e^{-i \cdot 
 \end{equation}
 
 \begin{equation}
-  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif}{x} (1 - x)^3 \left[ 3 (1 + x) D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right],
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif}{x} (1 - x)^3 \left( 3 (1 + x) D^{(L+T)}(s) + 4 D^{(L)}(s)  \right),
 \end{equation}
 where $x=s/m_\tau^2$.
 \end{document}
