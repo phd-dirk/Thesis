@@ -2,13 +2,26 @@
 
 \begin{document}
 \chapter{$\tau$ decays into hadrons}
+\begin{equation}
+  R_\tau = \frac{\Gamma(\tau \to \nu_\tau + \text{Hadrons})}{\Gamma(\tau \to \nu_\tau e^+ e^-)}
+\end{equation}
 
-\cite{Tsai1971}
+The theoretical expression of the hadronic $\tau$-decay ratio was first derived
+by \cite{Tsai1971} (using current algebra, a more recent derivation making use
+of the *optical theorem* can be taken from \cite{Schwab2002}):
 \begin{equation}
   R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
-  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)} \right]
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)} \right].
 \end{equation}
+$R_\tau$ introduces a problematic integral over the real axis of $\Pi(s)$ from $0$ up to
+$m_\tau$ for two reasons:
+\begin{itemize}
+  \item The \textit{perturbative Quantum Chromodynamcs} (\textbf{pQCD}) and the OPE breaks down for low
+    energies (over which we have to integrate).
+  \item The positive euclidean axis of $\Pi(s)$ has a discontinuity cut and can
+    theoretically not be evaluated.
+\end{itemize}
 
 Cauchy's Theorem
 \begin{equation}
@@ -30,10 +43,57 @@ $\Pi(z) - \overline{\Pi(z)} = 2 i \Ima \Pi(z)$
   \int_0^{m_\tau} \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \Pi(s) \dif s
 \end{equation}
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./images/rTauCauchysTheorem.eps}
+\end{figure}
+
 \begin{equation}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
 \end{equation}
 
+\begin{equation}
+  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
+\end{equation}
+\begin{equation}
+  D^{(L+T)}(s) \equiv -s \od{}{s} \Pi^{(L+T)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s))
+\end{equation}
+Integration by parts
+\begin{equation}
+  \int_a^b u(x) V(x) \dif x = \left[ U(x) V(x) \right]_a^b - \int_a^b U(x) v(x) \dif x
+\end{equation}
+\begin{equation}
+  \begin{split}
+    R_\tau^{(1)} &= \frac{6 \pi i}{m_\tau^2} \oint_{\abs{s}=m_\tau^2}\underbrace{\left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right)}_{=u(x)} \underbrace{ \vphantom{\left( \frac{s}{m_\tau^2} \right)} \Pi^{(L+T)}(s)}_{=V(x)} \\
+    &= \frac{6 \pi i}{m_\tau^2} \left\{  \left[ -\frac{m_\tau^2}{2} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) \right]_{\abs{s}=m_\tau^2} \right. \\
+    &\quad+ \oint_{\abs{s}=m_\tau^2} \underbrace{-\frac{m_\tau^2}{2} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right)}_{=U(x)} \underbrace{\vphantom{\left( \frac{1}{m_\tau^2} \right)}\od{}{s} \Pi^{(L+T)}(s)}_{=v(x)} \left. \vphantom{\left[ \left( \frac{1}{m_\tau^2} \right) \right]} \right\} \\
+    &= -3 \pi i \oint_{\abs{s}=m_\tau^2s} \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right) \od{}{s} D^{(L+T)}
+  \end{split}
+\end{equation}
+where we fixed the integration constant to $C=-\frac{m_\tau^2}{2}$ in the second
+line and left the antiderivatives contained in the squared brackets untouched.
+Parametrizing the expression in the squared brackets
+\begin{equation}
+    \left[ -\frac{m_\tau^2}{2} \left( 1 - e^{-i \phi} \right)^3 \left( 1 + e^{-i \phi} \right) \Pi^{(L+T)}(m_\tau^2 e^{-i \phi}) \right]_0^{2\pi} = 0
+\end{equation}
+where $s \to m_\tau^2 e^{-i \phi}$ and $(1 - e^{-i \cdot 0}) = (1 - e^{-i \cdot 2 \pi})
+= 0$.
+
+\begin{equation}
+  \begin{split}
+    R_\tau^{(2)} &= \oint_{\abs{s}=m_\tau^2} \dif s \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( - \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \\
+    &= - 4 \pi i \oint \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 D^{(L)}(s)
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left[ 3 \left( 1 + \frac{s}{m_\tau^2} D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right]
+\end{equation}
+
+\begin{equation}
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif}{x} (1 - x)^3 \left[ 3 (1 + x) D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right],
+\end{equation}
+where $x=s/m_\tau^2$.
 \end{document}

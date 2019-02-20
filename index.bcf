@@ -2009,7 +2009,9 @@
     <bcf:citekey order="12">Lehmann1954</bcf:citekey>
     <bcf:citekey order="13">Peskin1995</bcf:citekey>
     <bcf:citekey order="14">Peskin1995</bcf:citekey>
-    <bcf:citekey order="15">Boito2011</bcf:citekey>
+    <bcf:citekey order="15">Tsai1971</bcf:citekey>
+    <bcf:citekey order="16">Schwab2002</bcf:citekey>
+    <bcf:citekey order="17">Boito2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
