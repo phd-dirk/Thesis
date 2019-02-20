@@ -1,5 +1,8 @@
 .DS_Store
 
+## AucTex Regions
+_region_.tex
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
