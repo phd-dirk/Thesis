@@ -20,7 +20,7 @@ in terms of V/A, S/P \cite{Broadhurst1975}
 
 in terms of T and L
 \begin{equation}
-  (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2)
+  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2)
 \end{equation}
 
 \begin{equation}
@@ -35,6 +35,7 @@ relation L and S,P
 
 need relation T and V,A
 \begin{equation}
+  \label{eq:longitudinalCorrelator}
   \begin{split}
     \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) + (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu} q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s)
   \end{split} 
@@ -136,6 +137,7 @@ It is convenient to rewrite the
   R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
 \end{equation}
 \begin{equation}
+  \label{eq:adlerFunction}
   D^{(L+T)}(s) \equiv -s \od{}{s} \Pi^{(L+T)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s))
 \end{equation}
 Integration by parts
@@ -174,4 +176,47 @@ where $s \to m_\tau^2 e^{-i \phi}$ and $(1 - e^{-i \cdot 0}) = (1 - e^{-i \cdot 
   R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif}{x} (1 - x)^3 \left( 3 (1 + x) D^{(L+T)}(s) + 4 D^{(L)}(s)  \right),
 \end{equation}
 where $x=s/m_\tau^2$.
+
+\section{The perturbative expansion}
+We will treat the correlator in the chiral limit for which the longitudinal
+components $\Pi^{L}(s)$ vanish (see \cref{eq:longitudinalCorrelator}) and the
+axial and vectorial contributions are equal. Consequently \cite{Beneke2008} we
+can write the vector correlation function $\Pi(s)$ can be written as follows:
+\begin{equation}
+  \Pi_V^{T+L} = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
+\end{equation}
+$\Pi_V^{T+L}(s)$ is not a physical quantity but we can use
+\cref{eq:adlerFunction} to rewrite it into one:
+\begin{equation}
+  D_V^{T+L} = - s \od{\Pi_V^{1+0}(s)}{s} = \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1},
+\end{equation}
+where we used $\dif L^k/ \dif s=k\ln(-s/\mu^2)^{k-1}(-1/\mu^2)$. $D_V^{1+0}$
+being a physical quantity has to fulfill the RGE \cref{eq:RGE}
+\begin{equation}
+  -\mu \od{}{\mu} D_V^{T+L} = -\mu \od{}{\mu} \left( \pd{}{L} \dif L + \pd{}{a_s} \dif a_s \right) D_V^{T+L}
+  = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{T+L} = 0,
+\end{equation}
+where we defined the $\beta$-function in \cref{eq:betaFunction} and used $\dif L
+/ \dif \mu = - 2/ \mu$. The RGE puts constraints on the $c_{n, k}$-coefficients,
+... not independent
+\begin{equation}
+  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + a_\mu(c_{11} + 2 c_{12} L) + a_\mu^2(c_{21} + 2 c_{22} L + 3 c_{23} L^2) \right]
+\end{equation}
+inserting into RGE
+\begin{equation}
+  4 a_\mu c_{12} + 2 a_\mu^2(2 c_{22} + 6 c_{23} L) + \beta_1 a_\mu^2(c_{11} + 2 c_{12}L) + \mathcal{O}(a_\mu^3) = 0
+\end{equation}
+Thus
+\begin{equation}
+  c_{12} = 0 \quad c_{22} = \frac{\beta_1 c_{11}}{4} \quad c_{23} = 0
+\end{equation}
+or $D(s)$ to the first order in $\alpha_s$
+\begin{equation}
+  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + c_{11} a_\mu \left( c_{21} - \frac{1}{2} \beta_1 c_{11} L  \right) a_\mu^2 \right] + \mathcal{O}(a_\mu^3)
+\end{equation}
+
+
+
+
+
 \end{document}
