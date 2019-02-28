@@ -224,6 +224,7 @@ to $\alpha_s^4$, was published in 2008 \cite{Baikov2008} almost 20 years later.
 Fixing the number of colors to $N_c=3$ the missing coefficients up to order four
 in $\alpha_s$ read:
 \begin{equation}
+  \label{eq:adlerCoefficients}
   \begin{split}
     c_{2,1} &= \frac{365}{24} - 11 \zeta_3 - \left( \frac{11}{12} - \frac{2}{3}\zeta_3 \right) N_f \\ 
     c_{3,1} &= \frac{87029}{288} - \frac{1103}{4} \zeta_3 + \frac{275}{6}\zeta_5 \\
@@ -321,21 +322,58 @@ where the contour integrals $J_l$ are defined by
 \end{equation}
 All logarithms vanish except the ones for $k=1$:
 \begin{equation}
-  \log(1)^{k-1} = \begin{cases} \mbox{1} & \mbox{if } k=1 \\ \mbox{0} & \mbox{k \neq 1} \end{cases},
+  \log(1)^{k-1} =  \begin{cases} \mbox{1} & \mbox{if } k=1, \\ \mbox{0} & k\neq 1 \end{cases}
 \end{equation}
-which selectes adler function coefficients $c_{n,1}$ with $k=1$. Handling the
-logarithms left us with the integration of $\alpha_s(-x m_\tau^2 x)$ over the closed-contour $\oint_{\abs{x}=1}$, which now
+which selectes adler function coefficients $c_{n,1}$ with a fixed $k=1$. Handling the
+logarithms left us with the integration of $\alpha_s(- m_\tau^2 x)$ over the closed-contour $\oint_{\abs{x}=1}$, which now
 depends on the integration variable x.
 
+Calculating the perturbative contribution $\delta^{(0)}$ to $R_\tau$ for the two different prescriptions yields \cite{Beneke2008}
 \begin{align}
   & \quad\qquad \alpha_s^2 \qquad \alpha_s^2 \qquad \alpha_s^3 \qquad \alpha_s^4 \quad\qquad \alpha_s^5 \nonumber\\
   \delta_{FO}^{(0)} &= 0.1082 + 0.0609 + 0.0334 + 0.0174 (+ 0.0088) = 0.2200 (0.2288) \\
-  \delta_{CI}^{(0)} &= 0.1479 + 0.0297 + 0.0122 + 0.0086 (+ 0.0038) = 0.1984 (0.2021)
+  \delta_{CI}^{(0)} &= 0.1479 + 0.0297 + 0.0122 + 0.0086 (+ 0.0038) = 0.1984 (0.2021).
 \end{align}
+The series indicate, that CIPT converges faster and that both series aproach a
+different value. This discrepancy represents currently the biggest theoretical
+uncertainity while extracting the strong coupling $\alpha_s$.
+
+As today we do not know which if FOPT or CIPT is the correct approach of
+measuring $\alpha_s$. Therefore there are currently three ways of stating
+result:
+\begin{itemize}
+  \item Quoting the average of both results.
+  \item Quoting the CIPT result.
+  \item Quoting the FOPT result.
+\end{itemize}
+
+We follow the approach of Beneke and Jamin \cite{Benke2008} who prefere FOPT.
 
 
+\section{Non-Perturbative Contribution}
+\subsection{Dimension 4}
+\cite{Pich1999}
+\begin{equation}
+  \left. D_{ij}^{(L+T)}(s) \right\rvert_{D=4} = \frac{1}{s^2} \sum_n \Omega^{(1+0)}(s/\mu^2)a^n,
+\end{equation}
+where
+\begin{equation}
+  \begin{split}
+    \Omega_n^{(1+0)} (s/\mu^2) &\,=\, \frac{1}{6}\langle aGG \rangle p_n^{(L+T)}(s/\mu^2) + \sum_k m_k \langle \anti{q}_k q_k \rangle r_n^{(L+T)}(s/\mu^2) \\
+    &\,+ 2\langle m_i \anti{q}_i q_i + m_j \anti{q}_j q_j \rangle q_n^{(L+T)} (s/\mu^2) \pm \frac{8}{3} \langle m_j \anti{q}_i q_i + m_i \anti{q}_j q_j \rangle t_n^{(L+T)} \\
+    &\,- \frac{3}{\pi^2} (m_i^4 + m_j^4) h_n^{(L+T)} (s/\mu^2) \mp \frac{5}{\pi^2} m_i m_j (m_i^2 + m_j^2) k_n^{(L+T)}(s/\mu^2)\\
+    &\,+ \frac{3}{\pi^2} m_i^2 m_j^2 g_n^{(L+T)}(s/\mu^2) + \sum_k m_k^4 j_n^{(L+T)}(s/\mu^2) + 2 \sum_{k \neq l} m_k^2 m_l^2 u_n^{(L+T)}(s/\mu^2)
+  \end{split}
+\end{equation}
 
-
+\begin{equation}
+  \begin{array}{lll}
+    p_0^{(L+T)}=0, & p_1^{(L+T)}=1, & p_2^{(L+T)}=\frac{7}{6}, \\
+    r_0^{(L+T)}=0, & r_1^{(L+T)}=0, & r_2^{(L+T)}=-\frac{5}{3}+\frac{8}{3}\zeta_3-\frac{2}{3}\log(s/\mu^2), \\
+    q_0^{(L+T)}=1, & q_1^{(L+T)}=-1, & q_2^{(L+T)}=-\frac{131}{24}+\frac{9}{4}\log(s/\mu^2) \\
+    t_0^{(L+T)}=0 & t_1^{(L+T)}=1, & t_2^{(L+T)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2)
+  \end{array}
+\end{equation}
 
 
 \end{document}
