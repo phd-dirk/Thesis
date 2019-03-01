@@ -394,7 +394,11 @@ than $\omega_\tau$.
 
 
 \subsection{Dimension four}
-\cite{Pich1999}
+For the OPE contributions of dimension four we have to take into account the
+terms with masses to the fourth power $m^4$, the quark condensate multiplied by
+a mass $m \langle \anti{q} q \rangle$ and the glucon condensate $\langle GG
+\rangle$. The resulting expression can be taken from the appendix of
+\cite{Pich1999}, yielding:
 \begin{equation}
   \left. D_{ij}^{(L+T)}(s) \right\rvert_{D=4} = \frac{1}{s^2} \sum_n \Omega^{(1+0)}(s/\mu^2)a^n,
 \end{equation}
@@ -407,35 +411,50 @@ where
     &\,+ \frac{3}{\pi^2} m_i^2 m_j^2 g_n^{(L+T)}(s/\mu^2) + \sum_k m_k^4 j_n^{(L+T)}(s/\mu^2) + 2 \sum_{k \neq l} m_k^2 m_l^2 u_n^{(L+T)}(s/\mu^2)
   \end{split}
 \end{equation}
-
+The perturbative expansion coefficients are known to $\mathcal{O}(a^2)$ for the
+condensate contributions,
 \begin{equation}
   \begin{array}{lll}
     p_0^{(L+T)}=0, & p_1^{(L+T)}=1, & p_2^{(L+T)}=\frac{7}{6}, \\
     r_0^{(L+T)}=0, & r_1^{(L+T)}=0, & r_2^{(L+T)}=-\frac{5}{3}+\frac{8}{3}\zeta_3-\frac{2}{3}\log(s/\mu^2), \\
     q_0^{(L+T)}=1, & q_1^{(L+T)}=-1, & q_2^{(L+T)}=-\frac{131}{24}+\frac{9}{4}\log(s/\mu^2) \\
-    t_0^{(L+T)}=0 & t_1^{(L+T)}=1, & t_2^{(L+T)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2)
+    t_0^{(L+T)}=0 & t_1^{(L+T)}=1, & t_2^{(L+T)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2).
   \end{array}
 \end{equation}
-
+while the $m^4$ terms have been only computed to $\mathcal{O}(a)$
 \begin{equation}
   \begin{array}{lll}
     h_0^{(L+T)}=1-1/2 \log(s/\mu^2), & h_1^{(L+T)}=\frac{25}{4}-2\zeta_3-\frac{25}{6}\log(s/\mu^2)-2 \log(s/\mu^2)^2, \\
     k_0^{(L+T)}=0, & k_1^{(L+T)}=1-\frac{2}{5}\log(s/\mu^2), \\
     g_0^{(L+T)}=1, & g_1^{(L+T)}=\frac{94}{9}-\frac{4}{3}\zeta_3-4 \log(s/\mu^2), \\
     j_0^{(L+T)}=0, & j_1^{(L+T)}=0, \\
-    u_0^{(L+T)}=0, & u_2^{(L+T)}=0
+    u_0^{(L+T)}=0, & u_2^{(L+T)}=0.
   \end{array}
 \end{equation}
 
 \subsection{Dimension six and eight}
-calculated beyond leading order in \cite{Lanin1986} 
-vaccuum saturation approximation \cite{Beneke2008,Braaten1991,Shifman1978}
+Our application of dimension six contributions is founded in \cite{Braaten1991}
+and has previously been calculated beyond leading order by \cite{Lanin1986}.
+The operators appearing are the masses to the power six $m^6$, the four-quark
+condensates $\langle \anti q q \anti q q \rangle$, the three-gluon condensates
+$\langle g^3 G^3 \rangle$ and lower dimensional condensates multiplies by the
+corresponding masses, such that in total the mass dimension of the operator will
+be six.
+As there are too many parameters to be fitted with experimental data we have to
+omit some of them, starting with the three-gluon condensate, which does not
+contribute at leading order. The four-quark condensates known up to
+$\mathcal{O}(a^2)$, but we will make use of the \textit{vacuum saturation
+  approach} \cite{Beneke2008,Braaten1991,Shifman1978} to express them in quark, anti-quark condensates $\langle q \anti{q} \rangle$.
+In our work we take the simplest approach possible: Introducing an effective
+dimension six coefficient $\rho_{V/A}^{(6)}$ divided by the appropiate power in s
 \begin{equation}
-  \left. D_{ij,V/A}^{(1+0)}(s) \right\rvert_{D=6} = \pm \frac{32}{3} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \langle \anti{q}_i q_i \rangle \langle \anti{q}_j q_j \rangle = \frac{32}{7} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \left( \langle \anti{q}_i q_i \rangle^2 + \langle \anti{q}_i q_i \rangle \right)
+  \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=6} = 0.03 \frac{\rho_{V/A}^{(6)}}{s^3}
 \end{equation}
 
+As for the dimension eigth contribution the situation is not better than the
+dimension six one we keep the simplest approach, leading to
 \begin{equation}
-  \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=8} = \frac{\rho_{V/A}^{(8)}}{s^4}
+  \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=8} = 0.04 \frac{\rho_{V/A}^{(8)}}{s^4}.
 \end{equation}
 
 \end{document}
