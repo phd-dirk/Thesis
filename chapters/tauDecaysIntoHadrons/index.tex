@@ -2,64 +2,89 @@
 
 \begin{document}
 \chapter{$\tau$ decays into hadrons}
+The $\tau$-lepton is the only lepton heavy enough to decay into Hadrons. It
+permits one of the most precie determinations of the strong coupling $\alpha_s$.
+The inclusive $\tau$-decay ratio
 \begin{equation}
+  \label{eq:inclusiveRatio}
   R_\tau = \frac{\Gamma(\tau \to \nu_\tau + \text{Hadrons})}{\Gamma(\tau \to \nu_\tau e^+ e^-)}
 \end{equation}
-
-in terms of V/A, S/P \cite{Broadhurst1975}
+can be precisly calculated and is sensitive to $\alpha_s$. Due to the mass of
+the $\tau$-lepton $m_\tau\approx\SI{1.8}{\giga\electronvolt}$ it is a good
+phenomen to perform low-energy QCD analysis.
+The theoretical expression of the hadronic $\tau$-decay ratio was first derived
+by \cite{Tsai1971} (using current algebra, a more recent derivation making use
+of the \textit{optical theorem} can be taken from \cite{Schwab2002}):
 \begin{equation}
+  \label{eq:hadronicTauDecayRatio}
+  R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
+  \left( 1 - \frac{s}{m_\tau^2} \right)
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)}(s) \right].
+\end{equation}
+The $\tau$-decay ratio depends on the two-point function
+\begin{equation}
+  \Pi_{\mu\nu,ij}^{V/A}(s) \equiv i \int \dif x \,e^{ipx} \langle \Omega | T \{ J_{\mu,ij}^{V/A}(x) J_{\nu,ij}^{V/A}(0)^\dagger \} | \Omega \rangle,
+\end{equation}
+with $|\Omega\rangle$ being the physical vacuum. The vectorial and axial-vector
+currents are given by
+\begin{equation}
+  J_{\mu,ij}^{V}(x) = \anti{q}_j(x) \gamma_\mu q_i(x) \quad \text{and} \quad J_{\mu,ij}^{A}(x) = \anti{q}_j(x) \gamma_\mu \gamma_5 q_i(x)
+\end{equation}
+where $i,j$ stand for the light quark flavours u, d and s.
+
+The general correlator $\Pi^{\mu\nu}(q^2)$ can be decomposed into a vector/
+axial-vector (V/A) and scalar/ pseudo-scalar (S/P) part containing a correction \cite{Broadhurst1975}
+\begin{equation}
+  \label{eq:correlatorVectorScalarDecomposition}
   \begin{split}
     \Pi^{\mu\nu}(q^2) &= (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi^{V,A}(q^2) + \frac{g^{\mu\nu}}{q^2} (m_i \mp m_j)\Pi^{S,P}(q^2) \\
-    &+ g^{\mu\nu}\frac{(m_i \mp m_j)}{q^2} [ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+    &+ g^{\mu\nu}\frac{(m_i \mp m_j)}{q^2} [ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
   \end{split}
 \end{equation}
+which is composed of a vector $\Pi^{V,A}$ and scalar $\Pi^{S,P}$ part. The third
+term are corrections arising due to the physical vacuum $|\Omega\rangle$.
 
+The general correlator $\Pi^{\mu\nu}$ can also be decomposed into transversal
+and longitudinal components:
+\begin{equation}
+  \label{eq:correlatorTransversalLongitudinalDecomposition}
+  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2).
+\end{equation}
+
+To relate the two different contributions we note, that only the scalar components of
+\cref{eq:correlatorVectorScalarDecomposition} carry a mass term. Using the
+\textit{Ward identity}
+\begin{equation}
+  q_\mu \Pi^{\mu\nu}(q^2) = 0
+\end{equation}
+we can introduce two four-momenta into
+\cref{eq:correlatorVectorScalarDecomposition}
 \begin{equation}
   q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
 \end{equation}
-
-in terms of T and L
-\begin{equation}
-  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2)
-\end{equation}
-
+to relate the longitudinal of \cref{eq:correlatorTransversalLongitudinalDecomposition}
 \begin{equation}
   q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s),
 \end{equation}
-where $s \equiv q^2$
-
-relation L and S,P
+where we defined $s \equiv q^2$. Thus
 \begin{equation}
-  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle].
 \end{equation}
-
-need relation T and V,A
+Furthermore we can relate the transversal and vectorial components via
 \begin{equation}
   \label{eq:longitudinalCorrelator}
   \begin{split}
     \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) + (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu} q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s)
   \end{split} 
 \end{equation}
-where $\Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)$
+where $\Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)$, such that
 \begin{equation}
-  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)}
+  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)}.
 \end{equation}
 
-\begin{equation}
-  q_\mu q_nu
-\end{equation}
-
-The theoretical expression of the hadronic $\tau$-decay ratio was first derived
-by \cite{Tsai1971} (using current algebra, a more recent derivation making use
-of the *optical theorem* can be taken from \cite{Schwab2002}):
-\begin{equation}
-  \label{eq:hadronicTauDecayRatio}
-  R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
-  \left( 1 - \frac{s}{m_\tau^2} \right)
-  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)} \right].
-\end{equation}
-$R_\tau$ introduces a problematic integral over the real axis of $\Pi(s)$ from $0$ up to
-$m_\tau$. The integral is problematic for two reasons:
+Inspecting the inclusive ratio $R_\tau$ in \cref{eq:inclusiveRatio} introduces a
+problematic integral over the real axis of $\Pi(s)$ from $0$ up to $m_\tau$.
+The integral is problematic for two reasons:
 \begin{itemize}
   \item The \textit{perturbative Quantum Chromodynamcs} (\textbf{pQCD}) and the OPE breaks down for low
     energies (over which we have to integrate).
@@ -354,7 +379,20 @@ result:
 We follow the approach of Beneke and Jamin \cite{Benke2008} who prefere FOPT.
 
 
-\section{Non-Perturbative Contribution}
+\section{Non-Perturbative OPE Contribution}
+The perturbative contribution to the Sum-Rule, that we have seen so far, is the
+dominant one. With
+\begin{equation}
+  \begin{split}
+    R_\tau^{FOPT} &= \\ 
+    R_\tau^{CIPT} &=  
+  \end{split}
+\end{equation}
+
+The NP vs perturbative contributions can be varied by choosen different weights
+than $\omega_\tau$.
+
+
 \subsection{Dimension four}
 \cite{Pich1999}
 \begin{equation}
@@ -394,6 +432,10 @@ calculated beyond leading order in \cite{Lanin1986}
 vaccuum saturation approximation \cite{Beneke2008,Braaten1991,Shifman1978}
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)}(s) \right\rvert_{D=6} = \pm \frac{32}{3} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \langle \anti{q}_i q_i \rangle \langle \anti{q}_j q_j \rangle = \frac{32}{7} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \left( \langle \anti{q}_i q_i \rangle^2 + \langle \anti{q}_i q_i \rangle \right)
+\end{equation}
+
+\begin{equation}
+  \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=8} = \frac{\rho_{V/A}^{(8)}}{s^4}
 \end{equation}
 
 \end{document}
