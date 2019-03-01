@@ -196,6 +196,10 @@ can write the vector correlation function $\Pi(s)$ as:
 The coeffiecient $c_{n,k}$ up to two-loop order can be
 obtained by Feynman-diagram calculations.
 \textcolor{red}{add complete calculation}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/correlatorLoopDiagrams.eps}
+\end{figure}
 E.g. we can compare the zero-loop result of the correlator \cite{Jamin2006}
 \begin{equation}
   \left. \Pi^B_{\mu\nu}(q^2) \right\rvert^{1-loop} = \frac{N_c}{12\pi^2} \left( \frac{1}{\hat \epsilon} - \log\frac{(-q^2 - i0)}{\mu^2} + \frac{5}{3} + \mathcal{O}(\epsilon) \right)
@@ -351,7 +355,7 @@ We follow the approach of Beneke and Jamin \cite{Benke2008} who prefere FOPT.
 
 
 \section{Non-Perturbative Contribution}
-\subsection{Dimension 4}
+\subsection{Dimension four}
 \cite{Pich1999}
 \begin{equation}
   \left. D_{ij}^{(L+T)}(s) \right\rvert_{D=4} = \frac{1}{s^2} \sum_n \Omega^{(1+0)}(s/\mu^2)a^n,
@@ -375,5 +379,21 @@ where
   \end{array}
 \end{equation}
 
+\begin{equation}
+  \begin{array}{lll}
+    h_0^{(L+T)}=1-1/2 \log(s/\mu^2), & h_1^{(L+T)}=\frac{25}{4}-2\zeta_3-\frac{25}{6}\log(s/\mu^2)-2 \log(s/\mu^2)^2, \\
+    k_0^{(L+T)}=0, & k_1^{(L+T)}=1-\frac{2}{5}\log(s/\mu^2), \\
+    g_0^{(L+T)}=1, & g_1^{(L+T)}=\frac{94}{9}-\frac{4}{3}\zeta_3-4 \log(s/\mu^2), \\
+    j_0^{(L+T)}=0, & j_1^{(L+T)}=0, \\
+    u_0^{(L+T)}=0, & u_2^{(L+T)}=0
+  \end{array}
+\end{equation}
+
+\subsection{Dimension six and eight}
+calculated beyond leading order in \cite{Lanin1986} 
+vaccuum saturation approximation \cite{Beneke2008,Braaten1991,Shifman1978}
+\begin{equation}
+  \left. D_{ij,V/A}^{(1+0)}(s) \right\rvert_{D=6} = \pm \frac{32}{3} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \langle \anti{q}_i q_i \rangle \langle \anti{q}_j q_j \rangle = \frac{32}{7} \pi^2 a_\mu \frac{\rho_{V/A}^{(6)}}{s^3} \left( \langle \anti{q}_i q_i \rangle^2 + \langle \anti{q}_i q_i \rangle \right)
+\end{equation}
 
 \end{document}
