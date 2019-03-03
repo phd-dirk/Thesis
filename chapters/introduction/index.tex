@@ -246,7 +246,8 @@ where $\Gamma$ stands for one of the dirac matrices $\Gamma \in \{1, i \gamma_5,
 operators appear normal ordered they vanish by definition in PT. Consequently
 they appear as \textbf{Condensates} in Non-perturbative (NPT) QCD like
 quark-condensate $\langle \anti{q} q \rangle$ or the gluon-condensate $\langle a
-GG \rangle$ (both of dimension four).
+GG \rangle$ (both of dimension four). These non-vanishing condensats
+characterize the QCD-vacuum.
 
 As we work with dimensionless functions (e.g. $\Pi$) in Sum Rules, the r.h.s.
 of \cref{eq:ope} has to be dimensionless. Consequently the
@@ -259,61 +260,85 @@ momenta explicit
 where we used $C^{(D)}=c/(-s)^{D/2}$ with $D$ being the dimension. Consequently
 the OPE should converge with increasing dimension for suficienty large momenta $s$.
 
-The usage of the OPE and its validity is far from obvious. We are deriving the
-OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
-Feynman-graphs are calculated perturbatively but the coefficients with dimension
-$D>0$ correspond to NPT condensates!
-
+Let's rapidly show how the OPE contributions are calculated with a the
+``standard example'' (following \cite{Pascual1986}), where we calculate the
+perturbative and quark-condensate Wilson-coefficients for the $\rho$-meson. We
+start with the two-point function 
 \begin{equation}
   \Pi^{\mu\nu}(q) = i \int \dif^4 x e^{iqx} \langle \Omega | T\{ j^\mu(x) j^\nu(0) \} \rangle
 \end{equation}
-
+with two-quark currents
 \begin{equation}
-  j^\mu(x) = [\anti q_i \Gamma q_j](x)
+  j^\mu(x) = [\anti q_i \Gamma q_j](x).
 \end{equation}
-
-Standard example (following \cite{Pascual1986})
+For the $\rho$-meson, which is composed of u and d quarks, the current takes the
+following form
 \begin{equation}
-  j^\mu(x) = \frac{1}{2}\left(:[\anti{u} \gamma^\mu u](x) - \anti{d} \gamma^\mu d](x)\right)
+  j^\mu(x) = \frac{1}{2}\left(:[\anti{u} \gamma^\mu u](x) - \anti{d} \gamma^\mu d](x)\right).
 \end{equation}
-
+The correlator tensor can be rewritten, due to its Lorentz structure, into a
+scalar by using the \textit{Ward identity}
 \begin{equation}
-  \Pi^{\mu\nu}(s) = (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi(s)
+  \Pi^{\mu\nu}(s) = (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi(s).
 \end{equation}
-
-\begin{equation}
-  \begin{split}
-    \Pi(q^2) &= - \frac{i}{4 q^2 (D -1)} \int \dif^D x e^{iqx} \langle \Omega | T \{:\anti{u}(x) \gamma^\mu u(x) - \anti{d}(x) \gamma^{mu} d(x): \\
-    &\quad\times :\anti{u}(0 \gamma_\mu u(0) - \anti{d}(0)\gamma_\mu d(0): \} \rangle 
-  \end{split}
-\end{equation}
-
-Using Wick's theorem
-\begin{equation}
-  \begin{split}
-    \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx}
-    \left[
-      \wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)}
-      \cdot \wick{\c u_{l \beta}(0) \anti{\c u}_{i \alpha}(x)} + (u \to d)
-    \right]
-  \end{split}
-\end{equation}
-
-Condensate contraction
-\begin{equation}
-  \begin{split}
-    \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \left[ \phantom{\wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)}} \right.\\
-      &\quad+\wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)} \cdot \langle \Omega \vert : \anti{u}_{i \alpha}(x) u_{l \beta} (0) :\vert \Omega \rangle \\
-      &\quad\left.+\wick{\c u_{l \beta}(0) \anti{\c u}_{i \alpha}(x)} \cdot \langle \Omega \vert: \anti{u}_{k \beta}(0) u_{j \alpha}(x) : \vert \rangle + (u \to d)
-    \right]
-  \end{split}
-\end{equation}
-
-
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/condensateFeynmanDiagram.eps}
+  \label{fig:OPEFeynmanDiagram}
 \end{figure}
+In \cref{fig:OPEFeynmanDiagram} we draw the Feynman-diagram to at tree level,
+from which we can take the uncontracted mathematical expression
+\begin{equation}
+  \begin{split}
+    \Pi(q^2) &= - \frac{i}{4 q^2 (D -1)} \int \dif^D x e^{iqx} \langle \Omega | T \{:\anti{u}(x) \gamma^\mu u(x) - \anti{d}(x) \gamma^{mu} d(x): \\
+    &\quad\times :\anti{u}(0 \gamma_\mu u(0) - \anti{d}(0)\gamma_\mu d(0): \} \rangle.
+  \end{split}
+\end{equation}
+Using Wick's theorem we can contract all of the fields and calculate the first
+term of the OPE ($\mathbb{1}$), which represents the perturbative contribution
+\begin{equation}
+  \begin{split}
+    \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \\
+    &\times\quad\left[
+      \wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)}
+      \cdot \wick{\c u_{l \beta}(0) \anti{\c u}_{i \alpha}(x)} + (u \to d)
+    \right] \\
+    &= \frac{3}{8\pi^2} \left[ \frac{5}{3} - \log\left( -\frac{q^2}{\nu^2} \right) \right].
+  \end{split}
+\end{equation}
+
+To calculate the higher dimensional contributions of the OPE we use the same
+techniques as before, but leave some of the fields uncontracted. For the
+quark-condensate, which we want to derive for tree-level, we leave two fields uncontracted
+\begin{equation}
+  \begin{split}
+    \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \left[ \phantom{\wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)}} \right.\\
+      &\quad+\,\wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)} \cdot \langle \Omega \vert : \anti{u}_{i \alpha}(x) u_{l \beta} (0) :\vert \Omega \rangle \\
+      &\quad\,\left.+\wick{\c u_{l \beta}(0) \anti{\c u}_{i \alpha}(x)} \cdot \langle \Omega \vert: \anti{u}_{k \beta}(0) u_{j \alpha}(x) : \vert \Omega \rangle + (u \to d)
+    \right].
+  \end{split}
+\end{equation}
+The non contracted fields can then be expanded in x
+\begin{equation}
+  \begin{split}
+    \langle \Omega \vert: \anti{q}(x) q(0):\vert \Omega \rangle &= \langle\Omega\vert: \anti{q}(0) q(0): \vert\Omega\rangle\\
+    &\quad+ \langle\Omega\vert:\left[ \partial_\mu \anti{q}(0) \right] q(0):\vert\Omega\rangle x^\mu + \dots
+  \end{split}
+\end{equation}
+and redefined to a more elegant notation
+\begin{equation}
+  \langle \anti{q}q \rangle \equiv \langle\Omega\vert: \anti{q}(0) q(0):\vert\Omega\rangle.
+\end{equation}
+The finally result can be taken from \cite{Pascual1984} and yields
+\begin{equation}
+  \Pi_{(\rho)}(q^2) = \frac{1}{2} \frac{1}{\left(-q^2\right)^2} \left[ m_u\langle \anti{u} u + m_d \langle \anti{d} \rangle\right].
+\end{equation}
+
+
+
+
+
+
 
 
 
@@ -405,4 +430,13 @@ the following expression
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated with by applying the OPE of the correlator $\Pi_{OPE}(s)$.
 
+The usage of the OPE and its validity is far from obvious. We are deriving the
+OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
+Feynman-graphs are calculated perturbatively but the coefficients with dimension
+$D>0$ correspond to NPT condensates!
+
+The usage of the OPE and its validity is far from obvious. We are deriving the
+OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
+Feynman-graphs are calculated perturbatively but the coefficients with dimension
+$D>0$ correspond to NPT condensates!
 \end{document}
