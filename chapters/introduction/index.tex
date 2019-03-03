@@ -3,7 +3,7 @@
 \begin{document}
 \chapter{Introduction}
 In particle physics we are concerned about small objects and their interactions.
-Their dynamics are currently best described by the Standard Model (SM).
+Since the 1970 the dynamics of these tiny pieces are best described by the Standard Model (SM).
 
 The SM contains two groups of fermionic, Spin 1/2 particles. The former group,
 the Leptons consist of: the electron ($e$), the muon ($\mu$), the tau ($\tau$)
@@ -22,36 +22,39 @@ force is characterized by the color charge. Every quark has next to its type one
 of the three colors blue, red or green. The color force is mediated through
 eight gluons, which each being bi-colored\footnote{Each gluon carries a color
   and an anti-color.}, interact with quarks and each other. The strength of the
-strong force is given by the coupling constant $\alpha_s$. The coupling
-constants are a function of energy $E$ and $\alpha_s(E)$ increases with 
-energy\footnote{In contrast to the electromagnetic force, where $\alpha(E)$
-  decreases!}. This is exclusive for QCD and leads to \textit{asymptotic freedom} an
+strong force is given by the coupling constant $\alpha_s$, which we will
+determine within this work. The strong coupling constant $\alpha_s(E)$ is a function of energy $E$ and increases
+with decreasing energies \footnote{In contrast to the electromagnetic force, where $\alpha(E)$
+  decreases!}. This is exclusive for QCD and leads to \textit{asymptotic freedom} and
 \textit{confinement}. The former phenomen describes the decreasing strong force
-between quarks and gluons, which become asymptotically free at large
+between quarks and gluons for high energies (short distances), which become asymptotically free at large
 energies. The latter expresses the fact, that no isolated quark has been found
 until today. Quarks appear confined as \textit{Hadrons}, the so called
 \textit{Mesons}\footnote{Composite of a quark and an anti-quark.} and
 \textit{Baryons}\footnote{Composite of three quarks or three anti-quarks.}.
 As we measure \textit{Hadrons} in our experiments but calculate with quarks
 within our theoretical QCD model we have to assume \textit{Quark-Hadron
-  Duality}, which states that QCD is still valid for Hadrons for energies
-sufficently heigh energies. There exist \textit{Duality Violations} (DV), which
-will be investigated within this work.
+  Duality}, which states that QCD, which is the theory of quarks and gluons, is still valid for Hadrons for energies
+sufficently heigh. For lower energies there are measurable \textit{Duality Violations} (DV), which
+will be commented within this work.
 
 In the following (\cref{sec:tauDecays}) we will describe the $\tau$-decays, which
-play an essential role in our QCD analysis. Then (\cref{sec:quantumchromodynamics}) we want to explain some more
+play an essential role in our QCD analysis. Then in \cref{sec:quantumchromodynamics} we want to give more
 details of QCD, especially about the coupling constant $\alpha_s(s)$ (which is not
 constant at all) and the \textit{QCD sum rules}.
 
 
 \section{$\tau$-Decays}
 \label{sec:tauDecays}
+The principal input to our QCD analysis are measurements of $\tau$-decays, which
+represent an excellent tool to access low energy QCD.
+
 The $\tau$-particle is an elementary particle with negative electric charge and a
 spin of 1/2. Together with the lighter electron and muon it forms the
 \textit{charged Leptons}\footnote{Leptons do not interact via the strong force.}.
 Even though it is an elementary particle it decays via the \textit{weak
-  interaction} with a lifetime of $\tau_\tau=\SI{2.9e-13}{\second}$ and a mass
-of $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is the only
+  interaction} with a lifetime of $\tau_\tau=\SI{2.9e-13}{\second}$ and has a mass
+of $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is furthermore the only
 lepton massive enough to decay into Hadrons.
 The final states of a decay are limited by \textit{conservation laws}. In case
 of a $\tau$-decay they must conserve the electric charge ($-1$) and
@@ -60,14 +63,14 @@ the corresponding Feynman diagram
 (see \cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay into strange
   quarks or charm quarks, but these decays are rather uncommon due to the heavy
   masses of s and c.} the $\tau$ decays by the emission of a $\textit{W boson}$
-and a tau-neutrino $\nu_\tau$ into different pairs of $(e^-, \bar\nu_e), (\mu^-,
+and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
 \bar\nu_\mu)$ or $(q, \bar q)$.
 \begin{figure}[h]
-  \label{fig:tauDecay}
   \centering
   \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
   \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
     lepton-antineutrino or quark-antiquark by the emission of a \textit{W boson}.}
+  \label{fig:tauDecay}
 \end{figure}
 
 We are foremost interested into the hadronic decay channels, meaning
@@ -78,7 +81,6 @@ and \textit{baryons}. Due to its mass of $m_\tau \approx
 (pions-$\pi$, kaons-$K$, and eta-$\eta$, see \cref{table:lightMesons}), which
 can be experimentally detected.
 \begin{table}
-  \label{table:lightMesons}
   \centering
   \begin{tabular}{l c c c}
     \toprule
@@ -93,6 +95,7 @@ can be experimentally detected.
   \caption{List of mesons produced by a $\tau$-decay. Rare final states with
     branching Ratios smaller than 0.1 have been omitted. The list is taken from 
     \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
+  \label{table:lightMesons}
 \end{table}
 
 The hadronic $\tau-decay$ provides one of the most precise ways to determine the
@@ -102,25 +105,25 @@ the framework of QCD.
 
 \section{Quantumchromodynamics}
 \label{sec:quantumchromodynamics}
-QCD describes the strong interaction, which occur between \textit{quarks} and
+QCD describe the strong interaction, which occur between \textit{quarks} and
 are transmitted through \textit{gluons}. A list of quarks can be found in
-\ref{table:quarkList}.
+\cref{table:quarkList}.
 \begin{table}
-  \label{table:quarkList}
   \centering
   \begin{tabular}{l l c}
     \toprule
     Flavour & Mass & comment\\
     \midrule
-    $u$ & $2.2_{-0.4}^{+0.5}$ \SI{}{\mega\eV} & $\overline{\text{MS}}$ \\
-    $d$ & $4.7_{-0.3}^{+0.5}$ \SI{}{\mega\eV} \\
-    $s$ & $95_{-3}^{+9}$ \SI{}{\mega\eV}  \\
-    $c$ & $1.275_{-0.035}^{+0.025}$ \SI{}{\giga\eV} \\
-    $b$ & $4.18_{-0.03}^{+0.04}$ \SI{}{\giga\eV} \\
-    $t$ & \SI{173.0 \pm 4}{\giga\eV} \\
+    $u$ & $2.2_{-0.4}^{+0.5}$ \SI{}{\mega\eV} & $\overline{\text{MS}} \,at\, \mu=\SI{2}{\giga\eV}$ \\
+    $d$ & $4.7_{-0.3}^{+0.5}$ \SI{}{\mega\eV} & $\overline{\text{MS}} \,at\, \mu=\SI{2}{\giga\eV}$ \\
+    $s$ & $95_{-3}^{+9}$ \SI{}{\mega\eV} & $\overline{\text{MS}} \,at\, \mu=\SI{2}{\giga\eV}$ \\
+    $c$ & $1.275_{-0.035}^{+0.025}$ \SI{}{\giga\eV} & $\overline{\text{MS}} \,at\, \mu=m_c$\\
+    $b$ & $4.18_{-0.03}^{+0.04}$ \SI{}{\giga\eV} & $\overline{\text{MS}} \,at\, \mu=m_b$\\
+    $t$ & \SI{173.0 \pm 4}{\giga\eV} & direct observations of top events \\
     \bottomrule 
   \end{tabular}
-  \caption{List of Quarks and their masses\cite{PDG2018}.}
+  \caption{List of Quarks and their masses. Taken from \cite{PDG2018}.}
+  \label{table:quarkList}
 \end{table}
 
 The QCD Lagrange density is similar to that of QED\cite{Jamin2006},
@@ -135,16 +138,17 @@ where $q^A(x)$ represents the quark fields and $G_{\mu\nu}^a$ being the \textit{
 \end{equation}
 where $B_\mu^a$ are the \textit{gluon fields}, given in the \textit{adjoint
   representation} of the SU(3) gauge group with $f^{abc}$ as \textit{structure
-  constants}. Furthermore we have used $A, B, \dots = 0, \dots 5$ as flavour indices, $a,
-b, \dots = 0, \dots, 8 $ as color indices and $\mu, \nu, \dots = 0, \dots 3$ as lorentz indices.
+  constants}. Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour indices, $a,
+b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc = 0, \dotsc 3$ as lorentz indices.
 
 
 \subsection{Renormalisation Group}
 The perurbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to divergencies, which have to be
 \textit{renormalized}. There are different aproaches to 'make' these
-divergencies finite. The most popular one is \textit{dimensional
+divergencies finite. The most popular one is \textbf{dimensional
   regularisation}.
-In \textit{Dimensional regularisation} we expand the four space-time dimensions
+
+In \textit{dimensional regularisation} we expand the four space-time dimensions
 to arbitrary dimensions. Consequently the in QCD calculations appearing
 $\textit{Feyman integrals}$ have to be continued to $D$-dimensions like
 \begin{equation}
@@ -155,12 +159,16 @@ where we introduced the scale parameter $\mu$ to account for the extra
 dimensions and conserve the mass dimension of the non continued integral.
 
 In addition \textit{physical quantities}\footnote{Observables that can be
-  measured.} cannot depend on the renormalisation scale $\mu$. Thus examining a \textit{physical quantity} $R(q, a_s, m)$ that depends on the
-external momentum q, the renormalised coupling $a_s=\alpha_s/\pi$ and the renormalized quark mass $m$ 
+  measured.} cannot depend on the renormalisation scale $\mu$. Thus the
+derivative by $\mu$ of a general \textit{physical quantity} $R(q, a_s, m)$ that depends on the
+external momentum q, the renormalised coupling $a_s\equiv\alpha_s/\pi$ and the
+renormalized quark mass $m$ has to yield zero
 \begin{equation}
-  \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0
+  \label{eq:RGE}
+  \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{m} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
 \end{equation}
-we can define the \textit{renormalisation group functions}:
+\cref{eq:RGE} is referred to as \textbf{renormalization group equation} and
+is the basis for defining the \textit{renormalisation group functions}:
 \begin{align}
   \beta(a_s) &\equiv -\mu \od{a_s}{\mu} = \beta_1 a_s^2 + \beta_2 a_s^3 + \dots & \beta-\text{function}
   \label{eq:betaFunction} \\
@@ -169,8 +177,15 @@ we can define the \textit{renormalisation group functions}:
 \end{align}
 
 \subsubsection{Running gauge coupling}
+The $\beta$-function and the anomalous mass dimension are responsible for the
+running of the strong coupling and the running of the quark mass respektively.
+In this section we will shortly review the $\beta$-function and its implications
+on the strong coupling, whereas in the following section we will discuss the
+anomalous-mass dimension.
+
 Regarding the $\beta$-function we notice, that $a_s(\mu)$ is not a constant, but
-\textit{runs} by varying the scale $\mu$. Integrating the $\beta$-function yields 
+\textit{runs} by varying its scale $\mu$. Lets observe the running of the strong
+coupling constant by integrating the $\beta$-function 
 \begin{equation}
   \int_{a_s(\mu_1)}^{a_s(\mu_2)}\frac{\dif a_s}{\beta(a_s)} = - \int_{\mu_1}^{\mu_2} \frac{\dif \mu}{\mu} = \log \frac{\mu_1}{\mu_2}.
 \end{equation}
@@ -188,9 +203,12 @@ $\beta$-function \ref{eq:betaFunction} is positive. Thus for $\mu_2>\mu_1$ $a_s(
 logarithmically and vanishes for $\mu_2 \to \infty$. This behaviour is known as
 \textit{asymptotic freedom}.
 The coefficients of the $\beta$-function are currently known up to the 5th
-order, which are displayed in the appendix \ref{sec:betaCoefficients}.
+order and listed in the appendix \ref{sec:betaCoefficients}.
 
 \subsubsection{Running quark mass}
+Not only the coupling but also the masses carry an energy dependencies, which is
+governed by the \textit{anomalou mass dimension} $\gamma(a_s)$.
+
 The properties of the running quark mass can be derived similar to the gauge
 coupling. Starting from integrating the \textit{anomalous mass dimension} \ref{eq:anomalousMassDimension}
 \begin{equation}
@@ -208,6 +226,95 @@ The general relation between different scales is given by
   m(\mu_2) = m(\mu_1) \exp \left( \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}  \right)
 \end{equation}
 and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
+
+To theoretically describe the strong interaction regime of $\tau$-decays we have
+to introduce the \textbf{QCD sum rules} for which we will devote the following section.
+
+\subsection{Two-Point function}
+The vacuum expectation value of the product of the conserved
+noether current $J_\mu(x)$ at different space-times points $x$ and $y$ is known
+as the \textbf{two-point function} (or simply \textbf{correlator})
+\begin{equation}
+  \label{eq:twoPointFunction}
+  \Pi_{\mu\nu}(q^2) = \langle  0 | J_\mu(x) J_\nu(y) | 0 \rangle,
+\end{equation}
+where the noether current is given by
+\begin{equation}
+  J_\mu(x) = \anti{q}(x) \Gamma q(y)
+\end{equation}
+, where $\Gamma$ stands for one of the dirac matrices $\Gamma \in \{ 1,
+i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
+the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
+\textit{vectorial}, A: \textit{axial-vectorial}, respectively). 
+
+The correlator tensor $\Pi_{\mu\nu}(q^2)$ can be lorentz decomposed to a scalar
+function $\Pi(q^2)$. There are only two possible terms that can reproduce the
+second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
+multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
+\begin{equation}
+  \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
+\end{equation}
+By making use of the \textbf{Ward-identity} \cite{Peskin1995}
+\begin{equation}
+  q^\mu \Pi_{\mu\nu}(q^2) = q^\nu \Pi_{\mu\nu} = 0
+\end{equation}
+we can demonstrate, that the two arbitrary functions are related
+\begin{equation}
+  \begin{split}
+    q^\mu q^\nu \Pi_{\mu\nu} &= q^4 A(q^2) + q^4 B(q^2) = 0 \\
+    &\quad \implies A(q^2) = -B(q^2).
+  \end{split}
+\end{equation}
+Thus redefining $A(q^2) \equiv \Pi(q^2)$ we expressed the correlator as a scalar function
+\begin{equation}
+  \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
+\end{equation}
+
+The scalar QCD two point function can then be related to the spectrum of
+hadronic states. The correlator is then related to an integral over the
+\textbf{spectral function} $\rho(s)$ via the \textit{Källén-Lehmann spectral
+  representation} \cite{Kallen1952,Lehmann1954}, which is known since the early fities
+\begin{equation}
+  \label{eq:dispersionRelation}
+  \Pi(q^2) = \int_0^\infty \dif s \frac{\rho(s)}{s - q^2 - i \epsilon}.
+\end{equation}
+
+Equation \ref{eq:dispersionRelation} is refered to as \textbf{dispersion relation} analogous to similar
+relations which arise for example in electrodynamics and defines the
+\textbf{spectral function} (a derivation can be found in \cite{Rafael1997})
+\begin{equation}
+  \label{eq:spectralFunction}
+  \rho(s) = \frac{1}{\pi} \Ima \Pi(s).
+\end{equation}
+
+Until know we connected theoretical correlators with the measurable hadronic
+spectrum. Nevertheless the analytic properties of the correlators have to be
+discussed as the function has discontinuities.
+
+The main contribution from the spectral function given in
+\cref{eq:dispersionRelation} are the hadronic final states
+\begin{equation}
+  2 \pi \rho(m^2) = \sum_n \langle  0 | J_\mu(x) | n \rangle \langle n | J_\nu(y) \rangle (2 \pi^2)^4 \delta^{(4)}(p - p_n),
+\end{equation}
+which lead to a series of continuous poles on the positive real axis for the
+two-point function, see Fig. \ref{fig:analyticStructureCorrelator}.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{./images/analyticStructureCorrelator.eps}
+  \caption{Analytic structure in the complex $q^2$-plane of the Fourier
+    transform of the two-point function. The hadronic final states are
+    responsible for poles appearing on the real-axis. The one-particle states contribute as
+    isolated pole and the multi-particle states contribute as bound-states poles
+    or a continues ``discontinuity cut'' \cite{Peskin1995}.}
+  \label{fig:analyticStructureCorrelator}
+\end{figure}
+These discontinuities can be tackled with \textit{Cauchy's theorem}, which we
+will apply in \cref{secSumRules}.
+
+Until now we exclusively dealt with the perturbative (PT) part of the theory,
+but QCD is known to have not negligible non-perturbative (NPT) contributions.
+Thus before continuing with the \textit{Sum Rules} we need a final ingredient
+the operator product expansion, which implements NPT cotributions to our theory.
 
 
 \subsection{Operator Product Expansion}
@@ -260,34 +367,23 @@ momenta explicit
 where we used $C^{(D)}=c/(-s)^{D/2}$ with $D$ being the dimension. Consequently
 the OPE should converge with increasing dimension for suficienty large momenta $s$.
 
-Let's rapidly show how the OPE contributions are calculated with a the
-``standard example'' (following \cite{Pascual1986}), where we calculate the
-perturbative and quark-condensate Wilson-coefficients for the $\rho$-meson. We
-start with the two-point function 
-\begin{equation}
-  \Pi^{\mu\nu}(q) = i \int \dif^4 x e^{iqx} \langle \Omega | T\{ j^\mu(x) j^\nu(0) \} \rangle
-\end{equation}
-with two-quark currents
-\begin{equation}
-  j^\mu(x) = [\anti q_i \Gamma q_j](x).
-\end{equation}
-For the $\rho$-meson, which is composed of u and d quarks, the current takes the
+Let's show how the OPE contributions are calculated with a the
+``standard example'' (following \cite{Pascual1986}), where we compute the
+perturbative and quark-condensate Wilson-coefficients for the $\rho$-meson. 
+For the $\rho$-meson, which is composed of u and d quarks, the current of \cref{eq:twoPointFunction} takes the
 following form
 \begin{equation}
   j^\mu(x) = \frac{1}{2}\left(:[\anti{u} \gamma^\mu u](x) - \anti{d} \gamma^\mu d](x)\right).
 \end{equation}
-The correlator tensor can be rewritten, due to its Lorentz structure, into a
-scalar by using the \textit{Ward identity}
-\begin{equation}
-  \Pi^{\mu\nu}(s) = (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi(s).
-\end{equation}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/condensateFeynmanDiagram.eps}
+  \caption{Feynman diagrams of the perturbative (a) and the quark-condensate (b)
+  contribution. The upper part of the right diagram is not wick-contracted and responsible for the condensate.}
   \label{fig:OPEFeynmanDiagram}
 \end{figure}
-In \cref{fig:OPEFeynmanDiagram} we draw the Feynman-diagram to at tree level,
-from which we can take the uncontracted mathematical expression
+In \cref{fig:OPEFeynmanDiagram} we draw the Feynman-diagram,
+from which we can take the uncontracted mathematical expression for the scalar correlator
 \begin{equation}
   \begin{split}
     \Pi(q^2) &= - \frac{i}{4 q^2 (D -1)} \int \dif^D x e^{iqx} \langle \Omega | T \{:\anti{u}(x) \gamma^\mu u(x) - \anti{d}(x) \gamma^{mu} d(x): \\
@@ -296,6 +392,7 @@ from which we can take the uncontracted mathematical expression
 \end{equation}
 Using Wick's theorem we can contract all of the fields and calculate the first
 term of the OPE ($\mathbb{1}$), which represents the perturbative contribution
+of the OPE ($\mathbb{1}$)
 \begin{equation}
   \begin{split}
     \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \\
@@ -334,71 +431,47 @@ The finally result can be taken from \cite{Pascual1984} and yields
   \Pi_{(\rho)}(q^2) = \frac{1}{2} \frac{1}{\left(-q^2\right)^2} \left[ m_u\langle \anti{u} u + m_d \langle \anti{d} \rangle\right].
 \end{equation}
 
+The usage of the OPE and its validity is far from obvious. We are deriving the
+OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
+Feynman-graphs are calculated perturbatively but the coefficients with dimension
+$D>0$ correspond to NPT condensates!
 
-
-
-
-
-
-
+Having gathered all of the necessary concepts we can close the gap between the
+theory and experiment in the last section of the introduction: QCD Sum Rules.
 
 \subsection{Sum Rules}
-We need to relate the measurable hadronic final states of a QCD process (e.g.
-$\tau$-decays into Hadrons) to a theoretical calculable value. Consequently we will employ \textbf{QCD Sum Rules}\cite{Shifman1978}, which is a combination of the \textbf{operator
-  product expansion} (OPE), the \textbf{optical theorem}, a \textbf{dispersion
-relation} the analyticity of the \textbf{two-poin function} and the \textbf{quark
-hadron duality}. 
+\label{sec:sumRules}
+To relate the measurable hadronic final states of a QCD process (e.g.
+$\tau$-decays into Hadrons) to a theoretical calculable \textbf{QCD sum rules}
+have been empliyed by Shifman in the late sevent \cite{Shifman1978}.
 
-Starting from the the vacuum expectation value of the product of the conserved
-noether current $J_\mu(x)$ at different space-times points $x$ and $y$, which
-is known as the
-\textit{two-point function} (or simply correlator)
+The sum rules are a combination of the two-point function and its analyticity,
+the OPE, a dispersion relation, the optical theorem and quark hadron duality.  
+
+The previously introduced two-point function \cref{eq:twoPointFunction} is
+generally descriped by the OPE to account for NPT effects.
 \begin{equation}
-  \label{eq:twoPointFunction}
-  \Pi(q^2) = \langle  0 | J_\mu(x) J_\nu(y) | 0 \rangle,
+  \Pi(q^2) = \Pi^{OPE}(q^2).
 \end{equation}
-where the noether current is given by
+Furthermore it is related to the theoretical spectral function $\rho(s)$ via a
+dispersion relation \cref(eq:dispersionRelation). Using QCD we are computing
+interactions based on quarks and gluons, but due to
+confinement, we are only able to observe Hadrons. Consequently to connect the
+theory to the experiment we have to assume \textbf{quark-hadron
+  duality}\footnote{Or simply duality.}, which
+implies that physical quantities can be described equally good in the hadronic or in
+the quark-gluon picture. Thus we can rewrite the dispersion relation
+\cref{eq:dispersionRelation} as
 \begin{equation}
-  J_\mu(x) = \Psi^\dagger(x) \gamma_\mu (\gamma_5) \Psi(x).
+  \Pi^{OPE}_{th}(q^2) = \int_0^\infty \frac{\rho_{exp}(q^2)}{(s-q^2-i\epsilon)},
 \end{equation}
-The two-point function, within the framework of QCD sum rules, is improved by
-the OPE expansion
-\begin{equation}
-  \Pi_{OPE}(s) = \sum_n C_{2n}(s, \mu) \frac{\langle \hat{\mathcal{O}} (\mu) \rangle }{s^{n}},
-\end{equation}
-where we used $q^2=s$. It is furthermore related to the hadronic
-\textbf{spectral function} $\rho(q^2)$ through the \textit{Källén-Lehmann
-  spectral representation} \cite{Kallen1952}\cite{Lehmann1954}
-\begin{equation}
-  \label{eq:dispersionRelation}
-  \Pi(q^2) = \int_0^\infty \dif s \frac{\rho(s)}{s - q^2 - i \epsilon},
-\end{equation}
-where the spectral function $\rho(s)$ is defined as
-\begin{equation}
-  \rho(s) \equiv \frac{1}{\pi} \Ima \Pi(s).
-\end{equation}
-Equation \ref{eq:dispersionRelation} is refered to as \textbf{dispersion relation} analogous to similar
-realtions which arise for example in electrodynamics.
-The the main contribution from the spectral function given in
-\cref{eq:dispersionRelation} are the hadronic final states
-\begin{equation}
-  2 \pi \rho(m^2) = \sum_n \langle  0 | J_\mu(x) | n \rangle \langle n | J_\nu(y) \rangle (2 \pi^2)^4 \delta^{(4)}(p - p_n),
-\end{equation}
-which lead to a series of continuos poles on the positive real axis for the
-two-point function, see Fig. \ref{fig:analyticStructureCorrelator}.
-\begin{figure}[h]
-  \centering
-  \label{fig:analyticStructureCorrelator}
-  \includegraphics[width=0.8\textwidth]{./images/analyticStructureCorrelator.eps}
-  \caption{Analytic structure in the complex $q^2$-plane of the Fourier
-    transform of the two-point function. The hadronic final states are
-    responsible for poles appearing on the real-axis. The one-particle states contribute as
-    isolated pole and the multi-particle states contribute as bound-states poles
-    or a continues ``discontinuity cut'' (see \cite{Peskin1995}).}
-\end{figure}
-As the experimental data, which solely contributes to the spectral function
-$\rho(q^2)$, is only accesible on the postive real axis, we have to use Cauchy's
-theorem to access the theoretical values of the two-point function close to the
+where we connected the theoretical correlator $\Pi_{th}$ with the experimental
+measurable spectral function $\rho_{exp}$.
+
+We have seen that the theoretical description of the correlator $\Pi_{th}$
+contains poles on the real axis, but the experimental data $\rho_{exp}$ is solely
+accesible on the positive real axis. Thus we have to make
+use of Cauchy's theorem to access the theoretical values of the two-point function close to the
 postive real axis (see \cref{fig:correlatorComplexContour}).
 \begin{figure}[h]
   \centering
@@ -409,34 +482,15 @@ postive real axis (see \cref{fig:correlatorComplexContour}).
 \end{figure}
 
 The final ingredient of the QCD sum rules is the \textit{optical theorem},
-relating experimental data with the imaginary part of the correlator. E.g.
-taking the the total $e^+ e^-$ cross section scattering into hadrons
-\begin{equation}
-  R_q(s) \equiv \frac{\sigma(e^+ e^- \to \gamma^* \to q \bar q)}{\sigma(e^+ e^- \to \mu^+ \mu^-)} = 12 \pi \Ima \Pi_{Had}(s).
-\end{equation}
-Due to asymptotic freedom\footnote{There are no free quarks. They are bound in
-  pairs of two or three.} experiments can only detect Hadrons (note the
-$exp$-indice in $\Ima \Pi_{exp}(s)$), but on the theory
-side we are calculating with quarks as degrees of freedom. Consequently we
-assume that $\Pi_{Had}$ can be set equal to $\Pi_{OPE}$, which is referred
-to as \textit{quark hadron duality}.
+relating experimental data with the imaginary part of the correlator (the
+spectral function $\rho(s)$). 
 
 In total, with the help Cauchy's theorem, the QCD sum rules can be sumed up in
 the following expression
 \begin{equation}
   \label{eq:qcdSumRules}
-  \frac{1}{\pi}\int_0^\infty \frac{\Ima \Pi_{Had}(t)}{t - s}\dif t = \frac{1}{\pi} \oint_{\mathcal{C}} \frac{\Ima \Pi_{OPE}(t)}{t -s}\dif t,
+  \frac{1}{\pi}\int_0^\infty \frac{\rho_{exp}(t)}{t - s}\dif t = \frac{1}{\pi} \oint_{\mathcal{C}} \frac{\Ima \Pi_{OPE}(t)}{t -s}\dif t,
 \end{equation}
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated with by applying the OPE of the correlator $\Pi_{OPE}(s)$.
-
-The usage of the OPE and its validity is far from obvious. We are deriving the
-OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
-Feynman-graphs are calculated perturbatively but the coefficients with dimension
-$D>0$ correspond to NPT condensates!
-
-The usage of the OPE and its validity is far from obvious. We are deriving the
-OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
-Feynman-graphs are calculated perturbatively but the coefficients with dimension
-$D>0$ correspond to NPT condensates!
 \end{document}
