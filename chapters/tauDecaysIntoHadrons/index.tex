@@ -146,24 +146,114 @@ which pQCD would break down.
 
 To deal with the latter issue we have to suppress the contributions of the
 correlator close to the positive real axis, which can be achieved by introducing
-so called \textbf{pinched weights}.
+weight functions, which suppress contributions of the two-point function close
+to the postive real axis.
 
-\section{Pinched weights}
-
-
-We furthermore evade regions of the two-point
-correlator on the positive real axis (with which we will deal with to a later
-point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
-  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
-  \to m_\tau$.}) Finally combining \cref{eq:correlatorContourIntegral} with
+Finally combining \cref{eq:correlatorContourIntegral} with
 \cref{eq:hadronicTauDecayRatio} we get
 \begin{equation}
+  \label{eq:rTauT+L}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
 \end{equation}
 for the hadronic $\tau$-decay ratio.
 
+
+\section{Pinched weights}
+We are free to multiply \cref{eq:correlatorContourIntegral} by an analytic weight function $\omega(s)$
+\begin{equation}
+  \int_0^{m_\tau} \omega(s) \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \omega(s) \Pi(s) \dif s.
+\end{equation}
+We can use this technique to suppress contributions for the two-point function
+close to the positive real axis by implementing so called \textbf{pinched
+  weights} of the form
+\begin{equation}
+  \omega(s) = (1-\frac{s}{m_\tau^2})^k,
+\end{equation}
+where k is the degree of the pinched weight. The heigher the degree the farther
+we operate from the critical postivie real axis (see. \cref{fig:pinchedWeightGraphs}), which suppresses the effects of
+duality violations. This pinching of second degree appears quite naturally.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/monomialWeightGraphs.png}
+  \caption{Monomial weights $(1-s/m_\tau^2)^k$ for degrees $1\to4$. We can see
+    that weights of heigher pinching decrease faster, which comes in handy if we
+  want to suppress duality violations.}
+  \label{fig:monomialWeightGraphs}
+\end{figure}
+If we regard the incluse $\tau-decay$ ratio \cref{eq:rTauT+L}, we note that for the
+transversal component we already have a double pinched weight, the
+\textit{kinematic weight}
+\begin{equation}
+  \label{eq:kinematicWeight}
+  \omega_\tau(s) = \left( 1-\frac{s}{m_\tau^2} \right) \left( 1 + 2 \frac{s}{m_\tau^2} \right).
+\end{equation}
+In general it is said that a double pinched weight is sufficient to neglect
+effects caused by duality violation.
+
+We can also use different weights to control the dimensions of the OPE that
+contribute. The weights we are using have to be analytic, so that we can make
+use of Cauchy's theorem. Thus they can be represented as polynomials
+\begin{equation}
+  \omega(x) = \sum_i a_i x^i,
+\end{equation}
+every contributing monomial is responsible for a dimension of the OPE.
+Dimensions that are not represented in the weight polynomial do not contribute
+at all or are very suppressed as we will demonstrate now.
+
+The residue of a monomial $x^k$ is only different from 0 if its power $k=-1$:
+\begin{equation}
+  \label{eq:monomialWeights}
+  \oint_{C} x^k \dif x = i \int_0^{2\pi}\left(e^{i \theta}\right)^{k+1} \dif \theta
+  = \begin{cases} \mbox{$2 \pi i$} & \mbox{if } k=-1, \\ \mbox{0} & \mbox{otherwise} \end{cases}.
+\end{equation}
+Consequently if we exchange the kinematic weight of the incluse ratio
+\cref{eq:inclusiveRatio} through a monomial and neglect all terms of no interest
+to us we can write
+\begin{equation}
+  \label{eq:monomialInclusiveRatio}
+  \begin{split}
+  \left. R(x m_\tau) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \frac{x^k}{(x m_\tau)^{\frac{D}{2}}}C^{D}(x m_\tau) \\
+  &= \frac{1}{(m_\tau)^{\frac{D}{2}}} \oint_{\abs{x}=1} x^{k-D/2} \,C^{D}(x m_\tau),
+  \end{split}
+\end{equation}
+where $C^{D}$ are the $D$-dimensional Wilson coefficients. Thus combining
+\cref{eq:monomialWeights} with \cref{eq:monomialInclusiveRatio} we see that
+only Dimension  which fulfill
+\begin{equation}
+  k - D/2 = -1 \quad \implies \quad  D = 2(k+1)
+\end{equation}
+contribute to the OPE. For example the polynomial of the kinematic weight is
+given by
+\begin{equation}
+  (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3x^2_{D=6} + 2x^3_{D=8},
+\end{equation}
+where we underbraced the monomials and gave the active dimensions. A list of
+monomomials and their corresponding Dimensions up to dimension 14 can be found
+in \cref{table:monomialDimensions}.
+\begin{table}
+  \centering
+  \begin{tabular}{l|lllllll}
+    \toprule
+    \textbf{monomial:} & $x^0$ & $x^1$ & $x^2$ & $x^3$ & $x^5$ & $x^6$ & $x^7$\\
+    \textbf{dimension:} & $D^{(2)}$ & $D^{(4)}$ & $D^{(6)}$ & $D^{(8)}$ & $D^{(10)}$ & $D^{(12)}$ & $D^{(14)}$\\
+    \bottomrule 
+  \end{tabular}
+  \caption{List of monomials and their corresponding ``active'' dimensions in the OPE.}
+  \label{table:monomialDimensions}
+\end{table}
+This behaviour enables us to bring out different dimensions of the OPE and
+suppress contributions of heigher order ($D\geq10$) for which less is kown. 
+
+
+
+
+We furthermore evade regions of the two-point
+correlator on the positive real axis (with which we will deal with to a later
+point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
+  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
+  \to m_\tau$.}) 
 The contour integral obtained is an import result as we can now theoretically
 evaluate the hadronic $\tau$-decay ratio sufficiently large energy scales
 ($m_\tau \approx \SI{1.78}{\mega\electronvolt}$) at which
