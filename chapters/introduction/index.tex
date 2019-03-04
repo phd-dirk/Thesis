@@ -231,6 +231,7 @@ To theoretically describe the strong interaction regime of $\tau$-decays we have
 to introduce the \textbf{QCD sum rules} for which we will devote the following section.
 
 \subsection{Two-Point function}
+\label{sec:twoPointFunction}
 The vacuum expectation value of the product of the conserved
 noether current $J_\mu(x)$ at different space-times points $x$ and $y$ is known
 as the \textbf{two-point function} (or simply \textbf{correlator})
@@ -256,6 +257,7 @@ multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
 \end{equation}
 By making use of the \textbf{Ward-identity} \cite{Peskin1995}
 \begin{equation}
+  \label{eq:wardIdentity}
   q^\mu \Pi_{\mu\nu}(q^2) = q^\nu \Pi_{\mu\nu} = 0
 \end{equation}
 we can demonstrate, that the two arbitrary functions are related
@@ -472,7 +474,12 @@ We have seen that the theoretical description of the correlator $\Pi_{th}$
 contains poles on the real axis, but the experimental data $\rho_{exp}$ is solely
 accesible on the positive real axis. Thus we have to make
 use of Cauchy's theorem to access the theoretical values of the two-point function close to the
-postive real axis (see \cref{fig:correlatorComplexContour}).
+postive real axis (see \cref{fig:correlatorComplexContour}) given by
+\begin{equation}
+  \label{eq:cauchysTheorem}
+  \int_{\mathcal{C}} f(z) \dif z = 0,
+\end{equation}
+where $f(z)$ is an analytic function on a closed contour $\mathcal{C}$.
 \begin{figure}[h]
   \centering
   \label{fig:correlatorComplexContour}

@@ -3,37 +3,46 @@
 \begin{document}
 \chapter{$\tau$ decays into hadrons}
 The $\tau$-lepton is the only lepton heavy enough to decay into Hadrons. It
-permits one of the most precie determinations of the strong coupling $\alpha_s$.
+permits one of the most precise determinations of the strong coupling $\alpha_s$.
 The inclusive $\tau$-decay ratio
 \begin{equation}
   \label{eq:inclusiveRatio}
   R_\tau = \frac{\Gamma(\tau \to \nu_\tau + \text{Hadrons})}{\Gamma(\tau \to \nu_\tau e^+ e^-)}
 \end{equation}
-can be precisly calculated and is sensitive to $\alpha_s$. Due to the mass of
-the $\tau$-lepton $m_\tau\approx\SI{1.8}{\giga\electronvolt}$ it is a good
-phenomen to perform low-energy QCD analysis.
+can be precisly calculated and is sensitive to $\alpha_s$. Due to low the mass of
+the $\tau$-lepton $m_\tau\approx\SI{1.8}{\giga\eV}$ $\tau$-decays are excellent
+for performing a low-energy QCD analysis.
 The theoretical expression of the hadronic $\tau$-decay ratio was first derived
-by \cite{Tsai1971} (using current algebra, a more recent derivation making use
-of the \textit{optical theorem} can be taken from \cite{Schwab2002}):
+by \cite{Tsai1971}, using current algebra, a more recent derivation making use
+of the \textit{optical theorem} can be taken from \cite{Schwab2002}. The
+inclusive ratio is then given by:
 \begin{equation}
   \label{eq:hadronicTauDecayRatio}
-  R_\tau = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
+  R_\tau(s) = 12 \pi \int_0^{m_\tau} = \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
-  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)}(s) \right].
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)}(s) \right],
 \end{equation}
-The $\tau$-decay ratio depends on the two-point function
+where $\Ima \Pi$ is the two-point function (see \cref{sec:twoPointFunction}). In
+the case of $\tau$-decays we only have to consider vector (V) and axial-vector
+contributions (A) of decays into up, down and strange quarks. Thus taking $i,j$ as the flavour
+indices for the light quarks (u, d and s) we can express the correlator as
 \begin{equation}
   \Pi_{\mu\nu,ij}^{V/A}(s) \equiv i \int \dif x \,e^{ipx} \langle \Omega | T \{ J_{\mu,ij}^{V/A}(x) J_{\nu,ij}^{V/A}(0)^\dagger \} | \Omega \rangle,
 \end{equation}
-with $|\Omega\rangle$ being the physical vacuum. The vectorial and axial-vector
-currents are given by
+with $|\Omega\rangle$ being the physical vacuum. The vector and axial-vector
+currents are then distinguished by the corresponding dirac-matrices
+($\gamma_\mu \text{and} \gamma_\mu \gamma_5$) given by
 \begin{equation}
-  J_{\mu,ij}^{V}(x) = \anti{q}_j(x) \gamma_\mu q_i(x) \quad \text{and} \quad J_{\mu,ij}^{A}(x) = \anti{q}_j(x) \gamma_\mu \gamma_5 q_i(x)
+  J_{\mu,ij}^{V}(x) = \anti{q}_j(x) \gamma_\mu q_i(x) \quad \text{and} \quad J_{\mu,ij}^{A}(x) = \anti{q}_j(x) \gamma_\mu \gamma_5 q_i(x).
 \end{equation}
-where $i,j$ stand for the light quark flavours u, d and s.
+The two-point function can be decomposed into its vector and axial-vector
+contributions, but also into transversal and longitudinal components. We will
+give now both of these decompositions and relate them, which has some
+implications for a common used approximation: the \textbf{chiral limit}, where
+the quark masses are taken to 0 ($m_q \to 0$).
 
-The general correlator $\Pi^{\mu\nu}(q^2)$ can be decomposed into a vector/
-axial-vector (V/A) and scalar/ pseudo-scalar (S/P) part containing a correction \cite{Broadhurst1975}
+Starting with the decomposition into vector, axial-vector, scalar (S) and pseudo-scalar (P) components we can
+write \cite{Broadhurst1981,Jamin1992}
 \begin{equation}
   \label{eq:correlatorVectorScalarDecomposition}
   \begin{split}
@@ -42,69 +51,68 @@ axial-vector (V/A) and scalar/ pseudo-scalar (S/P) part containing a correction 
   \end{split}
 \end{equation}
 which is composed of a vector $\Pi^{V,A}$ and scalar $\Pi^{S,P}$ part. The third
-term are corrections arising due to the physical vacuum $|\Omega\rangle$.
-
-The general correlator $\Pi^{\mu\nu}$ can also be decomposed into transversal
+term are corrections arising due to the physical vacuum $|\Omega\rangle$. The
+latter decomposition rewrites the correlator $\Pi^{\mu\nu}(q^2)$ into transversal
 and longitudinal components:
 \begin{equation}
   \label{eq:correlatorTransversalLongitudinalDecomposition}
   \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2).
 \end{equation}
-
-To relate the two different contributions we note, that only the scalar components of
-\cref{eq:correlatorVectorScalarDecomposition} carry a mass term. Using the
-\textit{Ward identity}
+With the two decompositions \cref{eq:correlatorVectorScalarDecomposition} and
+\cref{eq:correlatorTransversalLongitudinalDecomposition} we can now identify the
+longitudinal components of the correlator as being purely scalar, by multiplying
+\cref{eq:correlatorVectorScalarDecomposition} by two four-momenta and making use
+of the Ward-idendity \cref{eq:wardIdentity} we can write
 \begin{equation}
-  q_\mu \Pi^{\mu\nu}(q^2) = 0
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
 \end{equation}
-we can introduce two four-momenta into
-\cref{eq:correlatorVectorScalarDecomposition}
+which then can be related to the longitudinal component of
+\cref{eq:correlatorTransversalLongitudinalDecomposition} by comparisson of the
+two equations
 \begin{equation}
-  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle]
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
 \end{equation}
-to relate the longitudinal of \cref{eq:correlatorTransversalLongitudinalDecomposition}
+In a more eloquent way this can be expressed as
 \begin{equation}
-  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s),
+  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
 \end{equation}
-where we defined $s \equiv q^2$. Thus
+where we can see, that all mass terms are related to the longitudinal component
+of the correlator. By defining a combination of the transversal and longitudinal
+correlator
 \begin{equation}
-  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle].
+  \Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)
 \end{equation}
-Furthermore we can relate the transversal and vectorial components via
+we can additionaly relate the transversal and vectorial components via
 \begin{equation}
   \label{eq:longitudinalCorrelator}
   \begin{split}
-    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) + (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu} q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s)
+    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) + (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu} q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s),
   \end{split} 
 \end{equation}
-where $\Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)$, such that
+such that
 \begin{equation}
-  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)}.
+  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)},
 \end{equation}
+where the vector/ axial-vector component of the correlator is now related to the
+newly defined transversal and longitudinal combination of the correlator. As the
+$\tau$-decays, with the limiting factor of the $\tau$-mass, can only decay into
+light quarks we will often neglect the quark masses and work in the so called
+chiral limit. In the chiral limit the longitudinal component, which is 
+proportional to the quark masses, of the correlator vanishes.  
 
-Inspecting the inclusive ratio $R_\tau$ in \cref{eq:inclusiveRatio} introduces a
-problematic integral over the real axis of $\Pi(s)$ from $0$ up to $m_\tau$.
-The integral is problematic for two reasons:
+Examining the inclusive ratio $R_\tau$ in \cref{eq:inclusiveRatio}, we note that
+we have to deal with a problematic integral over the real axis of $\Pi(s)$ from
+$0$ up to $m_\tau$. The integral is problematic for two reasons:
 \begin{itemize}
-  \item The \textit{perturbative Quantum Chromodynamcs} (\textbf{pQCD}) and the OPE breaks down for low
+  \item \textbf{Perturbative Quantum Chromodynamcs} (pQCD) and the OPE breaks down for low
     energies (over which we have to integrate).
   \item The positive euclidean axis of $\Pi(s)$ has a discontinuity cut and can
-    theoretically not be evaluated.
+    theoretically not be evaluated (see \cref{sec:twoPointFunction}).
 \end{itemize}
-To literally circunvent these issues we make use of \textit{Cauchy's Theorem}
-\begin{equation}
-  \int_{\mathcal{C}} f(z) \dif z = 0,
-\end{equation}
-where $f(z)$ is an analytic function on a closed contour $\mathcal{C}$.
-
-In our case we have to deal with the two-point correlator $\Pi(s)$, which is analytic
-except for the positive real axis (with which we will deal with to a later
-point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
-  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
-  \to m_\tau$.}) Consequently, to rewrite we can rewrite the definite integral of
+To literally circunvent the former issue we make use of \textit{Cauchy's Theorem}
+\cref{eq:cauchysTheorem}. Consequently we rewrite the definite integral of
 \cref{eq:hadronicTauDecayRatio} into a contour integral over a closed circle
-with
-radius $m_\tau^2$. The closed contour consists of four line integrals,
+with radius $m_\tau^2$. The closed contour consists of four line integrals,
 which have been visualized in \cref{fig:rTauCauchysTheorem}. Summing over the
 four line integrals, performing a \textit{analytic continuation} of the
 two-point correlator $\Pi(s) \to \Pi(s + i \epsilon)$ and finally taking the
@@ -133,7 +141,21 @@ more intuitive form, which we also visualized in \cref{fig:rTauCauchysTheorem}
   of radius $m_\tau^2$.}
   \label{fig:rTauCauchysTheorem}
 \end{figure}
-Finally combining \cref{eq:correlatorContourIntegral} with
+Due to the circle-contour we can avoid low energies at
+which pQCD would break down. 
+
+To deal with the latter issue we have to suppress the contributions of the
+correlator close to the positive real axis, which can be achieved by introducing
+so called \textbf{pinched weights}.
+
+\section{Pinched weights}
+
+
+We furthermore evade regions of the two-point
+correlator on the positive real axis (with which we will deal with to a later
+point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
+  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
+  \to m_\tau$.}) Finally combining \cref{eq:correlatorContourIntegral} with
 \cref{eq:hadronicTauDecayRatio} we get
 \begin{equation}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
