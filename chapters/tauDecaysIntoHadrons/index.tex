@@ -80,6 +80,7 @@ where we can see, that all mass terms are related to the longitudinal component
 of the correlator. By defining a combination of the transversal and longitudinal
 correlator
 \begin{equation}
+  \label{eq:correlatorCombination}
   \Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)
 \end{equation}
 we can additionaly relate the transversal and vectorial components via
@@ -110,7 +111,10 @@ $0$ up to $m_\tau$. The integral is problematic for two reasons:
     theoretically not be evaluated (see \cref{sec:twoPointFunction}).
 \end{itemize}
 To literally circunvent the former issue we make use of \textit{Cauchy's Theorem}
-\cref{eq:cauchysTheorem}. Consequently we rewrite the definite integral of
+\cref{eq:cauchysTheorem}. For the latter we will apply so-called \textbf{pinched weights}.
+
+\section{Rescuing pQCD with Cauchy's theorem}
+We will make use of Cauchy's theorem to rewrite the definite integral of
 \cref{eq:hadronicTauDecayRatio} into a contour integral over a closed circle
 with radius $m_\tau^2$. The closed contour consists of four line integrals,
 which have been visualized in \cref{fig:rTauCauchysTheorem}. Summing over the
@@ -157,10 +161,25 @@ Finally combining \cref{eq:correlatorContourIntegral} with
   \left( 1 - \frac{s}{m_\tau^2} \right)
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)} \right]
 \end{equation}
-for the hadronic $\tau$-decay ratio.
+for the hadronic $\tau$-decay ratio. It is convenient to work with
+$\Pi^{(T+L)}$, which is connected to the vector/ axial-vector components of the
+correlator. Thus using \cref{eq:correlatorCombination} in \cref{eq:rTauT+L} yields
+\begin{equation}
+  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
+\end{equation}
 
+By introducing Cauchy's theorem we avoided low energies, which could lead to a
+breakdown of PT. The contour integral obtained is an important result as we are
+now able to theoretically evaluate the hadronic $\tau$-decay ratio at
+sufficiently large energy scales ($m_\tau \approx \SI{1.78}{\mega\eV}$)
+at which $\alpha_s(m_\tau)\approx 0.33$ \cite{Pich2016} is large enough to
+apply perturbation theory and the OPE. Obviously we would benefit from a
+contour integral over a bigger circunference, but $\tau$-decays are limited by the $m_\tau$.
+Nevertheless there are promising $e^+e^-$ annihilation data, which yields
+valuable R-ratio values up to $\SI{2}{\giga\electronvolt}$
+\cite{Boito2018}\cite{Keshavarzi2018}.
 
-\section{Pinched weights}
+\section{Pinched weights to avoid DVs}
 We are free to multiply \cref{eq:correlatorContourIntegral} by an analytic weight function $\omega(s)$
 \begin{equation}
   \int_0^{m_\tau} \omega(s) \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \omega(s) \Pi(s) \dif s.
@@ -227,7 +246,7 @@ only Dimension  which fulfill
 contribute to the OPE. For example the polynomial of the kinematic weight is
 given by
 \begin{equation}
-  (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3x^2_{D=6} + 2x^3_{D=8},
+  (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3\underbrace{x^2}_{D=6} + 2\underbrace{x^3}_{D=8},
 \end{equation}
 where we underbraced the monomials and gave the active dimensions. A list of
 monomomials and their corresponding Dimensions up to dimension 14 can be found
@@ -247,40 +266,21 @@ This behaviour enables us to bring out different dimensions of the OPE and
 suppress contributions of heigher order ($D\geq10$) for which less is kown. 
 
 
-
-
-We furthermore evade regions of the two-point
-correlator on the positive real axis (with which we will deal with to a later
-point\footnote{To not evaluate $\Pi(s)$ at the positive real axis we have to
-  introduce \textit{pinched weights}. The \textit{pinched weights} vanish for $s
-  \to m_\tau$.}) 
-The contour integral obtained is an import result as we can now theoretically
-evaluate the hadronic $\tau$-decay ratio sufficiently large energy scales
-($m_\tau \approx \SI{1.78}{\mega\electronvolt}$) at which
-$\alpha_s(m_\tau)\approx 0.33$ \cite{Pich2016} is tolerable heigh for applying
-perturbation theory and the OPE. Obviously we would benefit from a contour integral over a
-bigger circunference, but $\tau$-decays are limited by the $m_\tau$.
-Nevertheless there are promising $e^+e^-$ annihilation data, which yields
-valuable R-ratio values up to $\SI{2}{\giga\electronvolt}$
-\cite{Boito2018}\cite{Keshavarzi2018}.
-
-It is convenient to rewrite the 
-
-\begin{equation}
-  \Pi^{(L+T)} = \Pi^{(L)} + \Pi^{(T)}
-\end{equation}
-
-\begin{equation}
-  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right]
-\end{equation}
+\section{RG invariance}
+The two-point function is not a physical quantity. It does not fulfill the RGE
+\cref{eq:RGE} and is thus dependent on the scale $\mu$. We can enhance the
+inclusive ration \cref{eq:inclusiveRatio} making use of the \textbf{Adler function} defined as:
 \begin{equation}
   \label{eq:adlerFunction}
-  D^{(L+T)}(s) \equiv -s \od{}{s} \Pi^{(L+T)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s))
+  D^{(T+L)}(s) \equiv -s \od{}{s} \Pi^{(T+L)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s)),
 \end{equation}
-Integration by parts
+where we have two separate definitions: one for the transversal plus longitudinal
+contribution and one for solely longitudinal part. The two-point functions can now be replaced with the help of partial integration
 \begin{equation}
-  \int_a^b u(x) V(x) \dif x = \left[ U(x) V(x) \right]_a^b - \int_a^b U(x) v(x) \dif x
+  \int_a^b u(x) V(x) \dif x = \left[ U(x) V(x) \right]_a^b - \int_a^b U(x) v(x) \dif x.
 \end{equation}
+We will do the computation for each of the two cases $(T+L)$ and $(L)$ separate.
+Starting by the transversal plus longitudinal contribution we get:
 \begin{equation}
   \begin{split}
     R_\tau^{(1)} &= \frac{6 \pi i}{m_\tau^2} \oint_{\abs{s}=m_\tau^2}\underbrace{\left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right)}_{=u(x)} \underbrace{ \vphantom{\left( \frac{s}{m_\tau^2} \right)} \Pi^{(L+T)}(s)}_{=V(x)} \\
@@ -291,29 +291,30 @@ Integration by parts
 \end{equation}
 where we fixed the integration constant to $C=-\frac{m_\tau^2}{2}$ in the second
 line and left the antiderivatives contained in the squared brackets untouched.
-Parametrizing the expression in the squared brackets
+If we parametrizing the integral appearing in the expression in the squared
+brackets we can derive that it vanishes:
 \begin{equation}
     \left[ -\frac{m_\tau^2}{2} \left( 1 - e^{-i \phi} \right)^3 \left( 1 + e^{-i \phi} \right) \Pi^{(L+T)}(m_\tau^2 e^{-i \phi}) \right]_0^{2\pi} = 0
 \end{equation}
 where $s \to m_\tau^2 e^{-i \phi}$ and $(1 - e^{-i \cdot 0}) = (1 - e^{-i \cdot 2 \pi})
 = 0$.
-
+Repeating the same calculation for the longitudinal part yields
 \begin{equation}
   \begin{split}
-    R_\tau^{(2)} &= \oint_{\abs{s}=m_\tau^2} \dif s \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( - \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \\
+    R_\tau^{(L)} &= \oint_{\abs{s}=m_\tau^2} \dif s \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( - \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \\
     &= - 4 \pi i \oint \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 D^{(L)}(s)
   \end{split}
 \end{equation}
-
+Consequently combining the two parts results in
 \begin{equation}
-  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left[ 3 \left( 1 + \frac{s}{m_\tau^2} D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right]
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left[ 3 \left( 1 + \frac{s}{m_\tau^2} D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right].
 \end{equation}
-
+It is convenient to define $x=s/m_\tau^2$ such that we can rewrite the inclusive
+ratio as
 \begin{equation}
   \label{eq:rTauFinal}
-  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif x}{x} (1 - x)^3 \left[ 3 (1 + x) D^{(L+T)}(m_\tau^2 x) + 4 D^{(L)}(m_\tau^2 x)  \right],
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif x}{x} (1 - x)^3 \left[ 3 (1 + x) D^{(L+T)}(m_\tau^2 x) + 4 D^{(L)}(m_\tau^2 x)  \right].
 \end{equation}
-where $x=s/m_\tau^2$.
 
 \begin{equation}
   \label{eq:rTauContributions}
