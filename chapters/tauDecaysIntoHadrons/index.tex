@@ -324,8 +324,8 @@ ratio as
 \section{The perturbative expansion}
 We will treat the correlator in the chiral limit for which the longitudinal
 components $\Pi^{L}(s)$ vanish (see \cref{eq:longitudinalCorrelator}) and the
-axial and vectorial contributions are equal. Consequently \cite{Beneke2008} we
-can write the vector correlation function $\Pi(s)$ as:
+axial and vectorial contributions are equal. In the massless case we then
+can write the vector correlation function $\Pi(s)$ as \cite{Beneke2008}:
 \begin{equation}
   \label{eq:correlatorExpansion}
   \Pi_V^{T+L}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
@@ -382,62 +382,76 @@ The 6-loop calculation has until today not been achieved, but Beneke und Jamin
   c_{5,1} \approx 283 \pm 283.
 \end{equation}
 
-Until know we have mentioned the coefficients $c_{n,k}$ with a fixed $k=1$. This
-is due to the RGE, which relates coefficients with a different $k$ to the
-coefficients mentioned above. To make usage of the RGE $\Pi_V^{T+L}(s)$ needs to
-be a physical quantity, which can be achieved by rewriting \cref{eq:adlerFunction} to:
+Until now we have given the coefficients $c_{n,k}$ with solely $k=1$. This
+is due to the RGE, which relates coefficients with $k$ different than one to the
+coefficients mentioned above. To make use of the RGE the correlator $\Pi_V^{T+L}(s)$ needs to
+be a physical quantity, which can be achieved by rewriting it in terms of the
+Adler function (see. \cref{eq:adlerFunction}) to:
 \begin{equation}
   D_V^{(T+L)} = - s \od{\Pi_V^{(T+L)}(s)}{s} = \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1},
 \end{equation}
-where we used $\dif L^k/ \dif s=k\ln(-s/\mu^2)^{k-1}(-1/\mu^2)$. $D_V^{1+0}$
-being a physical quantity has to fulfill the RGE \cref{eq:RGE}
+where we used $\dif L^k/ \dif s=k\ln(-s/\mu^2)^{k-1}(-1/\mu^2)$. The
+Adler-function is physical quantity and has to fulfill the RGE \cref{eq:RGE}:
 \begin{equation}
   -\mu \od{}{\mu} D_V^{(T+L)} = -\mu \od{}{\mu} \left( \pd{}{L} \dif L + \pd{}{a_s} \dif a_s \right) D_V^{T+L}
   = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{T+L} = 0,
 \end{equation}
 where we defined the $\beta$-function in \cref{eq:betaFunction} and used $\dif L
-/ \dif \mu = - 2/ \mu$. The RGE puts constraints on the $c_{n, k}$-coefficients,
-... not independent
+/ \dif \mu = - 2/ \mu$. The RGE puts constraints on the $c_{n, k}$-coefficients
+for different $k$s, which are not not independent anymore.
+
+For example writing out the sum of the adler function to the second order in
+$\alpha_s$ yields
 \begin{equation}
-  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + a_\mu(c_{11} + 2 c_{12} L) + a_\mu^2(c_{21} + 2 c_{22} L + 3 c_{23} L^2) \right]
+  \label{eq:adlerSndOrder}
+  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + a_\mu(c_{11} + 2 c_{12} L) + a_\mu^2(c_{21} + 2 c_{22} L + 3 c_{23} L^2) \right].
 \end{equation}
-inserting into RGE
+Then inserting \cref{eq:adlerSndOrder} into the RGE
 \begin{equation}
   4 a_\mu c_{12} + 2 a_\mu^2(2 c_{22} + 6 c_{23} L) + \beta_1 a_\mu^2(c_{11} + 2 c_{12}L) + \mathcal{O}(a_\mu^3) = 0
 \end{equation}
-Thus
+lets us compare the coefficients order by order in $\alpha_s$. At order
+$\alpha_\mu$ only the $c_{12}$ term is present and has to be zero consequently.
+For $\mathcal{O}(a_\mu^2 L)$ the only $c_{23}$ exists ($c_{12}=0$) and has to
+vanish as well. Finally at $\mathcal{O}(a)$ we can relate $c_{22}$ with $c_{11}$
+resulting in:
 \begin{equation}
-  c_{12} = 0 \quad c_{22} = \frac{\beta_1 c_{11}}{4} \quad c_{23} = 0
+  c_{12} = 0, \quad c_{22} = \frac{\beta_1 c_{11}}{4} \quad \text{and} \quad c_{23} = 0.
 \end{equation}
-or $D(s)$ to the first order in $\alpha_s$
+or $D(s)$ to the first order in $\alpha_s$. Implementing the newly obtained
+Adler-coefficients we can write out the adler function to the first order:
 \begin{equation}
-  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + c_{11} a_\mu \left( c_{21} - \frac{1}{2} \beta_1 c_{11} L  \right) a_\mu^2 \right] + \mathcal{O}(a_\mu^3)
+  D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + c_{11} a_\mu \left( c_{21} - \frac{1}{2} \beta_1 c_{11} L  \right) a_\mu^2 \right] + \mathcal{O}(a_\mu^3).
 \end{equation}
 
+We have used the RGE to relate Adler-function coefficients and thus reduce its
+numbers. But as we will see in the following section the RGE gives us two
+different choices in the order of the computation of the perturbative
+contribution to the inclusive $\tau$-decay ratio.
+
 \subsection{Renormalisation group summation}
-We can express the perturbative contribution $\delta^{(0)}$ to $R_\tau$ (see
-\cref{eq:rTauContributions}) as
+By making use of the RGE we have to decide about the order of mathematical
+operations we perform. As the perturbative contribution $\delta^{(0)}$ is
+independent on the scale $\mu$ we are confronted with two choices
+\textbf{fixed-order perturbation theory} (FOPT) or \textbf{contour-improved
+  perturbation theory}. Each of them yields a different result and is the main
+source of error in extracting the strong coupling from $\tau$-decays.
+
+We can write the perturbative contribution $\delta^{(0)}$ to $R_\tau$ (see
+\cref{eq:rTauContributions}) in the chiral limit, such that $D^{(L)}$ vanishes as
 \begin{equation}
   \label{eq:rTauDelta0}
   \delta^{(0)} = \sum_{n=1}^{\infty} a_\mu^n \sum_{k=1}^n k c_{n,k} \frac{1}{2 \pi i} \oint_{\abs{x}=1} \frac{\dif x}{x} (1-x)^3(1+x) \log \left( \frac{-M_\tau^2 x}{\mu^2} \right)^{k-1},
 \end{equation}
 where we inserted the expansion of $D_V^{(T+L)}$ \cref{eq:adlerFunction} into
-$R_\tau$ \cref{eq:rTauFinal}. Keep in
-mind that we are working in the chiral limit, such that $D^{L}=0$ vanishes and
-the contributions from the vector and axialvector correlator are identical
+$R_\tau$ \cref{eq:rTauFinal}. Keep in mind that the contributions from the
+vector and axialvector correlator are identical in the massless case:
 \begin{equation}
   D^{(T+L)} = D^{(T+L)}_V + D^{(T+L)}_A = 2 D^{(T+L)}_V.
 \end{equation}
 
-The perturbative contribution $\delta^{(0)}$ is a physical quantity and
-satisfies the homogeneous RGE, thus is independent on the scale $\mu$.
-Consequently we have the freedom to choose $\mu$, which leads to two main
-descriptions \textbf{fixed-order perturbation theory} (FOPT) and
-\textbf{contour-improved perturbation theory} (CIPT). The two resulting series
-should converge to equal values, but differ notably. 
-
-
-By using the FOPT prescription we fix $\mu^2=m_\tau^2$ leading to
+In the following we will explain both the descriptions, starting by FOPT. By
+using the FOPT prescription we fix $\mu^2=m_\tau^2$ leading to
 \begin{equation}
   \delta_{FO}^{(0)} = \sum_{n=1}^\infty a(m_\tau^2)^n \sum_{k=1}^n k c_{n,k} J_{k-1}
 \end{equation}
@@ -450,8 +464,8 @@ The integrals $J_l$ up to order $\alpha_s^4$ are given by \cite{Beneke2008}:
   J_0 = 1, \quad J_1 = -\frac{19}{12} \quad J_2 = \frac{265}{72} - \frac{1}{3} \pi^2, \quad J_3 = - \frac{3355}{288} + \frac{19}{12}\pi^2.
 \end{equation}
 Using FOPT the strong coupling $a(\mu)$, which runs with the scale $\mu$, is
-fixed at $a(m_\tau^2)$ and can be taken out of the closed-contour integral. We
-still have to integrate over the logarithms $\log(-s/m_\tau^2)$. 
+fixed at $a(m_\tau^2)$ and can be taken out of the closed-contour integral. Thus
+we solely to integrate over the logarithms $\log(-s/m_\tau^2)$.  
 
 Using CIPT we can sum the logarithms by setting the scale to
 $\mu^2 = -m_\tau^2 x$ in \cref{eq:rTauDelta0}, resulting in:
@@ -468,9 +482,13 @@ All logarithms vanish except the ones for $k=1$:
 \end{equation}
 which selectes adler function coefficients $c_{n,1}$ with a fixed $k=1$. Handling the
 logarithms left us with the integration of $\alpha_s(- m_\tau^2 x)$ over the closed-contour $\oint_{\abs{x}=1}$, which now
-depends on the integration variable x.
+depends on the integration variable x. In general we have to decide if we want
+to perform a contour integration with a constant coupling constant and variable
+logarithms (FOPT) or ``constant logarithms'' and a running coupling (CIPT).
 
-Calculating the perturbative contribution $\delta^{(0)}$ to $R_\tau$ for the two different prescriptions yields \cite{Beneke2008}
+To emphasize the differences in both approaches we can calculate the
+perturbative contribution $\delta^{(0)}$ to $R_\tau$ for the two different
+prescriptions yielding \cite{Beneke2008}
 \begin{align}
   & \quad\qquad \alpha_s^2 \qquad \alpha_s^2 \qquad \alpha_s^3 \qquad \alpha_s^4 \quad\qquad \alpha_s^5 \nonumber\\
   \delta_{FO}^{(0)} &= 0.1082 + 0.0609 + 0.0334 + 0.0174 (+ 0.0088) = 0.2200 (0.2288) \\
@@ -480,16 +498,17 @@ The series indicate, that CIPT converges faster and that both series aproach a
 different value. This discrepancy represents currently the biggest theoretical
 uncertainity while extracting the strong coupling $\alpha_s$.
 
-As today we do not know which if FOPT or CIPT is the correct approach of
+As today we do not know if FOPT or CIPT is the correct approach of
 measuring $\alpha_s$. Therefore there are currently three ways of stating
-result:
+results:
 \begin{itemize}
   \item Quoting the average of both results.
   \item Quoting the CIPT result.
   \item Quoting the FOPT result.
 \end{itemize}
 
-We follow the approach of Beneke and Jamin \cite{Benke2008} who prefere FOPT.
+We follow the approach of Beneke and Jamin \cite{Benke2008} who have shown
+advantages of FOPT over CIPT.
 
 
 \section{Non-Perturbative OPE Contribution}
@@ -569,5 +588,91 @@ dimension six one we keep the simplest approach, leading to
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=8} = 0.04 \frac{\rho_{V/A}^{(8)}}{s^4}.
 \end{equation}
+
+
+\subsection{Duality Violations}
+
+
+\section{Experiment}
+The $\tau$-decay data we use to perform our QCD-analysis is from the
+\textbf{ALEPH} experiment. The ALEPH experiment was located at the
+large-electron-positron (LEP) collider at CERN laboratory in Geneva. LEP started
+producing particles in 1989 and was replaced in the late 90s by the
+large-hadron-collider, which makes use of the same tunnel of 27km circumference.
+The data produced within the experiment is still maintained by former ALEPH
+group members under led by M. Davier, which have performed regular updates on
+the data-sets \cite{Davier2013,Davier2008,Schael2005}.
+
+The measured spectral functions for the Aleph data are defined in
+\cite{Davier2007} and given for the transversal and longitudinal components separatly:
+\begin{equation}
+  \begin{split}
+    \rho^{(T)}_{V/A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}^2}S_{EW}} \frac{\mathcal{B}(\tau^- \to V^-/A^- \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \\
+    &\quad\times \frac{\dif N_{V/A}}{N_{V/A}\dif s} \left[ \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + \frac{2s}{m_\tau^2} \right) \right]^{-1} \\
+  \rho^{(L)}_{A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}^2 S_{EW}}} \frac{\mathcal{B}(\tau^- \to \pi^-(K^-) \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \times \frac{\dif N_A}{N_A \dif s} \left( 1 - \frac{s}{m_\tau^2} \right)^{-2}.
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  \mathcal{B}_e = ...
+\end{equation}
+
+\begin{equation}
+  R_{\tau, V/A} = \frac{B_{V/A, \tau}}{B_e}
+\end{equation}
+
+The data relies on a separation into vector and axial-vector channels. In the
+case of the Pions this can be achieved via counting. The vector channel is
+characterized by a negative parity, whereas the axial-vector channel has
+positive parity. A quark has by definition positive parity, thus an anti-quark
+has a negative parity. A meson, like the Pion particle, is a composite particle
+consiting of an quark an anti-quark. Consequently a single Pion carries negative
+parity, an even number of Pions carries positive parity and an odd number of
+Pions carries negative parity:
+\begin{equation}
+  n \times \pi = \begin{cases} \mbox{vector} & \mbox{if } n \text{ is even}, \\ \mbox{axial-vector} & \mbox{otherwise} \end{cases}.
+\end{equation}
+
+The contributions to the vector and axial channel can be seen in
+\textcolor{red}{figure}. The dominant modes in the vector case are
+\cite{Davier2006} $\tau^- \to \pi^-\pi^0 \nu_\tau$ and the $\tau^- \to \pi^-
+\pi^- \pi^+ \pi^0 \nu_\tau$. The first of these is produced by the $\rho(770)$
+meson, which in contrary to the pions carries angular momentum of one, which is
+also clearly visible as peak around $\SI{770}{\giga\eV}$ in
+\textcolor{red}{figure vector}. The dominant modes in the axial-vector case are
+$\tau^-\to \pi^-\nu_\tau$, $\tau^-\to \pi^- \pi^0 \pi^0 \nu_\tau$ and
+$\tau^- \to \pi^- \pi^- \pi^+\nu_\tau$. Here the three pion final states stem
+from the $a_1^-$-meson, which is also clearly visible as a peak in \textcolor{red}{figure}.
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{./images/specFuncAleph_V.png}
+        \caption{A gull}
+        \label{fig:gull}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{./images/specFuncAleph_A.png}
+        \caption{A mouse}
+        \label{fig:mouse}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.8\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{./images/specFuncAleph_VpA.png}
+      \label{fig:}
+    \end{subfigure}
+    \caption{Pictures of animals}\label{fig:animals}
+\end{figure}
+
+wavy => DV
+OPE cannot reproduce
+suppressed in VpA
+regions below 1.5 GeV can still not be applied
+
+The different inclusive $\tau$-decay ratios are then given by
+\begin{align}
+  R_{\tau,V} &= ...
+\end{align}
+
+
 
 \end{document}
