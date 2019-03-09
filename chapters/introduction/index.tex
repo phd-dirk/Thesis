@@ -38,41 +38,7 @@ within our theoretical QCD model we have to assume \textit{Quark-Hadron
 sufficently heigh. For lower energies there are measurable \textit{Duality Violations} (DV), which
 will be commented within this work.
 
-In the following (\cref{sec:tauDecays}) we will describe the $\tau$-decays, which
-play an essential role in our QCD analysis. Then in \cref{sec:quantumchromodynamics} we want to give more
-details of QCD, especially about the coupling constant $\alpha_s(s)$ (which is not
-constant at all) and the \textit{QCD sum rules}.
-
-
-\section{$\tau$-Decays}
-\label{sec:tauDecays}
-The principal input to our QCD analysis are measurements of $\tau$-decays, which
-represent an excellent tool to access low energy QCD.
-
-The $\tau$-particle is an elementary particle with negative electric charge and a
-spin of 1/2. Together with the lighter electron and muon it forms the
-\textit{charged Leptons}\footnote{Leptons do not interact via the strong force.}.
-Even though it is an elementary particle it decays via the \textit{weak
-  interaction} with a lifetime of $\tau_\tau=\SI{2.9e-13}{\second}$ and has a mass
-of $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is furthermore the only
-lepton massive enough to decay into Hadrons.
-The final states of a decay are limited by \textit{conservation laws}. In case
-of a $\tau$-decay they must conserve the electric charge ($-1$) and
-\textit{invariant mass} of the system. Thus, as we can see from
-the corresponding Feynman diagram
-(see \cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay into strange
-  quarks or charm quarks, but these decays are rather uncommon due to the heavy
-  masses of s and c.} the $\tau$ decays by the emission of a $\textit{W boson}$
-and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
-\bar\nu_\mu)$ or $(q, \bar q)$.
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
-  \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
-    lepton-antineutrino or quark-antiquark by the emission of a \textit{W boson}.}
-  \label{fig:tauDecay}
-\end{figure}
-
+\textcolor{red}{taken from tau decay adapt!}
 We are foremost interested into the hadronic decay channels, meaning
 $\tau$-decays that have quarks in their final states. Unfortunately the quarks
 have never been measured isolated, but appear always in combination of \textit{mesons}
@@ -98,16 +64,28 @@ can be experimentally detected.
   \label{table:lightMesons}
 \end{table}
 
-The hadronic $\tau-decay$ provides one of the most precise ways to determine the
-strong coupling \cite{Pich2016} and can be calculated to high precision within
-the framework of QCD.
+In the following (\cref{sec:tauDecays}) we will describe the $\tau$-decays, which
+play an essential role in our QCD analysis. Then in \cref{sec:quantumchromodynamics} we want to give more
+details of QCD, especially about the coupling constant $\alpha_s(s)$ (which is not
+constant at all) and the \textit{QCD sum rules}.
 
 
 \section{Quantumchromodynamics}
 \label{sec:quantumchromodynamics}
-QCD describe the strong interaction, which occur between \textit{quarks} and
-are transmitted through \textit{gluons}. A list of quarks can be found in
-\cref{table:quarkList}.
+QCD gives a complete description of \textit{quarks} and \textit{gluons}. It is
+born out of the very successful theory of \textit{quantum electrodynamics}
+(QED), but has some major differences. QED has two well known constituent
+fields the fermion and the photon. It is also a so called \textit{abelian}
+theory, meaning that two consecutive rotations commute $AB = BA$. Due to the
+abelian nature of the QED gauge group $U(1)$ only fermions carry gauge charge. Photons
+do not carry charge. In contrast QCD takes quarks\footnote{Quarks are a subset
+  to the fermions.} and gluons as fields. Additionally QCD is ruled by a \textit{non-abelian}
+gauge symmetry of $SU(3)$. Thus the group operation of QCD in general do not
+commute, which leads to gluons carrying charge! This charge is called
+\textit{color-charge}. The theory requieres three colors and describes
+interactions between a quark of a color with a quark of another color via
+gluons. Contrary to QED the force carrier, the gluons, interact with themselve,
+because they carry color charge.
 \begin{table}
   \centering
   \begin{minipage}[c]{0.4\textwidth}
@@ -136,7 +114,7 @@ are transmitted through \textit{gluons}. A list of quarks can be found in
   \label{table:quarkList}
 \end{table}
 
-The QCD Lagrange density is similar to that of QED\cite{Jamin2006},
+The theory of QCD can be summarized with its \textit{Lagrange density}\cite{Jamin2006}:
 \begin{equation}
   \label{eq:qcdLagrangian}
   \mathcal{L}_{QCD}(x) = -\frac{1}{4}G_{\mu\nu}^a(x)G^{\mu\nu a}(x) + \sum_A \left[ \frac{i}{2} \bar{q}^A(x) \gamma^\mu \overleftrightarrow{D}_\mu q^A(x) - m_A\bar{q}^A(x) a^A(x) \right],
@@ -150,6 +128,8 @@ where $B_\mu^a$ are the \textit{gluon fields}, given in the \textit{adjoint
   representation} of the SU(3) gauge group with $f^{abc}$ as \textit{structure
   constants}. Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour indices, $a,
 b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc = 0, \dotsc 3$ as lorentz indices.
+
+
 
 
 \subsection{Renormalisation Group}
@@ -237,8 +217,22 @@ The general relation between different scales is given by
 \end{equation}
 and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
 
-To theoretically describe the strong interaction regime of $\tau$-decays we have
-to introduce the \textbf{QCD sum rules} for which we will devote the following section.
+QCD in general has a precision problem caused by uncertainties and largness of the strong
+coupling constant $\alpha_s$. The fine-structure constant (the coupling constant
+of QED) is known to eleven digits, whereas the strong coupling is only known to
+about four. Furthermore for low energies the strong coupling constant is much
+larger than the fine-structure constant. E.g. at the $Z$-mass, the standard mass
+to compare the strong coupling, we have an $\alpha_s$ of $0.11$, whereas the
+fine structure constant would be around $0.007$. Consequently to use PT we have to
+calculate our results to much heigher orders, including tens of thousends of
+Feynman diagrams, in QCD to achieve a precision equal to QED. For even lower
+energies, around \SI{1}{\giga\eV}, the strong coupling reaches a critical value
+of $\approx 0.5$ leading to a break down of PT.
+
+In this work we try to achieve a higher precision in the value of $\alhpa_s$.
+Our method to measure the strong coupling is called \textbf{QCD sum rules},
+which by itself is based on a concept called the \texit{two-point function} for
+which we will devote the following section.
 
 \subsection{Two-Point function}
 \label{sec:twoPointFunction}
