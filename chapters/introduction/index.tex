@@ -85,7 +85,16 @@ commute, which leads to gluons carrying charge! This charge is called
 \textit{color-charge}. The theory requieres three colors and describes
 interactions between a quark of a color with a quark of another color via
 gluons. Contrary to QED the force carrier, the gluons, interact with themselve,
-because they carry color charge.
+because they carry color charge. The corresponding Feynman diagrams can be seen
+in \cref{fig:qcdFeynmanDiagrams}.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
+  \caption{Feynman diagrams of the strong interactions with corresponding
+    electromagnetic diagrams. We see that the gluons carry color-charge and thus
+    couple to other gluons, which is not the case for the photons.}
+  \label{fig:qcdFeynmanDiagrams}
+\end{figure}
 \begin{table}
   \centering
   \begin{minipage}[c]{0.4\textwidth}
@@ -128,7 +137,6 @@ where $B_\mu^a$ are the \textit{gluon fields}, given in the \textit{adjoint
   representation} of the SU(3) gauge group with $f^{abc}$ as \textit{structure
   constants}. Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour indices, $a,
 b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc = 0, \dotsc 3$ as lorentz indices.
-
 
 
 
@@ -182,6 +190,7 @@ coupling constant by integrating the $\beta$-function
 To analytically evaluate the above integral we can approximate the $\beta$-function to first order, with the known
 coefficient
 \begin{equation}
+  \label{eq:firstBetaCoefficient}
   \beta_1 = \frac{1}{6}(11 N_c - 2 N_f),
 \end{equation}
 yielding
@@ -194,6 +203,30 @@ logarithmically and vanishes for $\mu_2 \to \infty$. This behaviour is known as
 \textit{asymptotic freedom}.
 The coefficients of the $\beta$-function are currently known up to the 5th
 order and listed in the appendix \ref{sec:betaCoefficients}.
+
+As QCD we have three colors and six flavours the beta function carries a
+negative sign (see \cref{eq:firstBetaCoefficient}). This implies that the
+strength of the coupling is \textbf{decreasing} for increasing energies. In QED
+we have a beta-function with a positive sign and thus its coupling strength
+increases with energy. This behaviour of QCD leads to \textit{confinement} and
+\textit{asymptotic freedom}.
+
+Color confinement, or simply confinement, means that color charged quarks cannot
+be isolated. They always appear in composite hadrons. Until today no quark has
+been measured as single particle. There is no analytic proof of confinement, but
+until today no single quark has been observed. It is qualitativly explained with
+the gluon field carrying color charge. These gluons form so-called
+\textit{flux-tubes} between quarks, which cause a constant strong force between
+particles regardless of their separation. Consequently the energy needed to
+separate quarks is proportional to the distance between them and at some point
+there is enough energy to favour the creation of a new quark pair. Thus before
+separating two quarks we create a two new quarks and we will probably never be
+able to observe an isolated quark.
+
+For high energies the QCD coupling becomes weak, so in theory for a sufficient
+large energy quarks and gluons are essentially free. This phenomen is refered to
+as asymptotic freedom. 
+
 
 \subsubsection{Running quark mass}
 Not only the coupling but also the masses carry an energy dependencies, which is
@@ -229,9 +262,9 @@ Feynman diagrams, in QCD to achieve a precision equal to QED. For even lower
 energies, around \SI{1}{\giga\eV}, the strong coupling reaches a critical value
 of $\approx 0.5$ leading to a break down of PT.
 
-In this work we try to achieve a higher precision in the value of $\alhpa_s$.
+In this work we try to achieve a higher precision in the value of $\alpha_s$.
 Our method to measure the strong coupling is called \textbf{QCD sum rules},
-which by itself is based on a concept called the \texit{two-point function} for
+which by itself is based on a concept called the \textit{two-point function} for
 which we will devote the following section.
 
 \subsection{Two-Point function}
