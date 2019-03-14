@@ -15,61 +15,71 @@ the electromagnetic ($\gamma$ photon), weak ($Z$- or $W$-Boson) and strong ($g$
 gluon) interactions. The before mentioned Leptons solely interact through the
 electromagnetic and the weak force (also refered to as electroweak interaction),
 whereas the quarks additionally interact through the strong force. A short
-summary of the taxonomy of the SM can be seen in \cref{figure:SMTaxonomy}
+summary of the taxonomy of the SM can be seen in \cref{fig:SMTaxonomy}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/standardModelTaxonomy.eps}
-  \label{fig:SMTaxonomy}
   \caption{Taxonomy of the Standard Model.}
+  \label{fig:SMTaxonomy}
 \end{figure}
 
-The strong force is denominated Quantumchromodynamics
-(QCD). As the name suggest\footnote{Chromo is the greek word for color.} the
+All of the particles and forces given in the SM are described by a Lagrangian
+containing 19 parameters. Ten masses, four CKM-matrix parameters, the QCD vacuum
+angle, the Higgs vacuum expectation value and three gauge coupling constants.
+Every single parameter has to be fitted from experimental data. Highly accurate
+values with low errors are crucial for theoretical calculated predictions. One
+of the major error inputs of every theoretical output are uncertainties in these
+parameters. In this work we will measure one of these parameters to high
+precision: the strong coupling $\alpha_s$, which forms part of the theory of
+\textit{quantum chromodynamics} (QCD).
+
+As the name suggest\footnote{Chromo is the greek word for color.} the
 force is characterized by the color charge. Every quark has next to its type one
 of the three colors blue, red or green. The color force is mediated through
 eight gluons, which each being bi-colored\footnote{Each gluon carries a color
   and an anti-color.}, interact with quarks and each other. The strength of the
-strong force is given by the coupling constant $\alpha_s$, which we will
-determine within this work. The strong coupling constant $\alpha_s(E)$ is a function of energy $E$ and increases
-with decreasing energies \footnote{In contrast to the electromagnetic force, where $\alpha(E)$
-  decreases!}. This is exclusive for QCD and leads to \textit{asymptotic freedom} and
-\textit{confinement}. The former phenomen describes the decreasing strong force
-between quarks and gluons for high energies (short distances), which become asymptotically free at large
-energies. The latter expresses the fact, that no isolated quark has been found
-until today. Quarks appear confined as \textit{Hadrons}, the so called
-\textit{Mesons}\footnote{Composite of a quark and an anti-quark.} and
-\textit{Baryons}\footnote{Composite of three quarks or three anti-quarks.}.
-As we measure \textit{Hadrons} in our experiments but calculate with quarks
-within our theoretical QCD model we have to assume \textit{Quark-Hadron
-  Duality}, which states that QCD, which is the theory of quarks and gluons, is still valid for Hadrons for energies
-sufficently heigh. For lower energies there are measurable \textit{Duality Violations} (DV), which
-will be commented within this work.
+strong force is given by the coupling constant $\alpha_s$. The strong coupling
+varies with energy and contains an exeptional property. It increases with for
+low energies\footnote{In contrast to the electromagnetic force, where $\alpha(q^2)$
+  decreases!}. This is exclusive for QCD and has two main implications.
 
-\textcolor{red}{taken from tau decay adapt!}
-We are foremost interested into the hadronic decay channels, meaning
-$\tau$-decays that have quarks in their final states. Unfortunately the quarks
-have never been measured isolated, but appear always in combination of \textit{mesons}
-and \textit{baryons}. Due to its mass of $m_\tau \approx
-\SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into light mesons
-(pions-$\pi$, kaons-$K$, and eta-$\eta$, see \cref{table:lightMesons}), which
-can be experimentally detected.
-\begin{table}
-  \centering
-  \begin{tabular}{l c c c}
-    \toprule
-    Name & Symbol & Quark content & Rest mass ($\SI{}{\mega\electronvolt}$) \\
-    \midrule
-    Pion & $\pi^-$ & $\bar u d$ & \SI{139.57061 \pm 0.00024}{\mega\electronvolt}  \\
-    Pion & $\pi^0$ & $(u \bar u - d \bar d)/\sqrt{2}$ & \SI{134.9770\pm0.0005}{\mega\electronvolt} \\
-    Kaon & $K^-$ & $\bar u s$ & \SI{493.677\pm0.016}{\mega\electronvolt} \\
-    Kaon & $K^0$ & $d \bar s$ & \SI{497.611\pm0.013}{\mega\electronvolt} \\
-    Eta & $\eta$ & $(u \bar u + d \bar d - 2 s \bar s)/\sqrt{6}$ & \SI{547.862\pm0.017}{\mega\electronvolt} \\
-  \end{tabular}
-  \caption{List of mesons produced by a $\tau$-decay. Rare final states with
-    branching Ratios smaller than 0.1 have been omitted. The list is taken from 
-    \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
-  \label{table:lightMesons}
-\end{table}
+The first implication is that, for low energies the coupling is too strong to
+isolate quarks. Until now we have not been able to observe an isolated quarks
+and all experiments can only measure quark compositions. These bound states are
+called \textit{hadrons} and consist of two or three quarks\textit{There exist
+  also so-called \textit{Exotic hadrons}, which have more than three valence
+  quarks.}, which are refered to as Mesons\footnote{Composite of a quark and an
+  anti-quark.} or Baryons \footnote{Composite of three quarks or three
+  anti-quarks.} respectively. This
+phenomen, of quarks sticking together as hadrons is refered to as \textit{confinement}. 
+As the fundamental degrees of freedom of QCD are given by quarks and gluons, but
+the observed particles are hadrons we need to introduce the assumption of
+\textit{quark-hadron duality}. This means that a physical quantity should be
+similarly describable in the hadronic picture or quark-gluon picture and that
+both descriptions are equivalent. As we will see in our work quark-hadron
+duality is violated for low energies. These so-called \textit{duality
+  violations} have an impact on our strong coupling determinations and can be
+dealt with either suppression or the inclusion of a model \cite{}. Throughout
+this work will favor and argument for the the former approach.
+
+The second implications concerns \textit{perturbation theory} (PT). The lower
+the energies we deal with, the higher the value of the strong coupling and the
+the contributions of \textit{non-perturbative} (NP) effects. Currently there are
+three solutions to deal with NP effects:
+\begin{itemize}
+  \item \textbf{Chiral Perturbation Theory} (ChPT): Introduced by Weinberg
+    \cite{Weinberg1978} in the late seventies ChPT is an effective field theory
+    constructed with a Lagrangian symmetric under chiral transformation in the
+    limit of massless quarks. It's limitations are based in the chiral symmetry,
+    which is only a good approximation for the light quarks u, d and in some
+    cases s.
+  \item \textbf{Lattice QCD} (LQCD): Is the numerical approach to the strong
+    force. Based on the Wilson Loops \cite{Wilson1974} we treat QCD on a finite
+    latice instead of continous fields. LQCD has already many applications but
+    is limited due to its computational expensice calculations.
+  \item \textbf{QCD Sum Rules}: 
+\end{itemize}
+
 
 In the following (\cref{sec:tauDecays}) we will describe the $\tau$-decays, which
 play an essential role in our QCD analysis. Then in \cref{sec:quantumchromodynamics} we want to give more

@@ -29,6 +29,32 @@ and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
   \label{fig:tauDecay}
 \end{figure}
 
+\textcolor{red}{taken from tau decay adapt!}
+We are foremost interested into the hadronic decay channels, meaning
+$\tau$-decays that have quarks in their final states. Unfortunately the quarks
+have never been measured isolated, but appear always in combination of \textit{mesons}
+and \textit{baryons}. Due to its mass of $m_\tau \approx
+\SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into light mesons
+(pions-$\pi$, kaons-$K$, and eta-$\eta$, see \cref{table:lightMesons}), which
+can be experimentally detected.
+\begin{table}
+  \centering
+  \begin{tabular}{l c c c}
+    \toprule
+    Name & Symbol & Quark content & Rest mass ($\SI{}{\mega\electronvolt}$) \\
+    \midrule
+    Pion & $\pi^-$ & $\bar u d$ & \SI{139.57061 \pm 0.00024}{\mega\electronvolt}  \\
+    Pion & $\pi^0$ & $(u \bar u - d \bar d)/\sqrt{2}$ & \SI{134.9770\pm0.0005}{\mega\electronvolt} \\
+    Kaon & $K^-$ & $\bar u s$ & \SI{493.677\pm0.016}{\mega\electronvolt} \\
+    Kaon & $K^0$ & $d \bar s$ & \SI{497.611\pm0.013}{\mega\electronvolt} \\
+    Eta & $\eta$ & $(u \bar u + d \bar d - 2 s \bar s)/\sqrt{6}$ & \SI{547.862\pm0.017}{\mega\electronvolt} \\
+  \end{tabular}
+  \caption{List of mesons produced by a $\tau$-decay. Rare final states with
+    branching Ratios smaller than 0.1 have been omitted. The list is taken from 
+    \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
+  \label{table:lightMesons}
+\end{table}
+
 The hadronic $\tau-decay$ provides one of the most precise ways to determine the
 strong coupling \cite{Pich2016} and can be calculated to high precision within
 the framework of QCD.
@@ -932,6 +958,68 @@ D6, D8 stability
   \label{table:fitWCubicAlD6D8D10}
 \end{table}
 
+\subsection{Optimal Moments}
+
+\begin{equation}
+  \omega^{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k 
+\end{equation}
+\subsubsection{$\omega(x) = (1-x)^3$}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{llllll}
+    \toprule \\
+    $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_{6}$ & $\chi^2/dof$  \\
+    \hline \\
+    1.500 & 23 & 0.3276(13) & -0.0077(10) & 0.330(35) & 2.62 \\
+    1.525 & 22 & 0.3278(14) & -0.0078(10) & 0.330(38) & 2.75 \\
+    1.550 & 21 & 0.3299(16) & -0.0092(12) & 0.333(37) & 2.31 \\
+    1.575 & 20 & 0.3308(25) & -0.0098(13) & 0.334(47) & 2.32 \\
+    1.600 & 19 & 0.3317(28) & -0.0105(14) & 0.335(54) & 2.38 \\
+    1.625 & 18 & 0.3336(21) & -0.0118(14) & 0.340(46) & 2.09 \\
+    1.650 & 17 & 0.3345(34) & -0.0124(17) & 0.342(62) & 2.15 \\
+    1.675 & 16 & 0.3349(25) & -0.0127(15) & 0.342(51) & 2.28 \\
+    1.700 & 15 & 0.3348(33) & -0.0126(18) & 0.342(58) & 2.47 \\
+    1.750 & 14 & 0.3372(43) & -0.0145(23) & 0.341(71) & 2.34 \\
+    1.800 & 13 & 0.3378(31) & -0.0149(20) & 0.339(58) & 2.54 \\
+    1.850 & 12 & 0.3365(38) & -0.0138(25) & 0.346(60) & 2.72 \\
+    1.900 & 11 & 0.3355(40) & -0.0128(28) & 0.354(59) & 2.97 \\
+    1.950 & 10 & 0.3296(47) & -0.0073(34) & 0.418(58) & 1.57 \\
+    2.000 & 9  & 0.3299(50) & -0.0076(39) & 0.414(64) & 1.83 \\
+    2.100 & 8  & 0.3331(54) & -0.0108(45) & 0.361(76) & 1.9 \\
+    2.200 & 7  & 0.3401(57) & -0.0185(52) & 0.220(88) & 0.73 \\
+    2.300 & 6  & 0.3383(68) & -0.0165(67) & 0.26(12) & 0.89 \\
+    2.400 & 5  & 0.3450(93) & -0.0243(99) & 0.10(17) & 0.71 \\
+    2.600 & 4  & 0.337(16) & -0.014(18) & 0.36(45) & 0.98 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Table of our fitting values of $\alpha_s(m_\tau^2), aGGInv$ and $c_{6}$
+    for the triple pinched optimal weight $\omega^{(3,0)}(x)=(1-x)^3$ using FOPT ordered
+    by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
+  \label{table:fitOpt30AlD4D6}
+\end{table}
+
+\subsubsection{$\omega(x) = (1-x)^4$}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lllllll}
+    \toprule \\
+    $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_{6}$ & $c_{8}$ & $\chi^2/dof$  \\
+    \hline \\
+    1.900 & 11 & 0.34283(71) & -0.01404(44) & -0.1037(23) & -0.534(20) & 1.52 \\
+    1.950 & 10 & 0.34154(73) & -0.01234(95) & -0.050(28) & -0.389(53) & 1.42 \\
+    2.000 & 9  & 0.3399(14) & -0.0105(22) & 0.002(79) & -0.24(15) & 1.59 \\
+    2.100 & 8  & 0.3480(20) & -0.0194(22) & -0.265(72) & -1.03(19) & 0.31 \\
+    2.200 & 7  & 0.3483(47) & -0.0197(49) & -0.27(15) & -1.05(43) & 0.41 \\
+    2.300 & 6  & 0.3522(53) & -0.0242(60) & -0.42(19) & -1.51(58) & 0.29 \\
+    2.400 & 5  & 0.348(17) & -0.019(18) & -0.25(56) & -0.95(17) & 0.39 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Table of our fitting values of $\alpha_s(m_\tau^2), aGGInv, c_6$ and $c_{8}$
+    for the optimal weight $\omega^{(4,0)}(x)=(1-x)^4$ using FOPT ordered
+    by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
+  \label{table:fitOpt30AlD4D6D8}
+\end{table}
+
 \subsection{Comparison}
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{./images/comparisonAlpha.png}
@@ -942,6 +1030,7 @@ D6, D8 stability
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{./images/comparisonD10.png}
 \end{figure}
+
 
 \subsection{Toni Pich 2006}
 \subsubsection{4. ALEPH determination}
@@ -958,5 +1047,20 @@ Used single moments
 \end{equation}
 but omitted NPT corrections! He fitted the kinematic weight with free $\alpha_s$
 for $\omega(x)^{(2,1)}$. Later on he uses combined fits which is not in our interest.
+It is called optimal moments, because $n$ stands for the pinching factor, which
+suppresses DV!
 
+\subsubsection{6. Including information from the $s_0$ dependence}
+Pich fits $A^{(2,0)}, A^{(2,1)}$ and $A^{(2,2)}$ separately for $s_{min}=\SI{2}{\giga\eV}$.
+The corresponding weights with fitted OPE dimensions are given by:
+\begin{align}
+  \omega^{(2,0)} &= (1-x)^2 \quad c_4, c_6 \\
+  \omega^{(2,1)} &= \omega_{\tau} \quad c_6, c_8 \\
+  \omega^{(2,2)} &= (1-x)^2(1+2x+x^2) = (x^2-1)^2 \quad c_8, c_{10}
+\end{align}
+Thus we can compare our results from the kinematic weight with his results and
+furthermore add $(1-x)^2$ to our fitting list?
+
+Alpha is comparable, which just have a bigger error. For D6 and D8 we have to
+compare our definition of $c_6, c_8$ with his.
 \end{document}
