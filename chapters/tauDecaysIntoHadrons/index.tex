@@ -963,7 +963,7 @@ D6, D8 stability
 \begin{equation}
   \omega^{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k 
 \end{equation}
-\subsubsection{$\omega(x) = (1-x)^3$}
+\subsubsection{$\omega(x) = (1-x)^2$}
 \begin{table}[H]
   \centering
   \begin{tabular}{llllll}
@@ -993,45 +993,78 @@ D6, D8 stability
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), aGGInv$ and $c_{6}$
-    for the triple pinched optimal weight $\omega^{(3,0)}(x)=(1-x)^3$ using FOPT ordered
+    for the triple pinched optimal weight $\omega^{(2,0)}(x)=(1-x)^2$ using FOPT ordered
     by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
   \label{table:fitOpt30AlD4D6}
 \end{table}
 
-\subsubsection{$\omega(x) = (1-x)^4$}
+\subsubsection{$\omega(x) = (1-x)^3$}
 \begin{table}[H]
   \centering
   \begin{tabular}{lllllll}
     \toprule \\
     $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_{6}$ & $c_{8}$ & $\chi^2/dof$  \\
     \hline \\
-    1.900 & 11 & 0.34283(71) & -0.01404(44) & -0.1037(23) & -0.534(20) & 1.52 \\
-    1.950 & 10 & 0.34154(73) & -0.01234(95) & -0.050(28) & -0.389(53) & 1.42 \\
-    2.000 & 9  & 0.3399(14) & -0.0105(22) & 0.002(79) & -0.24(15) & 1.59 \\
-    2.100 & 8  & 0.3480(20) & -0.0194(22) & -0.265(72) & -1.03(19) & 0.31 \\
-    2.200 & 7  & 0.3483(47) & -0.0197(49) & -0.27(15) & -1.05(43) & 0.41 \\
-    2.300 & 6  & 0.3522(53) & -0.0242(60) & -0.42(19) & -1.51(58) & 0.29 \\
-    2.400 & 5  & 0.348(17) & -0.019(18) & -0.25(56) & -0.95(17) & 0.39 \\
+    1.900 & 11 & 0.34281(92) & -0.01473(73) & -0.103(22) & -0.534(46) & 1.52 \\
+    1.950 & 10 & 0.34154(99) & -0.01304(61) & -0.050(17) & -0.389(44) & 1.42 \\
+    2.000 & 9  & 0.33985(81) & -0.01124(43) & 0.002(10) & -0.242(26) & 1.59 \\
+    2.100 & 8  & 0.3480(47) & -0.0201(36) & -0.264(89) & -1.03(28) & 0.31 \\
+    2.200 & 7  & 0.3483(23) & -0.0204(41) & -0.27(15) & -1.05(40) & 0.41 \\
+    2.300 & 6  & 0.3522(64) & -0.0249(62) & -0.42(18) & -1.51(57) & 0.29 \\
+    2.400 & 5  & 0.3480(89) & -0.0199(100) & -0.25(33) & -0.96(10) & 0.39 \\
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), aGGInv, c_6$ and $c_{8}$
-    for the optimal weight $\omega^{(4,0)}(x)=(1-x)^4$ using FOPT ordered
+    for the optimal weight $\omega^{(3,0)}(x)=(1-x)^3$ using FOPT ordered
     by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
   \label{table:fitOpt30AlD4D6D8}
 \end{table}
 
+\newpage
 \subsection{Comparison}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lllll}
+    \toprule \\
+    weight & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $\chi^2/dof$  \\
+    $\omega_{kin}^{(D6,D8)}$ & 0.3232(32) & -0.31(11) & -0.01(18) & 1.13 \\
+    $\omega_{cube}^{(D6,D8)}$ & 0.3261(21) & -0.309(27) & -0.136(18) & 1.17 \\
+    $\omega_{cube}^{(D6,D8,D10)}$ & 0.3312(43) & -0.56(12) & -0.68(23) & 1.17 \\
+    $\omega_{quartic}^{(D6,D8)}$ & 0.3266(27) & -0.235(28) & -0.087(17) & 1.0 \\
+    $\omega_{quartic}^{(D6,D8,D10)}$ & 0.3308(12) & -0.3499(62) & -0.2453(55) & 1.21 \\
+    $\omega_{quartic}^{(D6,D8,D10,D12)}$ & 0.3290(11)  & -0.3030(46) & -0.1874(28) & 0.67 \\
+    $\omega_{monoX3}^{(D8)}$ & 0.326(21) & - & -1.69(40) & 1.17 \\
+    $\omega_{monoX4}^{(D10)}$ & 0.325(20) & - & - & 1.17 \\
+    $\omega_{opt20}^{(D4,D6)}$ & 0.337(16) & 0.36(45) & - & 0.98 \\
+    $\omega_{opt30}^{(D4,D6,D8)}$ & 0.34154(99) & -0.050(17) & -0.389(44) & 1.42 \\
+    \hline \\
+    \bottomrule
+  \end{tabular}
+  \caption{Table of the best fits (selected by $\chi^2/dof$ closest to one) for
+    each weight including the strong coupling $\alpha_s(m_\tau^2)$ as a fitting variable.}
+  \label{table:fitCombinations}
+\end{table}
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{./images/comparisonAlpha.png}
+  \caption{Comparison of the strong coupling for the best fits (selected by
+    $\chi^2/dof$ closest to one) for each weight including the strong coupling
+    as a fitting variable.}
 \end{figure}
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{./images/comparisonD6D8.png}
+  \caption{Comparison of the dimension six and eight values for the best fits (selected by
+    $\chi^2/dof$ closest to one) for each weight including the OPE dimensions
+    six and eight as fitting variables.}
 \end{figure}
 \begin{figure}[H]
   \includegraphics[width=\textwidth]{./images/comparisonD10.png}
+  \caption{Comparison of the dimension ten values for the best fits (selected by
+    $\chi^2/dof$ closest to one) for each weight including the OPE dimensions
+    ten as fitting variables.}
 \end{figure}
 
 
+\newpage
 \subsection{Toni Pich 2006}
 \subsubsection{4. ALEPH determination}
 Toni built moments with five different weights:
