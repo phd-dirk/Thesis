@@ -3,7 +3,12 @@
 \begin{document}
 \chapter{Introduction}
 In particle physics we are concerned about small objects and their interactions.
-Since the 1970 the dynamics of elemental particles are best described by the Standard Model (SM).
+The smallest of these objects are referred to as \textit{elemental particles}.
+Their dynamics are governed by the laws of nature. These laws are organized
+through symmetries, which can be mathematically described through group theory.
+Since the 1970 the laws of nature are best described by the \textit{Standard
+  Model} (\textsc{sm}).
+
 
 The SM contains two groups of fermionic, spin 1/2 particles. The former group,
 the leptons consist of: the electron ($e$), the muon ($\mu$), the tau ($\tau$)
@@ -22,6 +27,29 @@ summary of the taxonomy of the SM can be seen in \cref{fig:SMTaxonomy}
   \caption{Taxonomy of the Standard Model.}
   \label{fig:SMTaxonomy}
 \end{figure}
+
+
+From a more mathematical point of view the \textsc{sm} is a gauge \textit{quantum field theory} (\textsc{qft}). QFT is the
+combination of \textit{classical field theory}, \textit{special relativity} and
+\textit{quantum mechanics}. Its fundamental objects are ruled through its
+gauge group $SU(3)\times SU(2)\times U(1)$. Each of subgroups introduces a
+global and a local gauge symmetry. The global symmetry introduces the charges,
+which fields are carrying. The local symmetry introduce the gauge-fields, which
+are also referred to as force carriers. 
+\begin{description}
+  \item[$\bm{U(1)}$] Is the \textit{abelian} gauge group governs the representation of \textit{quantum
+      electrodynamics} (\textsc{qed}), which is commonly known as the electric
+    force. Its global and local symmetry introduces the electric charge and the
+    photon\-/field.
+  \item[$\bm{SU(2)}$] Is the \textit{non\-/abelian} symmetry group responsible
+    for the weak\-/interaction. It introduces the $W^+,W^-$ and $Z$ bosons and
+    the weak charge. The gauge groups $U(1)$ and $SU(2)$ have been combined to the \textit{electroweak interaction}.
+  \item[$\bm{SU(3)}$] The $SU(3)$\-/group is also \textit{non-abelian} and
+    governs the strong interactions, which are summarized in the theory of
+    \textit{quantum chromodynamics} (\textsc{qcd}). The group yields the three
+    colour charges and the gluons. Due to the 8\-/dimensional adjoint
+    represntation of $SU(3)$ there exist eight different gluons.
+\end{description}
 
 All of the particles and forces given in the SM are described by a Lagrangian
 containing 19 parameters. The parameters are represented by ten masses, four CKM\-/matrix parameters, the QCD\-/vacuum
@@ -129,5 +157,59 @@ background for working with the QCDSR. Starting with the basics of QCD we want t
 running of the strong coupling. We then continue with the some
 aspects of the two\-/point function and its usage in the dispersion relation,
 which connects the hadronic picture with the quark\-/gluon picture. $\cdots$
+
+The $\tau$-particle is an elementary particle with negative electric charge and a
+spin of 1/2. Together with the lighter electron and muon it forms the
+\textit{charged Leptons}\footnote{Leptons do not interact via the strong force.}.
+Even though it is an elementary particle it decays via the \textit{weak
+  interaction} with a lifetime of $\tau_\tau=\SI{2.9e-13}{\second}$ and has a mass
+of $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is furthermore the only
+lepton massive enough to decay into Hadrons.
+The final states of a decay are limited by \textit{conservation laws}. In case
+of a $\tau$-decay they must conserve the electric charge ($-1$) and
+\textit{invariant mass} of the system. Thus, as we can see from
+the corresponding Feynman diagram
+(see \cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay into strange
+  quarks or charm quarks, but these decays are rather uncommon due to the heavy
+  masses of s and c.} the $\tau$ decays by the emission of a $\textit{W boson}$
+and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
+\bar\nu_\mu)$ or $(q, \bar q)$.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
+  \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
+    lepton-antineutrino or quark-antiquark by the emission of a \textit{W boson}.}
+  \label{fig:tauDecay}
+\end{figure}
+
+\textcolor{red}{taken from tau decay adapt!}
+We are foremost interested into the hadronic decay channels, meaning
+$\tau$-decays that have quarks in their final states. Unfortunately the quarks
+have never been measured isolated, but appear always in combination of \textit{mesons}
+and \textit{baryons}. Due to its mass of $m_\tau \approx
+\SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into light mesons
+(pions-$\pi$, kaons-$K$, and eta-$\eta$, see \cref{table:lightMesons}), which
+can be experimentally detected.
+\begin{table}
+  \centering
+  \begin{tabular}{l c c c}
+    \toprule
+    Name & Symbol & Quark content & Rest mass ($\SI{}{\mega\electronvolt}$) \\
+    \midrule
+    Pion & $\pi^-$ & $\bar u d$ & \SI{139.57061 \pm 0.00024}{\mega\electronvolt}  \\
+    Pion & $\pi^0$ & $(u \bar u - d \bar d)/\sqrt{2}$ & \SI{134.9770\pm0.0005}{\mega\electronvolt} \\
+    Kaon & $K^-$ & $\bar u s$ & \SI{493.677\pm0.016}{\mega\electronvolt} \\
+    Kaon & $K^0$ & $d \bar s$ & \SI{497.611\pm0.013}{\mega\electronvolt} \\
+    Eta & $\eta$ & $(u \bar u + d \bar d - 2 s \bar s)/\sqrt{6}$ & \SI{547.862\pm0.017}{\mega\electronvolt} \\
+  \end{tabular}
+  \caption{List of mesons produced by a $\tau$-decay. Rare final states with
+    branching Ratios smaller than 0.1 have been omitted. The list is taken from 
+    \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
+  \label{table:lightMesons}
+\end{table}
+
+The hadronic $\tau-decay$ provides one of the most precise ways to determine the
+strong coupling \cite{Pich2016} and can be calculated to high precision within
+the framework of QCD.
 
 \end{document}
