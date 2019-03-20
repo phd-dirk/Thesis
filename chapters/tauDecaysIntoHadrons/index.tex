@@ -605,7 +605,7 @@ producing particles in 1989 and was replaced in the late 90s by the
 large-hadron-collider, which makes use of the same tunnel of 27km circumference.
 The data produced within the experiment is still maintained by former ALEPH
 group members under led by M. Davier, which have performed regular updates on
-the data-sets \cite{Davier2013,Davier2008,Schael2005}.
+the data-sets \cite{Davier2013,Davier2008,Aleph2005}.
 
 The measured spectral functions for the Aleph data are defined in
 \cite{Davier2007} and given for the transversal and longitudinal components separatly:
@@ -677,48 +677,53 @@ The different inclusive $\tau$-decay ratios are then given by
   R_{\tau,V} &= ...
 \end{align}
 
+
+\newpage
 \section{Fits}
+In the following we will perform fits to determine $\alpha_s$ at the
+$m_\tau$\-/scale. The fits are separated corresponding to the used weight. Every
+weight contains multiple fits for different $s_0$\-/momenta. We will start with
+the kinematic weight, which appears naturally in the inclusive $\tau$\-/decay ratio.
 
 \subsection{Kinematic weight: $\omega(x) = (1-x)^2(1+2x)$}
-The kinematic weight $\omega(x) = (1-x)^2(1+2x)$ is the natural appearing weight
-carried by the \cref{eq:inclusiveRatio}. Its polinomial contains terms
-proportional to $x^2$ and $x^3$ which makes it sensitive to $D=6$ and $D=8$
-contributions from the OPE. Consequently we  fitted the strong coupling
-$\alpha_s(m_\tau^2)$ and the OPE coefficients for dimension six and eight.
-The fits have been performed within the framework of FOPT for different numbers
-of $s_0$. The momentum sets are characterized by its lowest energy $s_{min}$. We
-fitted values up to $\SI{1.5}{\giga\eV}$, as including more moments causes
-problems with the convergence of our fitting routine. This is due to their heigh
-correlation which has been plotted in \textcolor{red}{correlation plot?}? Going
-to lower energies also bares the risk to be affected by the $\rho(770)$ and
-$a_1$ peaks in the vector and axial-vector spectral function. We have given all
-of our fit values in \cref{table:fitWKinAlD6D8} and \cref{fig:fitWKinAlD6D8}.
+The kinematic weight is defined as $\omega(x) = (1-x)^2(1+2x)$. Its
+polinomial contains terms proportional to $x^2$ and $x^3$ which makes it
+sensitive to the dimension six and eight OPE contributions. The fits have
+been performed within the framework of FOPT for different numbers of $s_0$.
+The momentum sets are characterized by its lowest energy $s_{min}$. We
+fitted values up to $\SI{1.5}{\giga\eV}$. Going to lower energies is
+questionable due to the coupling constant becoming to large, which implies a
+breakdown of PT and appearing DVs. Furthermore it bares the
+risk to be affected by the $\rho(770)$ and $a_1$ peaks in the vector and
+axial-vector spectral function, which we cannot model within the framework of
+the OPE. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have given the results in
+\cref{table:fitWKinAlD6D8} and graphically in \cref{fig:fitWKinAlD6D8}.
 \begin{table}[H]
   \centering
   \begin{tabular}{llllll}
     \toprule \\
     $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $\chi^2/dof$  \\
     \hline \\
-    1.500 & 23 & 0.3255(13) & -0.441(10) & -0.2909(34) & 2.00  \\
-    1.525 & 22 & 0.3255(18) & -0.440(36) & -0.288(45) & 2.10 \\
-    1.550 & 21 & 0.3265(16) & -0.478(36) & -0.343(50) & 1.81 \\
-    1.575 & 20 & 0.3269(22) & -0.493(47) & -0.365(58) & 1.86 \\
-    1.600 & 19 & 0.3272(23) & -0.506(51) & -0.384(64) & 1.94 \\
-    1.625 & 18 & 0.3284(24) & -0.540(53) & -0.433(68) & 1.788 \\
-    1.650 & 17 & 0.3283(24) & -0.550(57) & -0.448(74) & 1.90 \\
-    1.675 & 16 & 0.3284(24) & -0.549(57) & -0.448(79) & 2.04 \\
-    1.700 & 15 & 0.3281(24) & -0.538(63) & -0.430(87) & 2.19 \\
-    1.750 & 14 & 0.3291(26) & -0.581(71) & -0.50(10) & 2.21 \\
-    1.800 & 13 & 0.3293(27) & -0.589(77) & -0.51(11) & 2.43 \\
-    1.850 & 12 & 0.3281(28) & -0.537(85) & -0.42(13) & 2.5 \\
-    1.900 & 11 & 0.3272(29) & -0.493(93) & -0.35(15) & 2.65 \\
+    % 1.500 & 23 & 0.3255(13) & -0.441(10) & -0.2909(34) & 2.00  \\
+    % 1.525 & 22 & 0.3255(18) & -0.440(36) & -0.288(45) & 2.10 \\
+    % 1.550 & 21 & 0.3265(16) & -0.478(36) & -0.343(50) & 1.81 \\
+    % 1.575 & 20 & 0.3269(22) & -0.493(47) & -0.365(58) & 1.86 \\
+    % 1.600 & 19 & 0.3272(23) & -0.506(51) & -0.384(64) & 1.94 \\
+    % 1.625 & 18 & 0.3284(24) & -0.540(53) & -0.433(68) & 1.788 \\
+    % 1.650 & 17 & 0.3283(24) & -0.550(57) & -0.448(74) & 1.90 \\
+    % 1.675 & 16 & 0.3284(24) & -0.549(57) & -0.448(79) & 2.04 \\
+    % 1.700 & 15 & 0.3281(24) & -0.538(63) & -0.430(87) & 2.19 \\
+    % 1.750 & 14 & 0.3291(26) & -0.581(71) & -0.50(10) & 2.21 \\
+    % 1.800 & 13 & 0.3293(27) & -0.589(77) & -0.51(11) & 2.43 \\
+    % 1.850 & 12 & 0.3281(28) & -0.537(85) & -0.42(13) & 2.5 \\
+    % 1.900 & 11 & 0.3272(29) & -0.493(93) & -0.35(15) & 2.65 \\
     1.950 & 10 & 0.3232(32) & -0.31(11) & -0.01(18) & 1.13 \\
     2.000 & 9 & 0.3234(34) & -0.32(12) & -0.03(21) & 1.31 \\
     2.100 & 8 & 0.3256(38) & -0.43(15) & -0.25(28) & 1.30 \\
-    2.200 & 7 & 0.3308(44) & -0.72(20) & -0.85(38) & 0.19 \\
-    2.300 & 6 & 0.3304(52) & -0.69(25) & -0.80(50) & 0.25 \\
-    2.400 & 5 & 0.3339(70) & -0.91(39) & -1.29(83) & 0.10 \\
-    2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
+    % 2.200 & 7 & 0.3308(44) & -0.72(20) & -0.85(38) & 0.19 \\
+    % 2.300 & 6 & 0.3304(52) & -0.69(25) & -0.80(50) & 0.25 \\
+    % 2.400 & 5 & 0.3339(70) & -0.91(39) & -1.29(83) & 0.10 \\
+    % 2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), c_6$ and $c_8$ for the kinematic weight
@@ -726,7 +731,7 @@ of our fit values in \cref{table:fitWKinAlD6D8} and \cref{fig:fitWKinAlD6D8}.
     errors are given in parenthesis after the observed value.}
   \label{table:fitWKinAlD6D8}
 \end{table}
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/fitWKinAlD6D8.png}
   \caption{Fitting values of $\alpha_s(m_\tau^2), c_6$ and $c_8$ for the kinematic weight
@@ -741,20 +746,41 @@ of our fit values in \cref{table:fitWKinAlD6D8} and \cref{fig:fitWKinAlD6D8}.
   \includegraphics[width=\textwidth]{./images/fitWKinAlD6D8SpecFunc.png}
   \caption{test}
 \end{figure}
+We only display the fits for $s_{min}=\{\SI{1.95}{\giga\eV}, \SI{2}{\giga\eV},
+\SI{2.1}{\giga\eV}\}$ as fits with higher $s_{min}$ have in general a to large
+$\chi^2$ per \textit{degree of freedom} \textsc{dof} and fits with lower
+$s_{min}$ have a too low $\chi^2$ per \textsc{dof}. We achieved three excellent,
+close to one $\chi^2$ per \textsc{dof} values. Furthermore the obtained values
+for the strong coupling and dimension six and eight OPE contributions agree
+within error boundaries, which underlines the stability of the fit. The best fit
+has an $\chi^2$ per \textsc{dof} of $1.13$ and results in our final values for
+the strong coupling
+\begin{equation}
+  \alpha_s(m_\tau^2) = 0.3232(32)
+\end{equation}
+and the OPE contributions
+\begin{equation}
+  c_6 = -0.31(11) \qquad \text{and} \qquad c_8 = -0.01(18).
+\end{equation}
+The error of $\alpha_s$ starts in all fits after two decimals places and is thus small. The
+errors of the eights dimension are compatible with zero, thus $c_8$ has a
+negligible contribution, which can also be seen in its delta value of
+$\delta^{(8)}=0.001$. This is a clear sign of the covergence of the OPE, as soon as with
+the eight dimension.
 
-The fits are very stable as we can see in \cref{table:fitWKinAlD6D8} and \cref{fig:fitWKinALD6D8}. The obtained
-values for $\alpha_s(m_\tau^2)$ are very consitent and vary little. Their standard derivation is of order
-$10^{-4}$. Furthermore the errors of the strong coupling are small. The averaged
-relative error is as small as $1\%$ for all of the fits. The $\chi^2$ per
-\textbf{degree of freedom} (dof) is good and has its best value of $1.13$ for
-$8-s_0$s moments for $s_{min}=1.95$. All of the values have a converging OPE,
-meaning that the values of $c_8$ are of the order $10$ smaller than values of $c_6$. 
-
-
-D6, D8 stability
+We further tested the stability of the dimension six and eight contributions to
+the OPE in the same fit series but with a fixed value of the strong coupling at
+$\alpha_s(m_\tau^2)=0.3179$, which is the current global standard given by the
+\textit{Particle Data Group} (\textsc{PDG}) \cite{PDG2018} \textcolor{red}{have
+  to rerun alpha from mz}. The fits have been plotted in \cref{fig:fitWKinD6D8}
+and show good stability. The values for $c_6$ and $c_8$ are larger than the values given
+in our final results from \cref{table:fitWKinAlD6D8}. This is explained with a
+smaller contribution from the strong coupling ($\alpha_s$ is smaller), which has
+to be compensated by larger OPE contributions. 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/fitWKinD6D8.png}
+  \label{fig:fitWKinD6D8}
 \end{figure}
 
 \subsection{Cubic weight: $\omega(x) = (1-x)^3(1+3x)$}
