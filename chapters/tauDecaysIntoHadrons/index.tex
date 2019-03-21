@@ -685,10 +685,12 @@ $m_\tau$\-/scale. The fits are separated corresponding to the used weight. Every
 weight contains multiple fits for different $s_0$\-/momenta. We will start with
 the kinematic weight, which appears naturally in the inclusive $\tau$\-/decay ratio.
 
-\subsection{Kinematic weight: $\omega(x) = (1-x)^2(1+2x)$}
-The kinematic weight is defined as $\omega(x) = (1-x)^2(1+2x)$. Its
-polinomial contains terms proportional to $x^2$ and $x^3$ which makes it
-sensitive to the dimension six and eight OPE contributions. The fits have
+\subsection{Kinematic weight: $\omega_{\tau}(x) \equiv (1-x)^2(1+2x)$}
+The kinematic weight is defined as $\omega(x) = (1-x)^2(1+2x)$. It is a
+polynomial double pinched weight\-/ function that contains the unity and
+does not contain a term proportional to x, which makes it an optimal weight
+\cite{Beneke2012}. Its polynomial contains terms proportional to $x^2$ and $x^3$, which makes it
+sensitive to the dimension six and eight OPE contributions.  The fits have
 been performed within the framework of FOPT for different numbers of $s_0$.
 The momentum sets are characterized by its lowest energy $s_{min}$. We
 fitted values up to $\SI{1.5}{\giga\eV}$. Going to lower energies is
@@ -783,48 +785,31 @@ to be compensated by larger OPE contributions.
   \label{fig:fitWKinD6D8}
 \end{figure}
 
-\subsection{Cubic weight: $\omega(x) = (1-x)^3(1+3x)$}
-% \begin{table}[H]
-%   \centering
-%   \begin{tabular}{lllllll}
-%     \toprule \\
-%     $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $c_{10}$ & $\chi^2/dof$  \\
-%     \hline \\
-%     1.900 & 11 & 0.3261(21) & -0.309(27) & -0.136(18) & 1.17 \\
-%     1.950 & 10 & 0.3265(19) & -0.318(22) & -0.143(16) & 1.25 \\
-%     2.000 & 9 & 0.3264(21) & -0.316(28) & -0.141(21) & 1.46 \\
-%     2.100 & 8 & 0.3243(27) & -0.267(38) & -0.098(29) & 0.54 \\
-%     2.200 & 7 & 0.3250(27) & -0.285(44) & -0.116(37) & 0.55 \\
-%     2.300 & 6 & 0.3256(30) & -0.301(54) & -0.132(49) & 0.65 \\
-%     2.400 & 5 & 0.3280(36) & -0.367(81) & -0.204(81) & 0.35 \\
-%     \bottomrule
-%   \end{tabular}
-%   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), c_6$ and $c_8$
-%     for the cubic weight $\omega(x)=(1-x)^3(1+3x)$ using FOPT ordered
-%     by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
-%   \label{table:fitWCubicAlD6D8}
-% \end{table}
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{./images/fitWCubeAlD6D8.png}
-%   \caption{$\w_{Cube}$ with $\alpha_s$, $c_6$ and $D_8$.}
-%   \label{fig:fitWCubeAlD6D8.png}
-% \end{figure}
-
+\subsection{Cubic weight: $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$}
+To further consolidate the results from the kinematic weight, we wanted to test
+a weight of higher pinching to suppress the \textsc{DV}s even more. The next
+higher pinching is triple pinching and to build an optimal weight we need to
+make sure that the weight has no contribution proportional to $x$. Thus the
+\textit{cubic weight} is defined as $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$. It
+is due to its polynomial structure sensitive to the \textsc{OPE} dimensions six,
+eight and ten, which yields one more parameter to fit than with $\omega_\tau$.
+The best fits, by $\chi^2$ per \textsc{dof}, can be seen in \cref{table:fitWCubicAlD6D8D10} and
+graphically in \cref{fig:fitWCubeAlpha}.
 \begin{table}[H]
   \centering
   \begin{tabular}{lllllll}
     \toprule \\
     $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $c_{10}$ & $\chi^2/dof$  \\
     \hline \\
-    1.800 & 13 & 0.3305(37) & -0.493(76) & -0.48(12) & -0.66(20) & 2.99 \\
-    1.850 & 12 & 0.3303(37) & -0.482(68) & -0.456(100) & -0.62(17) & 3.35 \\
+    % 1.800 & 13 & 0.3305(37) & -0.493(76) & -0.48(12) & -0.66(20) & 2.99 \\
+    % 1.850 & 12 & 0.3303(37) & -0.482(68) & -0.456(100) & -0.62(17) & 3.35 \\
     1.900 & 11 & 0.3249(29) & -0.280(20) & -0.088(21) & 0.088(55) & 1.58 \\
     1.950 & 10 & 0.3237(26) & -0.232(25) & 0.005(42) & 0.275(93) & 1.67 \\
     2.000 & 9 & 0.3228(26) & -0.196(27) & 0.075(28) & 0.420(56) & 1.96 \\
-    2.100 & 8 & 0.3302(40) & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\
-    2.200 & 7 & 0.3312(43) & -0.56(12) & -0.68(23) & -1.23(50) & 0.55 \\
-    2.300 & 6 & 0.336(11) & -0.78(47) & -1.17(98) & -2.38(22) & 0.29 \\
-    2.400 & 5 & 0.3330(96) & -0.63(47) & -0.82(10) & -1.51(26) & 0.48 \\
+    % 2.100 & 8 & 0.3302(40) & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\
+    % 2.200 & 7 & 0.3312(43) & -0.56(12) & -0.68(23) & -1.23(50) & 0.55 \\
+    % 2.300 & 6 & 0.336(11) & -0.78(47) & -1.17(98) & -2.38(22) & 0.29 \\
+    % 2.400 & 5 & 0.3330(96) & -0.63(47) & -0.82(10) & -1.51(26) & 0.48 \\
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), c_6$, $c_8$ and
@@ -837,6 +822,27 @@ to be compensated by larger OPE contributions.
   \includegraphics[width=\textwidth]{./images/fitWCubeAlD6D8D10.png}
   \label{fig:fitWCubeAlpha}
 \end{figure}
+The $chi^2$ is good, although a little bit higher than in the previous fits. The
+strong coupling of the three fits is within error ranges, but only the first of
+our fits the is in agreement with the other two by comparing the \textsc{OPE}
+contributions. Furthermore the OPE is not convergent for the fits with
+$s_{min}=\{\SI{1.95}{\giga\eV},\SI{2}{\giga\eV}\}$. Nevertheless the final fit
+values for the best fit, with a $\chi^2$ per \textsc{dof} of $1.58$, for \textit{cubic} weight are:
+\begin{equation}
+  \alpha_s(m_\tau^2) = 0.3249(29)
+\end{equation}
+for the strong coupling and
+\begin{equation}
+  c_6 = -0.280(20), \quad c_8 = -0.088(21) \quad \text{and} \quad c_{10} = 0.088(55)
+\end{equation}
+for the \textsc{OPE} contributions. These values are in high agreement with the
+ones obtained from the kinematical weight, although the strong coupling(the
+\textsc{OPE} contributions) is(are) a little bit larger(smaller). The
+conclusions that we take from the \textit{cubic weight} are that the kinematic
+weight, with its double pinching, should sufficiently suppress any contributions
+from \textsc{DV}s. If \textsc{DV} would have an effect on the kinematic weight,
+we should have seen an improvement of the fits with the \textit{cubic} weight,
+due to its triple pinching, which is not the case.
 
 \subsection{Quartic weight: $\omega(x) = (1-x)^4(1+4x)$}
 \begin{table}[H]
