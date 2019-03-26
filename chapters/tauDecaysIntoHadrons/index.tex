@@ -726,9 +726,11 @@ the \textsc{ope}. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have
     2.100 & 8 & 0.3256(38) & -0.43(15) & -0.25(28) & 1.30 \\
     \rowcolor{flatUI4}
     2.200 & 7 & 0.3308(44) & -0.72(20) & -0.85(38) & 0.19 \\
+    \rowcolor{flatUI4}
     2.300 & 6 & 0.3304(52) & -0.69(25) & -0.80(50) & 0.25 \\
+    \rowcolor{flatUI4}
     2.400 & 5 & 0.3339(70) & -0.91(39) & -1.29(83) & 0.10 \\
-    % 2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
+    2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of $\alpha_s(m_\tau^2), c_6$ and $c_8$ for the kinematic weight
@@ -754,21 +756,21 @@ the \textsc{ope}. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have
 We only display the fits for $s_{min}=\{\SI{1.95}{\giga\eV}, \SI{2}{\giga\eV},
 \SI{2.1}{\giga\eV}\}$ as fits with higher $s_{min}$ have in general a to large
 $\chi^2>2$. We achieved six good fits with a $\chi^2$ per \textsc{dof} less or
-close to one. We noticed a  The best fit
-has an $\chi^2$ per \textsc{dof} of $1.13$ and results in our final values for
-the strong coupling
-\begin{equation}
-  \alpha_s(m_\tau^2) = 0.3232(32)
-\end{equation}
-and the OPE contributions
-\begin{equation}
-  c_6 = -0.31(11) \qquad \text{and} \qquad c_8 = -0.01(18).
-\end{equation}
-The error of $\alpha_s$ starts in all fits after two decimals places and is thus small. The
-errors of the eights dimension are compatible with zero, thus $c_8$ has a
-negligible contribution, which can also be seen in its delta value of
-$\delta^{(8)}=0.001$. This is a clear sign of the covergence of the OPE, as soon as with
-the eight dimension.
+close to one, which we divided into two groups:
+\begin{itemize}
+  \item Fits with \textbf{5\-/7} momenta have $\chi^2$ per \textsc{dof} larger
+    than one and means of $\alpha(m_\tau^2)=0.3317(33),
+    c_6=-0.77(17)$ and $c_8=-0.98(35)$, where we propagated the uncertainty.
+  \item Fits with \textbf{8\-/10} momenta have small $\chi^2$ per \textsc{dof}
+    values and lower means for the strong
+    coupling $\alpha(m_\tau^2)=0.3241(20)$ but the \textsc{ope} contributions
+    are higher $c_6=-0.350(75)$ and $c_8=-0.09(12)$.
+\end{itemize}
+The values for the less momenta are preferred by us due to two reasons. First
+below energies of \SI{1.5}{\giga\eV} we have to face the problematic influence
+of increasing resonances. Second, we will see, that the values obtained from the
+lower moment fits are more compatible with our other fits series. For both, the
+lower and the higher, momenta set, we further see a good convergence of the \textsc{ope}.
 
 We further tested the stability of the dimension six and eight contributions to
 the OPE in the same fit series but with a fixed value of the strong coupling at
@@ -784,6 +786,13 @@ to be compensated by larger OPE contributions.
   \includegraphics[width=\textwidth]{./images/fitWKinD6D8.png}
   \label{fig:fitWKinD6D8}
 \end{figure}
+
+Due to the good results we will try in the following to argue in favor of the
+values obtained for the lower momenta:
+\begin{equation}
+  \alpha_s(m_\tau^2) = 0.3317(33), \quad c_6 = -0.77(17) \quad \text{and} \quad
+  c_8 = -0.98(35).
+\end{equation}
 
 \subsection{Cubic weight: $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$}
 To further consolidate the results from the kinematic weight, we wanted to test
