@@ -724,11 +724,11 @@ the \textsc{ope}. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have
     1.950 & 10 & 0.3232(32) & -0.31(11) & -0.01(18) & 1.13 \\
     2.000 & 9 & 0.3234(34) & -0.32(12) & -0.03(21) & 1.31 \\
     2.100 & 8 & 0.3256(38) & -0.43(15) & -0.25(28) & 1.30 \\
-    \rowcolor{flatUI4}
+    \rowcolor{primary}
     2.200 & 7 & 0.3308(44) & -0.72(20) & -0.85(38) & 0.19 \\
-    \rowcolor{flatUI4}
+    \rowcolor{primary}
     2.300 & 6 & 0.3304(52) & -0.69(25) & -0.80(50) & 0.25 \\
-    \rowcolor{flatUI4}
+    \rowcolor{primary}
     2.400 & 5 & 0.3339(70) & -0.91(39) & -1.29(83) & 0.10 \\
     2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
     \bottomrule
@@ -770,17 +770,16 @@ The values for the less momenta are preferred by us due to two reasons. First
 below energies of \SI{1.5}{\giga\eV} we have to face the problematic influence
 of increasing resonances. Second, we will see, that the values obtained from the
 lower moment fits are more compatible with our other fits series. For both, the
-lower and the higher, momenta set, we further see a good convergence of the \textsc{ope}.
+momenta sets, we further see a good convergence of the \textsc{ope}.
 
 We further tested the stability of the dimension six and eight contributions to
-the OPE in the same fit series but with a fixed value of the strong coupling at
-$\alpha_s(m_\tau^2)=0.3179$, which is the current global standard given by the
-\textit{Particle Data Group} (\textsc{PDG}) \cite{PDG2018} \textcolor{red}{have
-  to rerun alpha from mz}. The fits have been plotted in \cref{fig:fitWKinD6D8}
-and show good stability. The values for $c_6$ and $c_8$ are larger than the values given
-in our final results from \cref{table:fitWKinAlD6D8}. This is explained with a
-smaller contribution from the strong coupling ($\alpha_s$ is smaller), which has
-to be compensated by larger OPE contributions. 
+the OPE within the same fit series but for a fixed value of the strong coupling 
+to our previous averaged result $\alpha_s(m_\tau^2)=0.3179$. The fits have been
+plotted in \cref{fig:fitWKinD6D8} and show good stability. The values for $c_6$
+and $c_8$ are larger than the values given in our final results from
+\cref{table:fitWKinAlD6D8}. This is explained with a smaller contribution from
+the strong coupling ($\alpha_s$ is smaller), which has to be compensated by
+larger OPE contributions. 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/fitWKinD6D8.png}
@@ -795,14 +794,17 @@ values obtained for the lower momenta:
 \end{equation}
 
 \subsection{Cubic weight: $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$}
-To further consolidate the results from the kinematic weight, we wanted to test
-a weight of higher pinching to suppress the \textsc{DV}s even more. The next
-higher pinching is triple pinching and to build an optimal weight we need to
-make sure that the weight has no contribution proportional to $x$. Thus the
-\textit{cubic weight} is defined as $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$. It
-is due to its polynomial structure sensitive to the \textsc{OPE} dimensions six,
-eight and ten, which yields one more parameter to fit than with $\omega_\tau$.
-The best fits, by $\chi^2$ per \textsc{dof}, can be seen in \cref{table:fitWCubicAlD6D8D10} and
+To further consolidate the results from the kinematic weight, we test
+a weight of higher pinching, which is known to suppress \textsc{dv} more than a
+double pinched weight would do. Consequently, any differences to the previous
+fit could indicate a problem with the \textsc{dv} treatment. Our \textit{cubic}
+weight will be triple pinched and optimal, as the kinematic weight is double
+pinched and we do not want any problematic contributions proportional to $x$.
+Then the \textit{cubic weight} is defined as $\omega_{cube}(x) \equiv
+(1-x)^3(1+3x)$. It is due to its polynomial structure sensitive to the dimensions
+six, eight and ten of the \textsc{OPE}, which yields one more parameter to fit
+than with the kinematic weight $\omega_\tau$. The some good, selected fits, by
+$\chi^2$ per \textsc{dof}, can be seen in \cref{table:fitWCubicAlD6D8D10} and
 graphically in \cref{fig:fitWCubeAlpha}.
 \begin{table}
 
@@ -816,9 +818,13 @@ graphically in \cref{fig:fitWCubeAlpha}.
     1.900 & 11 & 0.3249(29) & -0.280(20) & -0.088(21) & 0.088(55) & 1.58 \\
     1.950 & 10 & 0.3237(26) & -0.232(25) & 0.005(42) & 0.275(93) & 1.67 \\
     2.000 & 9 & 0.3228(26) & -0.196(27) & 0.075(28) & 0.420(56) & 1.96 \\
+    \rowcolor{primary}
     2.100 & 8 & 0.3302(40) & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\
+    \rowcolor{primary}
     2.200 & 7 & 0.3312(43) & -0.56(12) & -0.68(23) & -1.23(50) & 0.55 \\
+    \rowcolor{primary}
     2.300 & 6 & 0.336(11) & -0.78(47) & -1.17(98) & -2.38(22) & 0.29 \\
+    \rowcolor{primary}
     2.400 & 5 & 0.3330(96) & -0.63(47) & -0.82(10) & -1.51(26) & 0.48 \\
     \bottomrule
   \end{tabular}
