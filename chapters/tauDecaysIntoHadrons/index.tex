@@ -760,7 +760,10 @@ close to one, which we divided into two groups:
 \begin{itemize}
   \item Fits with \textbf{5\-/7} momenta have $\chi^2$ per \textsc{dof} larger
     than one and means of $\alpha(m_\tau^2)=0.3317(33),
-    c_6=-0.77(17)$ and $c_8=-0.98(35)$, where we propagated the uncertainty.
+    c_6=-0.77(17)$ and $c_8=-0.98(35)$, where we propagated the uncertainty. We
+    have excluded the momentum containing four $s_0$s, because it $\chi^2$ is
+    too low and its errors are too large, which is because we have to fix three
+    variables for only four data points.
   \item Fits with \textbf{8\-/10} momenta have small $\chi^2$ per \textsc{dof}
     values and lower means for the strong
     coupling $\alpha(m_\tau^2)=0.3241(20)$ but the \textsc{ope} contributions
@@ -807,7 +810,6 @@ than with the kinematic weight $\omega_\tau$. The some good, selected fits, by
 $\chi^2$ per \textsc{dof}, can be seen in \cref{table:fitWCubicAlD6D8D10} and
 graphically in \cref{fig:fitWCubeAlpha}.
 \begin{table}
-
   \centering
   \begin{tabular}{lllllll}
     \toprule \\
@@ -838,22 +840,22 @@ graphically in \cref{fig:fitWCubeAlpha}.
   \includegraphics[width=\textwidth]{./images/fitWCubeAlD6D8D10.png}
   \label{fig:fitWCubeAlpha}
 \end{figure}
-The $chi^2$ is good, although a little bit higher than in the previous fits. The
-strong coupling of the three fits is within error ranges, but only the first of
-our fits the is in agreement with the other two by comparing the \textsc{OPE}
-contributions. Furthermore the OPE is not convergent for the fits with
-$s_{min}=\{\SI{1.95}{\giga\eV},\SI{2}{\giga\eV}\}$. Nevertheless the final fit
-values for the best fit, with a $\chi^2$ per \textsc{dof} of $1.58$, for \textit{cubic} weight are:
-\begin{equation}
-  \alpha_s(m_\tau^2) = 0.3249(29)
-\end{equation}
-for the strong coupling and
-\begin{equation}
-  c_6 = -0.280(20), \quad c_8 = -0.088(21) \quad \text{and} \quad c_{10} = 0.088(55)
-\end{equation}
-for the \textsc{OPE} contributions. These values are in high agreement with the
-ones obtained from the kinematical weight, although the strong coupling(the
-\textsc{OPE} contributions) is(are) a little bit larger(smaller). The
+As with the kinematic weight we get two different sets of value:
+\begin{itemize}
+  \item The fits with \textbf{9, 10 and 11} momenta have a too high $\chi^2$,
+    but are comparable to our the upper entries of the kinematic weight table
+    \cref{table:fitWKinAlD6D8}. As with the kinematic weight the $s_{min}$ seems
+    to be affected by lower resonances.
+  \item The fits with \textbf{5,6,7 and 8} have a better $\chi^2$ per
+    \textsc{dof} value and are in good agreement with the corresponding fits of
+    the kinematic weight. The averaged value with its propagated errors read:
+    $\alpha_s(m_\tau^2)=0.332478(61), c_6=-0.622(12), c_8=-0.815(55)$ and $c_{10}=-1.5(3.1)$.
+\end{itemize}
+We furthermore found that the \textsc{ope} is converging, but not as good as for
+the kinematic weight. The values of $\abs{\delta^{(8)}}$ is only half as large
+as $\abs{\delta^{(8)}}$.
+The values of the lower momentum count are in high agreement with the
+ones obtained from the kinematical weight. The
 conclusions that we take from the \textit{cubic weight} are that the kinematic
 weight, with its double pinching, should sufficiently suppress any contributions
 from \textsc{DV}s. If \textsc{DV} would have an effect on the kinematic weight,
