@@ -71,7 +71,7 @@ of the Ward-idendity \cref{eq:wardIdentity} we can write
   q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
 \end{equation}
 which then can be related to the longitudinal component of
-\cref{eq:correlatorTransversalLongitudinalDecomposition} by comparisson of the
+\cref{eq:correlatorTransversalLongitudinalDecomposition} by comparison of the
 two equations
 \begin{equation}
   q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
@@ -87,7 +87,7 @@ correlator
   \label{eq:correlatorCombination}
   \Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)
 \end{equation}
-we can additionaly relate the transversal and vectorial components via
+we can additionally relate the transversal and vectorial components via
 \begin{equation}
   \label{eq:longitudinalCorrelator}
   \begin{split}
@@ -109,12 +109,12 @@ Examining the inclusive ratio $R_\tau$ in \cref{eq:inclusiveRatio}, we note that
 we have to deal with a problematic integral over the real axis of $\Pi(s)$ from
 $0$ up to $m_\tau$. The integral is problematic for two reasons:
 \begin{itemize}
-  \item \textbf{Perturbative Quantum Chromodynamcs} (pQCD) and the OPE breaks down for low
+  \item \textbf{Perturbative Quantum Chromodynamics} (pQCD) and the OPE breaks down for low
     energies (over which we have to integrate).
-  \item The positive euclidean axis of $\Pi(s)$ has a discontinuity cut and can
+  \item The positive Euclidean axis of $\Pi(s)$ has a discontinuity cut and can
     theoretically not be evaluated (see \cref{sec:twoPointFunction}).
 \end{itemize}
-To literally circunvent the former issue we make use of \textit{Cauchy's Theorem}
+To literally circumvent the former issue we make use of \textit{Cauchy's Theorem}
 \cref{eq:cauchysTheorem}. For the latter we will apply so-called \textbf{pinched weights}.
 
 \section{Rescuing pQCD with Cauchy's theorem}
@@ -155,7 +155,7 @@ which pQCD would break down.
 To deal with the latter issue we have to suppress the contributions of the
 correlator close to the positive real axis, which can be achieved by introducing
 weight functions, which suppress contributions of the two-point function close
-to the postive real axis.
+to the positive real axis.
 
 Finally combining \cref{eq:correlatorContourIntegral} with
 \cref{eq:hadronicTauDecayRatio} we get
@@ -178,7 +178,7 @@ now able to theoretically evaluate the hadronic $\tau$-decay ratio at
 sufficiently large energy scales ($m_\tau \approx \SI{1.78}{\mega\eV}$)
 at which $\alpha_s(m_\tau)\approx 0.33$ \cite{Pich2016} is large enough to
 apply perturbation theory and the OPE. Obviously we would benefit from a
-contour integral over a bigger circunference, but $\tau$-decays are limited by the $m_\tau$.
+contour integral over a bigger circumference, but $\tau$-decays are limited by the $m_\tau$.
 Nevertheless there are promising $e^+e^-$ annihilation data, which yields
 valuable R-ratio values up to $\SI{2}{\giga\electronvolt}$
 \cite{Boito2018}\cite{Keshavarzi2018}.
@@ -194,18 +194,18 @@ close to the positive real axis by implementing so called \textbf{pinched
 \begin{equation}
   \omega(s) = (1-\frac{s}{m_\tau^2})^k,
 \end{equation}
-where k is the degree of the pinched weight. The heigher the degree the farther
-we operate from the critical postivie real axis (see. \cref{fig:pinchedWeightGraphs}), which suppresses the effects of
+where k is the degree of the pinched weight. The higher the degree the farther
+we operate from the critical positive real axis (see. \cref{fig:pinchedWeightGraphs}), which suppresses the effects of
 duality violations. This pinching of second degree appears quite naturally.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/monomialWeightGraphs.png}
   \caption{Monomial weights $(1-s/m_\tau^2)^k$ for degrees $1\to4$. We can see
-    that weights of heigher pinching decrease faster, which comes in handy if we
+    that weights of higher pinching decrease faster, which comes in handy if we
   want to suppress duality violations.}
   \label{fig:monomialWeightGraphs}
 \end{figure}
-If we regard the incluse $\tau-decay$ ratio \cref{eq:rTauT+L}, we note that for the
+If we regard the include $\tau-decay$ ratio \cref{eq:rTauT+L}, we note that for the
 transversal component we already have a double pinched weight, the
 \textit{kinematic weight}
 \begin{equation}
@@ -231,7 +231,7 @@ The residue of a monomial $x^k$ is only different from 0 if its power $k=-1$:
   \oint_{C} x^k \dif x = i \int_0^{2\pi}\left(e^{i \theta}\right)^{k+1} \dif \theta
   = \begin{cases} \mbox{$2 \pi i$} & \mbox{if } k=-1, \\ \mbox{0} & \mbox{otherwise} \end{cases}.
 \end{equation}
-Consequently if we exchange the kinematic weight of the incluse ratio
+Consequently if we exchange the kinematic weight of the include ratio
 \cref{eq:inclusiveRatio} through a monomial and neglect all terms of no interest
 to us we can write
 \begin{equation}
@@ -252,7 +252,7 @@ given by
 \begin{equation}
   (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3\underbrace{x^2}_{D=6} + 2\underbrace{x^3}_{D=8},
 \end{equation}
-where we underbraced the monomials and gave the active dimensions. A list of
+where we underbraced the monomial and gave the active dimensions. A list of
 monomomials and their corresponding Dimensions up to dimension 14 can be found
 in \cref{table:monomialDimensions}.
 \begin{table}
@@ -263,11 +263,11 @@ in \cref{table:monomialDimensions}.
     \textbf{dimension:} & $D^{(2)}$ & $D^{(4)}$ & $D^{(6)}$ & $D^{(8)}$ & $D^{(10)}$ & $D^{(12)}$ & $D^{(14)}$\\
     \bottomrule 
   \end{tabular}
-  \caption{List of monomials and their corresponding ``active'' dimensions in the OPE.}
+  \caption{List of monomial and their corresponding ``active'' dimensions in the OPE.}
   \label{table:monomialDimensions}
 \end{table}
-This behaviour enables us to bring out different dimensions of the OPE and
-suppress contributions of heigher order ($D\geq10$) for which less is kown. 
+This behavior enables us to bring out different dimensions of the OPE and
+suppress contributions of higher order ($D\geq10$) for which less is known. 
 
 
 \section{RG invariance}
@@ -295,7 +295,7 @@ Starting by the transversal plus longitudinal contribution we get:
 \end{equation}
 where we fixed the integration constant to $C=-\frac{m_\tau^2}{2}$ in the second
 line and left the antiderivatives contained in the squared brackets untouched.
-If we parametrizing the integral appearing in the expression in the squared
+If we parameterizing the integral appearing in the expression in the squared
 brackets we can derive that it vanishes:
 \begin{equation}
     \left[ -\frac{m_\tau^2}{2} \left( 1 - e^{-i \phi} \right)^3 \left( 1 + e^{-i \phi} \right) \Pi^{(L+T)}(m_\tau^2 e^{-i \phi}) \right]_0^{2\pi} = 0
@@ -335,7 +335,7 @@ can write the vector correlation function $\Pi(s)$ as \cite{Beneke2008}:
   \Pi_V^{T+L}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
 \end{equation}
 
-The coeffiecient $c_{n,k}$ up to two-loop order can be
+The coefficient $c_{n,k}$ up to two-loop order can be
 obtained by Feynman-diagram calculations.
 \textcolor{red}{add complete calculation}
 \begin{figure}
@@ -351,7 +351,7 @@ with \cref{eq:correlatorExpansion} and extract the first two coefficients
   c_{00} = - \frac{5}{3} \qquad \text{and} \qquad c_{01} = 1,
 \end{equation}
 where $\Pi^B_{\mu\nu}(q^2)$ is not renormalized\footnote{The term $1/ \hat
-  \epsilon$, which is of order 0 in $\alpha_s$, will be cancelled by renormalization.}
+  \epsilon$, which is of order 0 in $\alpha_s$, will be canceled by renormalization.}
 
 The second loop can also be calculated by diagram techniques resulting in \cite{Boito2011}
 \begin{equation}
@@ -359,12 +359,12 @@ The second loop can also be calculated by diagram techniques resulting in \cite{
 \end{equation}
 yielding  $c_{11} = 1$.
 
-Beginning from three loop diagrams the algebra becomes exausting and one has to
-use dedicated algorithms to compute the heigher loops. The third loop
+Beginning from three loop diagrams the algebra becomes exhausting and one has to
+use dedicated algorithms to compute the higher loops. The third loop
 calculations have been done in the late seventies by
 \cite{Chetyrkin1979,Dine1979,Celmaster1979}. The four loop evaluation have been
 completed a little more than ten years later by
-\cite{Gorishnii1990,Surguladze1990}. The heighest loop published, that amounts
+\cite{Gorishnii1990,Surguladze1990}. The highest loop published, that amounts
 to $\alpha_s^4$, was published in 2008 \cite{Baikov2008} almost 20 years later.
 
 Fixing the number of colors to $N_c=3$ the missing coefficients up to order four
@@ -378,9 +378,9 @@ in $\alpha_s$ read:
    c_{4,1} &= \frac{78631453}{20736} - \frac{1704247}{432}\zeta_3 + \frac{4185}{8}\zeta_3^2 + \frac{34165}{96}\zeta_5 - \frac{1995}{16}\zeta_7,
   \end{split}
 \end{equation}
-where used the flavour number $N_f=3$ for the last line.
+where used the flavor number $N_f=3$ for the last line.
 
-The 6-loop calculation has until today not been achieved, but Beneke und Jamin
+The 6-loop calculation has until today not been achieved, but Beneke and Jamin
 \cite{Beneke2008} used and educated guess to estimate the coefficient
 \begin{equation}
   c_{5,1} \approx 283 \pm 283.
@@ -433,7 +433,7 @@ numbers. But as we will see in the following section the RGE gives us two
 different choices in the order of the computation of the perturbative
 contribution to the inclusive $\tau$-decay ratio.
 
-\subsection{Renormalisation group summation}
+\subsection{Renormalization group summation}
 By making use of the RGE we have to decide about the order of mathematical
 operations we perform. As the perturbative contribution $\delta^{(0)}$ is
 independent on the scale $\mu$ we are confronted with two choices
@@ -449,7 +449,7 @@ We can write the perturbative contribution $\delta^{(0)}$ to $R_\tau$ (see
 \end{equation}
 where we inserted the expansion of $D_V^{(T+L)}$ \cref{eq:adlerFunction} into
 $R_\tau$ \cref{eq:rTauFinal}. Keep in mind that the contributions from the
-vector and axialvector correlator are identical in the massless case:
+vector and axial-vector correlator are identical in the massless case:
 \begin{equation}
   D^{(T+L)} = D^{(T+L)}_V + D^{(T+L)}_A = 2 D^{(T+L)}_V.
 \end{equation}
@@ -484,7 +484,7 @@ All logarithms vanish except the ones for $k=1$:
 \begin{equation}
   \log(1)^{k-1} =  \begin{cases} \mbox{1} & \mbox{if } k=1, \\ \mbox{0} & k\neq 1 \end{cases}
 \end{equation}
-which selectes adler function coefficients $c_{n,1}$ with a fixed $k=1$. Handling the
+which selects adler function coefficients $c_{n,1}$ with a fixed $k=1$. Handling the
 logarithms left us with the integration of $\alpha_s(- m_\tau^2 x)$ over the closed-contour $\oint_{\abs{x}=1}$, which now
 depends on the integration variable x. In general we have to decide if we want
 to perform a contour integration with a constant coupling constant and variable
@@ -498,9 +498,9 @@ prescriptions yielding \cite{Beneke2008}
   \delta_{FO}^{(0)} &= 0.1082 + 0.0609 + 0.0334 + 0.0174 (+ 0.0088) = 0.2200 (0.2288) \\
   \delta_{CI}^{(0)} &= 0.1479 + 0.0297 + 0.0122 + 0.0086 (+ 0.0038) = 0.1984 (0.2021).
 \end{align}
-The series indicate, that CIPT converges faster and that both series aproach a
+The series indicate, that CIPT converges faster and that both series approach a
 different value. This discrepancy represents currently the biggest theoretical
-uncertainity while extracting the strong coupling $\alpha_s$.
+uncertainty while extracting the strong coupling $\alpha_s$.
 
 As today we do not know if FOPT or CIPT is the correct approach of
 measuring $\alpha_s$. Therefore there are currently three ways of stating
@@ -525,14 +525,14 @@ dominant one. With
   \end{split}
 \end{equation}
 
-The NP vs perturbative contributions can be varied by choosen different weights
+The NP vs perturbative contributions can be varied by chosen different weights
 than $\omega_\tau$.
 
 
 \subsection{Dimension four}
 For the OPE contributions of dimension four we have to take into account the
 terms with masses to the fourth power $m^4$, the quark condensate multiplied by
-a mass $m \langle \anti{q} q \rangle$ and the glucon condensate $\langle GG
+a mass $m \langle \anti{q} q \rangle$ and the gluon condensate $\langle GG
 \rangle$. The resulting expression can be taken from the appendix of
 \cite{Pich1999}, yielding:
 \begin{equation}
@@ -582,12 +582,12 @@ contribute at leading order. The four-quark condensates known up to
 $\mathcal{O}(a^2)$, but we will make use of the \textit{vacuum saturation
   approach} \cite{Beneke2008,Braaten1991,Shifman1978} to express them in quark, anti-quark condensates $\langle q \anti{q} \rangle$.
 In our work we take the simplest approach possible: Introducing an effective
-dimension six coefficient $\rho_{V/A}^{(6)}$ divided by the appropiate power in s
+dimension six coefficient $\rho_{V/A}^{(6)}$ divided by the appropriate power in s
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=6} = 0.03 \frac{\rho_{V/A}^{(6)}}{s^3}
 \end{equation}
 
-As for the dimension eigth contribution the situation is not better than the
+As for the dimension eight contribution the situation is not better than the
 dimension six one we keep the simplest approach, leading to
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=8} = 0.04 \frac{\rho_{V/A}^{(8)}}{s^4}.
@@ -608,7 +608,7 @@ group members under led by M. Davier, which have performed regular updates on
 the data-sets \cite{Davier2013,Davier2008,Aleph2005}.
 
 The measured spectral functions for the Aleph data are defined in
-\cite{Davier2007} and given for the transversal and longitudinal components separatly:
+\cite{Davier2007} and given for the transverse and longitudinal components separately:
 \begin{equation}
   \begin{split}
     \rho^{(T)}_{V/A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}^2}S_{EW}} \frac{\mathcal{B}(\tau^- \to V^-/A^- \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \\
@@ -627,10 +627,10 @@ The measured spectral functions for the Aleph data are defined in
 
 The data relies on a separation into vector and axial-vector channels. In the
 case of the Pions this can be achieved via counting. The vector channel is
-characterized by a negative parity, whereas the axial-vector channel has
+characterised by a negative parity, whereas the axial-vector channel has
 positive parity. A quark has by definition positive parity, thus an anti-quark
 has a negative parity. A meson, like the Pion particle, is a composite particle
-consiting of an quark an anti-quark. Consequently a single Pion carries negative
+consisting of an quark an anti-quark. Consequently a single Pion carries negative
 parity, an even number of Pions carries positive parity and an odd number of
 Pions carries negative parity:
 \begin{equation}
@@ -684,17 +684,18 @@ In the following we will perform fits to determine $\alpha_s$ at the
 $m_\tau^2$\-/scale. The fits are separated corresponding to the used weight. Every
 weight contains multiple fits for different $s_0$\-/momenta. We will start with
 the kinematic weight, which appears naturally in the inclusive $\tau$\-/decay
-ratio and has the best fitting characteristics of all weights we have used.
+ratio \cref{eq:inclusiveRatio} and has the best fitting characteristics of all
+weights we have used.
 
 \subsection{Kinematic weight: $\omega_{\tau}(x) \equiv (1-x)^2(1+2x)$}
 The kinematic weight is defined as $\omega(x) = (1-x)^2(1+2x)$. It is a
-polynomial double pinched weight\-/ function that contains the unity and
+double pinched, polynomial weight\-/ function that contains the unity and
 does not contain a term proportional to x, which makes it an optimal weight
 \cite{Beneke2012}. As a doubled pinched weight it should have a good suppression
 of \textsc{dv}\-/contributions and its polynomial contains terms proportional to
 $x^2$ and $x^3$, which makes it sensitive to the dimension six and eight \textsc{ope}
 contributions. The fits have been performed within the framework of \textsc{fopt} for different numbers of $s_0$.
-The momentum sets are characterized by its lowest energy $s_{min}$. We
+The momentum sets are characterised by its lowest energy $s_{min}$. We
 fitted values down to $\SI{1.5}{\giga\eV}$. Going to lower energies is
 questionable due to the coupling constant becoming to large, which implies a
 breakdown of \textsc{PT} and appearing DVs. Furthermore it bares the
@@ -744,7 +745,7 @@ the \textsc{ope}. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have
   \caption{Fitting values of $\alpha_s(m_\tau^2), c_6$ and $c_8$ for the kinematic weight
     $\omega(x)=(1-x)^2(1+2x)$ using FOPT for different $s_{min}$. The left graph plots $\alpha_s(m_\tau^2)$ for
     different numbers of used $s_0$s. The right plot contains the dimension six
-    and eight contributions to the OPE. Both plots have in gray the $\chi^2$ per
+    and eight contributions to the OPE. Both plots have in grey the $\chi^2$ per
   degree of freedom (dof).}
   \label{fig:fitWKinAlD6D8}
 \end{figure}
@@ -770,7 +771,7 @@ close to one, which we divided into two groups:
     are higher $c_6=-0.350(75)$ and $c_8=-0.09(12)$.
 \end{itemize}
 The values for the less momenta are preferred by us due to two reasons. First
-below energies of \SI{1.5}{\giga\eV} we have to face the problematic influence
+below energies of \SI{2.2}{\giga\eV} we have to face the problematic influence
 of increasing resonances. Second, we will see, that the values obtained from the
 lower moment fits are more compatible with our other fits series. For both, the
 momenta sets, we further see a good convergence of the \textsc{ope}.
@@ -786,11 +787,12 @@ larger OPE contributions.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/fitWKinD6D8.png}
+  \caption{}
   \label{fig:fitWKinD6D8}
 \end{figure}
 
-Due to the good results we will try in the following to argue in favor of the
-values obtained for the lower momenta:
+Due to the good results we will try to argue in favour of the values obtained by
+the lower momenta:
 \begin{equation}
   \label{eq:wKinResult}
   \alpha_s(m_\tau^2) = 0.3317(33), \quad c_6 = -0.77(17) \quad \text{and} \quad
@@ -798,6 +800,7 @@ values obtained for the lower momenta:
 \end{equation}
 
 \subsection{Cubic weight: $\omega_{cube}(x) \equiv (1-x)^3(1+3x)$}
+\label{sec:cubicWeight}
 To further consolidate the results from the kinematic weight, we test
 a weight of higher pinching, which is known to suppress \textsc{dv} more than a
 double pinched weight would do. Consequently, any differences to the previous
@@ -856,7 +859,7 @@ We furthermore found that the \textsc{ope} is converging, but not as good as for
 the kinematic weight. The values of $\abs{\delta^{(8)}}$ is only half as large
 as $\abs{\delta^{(8)}}$.
 The values of the lower momentum count are in high agreement with the
-ones obtained from the kinematical weight. The
+ones obtained from the kinematic weight. The
 conclusions that we take from the \textit{cubic weight} are that the kinematic
 weight, with its double pinching, should sufficiently suppress any contributions
 from \textsc{DV}s. If \textsc{DV} would have an effect on the kinematic weight,
@@ -864,35 +867,26 @@ we should have seen an improvement of the fits with the \textit{cubic} weight,
 due to its triple pinching, which is not the case.
 
 \subsection{Quartic weight: $\omega(x) \equiv (1-x)^4(1+4x)$}
+\label{sec:quarticWeight}
 To include an even higher pinching of four and to compare the previously
 obtained value for the dimension ten \textsc{OPE} contribution we performed fits
 with the \textit{quartic weight} defined as $\omega(x) \equiv (1-x)^4(1+4x)$,
-which also fulfills the definition of an optimal weight \cite{Beneke2012}. 
-\textcolor{red}{Fits including D12 did not converge (only 1), whereas fits with
-  only D6 D8 and D12 did converge as below.} The results can be seen in
-\cref{table:fitWQuarticAlD6D8D10}.
-\begin{table}
-  \centering
-  \begin{tabular}{lllllll}
-    \toprule \\
-    $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $c_{10}$ & $\chi^2/dof$  \\
-    \hline \\
-    1950 & 10 & 0.3308(12) & -0.3499(62) & -0.2453(55) & -0.1779(45) & 1.21 \\
-    2000 & 9 & 0.3290(99) & -0.3030(44) & -0.1874(30) & -0.1207(44) & 0.54 \\
-    2100 & 8 & 0.3278(12) & -0.2749(48) & -0.1515(28) & -0.0841(47) & 0.48 \\
-    2200 & 7 & 0.3286(28) & -0.296(40) & -0.181(48) & -0.117(49) & 0.51 \\
-    2300 & 6 & 0.3304(30) & -0.352(54) & -0.262(71) & -0.210(79) & 0.41 \\
-    \bottomrule
-  \end{tabular}
-  \caption{Table of our fitting values of $\alpha_s(m_\tau^2), c_6$, $c_8$ and
-    $c_{10}$ for the quartic weight $\omega(x)=(1-x)^4(1+4x)$ using FOPT ordered
-    by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
-  \label{table:fitWQuarticAlD6D8D10}
-\end{table}
+which also fulfils the definition of an optimal weight \cite{Beneke2012}. 
+Unfortunately the fits only converged for the $s_{min}=\SI{2}{\giga\eV}$, nine $s_0$s
+moment combination. The results for , with a $\chi^2$ per \textsc{dof} of $0.67$ are given by:
+\begin{equation}
+  \begin{split}
+  \alpha_s(m_\tau^2) &= 0.3290(11), \quad c_6=-0.3030(46), \quad c_8=-0.1874(28), \\
+  c_{10} &= 0.3678(45) \quad \text{and} \quad c_{12}=-0.4071(77)
+  \end{split}
+\end{equation}
+Due to the problematic of the fitting routing, which is caused by the inclusion
+of too many \textsc{ope} contributions, which have to be fitted simultaneously,
+we will discard the fitting results for the quartic weight.
 
-\subsection{Single pinched third power monomial: $\omega_{m3}(x) \equiv 1-x^3$}
-To study the behavior of the \textsc{DV} and the higher order \textsc{OPE}
-contributinos of dimension eight and ten we further included two optimal, single pinched weights.
+\subsection{Third power monomial: $\omega_{m3}(x) \equiv 1-x^3$}
+To study the behaviour of the \textsc{DV} and the higher order \textsc{OPE}
+contributions of dimension eight and ten we further included two optimal, single pinched weights.
 The first we analysed is defined as $\omega_{m3}(x)\equiv 1-x^3$ and contains a
 single third power monomial and is consequently sensitive to dimension eight
 contributions from the \textsc{OPE}. The results can be taken from \cref{table:fitWM3AlD8}.
@@ -941,10 +935,10 @@ consequently given by
 \begin{equation}
   \alpha(m_\tau^2) = 0.32382(42) \qquad \text{and} \qquad c_8=-1.33(67).
 \end{equation}
-We note that the strong coupling is smaller as our choosen values from the
+We note that the strong coupling is smaller as our chosen values from the
 kinematic weight \cref{eq:wKinResults}, but the dimension eight contribution
 is in good agreement. The strong coupling from the monomial weight to third
-order seems to agree more with the 8\-/10 momenta fits of the kinematic gits, whereas
+order seems to be in better agreement with the 8\-/10 momenta used in the kinematic fits, whereas
 the dimension eight contributions agrees more with the 4\-/7 momenta fits.
 
 We have made use of a single pinched weight and discovered that the fitting
@@ -952,8 +946,14 @@ result is not completely compatible with our previous fitting results.
 Consequently weights with a pinching less than two are affected by \textsc{DV}
 and should not be used to determine the strong coupling.
 
-\subsection{Single pinched fourth power monomial: $\omega(x) = 1-x^4$}
-\textcolor{red}{same observation as before} \cref{table:fitM4AlD10}
+\subsection{Fourth power monomial: $\omega_{m4}(x) \equiv
+  1-x^4$}
+We already analysed the cubic and quartic weights, which depend on the
+dimension ten \textsc{ope} contribution, in \cref{sec:cubicWeight}
+and \cref{sec:quarticWeight} correspondingly. Now, even with the visible
+\textsc{dv} for
+fourth power monomial $\omega_{m4}\equiv 1-x^4$ to study another single pinched moment and the dimension
+ten \textsc{ope} contribution. The results of the are given in \cref{table:wFitM4AlD10}. 
 \begin{table}
   \centering
   \begin{tabular}{lllll}
@@ -988,8 +988,25 @@ and should not be used to determine the strong coupling.
     by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
   \label{table:fitM4AlD10}
 \end{table}
+The fitting behaviour is very similar to the third power monomial
+(\cref{table:wFitM3AlD8}) and we will directly cite our obtained results:
+\begin{equation}
+  \alpha_s(m_\tau^2) = 0.32277(40) \qquad \text{and} \qquad c_{10}=-2.4(3.6).
+\end{equation}
+As before the values for the strong coupling are lower than the ones obtained by
+the kinematic weight fit. Furthermore the error on the tenth dimension
+contribution of the \textsc{ope} are too huge, although the huge errors makes it
+compatible with all previous results. All in all the usage of the single pinched
+fourth power monomial weight is questionable and does not deliver any additional insights.
 
-\subsection{Optimal Moments}
+\subsection{Pich's Optimal Moments \cite{Pich2016}}
+Next to the previously mentioned \textit{optimal weights} from Beneke and Jamin
+\cite{Beneke2012} there are \textit{optimal moments} introduced by Pich
+\cite{LeDiberder1992}. Combinations of these optimal moments have been widely
+used by the \textsc{aleph} collaboration to perform QCD analysis on the Large electron-positron
+collider (\textsc{lep}). These moments include the for \textsc{FOPT} problematic
+proportional term in x \cite{Beneke2012}, thus we will perform additional fits
+in the Borel-sum.
 
 \begin{equation}
   \omega^{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k 
@@ -1001,22 +1018,22 @@ and should not be used to determine the strong coupling.
     \toprule \\
     $s_{min}$ & \#$s_0$s & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_{6}$ & $\chi^2/dof$  \\
     \hline \\
-    1.500 & 23 & 0.3276(13) & -0.0077(10) & 0.330(35) & 2.62 \\
-    1.525 & 22 & 0.3278(14) & -0.0078(10) & 0.330(38) & 2.75 \\
-    1.550 & 21 & 0.3299(16) & -0.0092(12) & 0.333(37) & 2.31 \\
-    1.575 & 20 & 0.3308(25) & -0.0098(13) & 0.334(47) & 2.32 \\
-    1.600 & 19 & 0.3317(28) & -0.0105(14) & 0.335(54) & 2.38 \\
-    1.625 & 18 & 0.3336(21) & -0.0118(14) & 0.340(46) & 2.09 \\
-    1.650 & 17 & 0.3345(34) & -0.0124(17) & 0.342(62) & 2.15 \\
-    1.675 & 16 & 0.3349(25) & -0.0127(15) & 0.342(51) & 2.28 \\
-    1.700 & 15 & 0.3348(33) & -0.0126(18) & 0.342(58) & 2.47 \\
-    1.750 & 14 & 0.3372(43) & -0.0145(23) & 0.341(71) & 2.34 \\
-    1.800 & 13 & 0.3378(31) & -0.0149(20) & 0.339(58) & 2.54 \\
-    1.850 & 12 & 0.3365(38) & -0.0138(25) & 0.346(60) & 2.72 \\
-    1.900 & 11 & 0.3355(40) & -0.0128(28) & 0.354(59) & 2.97 \\
-    1.950 & 10 & 0.3296(47) & -0.0073(34) & 0.418(58) & 1.57 \\
-    2.000 & 9  & 0.3299(50) & -0.0076(39) & 0.414(64) & 1.83 \\
-    2.100 & 8  & 0.3331(54) & -0.0108(45) & 0.361(76) & 1.9 \\
+    % 1.500 & 23 & 0.3276(13) & -0.0077(10) & 0.330(35) & 2.62 \\
+    % 1.525 & 22 & 0.3278(14) & -0.0078(10) & 0.330(38) & 2.75 \\
+    % 1.550 & 21 & 0.3299(16) & -0.0092(12) & 0.333(37) & 2.31 \\
+    % 1.575 & 20 & 0.3308(25) & -0.0098(13) & 0.334(47) & 2.32 \\
+    % 1.600 & 19 & 0.3317(28) & -0.0105(14) & 0.335(54) & 2.38 \\
+
+    % 1.650 & 17 & 0.3345(34) & -0.0124(17) & 0.342(62) & 2.15 \\
+    % 1.675 & 16 & 0.3349(25) & -0.0127(15) & 0.342(51) & 2.28 \\
+    % 1.700 & 15 & 0.3348(33) & -0.0126(18) & 0.342(58) & 2.47 \\
+    % 1.750 & 14 & 0.3372(43) & -0.0145(23) & 0.341(71) & 2.34 \\
+    % 1.800 & 13 & 0.3378(31) & -0.0149(20) & 0.339(58) & 2.54 \\
+    % 1.850 & 12 & 0.3365(38) & -0.0138(25) & 0.346(60) & 2.72 \\
+    % 1.900 & 11 & 0.3355(40) & -0.0128(28) & 0.354(59) & 2.97 \\
+    % 1.950 & 10 & 0.3296(47) & -0.0073(34) & 0.418(58) & 1.57 \\
+    % 2.000 & 9  & 0.3299(50) & -0.0076(39) & 0.414(64) & 1.83 \\
+    % 2.100 & 8  & 0.3331(54) & -0.0108(45) & 0.361(76) & 1.9 \\
     2.200 & 7  & 0.3401(57) & -0.0185(52) & 0.220(88) & 0.73 \\
     2.300 & 6  & 0.3383(68) & -0.0165(67) & 0.26(12) & 0.89 \\
     2.400 & 5  & 0.3450(93) & -0.0243(99) & 0.10(17) & 0.71 \\
@@ -1127,5 +1144,14 @@ furthermore add $(1-x)^2$ to our fitting list?
 
 Alpha is comparable, which just have a bigger error. For D6 and D8 we have to
 compare our definition of $c_6, c_8$ with his.
-jo
 \end{document}
+% LocalWords:  adlerFunction rTauContributions adlerSndOrder betaFunction rTauT
+% LocalWords:  correlatorExpansion correlatorLoopDiagrams antiderivatives AlD
+% LocalWords:  longitudinalCorrelator monomialDimensions monomialInclusiveRatio
+% LocalWords:  monomialWeights monomialWeightGraphs pinchedWeightGraphs llllll
+% LocalWords:  hadronicTauDecayRatio correlatorContourIntegral LocalWords lllll
+% LocalWords:  correlatorCombination fitWKinAlD rTauCauchysTheorem SpecFunc
+% LocalWords:  cauchysTheorem fitWKinD twoPointFunction fitWCubicAlD fitWM
+% LocalWords:  fitWCubeAlpha fitWCubeAlD wKinResults cubicWeight quarticWeight
+% LocalWords:  correlatorTransversalLongitudinalDecomposition wFitM lllllll
+% LocalWords:  inclusiveRatio
