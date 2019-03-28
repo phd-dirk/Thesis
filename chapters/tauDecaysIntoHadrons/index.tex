@@ -792,6 +792,7 @@ larger OPE contributions.
 Due to the good results we will try in the following to argue in favor of the
 values obtained for the lower momenta:
 \begin{equation}
+  \label{eq:wKinResult}
   \alpha_s(m_\tau^2) = 0.3317(33), \quad c_6 = -0.77(17) \quad \text{and} \quad
   c_8 = -0.98(35).
 \end{equation}
@@ -929,14 +930,27 @@ contributions from the \textsc{OPE}. The results can be taken from \cref{table:f
     by increasing $s_{min}$. The errors are given in parenthesis after the observed value.}
   \label{table:fitWM3AlD8}
 \end{table}
-The strong coupling for this single pinched weights are lower than the previous
-obtained results. Furthermore the dimensions eight contribution is not
-compatible with zero anymore. Apart from that the fits have a good $\chi^2$ per
-\textsc{dof}, and are internally consistent regarding their values and errors.
-Furthermore the obtained dimension eight contributions are similar to the
-previously obtained results from higher pinched weights. This confirms that
-single pinched weights are affected by \textsc{DV} and should not be used to
-determine the strong coupling.
+The $\chi^2$ per \textsc{dof} is like in the $\omega_\tau$ and $\omega_{cubic}$
+fits good for $s_{min}\leq \SI{2.2}{\giga\eV}$, but jumps to values
+$\chi^2/dof>1.4$ for smaller $s_{min}$. This is, as before, explained through
+resonances that appear in lower energies. Due to the good $\chi^2$ and the
+internally compatible fitting values we averaged over all rows except the last
+one of \cref{table:fitWM3AlD8}. The last row, at $s_{min}=\SI{2.8}{\giga\eV}$
+has only one \textsc{dof} and thus high errors. The averaged values are
+consequently given by 
+\begin{equation}
+  \alpha(m_\tau^2) = 0.32382(42) \qquad \text{and} \qquad c_8=-1.33(67).
+\end{equation}
+We note that the strong coupling is smaller as our choosen values from the
+kinematic weight \cref{eq:wKinResults}, but the dimension eight contribution
+is in good agreement. The strong coupling from the monomial weight to third
+order seems to agree more with the 8\-/10 momenta fits of the kinematic gits, whereas
+the dimension eight contributions agrees more with the 4\-/7 momenta fits.
+
+We have made use of a single pinched weight and discovered that the fitting
+result is not completely compatible with our previous fitting results.
+Consequently weights with a pinching less than two are affected by \textsc{DV}
+and should not be used to determine the strong coupling.
 
 \subsection{Single pinched fourth power monomial: $\omega(x) = 1-x^4$}
 \textcolor{red}{same observation as before} \cref{table:fitM4AlD10}
@@ -1113,4 +1127,5 @@ furthermore add $(1-x)^2$ to our fitting list?
 
 Alpha is comparable, which just have a bigger error. For D6 and D8 we have to
 compare our definition of $c_6, c_8$ with his.
+jo
 \end{document}
