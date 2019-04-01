@@ -754,9 +754,9 @@ the \textsc{ope}. For the fitting\-/parameters $\alpha_s, c_6$ and $c_8$ we have
   \includegraphics[width=\textwidth]{./images/fitWKinAlD6D8SpecFunc.png}
   \caption{test}
 \end{figure}
-We only display the fits for $s_{min}=\{\SI{1.95}{\giga\eV}, \SI{2}{\giga\eV},
-\SI{2.1}{\giga\eV}\}$ as fits with higher $s_{min}$ have in general a to large
-$\chi^2>2$. We achieved six good fits with a $\chi^2$ per \textsc{dof} less or
+We only display the fits for $s_{min}$ larger than \SI{1.95}{\giga\eV} as fits
+with higher $s_{min}$ have a too large
+$\chi^2$ (larger than two). We achieved six good fits with a $\chi^2$ per \textsc{dof} less or
 close to one, which we divided into two groups:
 \begin{itemize}
   \item Fits with \textbf{5\-/7} momenta have $\chi^2$ per \textsc{dof} larger
@@ -774,7 +774,7 @@ The values for the less momenta are preferred by us due to two reasons. First
 below energies of \SI{2.2}{\giga\eV} we have to face the problematic influence
 of increasing resonances. Second, we will see, that the values obtained from the
 lower moment fits are more compatible with our other fits series. For both, the
-momenta sets, we further see a good convergence of the \textsc{ope}.
+momenta sets, we see a good convergence of the \textsc{ope}.
 
 We further tested the stability of the dimension six and eight contributions to
 the OPE within the same fit series but for a fixed value of the strong coupling 
@@ -807,9 +807,9 @@ double pinched weight would do. Consequently, any differences to the previous
 fit could indicate a problem with the \textsc{dv} treatment. Our \textit{cubic}
 weight will be triple pinched and optimal, as the kinematic weight is double
 pinched and we do not want any problematic contributions proportional to $x$.
-Then the \textit{cubic weight} is defined as $\omega_{cube}(x) \equiv
+Thus we define the \textit{cubic weight} as $\omega_{cube}(x) \equiv
 (1-x)^3(1+3x)$. It is due to its polynomial structure sensitive to the dimensions
-six, eight and ten of the \textsc{OPE}, which yields one more parameter to fit
+six, eight and ten contributions of the \textsc{OPE}, which yields one more parameter to fit
 than with the kinematic weight $\omega_\tau$. The some good, selected fits, by
 $\chi^2$ per \textsc{dof}, can be seen in \cref{table:fitWCubicAlD6D8D10} and
 graphically in \cref{fig:fitWCubeAlpha}.
@@ -872,24 +872,25 @@ To include an even higher pinching of four and to compare the previously
 obtained value for the dimension ten \textsc{OPE} contribution we performed fits
 with the \textit{quartic weight} defined as $\omega(x) \equiv (1-x)^4(1+4x)$,
 which also fulfils the definition of an optimal weight \cite{Beneke2012}. 
-Unfortunately the fits only converged for the $s_{min}=\SI{2}{\giga\eV}$, nine $s_0$s
-moment combination. The results for , with a $\chi^2$ per \textsc{dof} of $0.67$ are given by:
+Unfortunately the fits only converged for $s_{min}=\SI{2}{\giga\eV}$ (nine $s_0$s
+moment combination). The results for , with a $\chi^2$ per \textsc{dof} of $0.67$ are given by:
 \begin{equation}
   \begin{split}
   \alpha_s(m_\tau^2) &= 0.3290(11), \quad c_6=-0.3030(46), \quad c_8=-0.1874(28), \\
   c_{10} &= 0.3678(45) \quad \text{and} \quad c_{12}=-0.4071(77)
   \end{split}
 \end{equation}
-Due to the problematic of the fitting routing, which is caused by the inclusion
-of too many \textsc{ope} contributions, which have to be fitted simultaneously,
-we will discard the fitting results for the quartic weight.
+Due to the problematic of the fitting routing, which is caused by too many
+\textsc{ope} contributions fitted simultaneously, we will discard the fitting
+results for the quartic weight.
 
 \subsection{Third power monomial: $\omega_{m3}(x) \equiv 1-x^3$}
 To study the behaviour of the \textsc{DV} and the higher order \textsc{OPE}
 contributions of dimension eight and ten we further included two optimal, single pinched weights.
-The first we analysed is defined as $\omega_{m3}(x)\equiv 1-x^3$ and contains a
+The first one is defined as $\omega_{m3}(x)\equiv 1-x^3$ and contains a
 single third power monomial and is consequently sensitive to dimension eight
-contributions from the \textsc{OPE}. The results can be taken from \cref{table:fitWM3AlD8}.
+contributions from the \textsc{OPE}. Our fitting results can be taken from
+\cref{table:fitWM3AlD8}.
 \begin{table}
   \centering
   \begin{tabular}{lllll}
@@ -931,15 +932,16 @@ resonances that appear in lower energies. Due to the good $\chi^2$ and the
 internally compatible fitting values we averaged over all rows except the last
 one of \cref{table:fitWM3AlD8}. The last row, at $s_{min}=\SI{2.8}{\giga\eV}$
 has only one \textsc{dof} and thus high errors. The averaged values are
-consequently given by 
+thus given by 
 \begin{equation}
   \alpha(m_\tau^2) = 0.32382(42) \qquad \text{and} \qquad c_8=-1.33(67).
 \end{equation}
-We note that the strong coupling is smaller as our chosen values from the
+We note that the strong coupling is smaller as our expected values from the
 kinematic weight \cref{eq:wKinResults}, but the dimension eight contribution
 is in good agreement. The strong coupling from the monomial weight to third
-order seems to be in better agreement with the 8\-/10 momenta used in the kinematic fits, whereas
-the dimension eight contributions agrees more with the 4\-/7 momenta fits.
+order seems to be in better agreement with the 8\-/10 momenta used in the
+kinematic fits, whereas the dimension eight contributions agrees more with the
+4\-/7 momenta fits.
 
 We have made use of a single pinched weight and discovered that the fitting
 result is not completely compatible with our previous fitting results.
@@ -1009,7 +1011,7 @@ proportional term in x \cite{Beneke2012}, thus we will perform additional fits
 in the Borel-sum.
 
 \begin{equation}
-  \omega^{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k 
+  \omega_{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k 
 \end{equation}
 \subsubsection{$\omega(x) = (1-x)^2$}
 \begin{table}[H]
@@ -1072,24 +1074,28 @@ in the Borel-sum.
 \subsection{Comparison}
 \begin{table}[H]
   \centering
-  \begin{tabular}{lllll}
-    \toprule \\
-    weight & $\alpha_s(m_\tau^2)$ & $c_6$ & $c_8$ & $\chi^2/dof$  \\
-    $\omega_{kin}^{(D6,D8)}$ & 0.3232(32) & -0.31(11) & -0.01(18) & 1.13 \\
-    $\omega_{cube}^{(D6,D8)}$ & 0.3261(21) & -0.309(27) & -0.136(18) & 1.17 \\
-    $\omega_{cube}^{(D6,D8,D10)}$ & 0.3312(43) & -0.56(12) & -0.68(23) & 1.17 \\
-    $\omega_{quartic}^{(D6,D8)}$ & 0.3266(27) & -0.235(28) & -0.087(17) & 1.0 \\
-    $\omega_{quartic}^{(D6,D8,D10)}$ & 0.3308(12) & -0.3499(62) & -0.2453(55) & 1.21 \\
-    $\omega_{quartic}^{(D6,D8,D10,D12)}$ & 0.3290(11)  & -0.3030(46) & -0.1874(28) & 0.67 \\
-    $\omega_{monoX3}^{(D8)}$ & 0.326(21) & - & -1.69(40) & 1.17 \\
-    $\omega_{monoX4}^{(D10)}$ & 0.325(20) & - & - & 1.17 \\
-    $\omega_{opt20}^{(D4,D6)}$ & 0.337(16) & 0.36(45) & - & 0.98 \\
-    $\omega_{opt30}^{(D4,D6,D8)}$ & 0.34154(99) & -0.050(17) & -0.389(44) & 1.42 \\
-    \hline \\
-    \bottomrule
-  \end{tabular}
-  \caption{Table of the best fits (selected by $\chi^2/dof$ closest to one) for
-    each weight including the strong coupling $\alpha_s(m_\tau^2)$ as a fitting variable.}
+  \resizebox{\textwidth}{!}{
+    \begin{tabular}{cccccccc}
+      \toprule \\
+      weight & $s_{min}$ & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_6$ & $c_8$ & $c_{10}$ & $\chi^2/dof$  \\
+      \toprule \\
+      $\omega_{kin}$ & 2.2 & 0.3308(44) & - & -0.72(20) & -0.85(38) & - & 0.19 \\
+      $\omega_{cube}$ & 2.1 & 0.3302(40) & - & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\ 
+      $\omega_{3,0}^*$ & 2.1 & 0.3239(30) & -0.2125(26) & -0.627(87) & -0.74(17) & - & 0.46 \\
+      \hline \\
+      $\omega_{quartic}$ & 2.0 & 0.3290(11) & - & -0.3030(46) & -0.1874(28) & 0.3678(45) & 0.67 \\
+      $\omega_{m3}$ & 2.2 & 0.3214(49) & - & - & -1.01(39) & - & 0.41 \\
+      $\omega_{m4}$ & 2.2 & 0.3203(48) & - & - & - & -1.64(77) \\
+      $\omega_{2,0}$ & 2.2 & 0.3401(57) & -0.0185(52) & 0.220(88) & - & - & 0.73\\
+      $\omega_{3,0}$ & 2.1 & 0.3480(47) & -0.0201(36) & -0.264(89) & -1.03(28) & - & 0.31\\
+      \bottomrule
+    \end{tabular}
+  }
+  \caption{Table of the best fits (selected by $\chi^2/dof$ and compatibility
+    of the fitting values) for each weight including at least the strong
+    coupling $\alpha_s(m_\tau^2)$ as a fitting variable. All fits have been
+    performed using \textsc{fopt}, execpt weights marked with a star $\omega^*$, which
+    have been fitted using the \textit{Borel sum}.}
   \label{table:fitCombinations}
 \end{table}
 \begin{figure}[H]

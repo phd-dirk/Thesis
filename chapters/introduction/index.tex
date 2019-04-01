@@ -6,21 +6,21 @@ In particle physics we are concerned about small objects and their interactions.
 The smallest of these objects are referred to as \textit{elemental particles}.
 Their dynamics are governed by the laws of nature. These laws are organized
 through symmetries, which can be mathematically described through group theory.
-Since the 1970 the laws of nature are best described by the \textit{Standard
+Since the 1970 the symmetries of nature are best described by the \textit{Standard
   Model} (\textsc{sm}).
 
 
-The SM contains two groups of fermionic, spin 1/2 particles. The former group,
+The \textsc{sm} contains two groups of fermionic, spin\-/1/2 particles. The former group,
 the leptons consist of: the electron ($e$), the muon ($\mu$), the tau ($\tau$)
 and their corresponding neutrinos $\nu_e$, $\nu_\mu$ and $\nu_\tau$. The latter
 group, the quarks contain: $u$, $d$ (up and down, the so called light quarks ),
-$s$ (strange), $c$ (charm), $b$ (bottom or beauty) and $t$ (top or truth). The SM
-furthermore differentiates between three fundamental forces (and its carriers):
+$s$ (strange), $c$ (charm), $b$ (bottom or beauty) and $t$ (top or truth). The
+\textsc{sm} furthermore differentiates between three fundamental forces (and its carriers):
 the electromagnetic ($\gamma$ photon), weak ($Z$\-/ or $W$\-/Boson) and strong ($g$
 gluon) interactions. The before mentioned Leptons solely interact through the
 electromagnetic and the weak force (also referred to as electroweak interaction),
 whereas the quarks additionally interact through the strong force. A short
-summary of the taxonomy of the SM can be seen in \cref{fig:SMTaxonomy}
+summary of the taxonomy of the \textsc{sm} can be seen in \cref{fig:SMTaxonomy}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/standardModelTaxonomy.eps}
@@ -29,15 +29,17 @@ summary of the taxonomy of the SM can be seen in \cref{fig:SMTaxonomy}
 \end{figure}
 
 
-From a more mathematical point of view the \textsc{sm} is a gauge \textit{quantum field theory} (\textsc{qft}). QFT is the
+From a more mathematical point of view the \textsc{sm} is a gauge \textit{
+  quantum field theory} (\textsc{qft}). \textsc{qft} is the
 combination of \textit{classical field theory}, \textit{special relativity} and
 \textit{quantum mechanics}. Its fundamental objects are ruled through its
-gauge group $SU(3)\times SU(2)\times U(1)$. Each of subgroups introduces a
+gauge\-/group $SU(3)\times SU(2)\times U(1)$. Each of subgroups introduces a
 global and a local gauge symmetry. The global symmetry introduces the charges,
 which fields are carrying. The local symmetry introduce the gauge-fields, which
-are also referred to as force carriers. 
+represent the previously mentioned force carriers. Every subgroup of the
+gauge\-/group of the standard model is responsible for one of the three forces:
 \begin{description}
-  \item[$\bm{U(1)}$] Is the \textit{abelian} gauge group governs the representation of \textit{quantum
+  \item[$\bm{U(1)}$] the \textit{abelian} gauge group governs the representation of \textit{quantum
       electrodynamics} (\textsc{qed}), which is commonly known as the electric
     force. Its global and local symmetry introduces the electric charge and the
     photon\-/field.
@@ -47,21 +49,25 @@ are also referred to as force carriers.
   \item[$\bm{SU(3)}$] The $SU(3)$\-/group is also \textit{non-abelian} and
     governs the strong interactions, which are summarized in the theory of
     \textit{quantum chromodynamics} (\textsc{qcd}). The group yields the three
-    colour charges and the gluons. Due to the 8\-/dimensional adjoint
-    represntation of $SU(3)$ there exist eight different gluons.
+    colour charges and due to its eight\-/dimensional adjoint\-/representation,
+    eight different gluons.
 \end{description}
+Unfortunately we are still not able to include gravity, the last of the four
+forces, in the \textsc{sm}. There have been attempts to describe gravity through
+a \textsc{qft} with the graviton, a spin\-/2 boson, as mediator, but there are
+unsolved problems with the renormalisation of general relativity (\textsc{gr}).
+Thus \textsc{gr} and quantum mechanics (\textsc{qm}) seem to be incompatible.
 
-All of the particles and forces given in the SM are described by a Lagrangian
+All of the particles and forces given in the \textsc{sm} are described by a Lagrangian
 containing 19 parameters. The parameters are represented by ten masses, four CKM\-/matrix parameters, the QCD\-/vacuum
 angle, the Higgs\-/vacuum expectation value and three gauge coupling constants.
 Every single parameter has to be fitted from experimental data. Highly accurate
 values with low errors are crucial for theoretical calculated predictions. One
 of the major error inputs of every theoretical output are uncertainties in these
 parameters. In this work we will focus on one of the parameters, namely the
-strong coupling $\alpha_s$, which forms part of the theory of
-\textit{quantum chromodynamics} (QCD).
+strong coupling $\alpha_s$, which forms part of \textsc{qcd}.
 
-As the name suggest\footnote{Chromo is the Greek word for color.} QCD
+As the name suggest\footnote{Chromo is the Greek word for color.} \textsc{qcd}
 is characterized by the color charge. Every quark has next to its type one
 of the three colors blue, red or green. The color force is mediated through
 eight gluons, which each being bi\-/colored\footnote{Each gluon carries a color
@@ -71,7 +77,7 @@ depends on the renormalization scale $\mu$, which is often chosen in a way that
 the coupling constant $\alpha_s(q)$ depends on the energy $q^2$. Thus the
 coupling varies with energy with an exceptional property: it increases for
 low energies\footnote{In contrast to the electromagnetic force, where $\alpha(q^2)$
-  decreases!}. This is exclusive for QCD and has two main implications.
+  decreases!}. This is exclusive for \textsc{qcd} and has two main implications.
 
 The first one states, that for low energies the coupling is too strong for
 isolate quarks to exist. Until now we have not been able to observe an isolated
@@ -82,7 +88,7 @@ states are called \textit{hadrons} and consist of two or three quarks
   of a quark and an anti\-/quark.} or baryons \footnote{Composite of three quarks
   or three anti\-/quarks.} respectively. This
 phenomenon, of quarks sticking together as hadrons is referred to as \textit{confinement}. 
-As the fundamental degrees of freedom of QCD are given by quarks and gluons, but
+As the fundamental degrees of freedom of \textsc{qcd} are given by quarks and gluons, but
 the observed particles are hadrons we need to introduce the assumption of
 \textit{quark\-/hadron duality} to match the theory to the experiment. This means that a physical quantity should be
 similarly describable in the hadronic picture or quark\-/gluon picture and that
@@ -146,7 +152,7 @@ but generously list our results for the CIPT framework.
 importance of contributions from DV. Currently there are two main approaches:
 Either we neglect them, arguing that they are sufficiently suppressed due to
 \textit{pinched weights} \cite{Pich2016} or model DV with sinusoidal
-exponentially suppressed function \cite{Cata2008,Boito2011,Boito2014} introducing
+exponentially suppressed function \cite{Cata2008,Boito2011a,Boito2014} introducing
 extra fitting parameters. We will argue for the former method, implementing
 pinched weights that sufficiently suppress DV contributions such as having only a negligible effect on our analysis.
 \end{enumerate}
