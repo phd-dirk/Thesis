@@ -73,21 +73,75 @@ theoretical output are uncertainties in these parameters. In this work we will
 focus on one of the parameters, namely the strong coupling $\alpha_s$, which
 forms part of \textsc{qcd}.
 
+The experimental data we need for the determination of the strong coupling
+paramter of the \textsc{sm} is
+given by $\tau$-decays. The $\tau$ is an elementary particle with
+negative electric charge and a spin of 1/2. Together with the lighter electron
+and muon it forms the group of charged Leptons\footnote{Leptons do not
+  interact via the strong force.}. Even though it is an elementary particle it
+decays via the weak interaction with a lifetime of
+$\tau_\tau=\SI{2.9e-13}{\second}$ and has a mass of
+$\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is furthermore the
+only lepton massive enough to decay into hadrons, thus of interest for our
+\textsc{qcd} study. The final states of a decay
+are limited by conservation laws. In case of a $\tau$-decay they must
+conserve the electric charge ($-1$) and invariant mass of the system.
+Thus, as we can see from the corresponding Feynman diagram (see
+\cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay into strange
+  quarks or charm quarks, but these decays are rather uncommon due to the heavy
+  masses of s and c.} the $\tau$ decays by the emission of a $\textit{W boson}$
+and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
+\bar\nu_\mu)$ or $(q, \bar q)$.
+\begin{figure}[h]
+  \centering \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
+  \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
+    lepton-antineutrino or quark-antiquark by the emission of a \textit{W
+      boson}.}
+  \label{fig:tauDecay}
+\end{figure}
+We are foremost interested into the hadronic decay channels, meaning $\tau$-decays that have quarks in their final
+states. Quarks have never been measured isolated, but appear
+always in combination of \textit{mesons} and \textit{baryons}. Due to its mass
+of $m_\tau \approx \SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into
+light mesons (pions-$\pi$, kaons-$K$, and eta-$\eta$, see
+\cref{table:lightMesons}), which can be experimentally detected.
+\begin{table}
+  \centering
+  \begin{tabular}{l c c c}
+    \toprule
+    Name & Symbol & Quark content & Rest mass ($\SI{}{\mega\electronvolt}$) \\
+    \midrule
+    Pion & $\pi^-$ & $\bar u d$ & \SI{139.57061 \pm 0.00024}{\mega\electronvolt}  \\
+    Pion & $\pi^0$ & $(u \bar u - d \bar d)/\sqrt{2}$ & \SI{134.9770\pm0.0005}{\mega\electronvolt} \\
+    Kaon & $K^-$ & $\bar u s$ & \SI{493.677\pm0.016}{\mega\electronvolt} \\
+    Kaon & $K^0$ & $d \bar s$ & \SI{497.611\pm0.013}{\mega\electronvolt} \\
+    Eta & $\eta$ & $(u \bar u + d \bar d - 2 s \bar s)/\sqrt{6}$ & \SI{547.862\pm0.017}{\mega\electronvolt} \\
+  \end{tabular}
+  \caption{List of mesons produced by a $\tau$-decay. Rare final states with
+    branching Ratios smaller than 0.1 have been omitted. The list is taken from
+    \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
+  \label{table:lightMesons}
+\end{table}
+The hadronic $\tau-decay$ provides one of the most precise ways to determine the
+strong coupling \cite{Pich2016} and can be calculated to high precision within
+the framework of \textsc{qcd}.
+
 As the name suggest\footnote{Chromo is the Greek word for colour.} \textsc{qcd}
-is characterised by the colour charge. \textsc{qcd} is a non-abelian gauge
-theory with symmetry group $SU(3)$. Consequently every quark has next to its
-type one of the three colours blue, red or green. The colour force is mediated
-through eight gluons, which each being bi\-/coloured\footnote{Each gluon carries
-  a colour and an anti\-/colour.}, interact with quarks and each other. The
-strength of the strong force is given by the coupling constant $\alpha_s$. The
-strong coupling depends on the renormalisation scale $\mu$, which is often
-chosen in a way that the coupling constant $\alpha_s(q)$ depends on the energy
-$q^2$. Thus the coupling varies with energy: it increases for low
-energies\footnote{In contrast to the electromagnetic force, where $\alpha(q^2)$
-  decreases!}. This is exclusive for \textsc{qcd} and has two main implications.
+is characterised by the colour charge and, as we have mentioned before, is a
+non-abelian gauge theory with symmetry group $SU(3)$. Consequently every quark
+has next to its type one of the three colours blue, red or green. The colour
+force is mediated through eight gluons, which each being
+bi\-/coloured\footnote{Each gluon carries a colour and an anti\-/colour.},
+interact with quarks and each other. The strength of the strong force is given
+by the coupling constant $\alpha_s$. The strong coupling depends on the
+renormalisation scale $\mu$, which is often chosen in a way that the coupling
+constant $\alpha_s(q)$ depends on the energy $q^2$. Thus the coupling varies
+with energy: it increases for low energies\footnote{In contrast to the
+  electromagnetic force, where $\alpha(q^2)$ decreases!}. This behaviour of the
+strong coupling has two main implications.
 
 The first one states, that for low energies the coupling is too strong for
-isolate quarks to exist. Until now we have not been able to observe an isolated
+isolated quarks to exist. Until now we have not been able to observe an isolated
 quark and all experiments can only measure quark compositions. These bound
 states are called \textit{hadrons} and consist of two or three quarks
 \footnote{There exist also so\-/called \textit{Exotic hadrons}, which have more
@@ -111,26 +165,28 @@ energies we deal with, the higher the value of the strong coupling and the
 contributions of \textit{non\-/perturbative} (NP) effects. Currently there are
 three solutions to deal with NP effects:
 \begin{itemize}
-\item \textbf{\textit{Chiral Perturbation Theory}} (\textsc{chpt}): Introduced by
-  Weinberg \cite{Weinberg1978} in the late seventies. \textsc{chpt} is an effective field
-  theory constructed with a Lagrangian symmetric under a chiral\-/transformation in
-  the limit of massless quarks. It's limitations are based in the chiral
-  symmetry, which is only a good approximation for the light quarks $u$, $d$ and
-  in some cases $s$.
-\item \textbf{\textit{Lattice QCD}} (\textsc{lqcd}): Is the numerical approach to the
-  strong force. Based on the Wilson Loops \cite{Wilson1974} we treat QCD on a
-  finite lattice instead of working with continuous fields. LQCD has already
-  many applications but is limited due to its computational expensive
+\item \textbf{\textit{Chiral Perturbation Theory}} (\textsc{chpt}): Introduced
+  by Weinberg \cite{Weinberg1978} in the late seventies. \textsc{chpt} is an
+  effective field theory constructed with a Lagrangian symmetric under a
+  chiral\-/transformation in the limit of massless quarks. It's limitations are
+  based in the chiral symmetry, which is only a good approximation for the light
+  quarks $u$, $d$ and in some cases $s$.
+\item \textbf{\textit{Lattice QCD}} (\textsc{lqcd}): Is the numerical approach
+  to the strong force. Based on the Wilson Loops \cite{Wilson1974} we treat QCD
+  on a finite lattice instead of working with continuous fields. LQCD has
+  already many applications but is limited due to its computational expensive
   calculations.
-\item \textbf{\textit{QCD Sum Rules}} (\textsc{qcdsr}): Was also introduced in the late
-  seventies by Shifman, Vainstein and Zakharov \cite{Shifman1978,Shifman1978a}.
-  It relates the observed hadronic picture to quark\-/gluon parameters through a
-  dispersion relation and the use of the \textit{Operator Product Expansion}
-  (OPE), which treats NP effect through the definition of vacuum expectation
-  values, the so\-/called \textit{QCD condensates}. It is a precise method for
-  extracting the strong coupling $\alpha_s$ at low energies, although limited to
-  the unknown higher order contributions of the OPE.
+\item \textbf{\textit{QCD Sum Rules}} (\textsc{qcdsr}): Was also introduced in
+  the late seventies by Shifman, Vainstein and Zakharov
+  \cite{Shifman1978,Shifman1978a}. It relates the observed hadronic picture to
+  quark\-/gluon parameters through a dispersion relation and the use of the
+  \textit{Operator Product Expansion} (OPE), which treats NP effect through the
+  definition of vacuum expectation values, the so\-/called \textit{QCD
+    condensates}. It is a precise method for extracting the strong coupling
+  $\alpha_s$ at low energies, although limited to the unknown higher order
+  contributions of the OPE.
 \end{itemize}
+
 
 In this work we focus on the determination of the strong coupling $\alpha_s$
 within the framework of \textsc{qcdsr} for $\tau$\-/decays which has been
@@ -141,18 +197,18 @@ the errors. Thus if we obtain the strong coupling at a low scale we will obtain
 high precision values at the scale of the Z\-/boson mass $m_Z$, which is the
 standard scale to compare $\alpha_s$ values.
 
-The \textsc{qcdsr} for the determination of $\alpha_s$, from low energies, contain three
-major issues.
+The \textsc{qcdsr} for the determination of $\alpha_s$, from low energies,
+contain three major issues.
 \begin{enumerate}
 \item There are two different approaches to treat perturbative and
   non\-/perturbative contributions. In particular, there is a significant
-  difference between results obtained using fixed\-/order (\textsc{fopt}) or contour
-  improved perturbation theory (\textsc{cipt}), such that analyses based on \textsc{cipt}
-  generally arrive at about 7\% larger values of $\alpha_s(m_{\tau^2})$ than
-  those based on FOPT \cite{PDG2018}. There have been a variety of analyses on
-  the topic been performed \cite{Pich2013,Caprini2009,Jamin2005} and we will
-  favour the FOPT approach, but generously list our results for the \textsc{cipt}
-  framework.
+  difference between results obtained using fixed\-/order (\textsc{fopt}) or
+  contour improved perturbation theory (\textsc{cipt}), such that analyses based
+  on \textsc{cipt} generally arrive at about 7\% larger values of
+  $\alpha_s(m_{\tau^2})$ than those based on FOPT \cite{PDG2018}. There have
+  been a variety of analyses on the topic been performed
+  \cite{Pich2013,Caprini2009,Jamin2005} and we will favour the FOPT approach,
+  but generously list our results for the \textsc{cipt} framework.
 
 \item There are several prescriptions to deal with the NP-contributions of
   higher order OPE condensates. Typically terms of higher dimension have been
@@ -169,65 +225,15 @@ major issues.
   as having only a negligible effect on our analysis.
 \end{enumerate}
 
+
 In the first chapter of this work we want to summarise the necessary theoretical
-background for working with the \textsc{qcdsr}. Starting with the basics of QCD we want
-to motivate the \textit{renormalisation group equation} (\textsc{rge}), which is
-responsible for the running of the strong coupling. We then continue with the
-some aspects of the two\-/point function and its usage in the dispersion
-relation, which connects the hadronic picture with the quark\-/gluon picture.
-$\cdots$
+background for working with the \textsc{qcdsr}. Starting with the basics of QCD
+we want to motivate the \textit{renormalisation group equation} (\textsc{rge}),
+which is responsible for the running of the strong coupling. We then continue
+with the some aspects of the two\-/point function and its usage in the
+dispersion relation, which connects the hadronic picture with the quark\-/gluon
+picture. $\cdots$
 
-The $\tau$-particle is an elementary particle with negative electric charge and
-a spin of 1/2. Together with the lighter electron and muon it forms the
-\textit{charged Leptons}\footnote{Leptons do not interact via the strong
-  force.}. Even though it is an elementary particle it decays via the
-\textit{weak interaction} with a lifetime of $\tau_\tau=\SI{2.9e-13}{\second}$
-and has a mass of $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is
-furthermore the only lepton massive enough to decay into Hadrons. The final
-states of a decay are limited by \textit{conservation laws}. In case of a
-$\tau$-decay they must conserve the electric charge ($-1$) and \textit{invariant
-  mass} of the system. Thus, as we can see from the corresponding Feynman
-diagram (see \cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay
-  into strange quarks or charm quarks, but these decays are rather uncommon due
-  to the heavy masses of s and c.} the $\tau$ decays by the emission of a
-$\textit{W boson}$ and a tau-neutrino $\nu_\tau$ into pairs of $(e^-,
-\bar\nu_e), (\mu^-, \bar\nu_\mu)$ or $(q, \bar q)$.
-\begin{figure}[h]
-  \centering \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
-  \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
-    lepton-antineutrino or quark-antiquark by the emission of a \textit{W
-      boson}.}
-  \label{fig:tauDecay}
-\end{figure}
-
-\textcolor{red}{taken from tau decay adapt!} We are foremost interested into the
-hadronic decay channels, meaning $\tau$-decays that have quarks in their final
-states. Unfortunately the quarks have never been measured isolated, but appear
-always in combination of \textit{mesons} and \textit{baryons}. Due to its mass
-of $m_\tau \approx \SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into
-light mesons (pions-$\pi$, kaons-$K$, and eta-$\eta$, see
-\cref{table:lightMesons}), which can be experimentally detected.
-\begin{table}
-  \centering
-  \begin{tabular}{l c c c}
-    \toprule
-    Name & Symbol & Quark content & Rest mass ($\SI{}{\mega\electronvolt}$) \\
-    \midrule
-    Pion & $\pi^-$ & $\bar u d$ & \SI{139.57061 \pm 0.00024}{\mega\electronvolt}  \\
-    Pion & $\pi^0$ & $(u \bar u - d \bar d)/\sqrt{2}$ & \SI{134.9770\pm0.0005}{\mega\electronvolt} \\
-    Kaon & $K^-$ & $\bar u s$ & \SI{493.677\pm0.016}{\mega\electronvolt} \\
-    Kaon & $K^0$ & $d \bar s$ & \SI{497.611\pm0.013}{\mega\electronvolt} \\
-    Eta & $\eta$ & $(u \bar u + d \bar d - 2 s \bar s)/\sqrt{6}$ & \SI{547.862\pm0.017}{\mega\electronvolt} \\
-  \end{tabular}
-  \caption{List of mesons produced by a $\tau$-decay. Rare final states with
-    branching Ratios smaller than 0.1 have been omitted. The list is taken from
-    \cite{Davier2006} with corresponding rest masses taken from \cite{PDG2018}.}
-  \label{table:lightMesons}
-\end{table}
-
-The hadronic $\tau-decay$ provides one of the most precise ways to determine the
-strong coupling \cite{Pich2016} and can be calculated to high precision within
-the framework of QCD.
 
 \end{document}
 % LocalWords:  SMTaxonomy tauDecay
