@@ -13,7 +13,7 @@ The inclusive $\tau$-decay ratio
   \label{eq:inclusiveRatio}
   R_\tau = \frac{\Gamma(\tau \to \nu_\tau + \text{Hadrons})}{\Gamma(\tau \to \nu_\tau e^+ e^-)}
 \end{equation}
-can be precisly calculated and is sensitive to $\alpha_s$. Due to low the mass of
+can be precisely calculated and is sensitive to $\alpha_s$. Due to low the mass of
 the $\tau$-lepton $m_\tau\approx\SI{1.8}{\giga\eV}$ $\tau$-decays are excellent
 for performing a low-energy QCD analysis.
 The theoretical expression of the hadronic $\tau$-decay ratio was first derived
@@ -1072,9 +1072,17 @@ in the Borel-sum.
 
 \newpage
 \subsection{Comparison}
-\begin{table}[H]
-  \centering
-  \resizebox{\textwidth}{!}{
+To create an overview of our previous results we have gathered the most
+compatible rows by hand. These are shown in \cref{table:fitCombinations}, which
+is composed of two parts:
+\begin{itemize}
+\item The upper three rows represent fits we found to have good properties for
+  determining the strong coupling.
+\item The lower five rows are problematic fits due to too many OPE
+  contributions, too low pinching or to terms proportional to $x$.
+\end{itemize}
+\begin{table}
+  \centering \resizebox{\textwidth}{!}{
     \begin{tabular}{cccccccc}
       \toprule \\
       weight & $s_{min}$ & $\alpha_s(m_\tau^2)$ & $aGGInv$ & $c_6$ & $c_8$ & $c_{10}$ & $\chi^2/dof$  \\
@@ -1085,37 +1093,44 @@ in the Borel-sum.
       \hline \\
       $\omega_{quartic}$ & 2.0 & 0.3290(11) & - & -0.3030(46) & -0.1874(28) & 0.3678(45) & 0.67 \\
       $\omega_{m3}$ & 2.2 & 0.3214(49) & - & - & -1.01(39) & - & 0.41 \\
-      $\omega_{m4}$ & 2.2 & 0.3203(48) & - & - & - & -1.64(77) \\
+      $\omega_{m4}$ & 2.2 & 0.3203(48) & - & - & - & -1.64(77) & 0.42 \\
       $\omega_{2,0}$ & 2.2 & 0.3401(57) & -0.0185(52) & 0.220(88) & - & - & 0.73\\
       $\omega_{3,0}$ & 2.1 & 0.3480(47) & -0.0201(36) & -0.264(89) & -1.03(28) & - & 0.31\\
       \bottomrule
     \end{tabular}
   }
-  \caption{Table of the best fits (selected by $\chi^2/dof$ and compatibility
-    of the fitting values) for each weight including at least the strong
-    coupling $\alpha_s(m_\tau^2)$ as a fitting variable. All fits have been
-    performed using \textsc{fopt}, execpt weights marked with a star $\omega^*$, which
+  \caption{Table of the best fits (selected by $\chi^2/dof$ and compatibility of
+    the fitting values) for each weight including at least the strong coupling
+    $\alpha_s(m_\tau^2)$ as a fitting variable. All fits have been performed
+    using \textsc{fopt}, except weights marked with a star $\omega^*$, which
     have been fitted using the \textit{Borel sum}.}
   \label{table:fitCombinations}
 \end{table}
-\begin{figure}[H]
-  \includegraphics[width=\textwidth]{./images/comparisonAlpha.png}
-  \caption{Comparison of the strong coupling for the best fits (selected by
-    $\chi^2/dof$ closest to one) for each weight including the strong coupling
-    as a fitting variable.}
-\end{figure}
-\begin{figure}[H]
-  \includegraphics[width=\textwidth]{./images/comparisonD6D8.png}
-  \caption{Comparison of the dimension six and eight values for the best fits (selected by
-    $\chi^2/dof$ closest to one) for each weight including the OPE dimensions
-    six and eight as fitting variables.}
-\end{figure}
-\begin{figure}[H]
-  \includegraphics[width=\textwidth]{./images/comparisonD10.png}
-  \caption{Comparison of the dimension ten values for the best fits (selected by
-    $\chi^2/dof$ closest to one) for each weight including the OPE dimensions
-    ten as fitting variables.}
-\end{figure}
+We have found that the kinematic weight is in excellent agreement with the cubic
+$\omega_{cube}$ and Pich's optimal weight $\omega_{3,0}$, fitted using the borel
+model. The fitted parameters from the kinematic weight ($\alpha_s, c_6$ and
+$c_8$) are all within error ranges and thus compatible. One fact that has to be
+investigated is the negative appearing sign for the gluon\-/condensate from the
+borel\-/sum of $\omega_{3,0}$.
+
+% \begin{figure}[H]
+%   \includegraphics[width=\textwidth]{./images/comparisonAlpha.png}
+%   \caption{Comparison of the strong coupling for the best fits (selected by
+%   $\chi^2/dof$ closest to one) for each weight including the strong coupling
+%   as a fitting variable.}
+% \end{figure}
+% \begin{figure}[H]
+%   \includegraphics[width=\textwidth]{./images/comparisonD6D8.png}
+%   \caption{Comparison of the dimension six and eight values for the best fits
+%   (selected by $\chi^2/dof$ closest to one) for each weight including the OPE
+%   dimensions six and eight as fitting variables.}
+% \end{figure}
+% \begin{figure}[H]
+%   \includegraphics[width=\textwidth]{./images/comparisonD10.png}
+%   \caption{Comparison of the dimension ten values for the best fits (selected
+%   by $\chi^2/dof$ closest to one) for each weight including the OPE dimensions
+%   ten as fitting variables.}
+% \end{figure}
 
 
 \newpage

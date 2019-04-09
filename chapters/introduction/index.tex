@@ -10,25 +10,28 @@ Since the 1970 the symmetries of nature are best described by the
 \textit{Standard Model} (\textsc{sm}).
 
 
-The \textsc{sm} contains two groups of fermionic, spin\-/1/2 particles. The
-former group, the leptons consist of: the electron ($e$), the muon ($\mu$), the
-tau ($\tau$) and their corresponding neutrinos $\nu_e$, $\nu_\mu$ and
-$\nu_\tau$. The latter group, the quarks contain: $u$, $d$ (up and down, the so
-called light quarks ), $s$ (strange), $c$ (charm), $b$ (bottom or beauty) and
-$t$ (top or truth). The \textsc{sm} furthermore differentiates between three
-fundamental forces (and its carriers): the electromagnetic ($\gamma$ photon),
-weak ($Z$\-/ or $W$\-/Boson) and strong ($g$ gluon) interactions. The before
-mentioned Leptons solely interact through the electromagnetic and the weak force
-(also referred to as electroweak interaction), whereas the quarks additionally
-interact through the strong force. A short summary of the taxonomy of the
-\textsc{sm} can be seen in \cref{fig:SMTaxonomy}
+The \textsc{sm} classifies all known elementary particles and describes three of
+the four fundamental forces: the electromagnetic, weak and strong force,
+excluding the gravitational force. The particles representing matter are
+contained in two groups of fermionic, spin\-/1/2 particles. The former group,
+the leptons consist of: the electron ($e$), the muon ($\mu$), the tau ($\tau$)
+and their corresponding neutrinos $\nu_e$, $\nu_\mu$ and $\nu_\tau$. The latter
+group, the quarks contain: $u$, $d$ (up and down, the so called light quarks ),
+$s$ (strange), $c$ (charm), $b$ (bottom or beauty) and $t$ (top or truth). The
+three fundamental forces interact with carrier particles, the so\-/called
+bosons: the photon for the electromagnetic, the $Z$\-/ or $W$\-/Boson for the
+weak and the gluon ($g$) for the strong interaction. and strong ($g$ gluon)
+interactions. The before mentioned Leptons solely interact through the
+electromagnetic and the weak force (also referred to as electroweak
+interaction), whereas the quarks additionally interact through the strong force.
+A short summary of the taxonomy of the \textsc{sm} can be seen in
+\cref{fig:SMTaxonomy}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/standardModelTaxonomy.eps}
   \caption{Taxonomy of the Standard Model.}
   \label{fig:SMTaxonomy}
 \end{figure}
-
 
 From a more mathematical point of view the \textsc{sm} is a gauge \textit{
   quantum field theory} (\textsc{qft}). \textsc{qft} is the combination of
@@ -37,8 +40,11 @@ From a more mathematical point of view the \textsc{sm} is a gauge \textit{
 $SU(3)\times SU(2)\times U(1)$. Each of subgroups introduces a global and a
 local gauge symmetry. The global symmetry introduces the charges, which fields
 are carrying. The local symmetry introduce the gauge-fields, which represent the
-previously mentioned force carriers. Every subgroup of the gauge\-/group of the
-standard model is responsible for one of the three forces:
+previously mentioned force carriers. Naively every subgroup\footnote{Actually
+  $U(1)$ and $SU(2)$ have to be regarded as combined group to be mapped to the
+  electromagnetic\-/ and weak\-/force in form of the electroweak interaction.}
+of the gauge\-/group of the standard model is responsible for one of the three
+forces:
 \begin{description}
 \item[$\bm{U(1)}$] the \textit{abelian} gauge group governs the representation
   of \textit{quantum electrodynamics} (\textsc{qed}), which is commonly known as
@@ -58,53 +64,63 @@ Unfortunately we are still not able to include gravity, the last of the four
 forces, into the \textsc{sm}. There have been attempts to describe gravity
 through \textsc{qft} with the graviton, a spin\-/2 boson, as mediator, but there
 are unsolved problems with the renormalisation of general relativity
-(\textsc{gr}). Until know \textsc{gr} and quantum mechanics (\textsc{qm}) seem
-to be incompatible.
+(\textsc{gr}). Until now \textsc{gr} and quantum mechanics (\textsc{qm}) remain
+incompatible.
 
-As the name indicates, the \textsc{sm} is a model and thus depending on
-variables, with have to be determined by data from experiments. All in all the
-Lagrangian of the \textsc{sm} contains 19 parameters. These parameters are
-represented by ten masses, four \textsc{ckm}\-/matrix parameters, the
-\textsc{qcd}\-/vacuum angle, the Higgs\-/vacuum expectation value and three
-gauge coupling constants. Every single parameter has to be fitted from
-experimental data. Highly accurate values with low errors are crucial for
-theoretical calculated predictions. One of the major error inputs of every
-theoretical output are uncertainties in these parameters. In this work we will
-focus on one of the parameters, namely the strong coupling $\alpha_s$, which
-forms part of \textsc{qcd}.
+Apart from gravity no being included, the \textsc{sm} has a variety of flaws.
+One of them is being dependent on many parameters. Every parameters has to be
+fitted to experimental data and there are ongoing discussions about the
+naturalness and fine-tuning of these parameters. In total the Lagrangian of the
+\textsc{sm} contains 19 parameters. These parameters are represented by ten
+masses, four \textsc{ckm}\-/matrix parameters, the \textsc{qcd}\-/vacuum angle,
+the Higgs\-/vacuum expectation value and three gauge coupling constants. Highly
+accurate values with low errors are crucial for theoretical calculated
+predictions. One of the major error inputs of every theoretical output are
+uncertainties in these parameters. In this work we will focus on one of the
+parameters, namely the strong coupling $\alpha_s$.
 
-The experimental data we need for the determination of the strong coupling
-paramter of the \textsc{sm} is
-given by $\tau$-decays. The $\tau$ is an elementary particle with
-negative electric charge and a spin of 1/2. Together with the lighter electron
-and muon it forms the group of charged Leptons\footnote{Leptons do not
-  interact via the strong force.}. Even though it is an elementary particle it
-decays via the weak interaction with a lifetime of
+\begin{wrapfigure}{r}{4cm}
+  \includegraphics[width=0.3\textwidth]{./images/alphasDetermination.png}
+  \caption{The six different subfields and their results for measuring the
+    strong coupling $\alpha_s$ \cite{PDG2018}.}
+  \label{fig:alphaSDetermination}
+\end{wrapfigure}
+The strong coupling is currently measured in six different ways: through
+$\tau$\-/decays, \textsc{qcd}\-/lattice computations, deep inelastic collider
+results and electroweak precision fits \cite{PSG2018}. We have plotted the
+values of each of the methods in \cref{fig:alphaSDetermination}. During this
+work we will focus on the subfield of $\tau$\-/decays to measure the value of
+the strong coupling $\alpha_s(m_\tau)$ at the $\tau$\-/scale. We will see that
+in \textsc{qcd} the value of the coupling ``constant'' depends upon the scale.
+The $\tau$ is an elementary particle with negative electric charge and a spin of
+1/2. Together with the lighter electron and muon it forms the group of charged
+Leptons\footnote{Leptons do not interact via the strong force.}. Even though it
+is an elementary particle it decays via the weak interaction with a lifetime of
 $\tau_\tau=\SI{2.9e-13}{\second}$ and has a mass of
 $\SI{1776.86\pm0.12}{\mega\electronvolt}$\cite{PDG2018}. It is furthermore the
 only lepton massive enough to decay into hadrons, thus of interest for our
-\textsc{qcd} study. The final states of a decay
-are limited by conservation laws. In case of a $\tau$-decay they must
-conserve the electric charge ($-1$) and invariant mass of the system.
-Thus, as we can see from the corresponding Feynman diagram (see
-\cref{fig:tauDecay})\footnote{The $\tau$-particle can also decay into strange
-  quarks or charm quarks, but these decays are rather uncommon due to the heavy
-  masses of s and c.} the $\tau$ decays by the emission of a $\textit{W boson}$
-and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e), (\mu^-,
-\bar\nu_\mu)$ or $(q, \bar q)$.
-\begin{figure}[h]
+\textsc{qcd} study. The final states of a decay are limited by conservation
+laws. In case of a $\tau$-decay they must conserve the electric charge ($-1$)
+and invariant mass of the system. Thus, we can see from the corresponding
+Feynman diagram \cref{fig:tauDecay} \footnote{The $\tau$-particle can also decay
+  into strange quarks or charm quarks, but these decays are rather uncommon due
+  to the heavy masses of s and c.} the $\tau$ decays by the emission of a
+$W$\-/boson and a tau-neutrino $\nu_\tau$ into pairs of $(e^-, \bar\nu_e),
+(\mu^-, \bar\nu_\mu)$ or $(q, \bar q)$.
+\begin{figure}
   \centering \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
   \caption{Feynman diagram of common decay of a $\tau$-lepton into pairs of
     lepton-antineutrino or quark-antiquark by the emission of a \textit{W
       boson}.}
   \label{fig:tauDecay}
 \end{figure}
-We are foremost interested into the hadronic decay channels, meaning $\tau$-decays that have quarks in their final
-states. Quarks have never been measured isolated, but appear
-always in combination of \textit{mesons} and \textit{baryons}. Due to its mass
-of $m_\tau \approx \SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into
-light mesons (pions-$\pi$, kaons-$K$, and eta-$\eta$, see
-\cref{table:lightMesons}), which can be experimentally detected.
+We are foremost interested into the hadronic decay channels, meaning
+$\tau$-decays that have quarks in their final states. Quarks have never been
+measured isolated, but appear always in combination of \textit{mesons} and
+\textit{baryons}. Due to its mass of $m_\tau \approx
+\SI{1.8}{\giga\electronvolt}$ the $\tau$-particle decays into light mesons
+(pions-$\pi$, kaons-$K$, and eta-$\eta$, see \cref{table:lightMesons}), which
+can be experimentally detected.
 \begin{table}
   \centering
   \begin{tabular}{l c c c}
@@ -126,44 +142,44 @@ The hadronic $\tau-decay$ provides one of the most precise ways to determine the
 strong coupling \cite{Pich2016} and can be calculated to high precision within
 the framework of \textsc{qcd}.
 
-As the name suggest\footnote{Chromo is the Greek word for colour.} \textsc{qcd}
-is characterised by the colour charge and, as we have mentioned before, is a
+Having introduced the experimental side of the determination of $\alpha_s$, we
+are missing out the theoretical side. The theory describing strong interactions
+is \textsc{QCD}. As the name suggest\footnote{Chromo is the Greek word for
+  colour.} \textsc{qcd} is characterised by the colour charge and is a
 non-abelian gauge theory with symmetry group $SU(3)$. Consequently every quark
-has next to its type one of the three colours blue, red or green. The colour
+has next to its type one of the three colours blue, red or green and the colour
 force is mediated through eight gluons, which each being
 bi\-/coloured\footnote{Each gluon carries a colour and an anti\-/colour.},
 interact with quarks and each other. The strength of the strong force is given
-by the coupling constant $\alpha_s$. The strong coupling depends on the
-renormalisation scale $\mu$, which is often chosen in a way that the coupling
-constant $\alpha_s(q)$ depends on the energy $q^2$. Thus the coupling varies
-with energy: it increases for low energies\footnote{In contrast to the
-  electromagnetic force, where $\alpha(q^2)$ decreases!}. This behaviour of the
-strong coupling has two main implications.
-
-The first one states, that for low energies the coupling is too strong for
-isolated quarks to exist. Until now we have not been able to observe an isolated
-quark and all experiments can only measure quark compositions. These bound
-states are called \textit{hadrons} and consist of two or three quarks
-\footnote{There exist also so\-/called \textit{Exotic hadrons}, which have more
-  than three valence quarks.}, which are referred to as
-mesons\footnote{Composite of a quark and an anti\-/quark.} or baryons
-\footnote{Composite of three quarks or three anti\-/quarks.} respectively. This
-phenomenon, of quarks sticking together as hadrons is referred to as
-\textit{confinement}. As the fundamental degrees of freedom of \textsc{qcd} are
-given by quarks and gluons, but the observed particles are hadrons we need to
-introduce the assumption of \textit{quark\-/hadron duality} to match the theory
-to the experiment. This means that a physical quantity should be similarly
-describable in the hadronic picture or quark\-/gluon picture and that both
-descriptions are equivalent. As we will see in our work quark\-/hadron duality
-is violated for low energies. These so\-/called \textit{duality violations} have
-an impact on our strong coupling determinations and can be dealt with either
-suppression or the inclusion of a model \cite{Pich2006,Cata2008}. Throughout
-this work we will favour and argument for the former approach.
-
-The second implication concerns \textit{perturbation theory} (PT). The lower the
-energies we deal with, the higher the value of the strong coupling and the
-contributions of \textit{non\-/perturbative} (NP) effects. Currently there are
-three solutions to deal with NP effects:
+by the coupling constant $\alpha_s$, which depends on the
+renormalisation\-/scale $\mu$. We often chosen the renormalisation\-/scale in a
+way that the coupling constant $\alpha_s(q)$ depends on the energy $q^2$. Thus
+the coupling varies with energy: it increases for low energies\footnote{In
+  contrast to the electromagnetic force, where $\alpha(q^2)$ decreases!}. This
+behaviour of the strong coupling has two main implications. The first one
+states, that for low energies the coupling is too strong for isolated quarks to
+exist. Until now we have not been able to observe an isolated quark and all
+experiments can only measure quark compositions. These bound states are called
+\textit{hadrons} and consist of two or three quarks \footnote{There exist also
+  so\-/called \textit{Exotic hadrons}, which have more than three valence
+  quarks.}, which are referred to as mesons\footnote{Composite of a quark and an
+  anti\-/quark.} or baryons \footnote{Composite of three quarks or three
+  anti\-/quarks.} respectively. This phenomenon, of quarks sticking together as
+hadrons is referred to as \textit{confinement}. As the fundamental degrees of
+freedom of \textsc{qcd} are given by quarks and gluons, but the observed
+particles are hadrons we need to introduce the assumption of
+\textit{quark\-/hadron duality} to match the theory to the experiment. This
+means that a physical quantity should be similarly describable in the hadronic
+picture or quark\-/gluon picture and that both descriptions are equivalent. As
+we will see in our work quark\-/hadron duality is violated for low energies.
+These so\-/called \textit{duality violations} have an impact on our strong
+coupling determinations and can be dealt with either suppression or the
+inclusion of a model \cite{Pich2006,Cata2008}. Throughout this work we will
+favour and argument for the former approach. The second implication concerns
+\textit{perturbation theory} (PT). The lower the energies we deal with, the
+higher the value of the strong coupling and the contributions of
+\textit{non\-/perturbative} (NP) effects. Currently there are three solutions to
+deal with NP effects:
 \begin{itemize}
 \item \textbf{\textit{Chiral Perturbation Theory}} (\textsc{chpt}): Introduced
   by Weinberg \cite{Weinberg1978} in the late seventies. \textsc{chpt} is an
@@ -236,4 +252,4 @@ picture. $\cdots$
 
 
 \end{document}
-% LocalWords:  SMTaxonomy tauDecay
+% LocalWords:  SMTaxonomy tauDecay alphaSDetermination
