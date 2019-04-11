@@ -27,6 +27,8 @@
 \usepackage{colortbl} % \rowcolor in tables
 \usepackage{adjustbox}
 \usepackage{wrapfig}
+\usepackage[refpage]{nomencl}
+
 
 
 % References
@@ -35,11 +37,15 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
+% Nomenclature
+\renewcommand{\nomname}{List of Abbreviations}
+
 \DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\Tr}{Tr}
 \newcommand*\anti[1]{\overline{#1}\,}
 
 % Color scheme
+
 \definecolor{primary}{rgb}{0.2,0.59,0.86}
 
 
@@ -54,6 +60,8 @@
 }
 \makeatother
 
+\makenomenclature
+\makeindex
 
 \begin{document}
   \title{
@@ -65,7 +73,6 @@
   \date{Day Month Year}
 
   \maketitle
-
   \subfile{chapters/notation/index}
   \subfile{chapters/introduction/index}
   \subfile{chapters/theoreticalBackground/index}
@@ -73,4 +80,5 @@
   \subfile{chapters/appendix/index}
 
   \printbibliography
+  \printnomenclature
 \end{document}

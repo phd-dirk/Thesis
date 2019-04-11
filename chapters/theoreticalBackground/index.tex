@@ -3,25 +3,37 @@
 \begin{document}
 \chapter{Theoretical Background}
 
-\section{Quantumchromodynamics}
+\section{Quantum\-/chromodynamics}
 \label{sec:quantumchromodynamics}
-Since the the formulation of \textsc{qed}
-\textsc{qcd} describes the strong nuclear force, which is mediated by
-\textit{gluons} acting on \textit{quarks}. It is born out of the very successful
-theory of \textit{quantum electrodynamics} (QED), but has some major
-differences. QED has two well known constituent fields the fermion and the
-photon. It is also a so called \textit{abelian} theory, meaning that two
-consecutive rotations commute $AB = BA$. Due to the abelian nature of the QED
-gauge group $U(1)$ only fermions carry gauge charge. Photons do not carry
-charge. In contrast QCD takes quarks\footnote{Quarks are a subset to the
-  fermions.} and gluons as fields. Additionally QCD is ruled by a
-\textit{non-abelian} gauge symmetry of $SU(3)$. Thus the group operation of QCD
-in general do not commute, which leads to gluons carrying charge! This charge is
-called \textit{color-charge}. The theory requieres three colors and describes
-interactions between a quark of a color with a quark of another color via
-gluons. Contrary to QED the force carrier, the gluons, interact with themselve,
-because they carry color charge. The corresponding Feynman diagrams can be seen
-in \cref{fig:qcdFeynmanDiagrams}.
+Since the formulation of \textsc{qed} in the end of the 40's it has been
+attempted to describe the strong nuclear force as a \textsc{qft}, which has been
+achieved in the 70's as \textsc{qcd}
+\cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}.
+\textsc{qcd} is a renormalisable \textsc{qft} of the strong interaction, which
+fundamental fields are given by dirac spinors of spin\-/$1/2$, the so\-/called
+quarks, with a fractional electric charge of $\pm 1/3$ or $\pm 2/3$. The theory
+furthermore contains gauge\-/fields of spin 1, which are chargeless, massless
+and referred to as gluons. The gluons are the force\-/mediators, which interact
+with quarks and themselves, in contrast to photons of \textsc{qed}, which
+interact only with fermions (see \cref{fig:qcdFeynmanDiagrams}).
+
+The corresponding gauge\-/group of \textsc{qcd} is the non\-/abelian group
+$SU(3)$. Each of the quark flavours $u,d,c,s,t$ and $b$ belongs to the
+fundamental representation of $SU(3)$ and contains a triplet of fields $\Psi$.
+\begin{equation}
+  \Psi = \begin{pmatrix} \Psi_1 \\ \Psi_2 \\ \Psi_3 \end{pmatrix}
+  = \begin{pmatrix} \textcolor{red}{red} \\ \textcolor{green}{green} \\ \textcolor{blue}{blue} \end{pmatrix}
+\end{equation}
+The components of the triplet are the so\-/called colours\footnote{The colour
+  denomination is not gauge\-/invariant. After a colour gauge transformation the
+  new colours are a linear combination of the old colours, which breaks
+  gauge\-/symmetry.} red, green and blue, which is referred to as
+\textit{colour\-/charge}. The gluons belong to the adjoint representation of
+$SU(3)$, contain an octet of fields and can be expressed using the Gell-Mann
+matrices $\lambda_a$
+\begin{equation}
+  G_\mu = G_\mu^a \lambda_a \qquad a = 1,2,\dots 8
+\end{equation}
 \begin{figure}
   \centering \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
   \caption{Feynman diagrams of the strong interactions with corresponding
@@ -80,7 +92,8 @@ indices, $a, b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc =
     &\quad+ \frac{i}{2}\anti{q}_\alpha^A(x) \gamma^\mu \partial_\mu q_\alpha^A(x) - \frac{i}{2} \left[ \partial_\mu \anti{q}_\alpha^A(x) \right] \gamma^\mu q_\alpha^A(x) - m_A \anti{q}_\alpha^A(x) q_\alpha^A(x) \\
     &\quad+ \frac{g_s}{2} \anti{q}_\alpha^A(x) \lambda^a_{\alpha \beta}\gamma_\mu q_\beta^A(x) G^\mu_a(x) \\
     &\quad- \frac{g_s}{2}f_{abc}\left[ \partial_\mu G_\nu^a(x) - \partial_\nu G_\mu^a(x)\right] G_b^\mu(x) G_c^\nu(x) \\
-    &\quad- \frac{g_s^2}{4} f_{abc}f_{ade} G_\mu^b(x) G_\nu^c(x) G_d^\mu(x) G_e^\nu(x)
+    &\quad- \frac{g_s^2}{4} f_{abc}f_{ade} G_\mu^b(x) G_\nu^c(x) G_d^\mu(x)
+    G_e^\nu(x)
   \end{split}
 \end{equation}
 
@@ -492,3 +505,4 @@ the following expression
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated with by applying the OPE of the correlator $\Pi_{OPE}(s)$.
 \end{document}
+% LocalWords:  qcdFeynmanDiagrams
