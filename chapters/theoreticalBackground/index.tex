@@ -32,19 +32,19 @@ The components of the triplet are the so\-/called colours\footnote{The colour
 $SU(3)$, contain an octet of fields and can be expressed using the Gell-Mann
 matrices $\lambda_a$
 \begin{equation}
-  G_\mu = G_\mu^a \lambda_a \qquad a = 1,2,\dots 8
+  B_\mu = B_\mu^a \lambda_a \qquad a = 1,2,\dotsc 8
 \end{equation}
 \begin{figure}
   \centering \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
   \caption{Feynman diagrams of the strong interactions with corresponding
-    electromagnetic diagrams. We see that the gluons carry color-charge and thus
+    electromagnetic diagrams. We see that the gluons carry colour charge and thus
     couple to other gluons, which is not the case for the photons.}
   \label{fig:qcdFeynmanDiagrams}
 \end{figure}
 \begin{table}
   \centering
   \begin{minipage}[c]{0.4\textwidth}
-    \begin{tabular}{l l}
+    \begin{tabular}{ll}
       \toprule
       Flavour & Mass\\
       \midrule
@@ -59,33 +59,33 @@ matrices $\lambda_a$
   \end{minipage}\hfill
   \begin{minipage}[c]{0.59\textwidth}
     \caption{List of Quarks and their masses. The masses of the up, down,
-      strange, charm and bottom quark are the renormalization group invariant
+      strange, charm and bottom quark are the renormalisation group invariant
       (RGI) quark masses and are quoted in the four-flavour theory ($N_f=2+1$)
       at the scale $\mu=\SI{2}{\giga\eV}$ in the $\overline{MS}$ scheme and are
       taken from the \textit{Flavour Lattice Averaging Group} \cite{FLAG2019}.
-      The mass of the top quark is not disucess in \cite{FLAG2019} and has been
+      The mass of the top quark is not discussed in \cite{FLAG2019} and has been
       taken from \cite{PDG2018} from direct observations of top events.}
   \end{minipage}
   \label{table:quarkList}
 \end{table}
-
-The theory of QCD can be summarized with its \textit{Lagrange
-  density}\cite{Jamin2006}:
+The classical \textit{Lagrange density} of \textsc{qcd} is given by
+\cite{Jamin2006,pascual1984}:
 \begin{equation}
   \label{eq:qcdLagrangian}
   \mathcal{L}_{QCD}(x) = -\frac{1}{4}G_{\mu\nu}^a(x)G^{\mu\nu a}(x) + \sum_A \left[ \frac{i}{2} \bar{q}^A(x) \gamma^\mu \overleftrightarrow{D}_\mu q^A(x) - m_A\bar{q}^A(x) a^A(x) \right],
 \end{equation}
-where $q^A(x)$ represents the quark fields and $G_{\mu\nu}^a$ being the
+with $q^A(x)$ representing the quark fields and $G_{\mu\nu}^a$ being the
 \textit{gluon field strength tensor} given by:
 \begin{equation}
   \label{eq:gluonField}
   G_{\mu\nu}^a(x) \equiv \partial_\mu B_\nu^a(x) - \partial_\nu^a(x) + g f^{abc} B_\mu^b(x) B_\nu^c(x),
 \end{equation}
-where $B_\mu^a$ are the \textit{gluon fields}, given in the \textit{adjoint
-  representation} of the SU(3) gauge group with $f^{abc}$ as \textit{structure
-  constants}. Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour
-indices, $a, b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc =
-0, \dotsc 3$ as lorentz indices. Explicitly the Lagrangian writes:
+with $f^{abc}$ as \textit{structure constants} of the gauge\-/group $SU(3)$ and
+$overleftrightarrow{D}_\mu$ as covariant derivative acting to the left and to
+the right.
+Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour indices, $a, b,
+\dotsc = 0, \dotsc, 8 $ as colour indices and $\mu, \nu, \dotsc = 0, \dotsc 3$
+as lorentz indices. Explicitly the Lagrangian writes:
 \begin{equation}
   \begin{split}
     \mathcal{L}_0(x) &=- \frac{1}{4} \left[ \partial_\mu G_\nu^a(x) - \partial_v G_\mu^a(x) \right] \left[ \partial^\mu G_a^\nu(x) - \partial^\nu G^\mu_a(x) \right] \\
@@ -96,7 +96,18 @@ indices, $a, b, \dotsc = 0, \dotsc, 8 $ as color indices and $\mu, \nu, \dotsc =
     G_e^\nu(x)
   \end{split}
 \end{equation}
-
+The first term is the kinetic term for the massless gluons. The next three terms
+are the kinetic terms for the quark field with different masses for each
+flavour. The rest of the terms are the interaction terms. The fifth term
+represents the interaction between quarks and gluons  and the last two terms the
+self\-/interactions of gluon fields. The equations of motion resulting from the
+above Lagrangian can then be given, in compact form, by
+\begin{equation}
+  \begin{split}
+    (i \gamma_\mu D^\mu - m_A) q^A(x) &= 0 \\
+    \left[ D^\mu, G_{\mu\nu}(x) \right] &= -i g^2 T_a \sum_A \anti{q}^A(x) T_a \gamma_\nu q^A(x).
+  \end{split}
+\end{equation}
 
 \subsection{Renormalisation Group}
 The perurbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to
