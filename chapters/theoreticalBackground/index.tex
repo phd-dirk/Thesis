@@ -100,12 +100,21 @@ The first term is the kinetic term for the massless gluons. The next three terms
 are the kinetic terms for the quark field with different masses for each
 flavour. The rest of the terms are the interaction terms. The fifth term
 represents the interaction between quarks and gluons  and the last two terms the
-self\-/interactions of gluon fields. The equations of motion resulting from the
-above Lagrangian can then be given, in compact form, by
+self\-/interactions of gluon fields. 
+
 \begin{equation}
   \begin{split}
-    (i \gamma_\mu D^\mu - m_A) q^A(x) &= 0 \\
-    \left[ D^\mu, G_{\mu\nu}(x) \right] &= -i g^2 T_a \sum_A \anti{q}^A(x) T_a \gamma_\nu q^A(x).
+    i S^{(0)AB}_{\alpha\beta}(x-y) &\equiv \wick{ \c q_\alpha^A(x) \anti{\c q}_\beta^B(y)}
+    \equiv \langle 0 \vert T \{ q_\alpha^A(x) \anti{q}_\beta^B \} \vert 0 \rangle
+    = \delta_{AB} \delta_{\alpha\beta} i S^{(0)}(x-y) \\
+    i D^{(0)\mu\nu}_{ab}(x-y) &\equiv \wick{ \c B_a^\mu(x) \c B_b^\nu(y)}
+    \equiv \langle  0 \vert T \{ B_a^\mu(x) B_b^\nu(y) \} \vert 0 \rangle
+    \equiv \delta_{ab}i \int \frac{\dif^4 k}{(2\pi)^4} D^{(0)\mu\nu}(k) e^{-ik(x-y)} \\
+    &= i \delta_{ab} \int \frac{\dif^4 k}{(2\pi)^4} \frac{1}{k^2+i\epsilon} \left[ -g_{\mu\nu} + (1-a) \frac{k_\mu k_\nu}{k^2+i\epsilon} \right] e^{-ik(x-y)} \\
+    i \widetilde{D}_{ab}^{(0)}(x-y) & \equiv \wick{\c \phi_a(x) \anti{\c \phi}_b(y)}
+    \equiv \langle 0 \vert T\{ \phi_a(x) \anti{\phi}_b(y) \} \vert 0 \rangle 
+    = \frac{i}{(2\pi)^4}\delta_{ab} \int \dif^4 q \frac{-1}{q^2 + i\epsilon} e^{-q(x-y)} \\
+    &\equiv \frac{i}{(2\pi)^4} \delta_{ab} \int \dif^4 q \widetilde{D}^{(0)}(q) e^{-iq(x-y)}
   \end{split}
 \end{equation}
 
