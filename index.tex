@@ -32,6 +32,7 @@
 \usepackage{adjustbox}
 \usepackage{wrapfig}
 \usepackage[refpage]{nomencl}
+\usepackage{slashed} % Feynman slash notation
 
 % following https://codeinthehole.com/guides/writing-a-thesis-in-latex/
 \usepackage{fancyhdr}
@@ -54,11 +55,11 @@
 \parskip 1ex
 \renewcommand{\baselinestretch}{1.33}
 
+
 \numberwithin{equation}{section}       % Tinker with equation numbering
 \renewcommand{\bibname}{References}    % Alter appearance of table of contents slightly
 \renewcommand{\contentsname}{Contents}
 \pagenumbering{roman}                  % Sets the pagenumbering to Roman nunerals to begin with
-\bibliographystyle{unsrtnat}           % Sets bibliography style file (see natbib literature)
 
 
 
@@ -108,6 +109,7 @@
   \newpage
   \pdfbookmark[0]{Abstract}{abstract} % Sets a PDF bookmark for the abstract
   \chapter*{Abstract}
+
 
   \pdfbookmark[0]{Acknowledgements}{acknowledgements} % Sets a PDF bookmark for the acknowledements
   \chapter*{Acknowledgements}

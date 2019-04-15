@@ -37,8 +37,8 @@ matrices $\lambda_a$
 \begin{figure}
   \centering \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
   \caption{Feynman diagrams of the strong interactions with corresponding
-    electromagnetic diagrams. We see that the gluons carry colour charge and thus
-    couple to other gluons, which is not the case for the photons.}
+    electromagnetic diagrams. We see that the gluons carry colour charge and
+    thus couple to other gluons, which is not the case for the photons.}
   \label{fig:qcdFeynmanDiagrams}
 \end{figure}
 \begin{table}
@@ -82,10 +82,9 @@ with $q^A(x)$ representing the quark fields and $G_{\mu\nu}^a$ being the
 \end{equation}
 with $f^{abc}$ as \textit{structure constants} of the gauge\-/group $SU(3)$ and
 $overleftrightarrow{D}_\mu$ as covariant derivative acting to the left and to
-the right.
-Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour indices, $a, b,
-\dotsc = 0, \dotsc, 8 $ as colour indices and $\mu, \nu, \dotsc = 0, \dotsc 3$
-as lorentz indices. Explicitly the Lagrangian writes:
+the right. Furthermore we have used $A, B, \dotsc = 0, \dotsc 5$ as flavour
+indices, $a, b, \dotsc = 0, \dotsc, 8 $ as colour indices and $\mu, \nu, \dotsc
+= 0, \dotsc 3$ as lorentz indices. Explicitly the Lagrangian writes:
 \begin{equation}
   \begin{split}
     \mathcal{L}_0(x) &=- \frac{1}{4} \left[ \partial_\mu G_\nu^a(x) - \partial_v G_\mu^a(x) \right] \left[ \partial^\mu G_a^\nu(x) - \partial^\nu G^\mu_a(x) \right] \\
@@ -99,24 +98,57 @@ as lorentz indices. Explicitly the Lagrangian writes:
 The first term is the kinetic term for the massless gluons. The next three terms
 are the kinetic terms for the quark field with different masses for each
 flavour. The rest of the terms are the interaction terms. The fifth term
-represents the interaction between quarks and gluons  and the last two terms the
-self\-/interactions of gluon fields. 
+represents the interaction between quarks and gluons and the last two terms the
+self\-/interactions of gluon fields.
 
+Having derived the Lagrangian leaves us with its quantisation. The
+dirac\-/spinors can be quantised as in \textsc{qed} without any problems. The
+$\Psi(x)$ quantum field can be written as:
+\begin{equation}
+  \Psi(x) = \int \frac{\dif^3 p}{(2\pi)^3 2E(\vec p)} \sum_\lambda \left[ u(\vec p, \lambda) a(\vec p, \lambda) e^{-ipx} + v(\vec p, \lambda) b^\dagger (\vec p, \lambda) e^{ipx} \right],
+\end{equation}
+where the integration ranges over the positive sheet of the mass hyperboloid
+$\Omega_+(m) = \{p \vert p^2 = m^2, p^0 > 0 \}$. The four spinors $u(\vec p,
+\lambda)$ and $v(\vec p, \lambda)$ are solutions to the dirac equations in
+momentum space
 \begin{equation}
   \begin{split}
-    i S^{(0)AB}_{\alpha\beta}(x-y) &\equiv \wick{ \c q_\alpha^A(x) \anti{\c q}_\beta^B(y)}
-    \equiv \langle 0 \vert T \{ q_\alpha^A(x) \anti{q}_\beta^B \} \vert 0 \rangle
-    = \delta_{AB} \delta_{\alpha\beta} i S^{(0)}(x-y) \\
-    i D^{(0)\mu\nu}_{ab}(x-y) &\equiv \wick{ \c B_a^\mu(x) \c B_b^\nu(y)}
-    \equiv \langle  0 \vert T \{ B_a^\mu(x) B_b^\nu(y) \} \vert 0 \rangle
-    \equiv \delta_{ab}i \int \frac{\dif^4 k}{(2\pi)^4} D^{(0)\mu\nu}(k) e^{-ik(x-y)} \\
-    &= i \delta_{ab} \int \frac{\dif^4 k}{(2\pi)^4} \frac{1}{k^2+i\epsilon} \left[ -g_{\mu\nu} + (1-a) \frac{k_\mu k_\nu}{k^2+i\epsilon} \right] e^{-ik(x-y)} \\
-    i \widetilde{D}_{ab}^{(0)}(x-y) & \equiv \wick{\c \phi_a(x) \anti{\c \phi}_b(y)}
-    \equiv \langle 0 \vert T\{ \phi_a(x) \anti{\phi}_b(y) \} \vert 0 \rangle 
-    = \frac{i}{(2\pi)^4}\delta_{ab} \int \dif^4 q \frac{-1}{q^2 + i\epsilon} e^{-q(x-y)} \\
-    &\equiv \frac{i}{(2\pi)^4} \delta_{ab} \int \dif^4 q \widetilde{D}^{(0)}(q) e^{-iq(x-y)}
+    [\slashed p - m]u(\vec p, \lambda) &= 0 \\
+    [\slashed p + m]v(\vec p, \lambda) &= 0,
   \end{split}
 \end{equation}
+with $\lambda$ representing the helicity state of the spinors.
+
+The quantisation of the gauge\-/fields are more cumbersome. One is forced to
+introduce supplementary non\-/physical fields, the so\-/called Faddeev\-/Popov
+ghosts $c^a(x)$ \cite{Faddeev1967}.
+
+The free propagators for the quark\-/, the gluon\-/ and the ghost\-/fields are
+then given by
+\begin{equation}
+  \begin{split}
+    i S^{(0)AB}_{\alpha\beta}(x-y) &\equiv \wick{ \c q_\alpha^A(x) \anti{\c
+        q}_\beta^B(y)} \equiv \langle 0 \vert T \{ q_\alpha^A(x)
+    \anti{q}_\beta^B \} \vert 0 \rangle
+    = \delta_{AB} \delta_{\alpha\beta} i S^{(0)}(x-y) \\
+    i D^{(0)\mu\nu}_{ab}(x-y) &\equiv \wick{ \c B_a^\mu(x) \c B_b^\nu(y)} \equiv
+    \langle 0 \vert T \{ B_a^\mu(x) B_b^\nu(y) \} \vert 0 \rangle
+    \equiv \delta_{ab}i \int \frac{\dif^4 k}{(2\pi)^4} D^{(0)\mu\nu}(k) e^{-ik(x-y)} \\
+    &= i \delta_{ab} \int \frac{\dif^4 k}{(2\pi)^4} \frac{1}{k^2+i\epsilon} \left[ -g_{\mu\nu} + (1-a) \frac{k_\mu k_\nu}{k^2+i\epsilon} \right] e^{-ik(x-y)} \\
+    i \widetilde{D}_{ab}^{(0)}(x-y) & \equiv \wick{\c \phi_a(x) \anti{\c
+        \phi}_b(y)} \equiv \langle 0 \vert T\{ \phi_a(x) \anti{\phi}_b(y) \}
+    \vert 0 \rangle
+    = \frac{i}{(2\pi)^4}\delta_{ab} \int \dif^4 q \frac{-1}{q^2 + i\epsilon} e^{-q(x-y)} \\
+    &\equiv \frac{i}{(2\pi)^4} \delta_{ab} \int \dif^4 q \widetilde{D}^{(0)}(q)
+    e^{-iq(x-y)},
+  \end{split}
+\end{equation}
+and the corresponding Feynman\-/rules have been displayed in \cref{fig:qcdFeynmanRules}.
+\begin{figure}
+  \includegraphics[width=\textwidth]{./images/qcdFeynmanRules.png}
+  \caption{QCD Feynman rules.}
+  \label{fig:qcdFeynmanRules}
+\end{figure}
 
 \subsection{Renormalisation Group}
 The perurbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to
@@ -265,7 +297,7 @@ i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
 the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
 \textit{vectorial}, A: \textit{axial-vectorial}, respectively).
 
-The correlator tensor $\Pi_{\mu\nu}(q^2)$ can be lorentz decomposed to a scalar
+The correlator tensor $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
 function $\Pi(q^2)$. There are only two possible terms that can reproduce the
 second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
 multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
