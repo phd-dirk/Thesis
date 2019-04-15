@@ -151,42 +151,46 @@ and the corresponding Feynman\-/rules have been displayed in \cref{fig:qcdFeynma
 \end{figure}
 
 \subsection{Renormalisation Group}
-The perurbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to
-divergencies, which have to be \textit{renormalized}. There are different
-aproaches to 'make' these divergencies finite. The most popular one is
+The perturbations of the QCD Lagrangian \ref{eq:qcdLagrangian} lead to
+divergencies, which have to be \textit{renormalised}. There are different
+approaches to 'make' these divergencies finite. The most popular one is
 \textbf{dimensional regularisation}.
 
 In \textit{dimensional regularisation} we expand the four space-time dimensions
-to arbitrary dimensions. Consequently the in QCD calculations appearing
-$\textit{Feyman integrals}$ have to be continued to $D$-dimensions like
+to arbitrary $d$\-/dimensions. Consequently the in \textsc{qcd} calculations
+appearing $\textit{Feyman integrals}$ have to be continued to $D$-dimensions
+like
 \begin{equation}
   \label{eq:dimRegFeynmanIntegral}
   \mu^{2\epsilon} \int \frac{\dif^D p}{(2\pi)^D}\frac{1}{[p^2-m^2+i0][(q-p)^2=m^2+i0]},
 \end{equation}
 where we introduced the scale parameter $\mu$ to account for the extra
-dimensions and conserve the mass dimension of the non continued integral.
+dimensions.
 
-In addition \textit{physical quantities}\footnote{Observables that can be
-  measured.} cannot depend on the renormalisation scale $\mu$. Thus the
-derivative by $\mu$ of a general \textit{physical quantity} $R(q, a_s, m)$ that
-depends on the external momentum q, the renormalised coupling
-$a_s\equiv\alpha_s/\pi$ and the renormalized quark mass $m$ has to yield zero
+\textit{Physical quantities}\footnote{Observables that can be measured.} cannot
+depend on the renormalisation scale $\mu$. Therefore the derivative by $\mu$ of
+a general physical quantity has to yield zero. The physical quantity $R(q, a_s,
+m)$, that depends on the external momentum q, the renormalised coupling
+$a_s\equiv\alpha_s/\pi$ and the renormalised quark mass $m$ can then be
+expressed as
 \begin{equation}
   \label{eq:RGE}
   \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{m} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
 \end{equation}
-\cref{eq:RGE} is referred to as \textbf{renormalization group equation} and is
-the basis for defining the \textit{renormalisation group functions}:
+\Cref{eq:RGE} is referred to as \textbf{renormalisation group equation} and is
+the basis for defining the two \textit{renormalisation group functions}:
 \begin{align}
   \beta(a_s) &\equiv -\mu \od{a_s}{\mu} = \beta_1 a_s^2 + \beta_2 a_s^3 + \dots & \beta-\text{function}
                                                                                   \label{eq:betaFunction} \\
   \gamma(a_s) &\equiv - \frac{\mu}{m} \od{m}{\mu} = \gamma_1 a_s + \gamma_2 a_s^2 + \dots & \text{anomalous mass dimension}.
                                                                                             \label{eq:anomalousMassDimension}
 \end{align}
+The coefficients of the $\beta$-function and the mass anomalous dimension are currently known up to the 5\textsueprscript{th} order
+and listed in the appendix \ref{sec:betaCoefficients}.
 
 \subsubsection{Running gauge coupling}
 The $\beta$-function and the anomalous mass dimension are responsible for the
-running of the strong coupling and the running of the quark mass respektively.
+running of the strong coupling and the running of the quark mass respectively.
 In this section we will shortly review the $\beta$-function and its implications
 on the strong coupling, whereas in the following section we will discuss the
 anomalous-mass dimension.
@@ -207,40 +211,30 @@ yielding
 \begin{equation}
   a_s(\mu_2) = \frac{a_s(\mu_1)}{\left( 1 - a_s(\mu_1) \beta_1 \log\frac{\mu_1}{\mu_2} \right)}.
 \end{equation}
-As we have three colours $N_c=3$ and six flavours $N_f=6$ the first
+As we have three colours ($N_c=3$) and six flavours ($N_f=6$) the first
 $\beta$-function \ref{eq:betaFunction} is positive. Thus for $\mu_2>\mu_1$
 $a_s(\mu_2)$ decreases logarithmically and vanishes for $\mu_2 \to \infty$. This
-behaviour is known as \textit{asymptotic freedom}. The coefficients of the
-$\beta$-function are currently known up to the 5th order and listed in the
-appendix \ref{sec:betaCoefficients}.
+behaviour is known as \textit{asymptotic freedom} and leads to
+\textit{confinement}.
 
-As QCD we have three colors and six flavours the beta function carries a
-negative sign (see \cref{eq:firstBetaCoefficient}). This implies that the
-strength of the coupling is \textbf{decreasing} for increasing energies. In QED
-we have a beta-function with a positive sign and thus its coupling strength
-increases with energy. This behaviour of QCD leads to \textit{confinement} and
-\textit{asymptotic freedom}.
-
-Color confinement, or simply confinement, means that color charged quarks cannot
-be isolated. They always appear in composite hadrons. Until today no quark has
-been measured as single particle. There is no analytic proof of confinement, but
-until today no single quark has been observed. It is qualitativly explained with
-the gluon field carrying color charge. These gluons form so-called
-\textit{flux-tubes} between quarks, which cause a constant strong force between
-particles regardless of their separation. Consequently the energy needed to
-separate quarks is proportional to the distance between them and at some point
-there is enough energy to favour the creation of a new quark pair. Thus before
-separating two quarks we create a two new quarks and we will probably never be
-able to observe an isolated quark.
-
-For high energies, or very close quarks, the QCD coupling becomes weak and the
-quarks and gluons are essentially free. This phenomen is refered to as
-asymptotic freedom.
-
+Asymptotic freedom states, that for high energies (small distances), the strong
+coupling becomes diminishing small and quarks and gluons do not interact. Thus
+in isolated baryons and mesons the quarks are separated by small distances, move
+freely and do not interact. On the other hand we are not able to separate the
+quarks in a meson or baryon. No quark has been detected as single particle yet.
+This is qualitativly explained with the gluon field carrying colour charge.
+These gluons form so-called \textit{flux-tubes} between quarks, which cause a
+constant strong force between particles regardless of their separation.
+Consequently the energy needed to separate quarks is proportional to the
+distance between them and at some point there is enough energy to favour the
+creation of a new quark pair. Thus before separating two quarks we create a
+quark\-/antiquark pair. As a result we will probably never be able to observe an
+isolated quark. This phenomenon is referred to as colour confinement or simply
+confinement.
 
 \subsubsection{Running quark mass}
 Not only the coupling but also the masses carry an energy dependencies, which is
-governed by the \textit{anomalou mass dimension} $\gamma(a_s)$.
+governed by the \textit{anomalous mass dimension} $\gamma(a_s)$.
 
 The properties of the running quark mass can be derived similar to the gauge
 coupling. Starting from integrating the \textit{anomalous mass dimension}
@@ -557,4 +551,4 @@ the following expression
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated with by applying the OPE of the correlator $\Pi_{OPE}(s)$.
 \end{document}
-% LocalWords:  qcdFeynmanDiagrams
+% LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules
