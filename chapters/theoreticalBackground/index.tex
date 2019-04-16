@@ -269,14 +269,14 @@ coupling reaches a critical value of $\approx 0.5$ leading to a break down of
 \textsc{pt}.
 
 In this work we try to achieve a higher precision in the value of $\alpha_s$.
-Our method to measure the strong coupling are the \textsc{QCD} sum rules,
-which by itself is based on a concept called the \textit{two-point function} for
+Our method to measure the strong coupling are the \textsc{qcdsr},
+which in our case make use of the \textit{two-point function} for
 which we will devote the following section.
 
 \subsection{Two-Point function}
 \label{sec:twoPointFunction}
 The vacuum expectation value of the product of the conserved noether current
-$J_\mu(x)$ at different space-times points $x$ and $y$ is known as the
+$J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
 \textbf{two-point function} (or simply \textbf{correlator})
 \begin{equation}
   \label{eq:twoPointFunction}
@@ -284,21 +284,22 @@ $J_\mu(x)$ at different space-times points $x$ and $y$ is known as the
 \end{equation}
 where the noether current is given by
 \begin{equation}
-  J_\mu(x) = \anti{q}(x) \Gamma q(y)
+  \label{eq:qcdCurrent}
+  J_\mu(x) = \anti{q}(x) \Gamma q(y),
 \end{equation}
-, where $\Gamma$ stands for one of the dirac matrices $\Gamma \in \{ 1,
+where $\Gamma$ can be any of the following dirac matrices $\Gamma \in \{ 1,
 i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
 the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
 \textit{vectorial}, A: \textit{axial-vectorial}, respectively).
 
-The correlator tensor $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
+The tensor correlator $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
 function $\Pi(q^2)$. There are only two possible terms that can reproduce the
 second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
 multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
 \begin{equation}
   \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
 \end{equation}
-By making use of the \textbf{Ward-identity} \cite{Peskin1995}
+By making use of the \textit{Ward-identity} \cite{Peskin1995}
 \begin{equation}
   \label{eq:wardIdentity}
   q^\mu \Pi_{\mu\nu}(q^2) = q^\nu \Pi_{\mu\nu} = 0
@@ -316,26 +317,26 @@ function
   \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
 \end{equation}
 
-The scalar QCD two point function can then be related to the spectrum of
+The scalar QCD two point function can then be described by the spectrum of
 hadronic states. The correlator is then related to an integral over the
-\textbf{spectral function} $\rho(s)$ via the \textit{Källén-Lehmann spectral
+\textit{spectral function} $\rho(s)$ via the \textit{Källén-Lehmann spectral
   representation} \cite{Kallen1952,Lehmann1954}, which is known since the early
-fities
+fifties
 \begin{equation}
   \label{eq:dispersionRelation}
   \Pi(q^2) = \int_0^\infty \dif s \frac{\rho(s)}{s - q^2 - i \epsilon}.
 \end{equation}
 
-Equation \ref{eq:dispersionRelation} is refered to as \textbf{dispersion
-  relation} analogous to similar relations which arise for example in
-electrodynamics and defines the \textbf{spectral function} (a derivation can be
-found in \cite{Rafael1997})
+\Cref{eq:dispersionRelation} is referred to as \textit{dispersion relation}
+analogous to similar relations which arise for example in electrodynamics and
+defines the \textit{spectral function} (a derivation can be found in
+\cite{Rafael1997})
 \begin{equation}
   \label{eq:spectralFunction}
   \rho(s) = \frac{1}{\pi} \Ima \Pi(s).
 \end{equation}
 
-Until know we connected theoretical correlators with the measurable hadronic
+Until know we connected theoretical correlator with the measurable hadronic
 spectrum. Nevertheless the analytic properties of the correlators have to be
 discussed as the function has discontinuities.
 
@@ -345,8 +346,8 @@ The main contribution from the spectral function given in
   2 \pi \rho(m^2) = \sum_n \langle  0 | J_\mu(x) | n \rangle \langle n | J_\nu(y) \rangle (2 \pi^2)^4 \delta^{(4)}(p - p_n),
 \end{equation}
 which lead to a series of continuous poles on the positive real axis for the
-two-point function, see Fig. \ref{fig:analyticStructureCorrelator}.
-\begin{figure}[h]
+two-point function (see Fig. \ref{fig:analyticStructureCorrelator}).
+\begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{./images/analyticStructureCorrelator.eps}
   \caption{Analytic structure in the complex $q^2$-plane of the Fourier
@@ -357,30 +358,29 @@ two-point function, see Fig. \ref{fig:analyticStructureCorrelator}.
   \label{fig:analyticStructureCorrelator}
 \end{figure}
 These discontinuities can be tackled with \textit{Cauchy's theorem}, which we
-will apply in \cref{secSumRules}.
+will apply in \cref{sec:sumRules}.
 
-Until now we exclusively dealt with the perturbative (PT) part of the theory,
-but QCD is known to have not negligible non-perturbative (NPT) contributions.
-Thus before continuing with the \textit{Sum Rules} we need a final ingredient
-the operator product expansion, which implements NPT cotributions to our theory.
+Having dealt exclusively with the perturbative part of the theory, we have to
+discuss non\-/perturbative contributions, as \textsc{qcd} is known to have
+non\-/negligible contributions. Thus before continuing with the \textit{Sum
+  Rules} we need a final ingredient the \define{ope}{Operator Product
+  Expansion}, which treats the non\-/perturbative contributions of our theory.
 
 
 \subsection{Operator Product Expansion}
-The \textbf{Operator Product Expansion} (OPE) was introduced by Wilson in 1969
-\cite{Wilson1969}. The expansion states that non-local operators can be
-rewritten into a sum of composite local operators and their corresponding
-coefficients:
+The \textsc{ope} was introduced by Wilson in 1969 \cite{Wilson1969}. The
+expansion states that non\-/local operators can be rewritten into a sum of
+composite local operators and their corresponding coefficients:
 \begin{equation}
-  \label{eq:OPE}
+  \label{eq:ope}
   \lim_{x\to y} \mathcal{O}_1(x) \mathcal{O}_2(y) = \sum_n C_n(x-y)\mathcal{O}_n(x),
 \end{equation}
 where $C_n(x-y)$ are the so-called \textit{Wilson-coefficients}.
 
-The OPE lets us separate \textit{short-distance} from \textit{long-distance}
-effects. In perturbation theory (PT) we can only amount for
-\textit{short-distances}, which are equal to hight energies, where the
-strong-coupling $\alpha_s$ is small. Consequently the OPE decodes the
-long-distance effects in the higher dimensionsional operators.
+The OPE lets us separate short-distance from long-distance effects. In
+\textsc{pt} we can only amount for short-distances, which are equal to height
+energies, where the strong-coupling $\alpha_s$ is small. Consequently the \textsc{ope}
+decodes the long-distance effects in the higher dimensionsional operators.
 
 The form of the composite operators are dictated by Gauge- and Lorentz symmetry.
 Thus we can only make use of operators of even dimension. The operators up to
@@ -396,15 +396,14 @@ dimension six are given by \cite{Pascual1984}
                         & :f_{abc} G_a^{\mu\nu} G_b^{\nu\delta} G_c^{\delta\mu}:,
   \end{array}
 \end{equation}
-where $\Gamma$ stands for one of the dirac matrices $\Gamma \in \{1, i \gamma_5,
-\gamma^\mu, \gamma^\mu \gamma_5\}$, specifying the quantum number of the current
-(S, P, A, respectively). As all the operators appear normal ordered they vanish
-by definition in PT. Consequently they appear as \textbf{Condensates} in
-Non-perturbative (NPT) QCD like quark-condensate $\langle \anti{q} q \rangle$ or
+where $\Gamma$ stands for one of possible dirac matrices (as seen
+\cref{eq:qcdCurrent}). As all the operators appear normal ordered they vanish by
+definition in \textsc{pt}. Consequently they appear as \textit{condensates} in
+\textsc{npt qcd} like quark-condensate $\langle \anti{q} q \rangle$ or
 the gluon-condensate $\langle a GG \rangle$ (both of dimension four). These
-non-vanishing condensats characterize the QCD-vacuum.
+non-vanishing condensates characterize the \textsc{qcd}-vacuum.
 
-As we work with dimensionless functions (e.g. $\Pi$) in Sum Rules, the r.h.s. of
+As we work with dimensionless functions (e.g. the correlator $\Pi$) in Sum Rules, the r.h.s. of
 \cref{eq:ope} has to be dimensionless. Consequently the Wilson-coefficients have
 to cancel the dimension of the operator with their inverse mass dimension. To
 account for the dimensions we can make the inverse momenta explicit
@@ -412,10 +411,10 @@ account for the dimensions we can make the inverse momenta explicit
   \Pi_{V/A}^{OPE}(s) = \sum_{D=0,2,4\dots} \frac{c^{(D)} \langle \mathcal{O}^{(D)}(x) \rangle}{-s^{D/2}},
 \end{equation}
 where we used $C^{(D)}=c/(-s)^{D/2}$ with $D$ being the dimension. Consequently
-the OPE should converge with increasing dimension for suficienty large momenta
+the \textsc{ope} should converge with increasing dimension for suficienty large momenta
 $s$.
 
-Let's show how the OPE contributions are calculated with a the ``standard
+Let's show how the \textsc{ope} contributions are calculated with a the ``standard
 example'' (following \cite{Pascual1986}), where we compute the perturbative and
 quark-condensate Wilson-coefficients for the $\rho$-meson. For the $\rho$-meson,
 which is composed of u and d quarks, the current of \cref{eq:twoPointFunction}
@@ -467,7 +466,7 @@ uncontracted
       \rangle + (u \to d) \right].
   \end{split}
 \end{equation}
-The non contracted fields can then be expanded in x
+The non contracted fields can then be expanded in $x$
 \begin{equation}
   \begin{split}
     \langle \Omega \vert: \anti{q}(x) q(0):\vert \Omega \rangle &= \langle\Omega\vert: \anti{q}(0) q(0): \vert\Omega\rangle\\
@@ -479,52 +478,54 @@ and redefined to a more elegant notation
 \begin{equation}
   \langle \anti{q}q \rangle \equiv \langle\Omega\vert: \anti{q}(0) q(0):\vert\Omega\rangle.
 \end{equation}
-The finally result can be taken from \cite{Pascual1984} and yields
+The finally result can be expressed as 
 \begin{equation}
-  \Pi_{(\rho)}(q^2) = \frac{1}{2} \frac{1}{\left(-q^2\right)^2} \left[ m_u\langle \anti{u} u + m_d \langle \anti{d} \rangle\right].
+  \Pi_{(\rho)}(q^2) = \frac{1}{2} \frac{1}{\left(-q^2\right)^2} \left[ m_u\langle \anti{u} u \rangle + m_d \langle \anti{d} d \rangle\right].
 \end{equation}
 
-The usage of the OPE and its validity is far from obvious. We are deriving the
-OPE from matching the Wilson-coefficients to Feynman-graph analyses. These
+The usage of the \textsc{ope} and its validity is far from obvious. We are deriving the
+\textsc{ope} from matching the Wilson-coefficients to Feynman-graph analyses. These
 Feynman-graphs are calculated perturbatively but the coefficients with dimension
-$D>0$ correspond to NPT condensates!
+$D>0$ correspond to \textsc{npt} condensates!
 
 Having gathered all of the necessary concepts we can close the gap between the
-theory and experiment in the last section of the introduction: QCD Sum Rules.
+theory and experiment in the last section of the introduction: \textsc{qcdsr}.
+
 
 \subsection{Sum Rules}
 \label{sec:sumRules}
-To relate the measurable hadronic final states of a QCD process (e.g.
-$\tau$-decays into Hadrons) to a theoretical calculable \textbf{QCD sum rules}
-have been empliyed by Shifman in the late sevent \cite{Shifman1978}.
+To relate the measurable hadronic final states of a \textsc{qcd} process (e.g.
+$\tau$-decays into hadrons) to a theoretical calculable \textsc{qcdsr} have been
+empliyed by Shifman in the late sevent \cite{Shifman1978}.
 
-The sum rules are a combination of the two-point function and its analyticity,
-the OPE, a dispersion relation, the optical theorem and quark hadron duality.
+The sum rules are a combination of the two-point function, its analyticity, the
+\textsc{ope}, a dispersion relation, the optical theorem and quark hadron
+duality.
 
 The previously introduced two-point function \cref{eq:twoPointFunction} is
-generally descriped by the OPE to account for NPT effects.
+generally described by the \textsc{ope} to account for \textsc{npt} effects.
 \begin{equation}
   \Pi(q^2) = \Pi^{OPE}(q^2).
 \end{equation}
 Furthermore it is related to the theoretical spectral function $\rho(s)$ via a
-dispersion relation \cref(eq:dispersionRelation). Using QCD we are computing
-interactions based on quarks and gluons, but due to confinement, we are only
-able to observe Hadrons. Consequently to connect the theory to the experiment we
-have to assume \textbf{quark-hadron duality}\footnote{Or simply duality.}, which
-implies that physical quantities can be described equally good in the hadronic
-or in the quark-gluon picture. Thus we can rewrite the dispersion relation
-\cref{eq:dispersionRelation} as
+dispersion relation (\cref{eq:dispersionRelation}). Using \textsc{qcd} we are
+computing interactions based on quarks and gluons, but as we have seen
+(confinement), we are only able to observe hadrons. Consequently to connect the
+theory to the experiment we have to assume \textbf{quark-hadron
+  duality}\footnote{Or simply duality.}, which implies that physical quantities
+can be described equally good in the hadronic or in the quark-gluon picture.
+Thus we rewrite the dispersion relation \cref{eq:dispersionRelation} as
 \begin{equation}
   \Pi^{OPE}_{th}(q^2) = \int_0^\infty \frac{\rho_{exp}(q^2)}{(s-q^2-i\epsilon)},
 \end{equation}
 where we connected the theoretical correlator $\Pi_{th}$ with the experimental
 measurable spectral function $\rho_{exp}$.
 
-We have seen that the theoretical description of the correlator $\Pi_{th}$
-contains poles on the real axis, but the experimental data $\rho_{exp}$ is
-solely accesible on the positive real axis. Thus we have to make use of Cauchy's
+We have seen, that the theoretical description of the correlator $\Pi_{th}$
+contains poles on the real axis. Unfortunately the experimental data $\rho_{exp}$ is
+solely accesible on the positive real axis. As a result we have to make use of Cauchy's
 theorem to access the theoretical values of the two-point function close to the
-postive real axis (see \cref{fig:correlatorComplexContour}) given by
+positive real axis (see \cref{fig:correlatorComplexContour}), which is given by
 \begin{equation}
   \label{eq:cauchysTheorem}
   \int_{\mathcal{C}} f(z) \dif z = 0,
@@ -538,17 +539,18 @@ where $f(z)$ is an analytic function on a closed contour $\mathcal{C}$.
     for the final QCD Sum Rule expression \cref{eq:qcdSumRules}.}
 \end{figure}
 
-The final ingredient of the QCD sum rules is the \textit{optical theorem},
-relating experimental data with the imaginary part of the correlator (the
-spectral function $\rho(s)$).
+The final ingredient of the \textsc{qcd} sum rules is the \textit{optical
+  theorem}, relating experimental data with the imaginary part of the correlator
+(the spectral function $\rho(s)$).
 
-In total, with the help Cauchy's theorem, the QCD sum rules can be sumed up in
-the following expression
+In total, with the help Cauchy's theorem, the \textsc{qcd} sum rules can be
+sumed up in the following expression
 \begin{equation}
   \label{eq:qcdSumRules}
   \frac{1}{\pi}\int_0^\infty \frac{\rho_{exp}(t)}{t - s}\dif t = \frac{1}{\pi} \oint_{\mathcal{C}} \frac{\Ima \Pi_{OPE}(t)}{t -s}\dif t,
 \end{equation}
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
-evaluated with by applying the OPE of the correlator $\Pi_{OPE}(s)$.
+evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$.
 \end{document}
-% LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules
+% LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav
+% LocalWords:  qcdCurrent
