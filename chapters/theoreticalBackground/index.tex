@@ -222,7 +222,7 @@ coupling becomes diminishing small and quarks and gluons do not interact. Thus
 in isolated baryons and mesons the quarks are separated by small distances, move
 freely and do not interact. On the other hand we are not able to separate the
 quarks in a meson or baryon. No quark has been detected as single particle yet.
-This is qualitativly explained with the gluon field carrying colour charge.
+This is qualitatively explained with the gluon field carrying colour charge.
 These gluons form so-called \textit{flux-tubes} between quarks, which cause a
 constant strong force between particles regardless of their separation.
 Consequently the energy needed to separate quarks is proportional to the
@@ -255,14 +255,14 @@ different scales is given by
 \end{equation}
 and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
 
-\textsc{qcd} in general has a precision problem caused by uncertainties and largness of
+\textsc{qcd} in general has a precision problem caused by uncertainties and largeness of
 the strong coupling constant $\alpha_s$. The fine-structure constant (the
 coupling \textsc{qed}) is known to eleven digits, whereas the strong coupling
 is only known to about four. Furthermore for low energies the strong coupling
 constant is much larger than the fine-structure constant. E.g. at the $Z$-mass,
 the standard mass to compare the strong coupling, we have an $\alpha_s$ of
 $0.11$, whereas the fine structure constant would be around $0.007$.
-Consequently to use \textsc{pt} we have to calculate our results to much heigher orders,
+Consequently to use \textsc{pt} we have to calculate our results to much higher orders,
 including tens of thousands of Feynman diagrams, in \textsc{qcd} to achieve a precision
 equal to \textsc{qed}. For even lower energies, around \SI{1}{\giga\eV}, the strong
 coupling reaches a critical value of $\approx 0.5$ leading to a break down of
@@ -275,14 +275,14 @@ which we will devote the following section.
 
 \subsection{Two-Point function}
 \label{sec:twoPointFunction}
-The vacuum expectation value of the product of the conserved noether current
+The vacuum expectation value of the product of the conserved Noether current
 $J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
 \textbf{two-point function} (or simply \textbf{correlator})
 \begin{equation}
   \label{eq:twoPointFunction}
   \Pi_{\mu\nu}(q^2) = \langle  0 | J_\mu(x) J_\nu(y) | 0 \rangle,
 \end{equation}
-where the noether current is given by
+where the Noether current is given by
 \begin{equation}
   \label{eq:qcdCurrent}
   J_\mu(x) = \anti{q}(x) \Gamma q(y),
@@ -380,7 +380,7 @@ where $C_n(x-y)$ are the so-called \textit{Wilson-coefficients}.
 The OPE lets us separate short-distance from long-distance effects. In
 \textsc{pt} we can only amount for short-distances, which are equal to height
 energies, where the strong-coupling $\alpha_s$ is small. Consequently the \textsc{ope}
-decodes the long-distance effects in the higher dimensionsional operators.
+decodes the long-distance effects in the higher dimensional operators.
 
 The form of the composite operators are dictated by Gauge- and Lorentz symmetry.
 Thus we can only make use of operators of even dimension. The operators up to
@@ -401,7 +401,7 @@ where $\Gamma$ stands for one of possible dirac matrices (as seen
 definition in \textsc{pt}. Consequently they appear as \textit{condensates} in
 \textsc{npt qcd} like quark-condensate $\langle \anti{q} q \rangle$ or
 the gluon-condensate $\langle a GG \rangle$ (both of dimension four). These
-non-vanishing condensates characterize the \textsc{qcd}-vacuum.
+non-vanishing condensates characterise the \textsc{qcd}-vacuum.
 
 As we work with dimensionless functions (e.g. the correlator $\Pi$) in Sum Rules, the r.h.s. of
 \cref{eq:ope} has to be dimensionless. Consequently the Wilson-coefficients have
@@ -411,7 +411,7 @@ account for the dimensions we can make the inverse momenta explicit
   \Pi_{V/A}^{OPE}(s) = \sum_{D=0,2,4\dots} \frac{c^{(D)} \langle \mathcal{O}^{(D)}(x) \rangle}{-s^{D/2}},
 \end{equation}
 where we used $C^{(D)}=c/(-s)^{D/2}$ with $D$ being the dimension. Consequently
-the \textsc{ope} should converge with increasing dimension for suficienty large momenta
+the \textsc{ope} should converge with increasing dimension for sufficiently large momenta
 $s$.
 
 Let's show how the \textsc{ope} contributions are calculated with a the ``standard
@@ -496,7 +496,7 @@ theory and experiment in the last section of the introduction: \textsc{qcdsr}.
 \label{sec:sumRules}
 To relate the measurable hadronic final states of a \textsc{qcd} process (e.g.
 $\tau$-decays into hadrons) to a theoretical calculable \textsc{qcdsr} have been
-empliyed by Shifman in the late sevent \cite{Shifman1978}.
+employed by Shifman in the late seventies \cite{Shifman1978}.
 
 The sum rules are a combination of the two-point function, its analyticity, the
 \textsc{ope}, a dispersion relation, the optical theorem and quark hadron
@@ -523,7 +523,7 @@ measurable spectral function $\rho_{exp}$.
 
 We have seen, that the theoretical description of the correlator $\Pi_{th}$
 contains poles on the real axis. Unfortunately the experimental data $\rho_{exp}$ is
-solely accesible on the positive real axis. As a result we have to make use of Cauchy's
+solely accessible on the positive real axis. As a result we have to make use of Cauchy's
 theorem to access the theoretical values of the two-point function close to the
 positive real axis (see \cref{fig:correlatorComplexContour}), which is given by
 \begin{equation}
@@ -544,7 +544,7 @@ The final ingredient of the \textsc{qcd} sum rules is the \textit{optical
 (the spectral function $\rho(s)$).
 
 In total, with the help Cauchy's theorem, the \textsc{qcd} sum rules can be
-sumed up in the following expression
+summed up in the following expression
 \begin{equation}
   \label{eq:qcdSumRules}
   \frac{1}{\pi}\int_0^\infty \frac{\rho_{exp}(t)}{t - s}\dif t = \frac{1}{\pi} \oint_{\mathcal{C}} \frac{\Ima \Pi_{OPE}(t)}{t -s}\dif t,
@@ -553,4 +553,6 @@ where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$.
 \end{document}
 % LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav
-% LocalWords:  qcdCurrent
+% LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules
+% LocalWords:  OPEFeynmanDiagram correlatorComplexContour qcdSumRules
+% LocalWords:  LocalWords
