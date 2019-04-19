@@ -2,6 +2,7 @@
 
 \begin{document}
 \chapter{Theoretical Background}
+\label{ch:theoreticalBackground}
 
 \section{Quantum\-/chromodynamics}
 \label{sec:quantumchromodynamics}
@@ -279,31 +280,41 @@ $J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
 \textbf{two-point function} (or simply \textbf{correlator})
 \begin{equation}
   \label{eq:twoPointFunction}
-  \Pi_{\mu\nu}(q^2) = \langle  0 | J_\mu(x) J_\nu(y) | 0 \rangle,
+  \Pi_{\mu\nu}(q^2) = \int \dif x \, e^{iqx} \langle  0 | J_\mu(x) J_\nu(0) | 0 \rangle,
 \end{equation}
 where the Noether current is given by
 \begin{equation}
   \label{eq:qcdCurrent}
-  J_\mu(x) = \anti{q}(x) \Gamma q(y),
+  J_\mu(x) = \anti{q}(x) \Gamma q(x),
 \end{equation}
 where $\Gamma$ can be any of the following dirac matrices $\Gamma \in \{ 1,
 i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
 the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
 \textit{vectorial}, A: \textit{axial-vectorial}, respectively).
 
-The tensor correlator $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
+The vector correlator $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
 function $\Pi(q^2)$. There are only two possible terms that can reproduce the
 second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
 multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
 \begin{equation}
   \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
 \end{equation}
-By making use of the \textit{Ward-identity} \cite{Peskin1995}
+By making use of the \textit{Ward\-/identity}
 \begin{equation}
   \label{eq:wardIdentity}
-  q^\mu \Pi_{\mu\nu}(q^2) = q^\nu \Pi_{\mu\nu} = 0
+  \begin{split}
+    q^\mu \Pi_{\mu\nu} &= \int \dif x q^\mu e^{iqx} \langle 0 \vert  J_\mu(x) J_\nu(0) \vert 0 \rangle \\
+    &= -i \int \dif x i q^\mu e^{i q^\nu x_\nu} \langle 0 \vert J_\mu(x) J_\nu(0) \vert 0 \rangle \\
+    &= i \int \dif x  e^{iqx} \langle 0 \vert \partial_\mu[J_\mu(x)] J_\nu(0)
+    \vert 0 \rangle \\
+    &= 0, \quad \text{with}  \quad \partial_\mu J_\mu(x) = 0,
+  \end{split}
 \end{equation}
-we can demonstrate, that the two arbitrary functions are related
+where we used $i q^\mu e^{i q^\nu x_\nu} = \partial_\mu e^{i q^\nu x_\nu}$ in
+the second and integration by parts in the third line. The Ward identity is
+dependent on the conserved Noether\-/current $J_\mu$ and thus only holds for
+same flavour quarks. With the Ward\-/identity we are able to demonstrate, that
+the two arbitrary functions are related
 \begin{equation}
   \begin{split}
     q^\mu q^\nu \Pi_{\mu\nu} &= q^4 A(q^2) + q^4 B(q^2) = 0 \\

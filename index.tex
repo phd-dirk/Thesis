@@ -77,6 +77,9 @@
 
 % Nomenclature
 \renewcommand{\nomname}{List of Abbreviations}
+\let\oldDif\dif
+\renewcommand{\dif}[1]{\oldDif{#1}\,}
+
 
 \DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\Tr}{Tr}
@@ -124,6 +127,7 @@
   \subfile{chapters/introduction/index}
   \subfile{chapters/theoreticalBackground/index}
   \subfile{chapters/tauDecaysIntoHadrons/index}
+  \subfile{chapters/measuringTheStrongCoupling/index}
   \subfile{chapters/appendix/index}
 
   \printbibliography
