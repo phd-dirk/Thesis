@@ -77,13 +77,16 @@
 
 % Nomenclature
 \renewcommand{\nomname}{List of Abbreviations}
-\let\oldDif\dif
-\renewcommand{\dif}[1]{\oldDif{#1}\,}
+% \let\oldDif\dif
+% \renewcommand{\dif}[1]{\oldDif{#1}\,}
 
 
+\DeclareMathOperator{\Rea}{Re}
 \DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\Tr}{Tr}
 \newcommand*\anti[1]{\overline{#1}\,}
+\newcommand*\intsum{\int\!\!\!\!\!\!\!\sum}
+\newcommand*\fdif[1]{\frac{\dif^4 #1}{(2\pi)^4}}
 
 % Colour scheme
 \definecolor{primary}{rgb}{0.2,0.59,0.86}

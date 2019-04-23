@@ -273,8 +273,10 @@ In this work we try to achieve a higher precision in the value of $\alpha_s$.
 Our method to measure the strong coupling are the \textsc{qcdsr},
 which in our case make use of the \textit{two-point function} for
 which we will devote the following section
-\subsection{Two-Point function}
+\section{Two-Point function}
 \label{sec:twoPointFunction}
+
+
 The vacuum expectation value of the product of the conserved Noether current
 $J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
 \textbf{two-point function} (or simply \textbf{correlator})
@@ -327,6 +329,122 @@ function
   \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
 \end{equation}
 
+
+\begin{equation}
+  \langle \Omega \vert \phi(x) \phi(y) \vert \Omega \rangle
+\end{equation}
+translation invariant, $\vert \Omega \rangle$ physical vacuum
+$\phi(x)$ Heisenberg operator, can translate
+single-particle state
+\begin{equation}
+  a_p^\dagger \vert 0 \rangle = \frac{1}{\sqrt{2 \omega_p}}\vert \vec p \rangle
+\end{equation}
+$\sqrt{2 \omega_p}$ convention
+\begin{equation}
+  \vert \vec p \rangle = \int \frac{\dif^3}{(2\pi)^4} \frac{1}{2E_p}
+\end{equation}
+identity operator for one-particle state
+\begin{equation}
+  \mathbb{1} = \int \frac{\dif^3 p}{(2\pi)^3} \frac{1}{2\omega_p} \vert \vec p \rangle \langle \vec p \vert
+\end{equation}
+complete set of states for multiple-particles
+\begin{equation}
+  \mathbb{1} = \intsum_{X} \dif \Pi_X \vert X \rangle \langle  X \vert
+\end{equation}
+with
+\begin{equation}
+  \dif \Pi_X \equiv \Pi_{i \in X} \int \frac{\dif^3 p_i}{(2\pi)^3} \frac{1}{2 E_j}
+\end{equation}
+$\vert X \rangle$ single- or multi\-/particle state with momentum $\vec p$.
+\begin{equation}
+  \begin{split}
+    \langle  \Omega \vert \phi(x) \vert X \rangle &= \langle \Omega \vert U(x)U^{-1}(x) \phi(x) U(x)U^{-1} \vert X \rangle \\
+    &=  \langle \Omega \vert e^{i \hat P x}e^{-i \hat P x} \phi(x) e^{i \hat P x}e^{-i \hat P x} \vert X \rangle \\
+    &= e^{-i p_X x} \langle \Omega \vert e^{-i \hat P x} \phi(x) e^{i \hat P x} \vert X \rangle \\
+    &= e^{-i p_X x} \langle \Omega \vert \phi(0) \vert X \rangle
+  \end{split} 
+\end{equation}
+\begin{equation}
+  \langle X \vert \phi(y) \vert \Omega \rangle = e^{ipy} \langle \Omega \vert \phi(0) \vert \Omega \rangle
+\end{equation}
+\begin{equation}
+  \begin{split}
+    \langle \Omega \vert \phi(x) \phi(y) \vert 0 \rangle
+    &= \intsum_X \dif \Pi_X \langle \Omega \vert \phi(x) \vert X \rangle \langle X \vert \phi(y) \vert \Omega \rangle \\
+    &= \intsum_X \dif \Pi_X e^{-i p_X (x-y)} \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2  \\
+    &= \int \frac{\dif^4 p}{(2\pi)^4} e^{-i p (x-y)} (2\pi)^3 \left[
+      \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2 \right]
+  \end{split}
+\end{equation}
+bracket term: Lorentz invariant => depends only on $p^2$ and $\vert X \rangle$
+have positive energy eigenstates ($p^0 > 0$).
+\begin{equation}
+  \theta(p^0) \rho(p^2) \equiv \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2
+\end{equation}
+$\rho(p^2)$ \textit{spectral density}, $\rho(p^2) > 0$ non\-/negative function
+\begin{equation}
+  \begin{split}
+    \langle \Omega \vert \phi(x) \phi(y) \vert \Omega \rangle &= \int \fdif{p} e^{-i p(x-y)} \theta(p^0) \rho(p^2) \\
+    &= \int \int_0^\infty \dif q^2 \rho(q^2) D(x, y, q^2)
+  \end{split}
+\end{equation}
+with
+\begin{equation}
+  \begin{split}
+    D(x,y,m^2) &= \int \frac{\dif^3}{(2\pi)^3} \frac{1}{2E_p} e^{-i p (x-y)} \\
+    &= \int \frac{\dif^4 p}{(2\pi)^3} e^{-i p (x-y)} \theta(p_0) \delta(p^2 - m^2)
+  \end{split}
+\end{equation}
+time\-/ordered two\-/point function
+\begin{equation}
+  \begin{split}
+    \langle\rangle \Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle
+    &= \theta(x^0-y^0) \langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle + \theta(y^0-x^0)\langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle  \\
+    &= \int_0^\infty \dif q^2 p(q^2) [ \theta(x^0 - y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) ]
+  \end{split} 
+\end{equation}
+mathematical identity
+\begin{equation}
+  \theta(x^0-y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) = \int \fdif{p} \frac{i}{p^2-q^2-i\epsilon}e^{ip(x-y)}
+\end{equation}
+thus
+\begin{equation}
+  \langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle = \int \fdif{p} e^{ip(x-y) i\Pi(p^2)}
+\end{equation}
+identity
+\begin{equation}
+  \label{eq:cuttingRules}
+  \Ima \frac{1}{p^2-m^2+i\epsilon} = -\pi \delta(p^2-m^2)
+\end{equation}
+we have
+\begin{equation}
+  \rho(p^2) = -\frac{1}{\pi} \Ima\Pi(p^2)
+\end{equation}
+
+\subsection{Spectral Function analytic}
+toy Lagrangian
+\begin{equation}
+  \mathcal{L} = -\frac{1}{2} \phi(\partial_\mu \partial^\mu + M^2) \phi - \frac{1}{2}\pi(\partial_\mu\partial^\mu + M^2)\pi + \frac{\lambda}{2}{\phi\pi^2}
+\end{equation}
+... missing
+\begin{equation}
+  \frac{1}{p^2-M^2+i\epsilon}
+\end{equation}
+\begin{equation}
+    \Ima \mathcal{M} = \frac{\lambda^2}{32 \pi} \sqrt{1 - 4\frac{m^2}{M^2}} \theta(M - 2m)
+\end{equation}
+\begin{equation}
+  i G(p^2) = \frac{i}{p^2 - m_R^2 + \Sigma(p^2) + i\epsilon }
+\end{equation}
+$i \Sigma(p^2)$ is sum of self-energy graphs
+using \cref{eq:cuttingRules}
+\begin{equation}
+  \begin{split}
+    \rho(q^2) &= -\frac{1}{\pi} \Ima \Pi(q^2) \\
+    &= \frac{1}{\pi} \Ima \left[ p^2 - M^2 + i\epsilon + \frac{\lambda^2}{32 \pi} \sqrt{1 - 4\frac{m^2}{M^2}} \theta(M - 2m) \right]^{-1} \\
+    &= \delta(q^2 - M^2) + \theta(q^2 - 4m^2)\frac{\lambda^2}{32 \pi^2} \frac{1}{(q^2 - M^2)^2} \sqrt{\frac{q^2 - 4m^2}{q^2}}
+  \end{split}
+\end{equation}
 The scalar QCD two point function can then be described by the spectrum of
 hadronic states. The correlator is then related to an integral over the
 \textit{spectral function} $\rho(s)$ via the \textit{Källén-Lehmann spectral
@@ -356,7 +474,7 @@ The main contribution from the spectral function given in
   2 \pi \rho(m^2) = \sum_n \langle  0 | J_\mu(x) | n \rangle \langle n | J_\nu(y) \rangle (2 \pi^2)^4 \delta^{(4)}(p - p_n),
 \end{equation}
 which lead to a series of continuous poles on the positive real axis for the
-two-point function (see Fig. \ref{fig:analyticStructureCorrelator}).
+two-point function (see Fig. \cref{fig:analyticStructureCorrelator}).
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{./images/analyticStructureCorrelator.eps}
@@ -367,6 +485,51 @@ two-point function (see Fig. \ref{fig:analyticStructureCorrelator}).
     bound-states poles or a continues ``discontinuity cut'' \cite{Peskin1995}.}
   \label{fig:analyticStructureCorrelator}
 \end{figure}
+\subsubsection{Analytic structure}
+Scalar theory with quartic potential
+\begin{equation}
+  \mathcal{L} = - (\partial \phi)^2 - \mu^2 \phi^2 -\kappa \mu \phi^3 - \kappa^2\lambda \phi^4
+\end{equation}
+$\kappa$ small, $\lambda$ freely tuneable parameter.
+time\-/ordered two-point correlator \cref{fig:twoPointFunctionSelfEnergy}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{./images/twoPointFunctionSelfEnergy}
+  \caption{Self energy}
+  \label{fig:twoPointFunctionSelfEnergy}
+\end{figure}
+\begin{equation}
+  M^{(0)}(p) = \frac{1}{p^2+\mu^2-i\epsilon}
+\end{equation}
+
+\begin{equation}
+  \begin{split}
+    M^{(2)} &= \frac{i (-i \mu \kappa)^2(-i)^4}{(p^2 + \mu^2 - i\epsilon)^2} i I(-p^2), \\
+    I(-p^2) = \int - i \frac{\dif^4}{(2\pi)^4} \frac{1}{l^2 + \mu^2 - i\epsilon} \frac{1}{(p-l)^2 + \mu^2 -i \epsilon}
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  M(p) = \frac{1}{p^2 + \mu^2 - i\epsilon} + \frac{\mu^2 \kappa^2 I(-p^2)}{(p^2 + \mu^2 -i \epsilon)^2}
+\end{equation}
+
+\begin{equation}
+  \frac{1}{x-i\epsilon} = \frac{1}{x} + i \pi \delta(x) \quad \text{and} \quad \frac{1}{(x-i\epsilon)^2} = \frac{1}{x^2} - i \pi \delta^\prime(x)
+\end{equation}
+
+\begin{equation}
+  \rho(-p^2) = 2 \Ima M(p)
+\end{equation}
+
+\begin{equation}
+  \begin{split}
+    \rho(s) &= 2 \pi \delta(-s + \mu^2) - 2\pi \mu^2 \kappa^2 \Rea I(s) \delta^\prime(-s + \mu^2) + \frac{2\mu^2 \kappa^2 \Ima I(s)}{(-s +\mu^2)^2} \\
+    &= 2 \pi \delta(s-\mu^2 + \mu^2 \kappa^2 \Rea I(\mu^2))(1 -\mu^2 \kappa^2 \Rea I(\mu^2)) + \frac{2 \mu^2 \kappa^2 \Ima I(s)}{(s-\mu^2)^2} \\
+    &= 2 \pi Z \delta(s-m^2) + \frac{2\mu^2 \kappa^2 \Ima I(s)}{(s-\mu^2)^2}
+  \end{split}
+\end{equation}
+
+
 These discontinuities can be tackled with \textit{Cauchy's theorem}, which we
 will apply in \cref{sec:sumRules}.
 
@@ -444,7 +607,7 @@ In \cref{fig:OPEFeynmanDiagram} we draw the Feynman-diagram, from which we can
 take the uncontracted mathematical expression for the scalar correlator
 \begin{equation}
   \begin{split}
-    \Pi(q^2) &= - \frac{i}{4 q^2 (D -1)} \int \dif^D x e^{iqx} \langle \Omega | T \{:\anti{u}(x) \gamma^\mu u(x) - \anti{d}(x) \gamma^{mu} d(x): \\
+    \Pi(q^2) &= - \frac{i}{4 q^2 (D -1)} \int \dif^D x e^{iqx} \langle \Omega \vert T \{:\anti{u}(x) \gamma^\mu u(x) - \anti{d}(x) \gamma^\mu d(x): \\
     &\quad\times :\anti{u}(0 \gamma_\mu u(0) - \anti{d}(0)\gamma_\mu d(0): \}
     \rangle.
   \end{split}
