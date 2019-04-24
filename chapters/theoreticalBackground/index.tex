@@ -1,7 +1,7 @@
 \documentclass[../../index.tex]{subfiles}
 
 \begin{document}
-\chapter{Theoretical Background}
+\chapter{QCD Sum Rules}
 \label{ch:theoreticalBackground}
 
 \section{Quantum\-/chromodynamics}
@@ -275,181 +275,195 @@ which in our case make use of the \textit{two-point function} for
 which we will devote the following section
 \section{Two-Point function}
 \label{sec:twoPointFunction}
+The \textit{two\-/point} function (or \textit{correlator}) is the vacuum
+expectation value of two local fields. In the simplest case, for a scalar field $\phi$, it is
+defined as
+\begin{equation}
+  \label{eq:simpleTwoPointFunction}
+  \Omega \vert \phi(x) \phi(y) \vert \Omega \rangle.
+\end{equation}
+Here $\vert \Omega \rangle$ is the physical vacuum and the fields operators $\phi(x)$ and
+$\phi(y)$ are time dependent Heisenberg operators, which can be translated to
+its origin. The two\-/point function can be interpreted physically as the
+amplitude of propagating single\-/ or multi\-/particles and their excitations.
+The correlator can be expressed as a \textit{spectral decomposition}, which has
+been discovered early on by \cite{Kallen1952,Lehmann1954} and is named \textit{Källén-Lehmann spectral
+  representation}. This spectral representation is interesting to us for two
+main reasons. First it is experimentally measurable and second it carries a
+problematic ``branch cut'', which we want to discuss now.
 
-
-The vacuum expectation value of the product of the conserved Noether current
-$J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
-\textbf{two-point function} (or simply \textbf{correlator})
+\subsection{Källén-Lehmann spectral representation}
+In the second quantisation we applied latter operators $a_o^\dagger$ on the free vacuum $\vert
+0 \rangle$ to obtain single particle states, carrying a momentum $p$
 \begin{equation}
-  \label{eq:twoPointFunction}
-  \Pi_{\mu\nu}(q^2) = \int \dif x \, e^{iqx} \langle  0 | J_\mu(x) J_\nu(0) | 0 \rangle,
+  a_p^\dagger \vert 0 \rangle = \frac{1}{\sqrt{2 E_p}}\vert \vec p \rangle,
 \end{equation}
-where the Noether current is given by
+where the factor $\sqrt{2 E_p}$ is a convention resulting from the harmonic
+oscillator. The identity operator for one\-/particle state, which selects only
+single particle states is then given by
 \begin{equation}
-  \label{eq:qcdCurrent}
-  J_\mu(x) = \anti{q}(x) \Gamma q(x),
+  \mathbb{1} = \int \frac{\dif^3 p}{(2\pi)^3} \frac{1}{2\omega_p} \vert \vec p \rangle \langle \vec p \vert.
 \end{equation}
-where $\Gamma$ can be any of the following dirac matrices $\Gamma \in \{ 1,
-i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
-the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
-\textit{vectorial}, A: \textit{axial-vectorial}, respectively).
-
-The vector correlator $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
-function $\Pi(q^2)$. There are only two possible terms that can reproduce the
-second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
-multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
+The above complete set of one\-/particle states can be enhanced to include
+multiple\-/particle states, where we have to sum not only over all possible
+momentum states $\vert \vec p \rangle$, but over all possible multi\-/particle
+states and their enhanced states as well. If we define these state vectors as
+$\vec X$ we can express the complete set of one\-/ and multiple\-/particle states as
 \begin{equation}
-  \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
+  \mathbb{1} = \intsum_{X} \dif \prod_X \vert X \rangle \langle  X \vert,
 \end{equation}
-By making use of the \textit{Ward\-/identity}
+where we have to sum over all possible $\vert X \rangle$ single- or
+multi\-/particle states and integrate over the momentum $\vec p$ via
 \begin{equation}
-  \label{eq:wardIdentity}
-  \begin{split}
-    q^\mu \Pi_{\mu\nu} &= \int \dif x q^\mu e^{iqx} \langle 0 \vert  J_\mu(x) J_\nu(0) \vert 0 \rangle \\
-    &= -i \int \dif x i q^\mu e^{i q^\nu x_\nu} \langle 0 \vert J_\mu(x) J_\nu(0) \vert 0 \rangle \\
-    &= i \int \dif x  e^{iqx} \langle 0 \vert \partial_\mu[J_\mu(x)] J_\nu(0)
-    \vert 0 \rangle \\
-    &= 0, \quad \text{with}  \quad \partial_\mu J_\mu(x) = 0,
-  \end{split}
+  \dif \Pi_X \equiv \prod_{i \in X} \int \frac{\dif^3 p_i}{(2\pi)^3} \frac{1}{2 E_j}.
 \end{equation}
-where we used $i q^\mu e^{i q^\nu x_\nu} = \partial_\mu e^{i q^\nu x_\nu}$ in
-the second and integration by parts in the third line. The Ward identity is
-dependent on the conserved Noether\-/current $J_\mu$ and thus only holds for
-same flavour quarks. With the Ward\-/identity we are able to demonstrate, that
-the two arbitrary functions are related
-\begin{equation}
-  \begin{split}
-    q^\mu q^\nu \Pi_{\mu\nu} &= q^4 A(q^2) + q^4 B(q^2) = 0 \\
-    &\quad \implies A(q^2) = -B(q^2).
-  \end{split}
-\end{equation}
-Thus redefining $A(q^2) \equiv \Pi(q^2)$ we expressed the correlator as a scalar
-function
-\begin{equation}
-  \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
-\end{equation}
-
-
-\begin{equation}
-  \langle \Omega \vert \phi(x) \phi(y) \vert \Omega \rangle
-\end{equation}
-translation invariant, $\vert \Omega \rangle$ physical vacuum
-$\phi(x)$ Heisenberg operator, can translate
-single-particle state
-\begin{equation}
-  a_p^\dagger \vert 0 \rangle = \frac{1}{\sqrt{2 \omega_p}}\vert \vec p \rangle
-\end{equation}
-$\sqrt{2 \omega_p}$ convention
-\begin{equation}
-  \vert \vec p \rangle = \int \frac{\dif^3}{(2\pi)^4} \frac{1}{2E_p}
-\end{equation}
-identity operator for one-particle state
-\begin{equation}
-  \mathbb{1} = \int \frac{\dif^3 p}{(2\pi)^3} \frac{1}{2\omega_p} \vert \vec p \rangle \langle \vec p \vert
-\end{equation}
-complete set of states for multiple-particles
-\begin{equation}
-  \mathbb{1} = \intsum_{X} \dif \Pi_X \vert X \rangle \langle  X \vert
-\end{equation}
-with
-\begin{equation}
-  \dif \Pi_X \equiv \Pi_{i \in X} \int \frac{\dif^3 p_i}{(2\pi)^3} \frac{1}{2 E_j}
-\end{equation}
-$\vert X \rangle$ single- or multi\-/particle state with momentum $\vec p$.
+To get to the desired spectral decomposition we have to translate the Heisenberg
+operator $\phi(x)$ to its origin, like
 \begin{equation}
   \begin{split}
-    \langle  \Omega \vert \phi(x) \vert X \rangle &= \langle \Omega \vert U(x)U^{-1}(x) \phi(x) U(x)U^{-1} \vert X \rangle \\
+    \langle  \Omega \vert \phi(x) \vert X \rangle
     &=  \langle \Omega \vert e^{i \hat P x}e^{-i \hat P x} \phi(x) e^{i \hat P x}e^{-i \hat P x} \vert X \rangle \\
     &= e^{-i p_X x} \langle \Omega \vert e^{-i \hat P x} \phi(x) e^{i \hat P x} \vert X \rangle \\
-    &= e^{-i p_X x} \langle \Omega \vert \phi(0) \vert X \rangle
+    &= e^{-i p_X x} \langle \Omega \vert \phi(0) \vert X \rangle.
   \end{split} 
 \end{equation}
+Equally we can we can express $\phi(y)$ as
 \begin{equation}
-  \langle X \vert \phi(y) \vert \Omega \rangle = e^{ipy} \langle \Omega \vert \phi(0) \vert \Omega \rangle
+  \langle X \vert \phi(y) \vert \Omega \rangle = e^{ipy} \langle \Omega \vert \phi(0) \vert \Omega \rangle.
 \end{equation}
+With these expressions in hand we can spectral decompose the two\-/point function
+(\cref{eq:simpleTwoPointFunction}) 
 \begin{equation}
   \begin{split}
     \langle \Omega \vert \phi(x) \phi(y) \vert 0 \rangle
     &= \intsum_X \dif \Pi_X \langle \Omega \vert \phi(x) \vert X \rangle \langle X \vert \phi(y) \vert \Omega \rangle \\
     &= \intsum_X \dif \Pi_X e^{-i p_X (x-y)} \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2  \\
     &= \int \frac{\dif^4 p}{(2\pi)^4} e^{-i p (x-y)} (2\pi)^3 \left[
-      \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2 \right]
+      \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2 \right],
   \end{split}
 \end{equation}
-bracket term: Lorentz invariant => depends only on $p^2$ and $\vert X \rangle$
-have positive energy eigenstates ($p^0 > 0$).
+where the term in the bracket is Lorentz invariant, implying that it depends
+only on the Lorentz\-/invariant measure $p^2$. The multi\-/particle states
+$\vert X \rangle$ have to have positive energy eigenstates $p^0 > 0$. Consequently we can define the
+\textit{spectral function} as
 \begin{equation}
-  \theta(p^0) \rho(p^2) \equiv \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2
+  \theta(p^0) \rho(p^2) \equiv \intsum_X \dif \Pi_X  2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2,
 \end{equation}
-$\rho(p^2)$ \textit{spectral density}, $\rho(p^2) > 0$ non\-/negative function
+with $\rho(p^2)$ being the \textit{spectral density}. The simple two\-/point
+function (\cref{eq:simpleTwoPointFunction}) can then be rewritten to
 \begin{equation}
   \begin{split}
     \langle \Omega \vert \phi(x) \phi(y) \vert \Omega \rangle &= \int \fdif{p} e^{-i p(x-y)} \theta(p^0) \rho(p^2) \\
-    &= \int \int_0^\infty \dif q^2 \rho(q^2) D(x, y, q^2)
+    &= \int_0^\infty \dif q^2 \rho(q^2) D(x, y, q^2)
   \end{split}
 \end{equation}
 with
 \begin{equation}
   \begin{split}
     D(x,y,m^2) &= \int \frac{\dif^3}{(2\pi)^3} \frac{1}{2E_p} e^{-i p (x-y)} \\
-    &= \int \frac{\dif^4 p}{(2\pi)^3} e^{-i p (x-y)} \theta(p_0) \delta(p^2 - m^2)
+    &= \int \frac{\dif^4 p}{(2\pi)^3} e^{-i p (x-y)} \theta(p_0) \delta(p^2 - m^2).
   \end{split}
 \end{equation}
-time\-/ordered two\-/point function
+$\rho(p^2)$ \textit{spectral density}, $\rho(p^2) > 0$. The spectral function is
+a non\-/negative function, describing physically measurable particle states.
+Until now we have given the spectral function for our ``simple'' two\-/point
+function (\cref{eq:simpleTwoPointFunction}), but we can generalise the
+decomposition to the \define{FT}{Fourier transform} of the \textit{time\-/ordered two\-/point function}
 \begin{equation}
+  \Pi(p^2) = i\int\fdif{x} e^{-ixp}\langle\Omega\vert T\{\phi(x)\phi(0) \} \vert\Omega\rangle,
+\end{equation}
+where we made use of the translation invariance of the correlator\footnote{
+  $\langle\Omega\vert\phi(x)\phi(y)\vert\Omega\rangle
+  = \langle\Omega\vert e^{i\hat P y}\underbrace{e^{-i\hat P y}\phi(x)e^{i\hat P
+      y}}_{x-y}\underbrace{e^{-i\hat P y}\phi(y)e^{i \hat P y}}_{=\phi(0)}e^{-i
+    \hat P y} \vert\Omega\rangle
+  = \langle\Omega\vert\phi(x-y)\phi(0)\vert\Omega\rangle$}. The time\-/ordered
+scalar correlator can then be expressed as
+\begin{equation}
+  \
   \begin{split}
-    \langle\rangle \Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle
-    &= \theta(x^0-y^0) \langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle + \theta(y^0-x^0)\langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle  \\
-    &= \int_0^\infty \dif q^2 p(q^2) [ \theta(x^0 - y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) ]
+    \Pi(p^2)
+    &= i\int\fdif{x}e^{-ixp}\left[\theta(x^0-0) \langle\Omega\vert T\{ \phi(x)\phi(0) \} \vert\Omega\rangle + \theta(y^0-0)\langle\Omega\vert T\{ \phi(x)\phi(0) \} \vert\Omega\rangle\right]  \\
+    &= i\int\fdif{x}e^{-ixp}\int_0^\infty \dif q^2\, \rho(q^2) \left[ \theta(x^0-0)D(x,0,q^2) + \theta(y^0-0)D(0,x,q^2) \right] \\
+    &= i\int\fdif{x}e^{-ixp}\int_0^\infty \dif q^2\, \rho(q^2) \int\fdif{p} \frac{i}{p^2 - q^2 - i\epsilon}e^{ipx}
   \end{split} 
 \end{equation}
-mathematical identity
+by making use of the mathematical identity\footnote{The identity should be known
+to the reader from the derivation of the Feynman propagator.}
 \begin{equation}
-  \theta(x^0-y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) = \int \fdif{p} \frac{i}{p^2-q^2-i\epsilon}e^{ip(x-y)}
+  \theta(x^0-y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) = \int \fdif{p} \frac{i}{p^2-q^2-i\epsilon}e^{ip(x-y)}.
 \end{equation}
-thus
+The last line of is given by two cancelling Fourier transforms. Thus we
+recognise the Källén-Lehmann spectral decomposition of the scalar time\-/ordered
+two\-/point function
 \begin{equation}
-  \langle\Omega\vert T\{ \phi(x)\phi(y) \} \vert\Omega\rangle = \int \fdif{p} e^{ip(x-y) i\Pi(p^2)}
+  \Pi(p^2) = \int_0^\infty \dif q^2 \frac{i\rho(q^2)}{p^2-q^2-i\epsilon}.
 \end{equation}
-identity
+Also notice that when applying the following mathematical identity
 \begin{equation}
   \label{eq:cuttingRules}
-  \Ima \frac{1}{p^2-m^2+i\epsilon} = -\pi \delta(p^2-m^2)
+  \Ima \frac{1}{p^2-q^2+i\epsilon} = -\pi \delta(p^2-q^2)
 \end{equation}
-we have
+that the spectral function can be given by the imaginary part of the correlator
 \begin{equation}
-  \rho(p^2) = -\frac{1}{\pi} \Ima\Pi(p^2)
+  \rho(p^2) = -\frac{1}{\pi} \Ima\Pi(p^2).
 \end{equation}
+The spectral function usually has a pole at one\-/particle states and a
+branch cut above the multi\-/particle state threshold. The branch cut is of high
+importance to us as the experimental detected spectral function is only
+accessible at the possible real axis, where the branch cut exists. We will
+further study these singularities with the following example of a
+toy\-/Lagrangian of two interacting scalar fields.
 
-\subsection{Spectral Function analytic}
-toy Lagrangian
+\subsection{Analytic Structure of the Spectral Function}
+To analyse the singularities contained in the spectral function $\rho(s)$ we
+have a look at the following Lagrangian
 \begin{equation}
-  \mathcal{L} = -\frac{1}{2} \phi(\partial_\mu \partial^\mu + M^2) \phi - \frac{1}{2}\pi(\partial_\mu\partial^\mu + M^2)\pi + \frac{\lambda}{2}{\phi\pi^2}
+  \mathcal{L} = -\frac{1}{2} \phi(\partial_\mu \partial^\mu + M^2) \phi - \frac{1}{2}\pi(\partial_\mu\partial^\mu + M^2)\pi + \frac{\lambda}{2}{\phi\pi^2}.
 \end{equation}
-... missing
+The Lagrangian contains two fields $\phi$ and $\pi$, which interact via the
+interaction term $\lambda/2 \phi \pi^2$. We now want to calculate the
+self\-/interaction of the $\phi$\-/field, as shown in
+\cref{fig:twoPointFunctionSelfEnergy}, to first order.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{./images/twoPointFunctionSelfEnergy}
+  \caption{Self energy}
+  \label{fig:twoPointFunctionSelfEnergy}
+\end{figure}
+To do so we need an expression for the free propagator of the $\phi$ field
 \begin{equation}
-  \frac{1}{p^2-M^2+i\epsilon}
+  G_\phi = \frac{1}{p^2-M^2+i\epsilon}.
 \end{equation}
+Furthermore we need the result of the Feynman loop\-/diagram given in
+\cref{fig:twoPointFunctionSelfEnergy}
 \begin{equation}
-    \Ima \mathcal{M} = \frac{\lambda^2}{32 \pi} \sqrt{1 - 4\frac{m^2}{M^2}} \theta(M - 2m)
+  \Ima \mathcal{M}^{Loop} = \frac{\lambda^2}{32 \pi} \sqrt{1 - 4\frac{m^2}{M^2}} \theta(M - 2m)
 \end{equation}
+Summing over all possible self\-/energy graphs we get a geometric series
 \begin{equation}
-  i G(p^2) = \frac{i}{p^2 - m_R^2 + \Sigma(p^2) + i\epsilon }
+  i G(p^2) = \frac{i}{p^2 - m_R^2 + \Sigma(p^2) + i\epsilon },
 \end{equation}
-$i \Sigma(p^2)$ is sum of self-energy graphs
-using \cref{eq:cuttingRules}
+where we can plugin the free propagator and the result of the loop diagram of
+our toy\-/Lagrangian to get a typical spectral function
 \begin{equation}
   \begin{split}
     \rho(q^2) &= -\frac{1}{\pi} \Ima \Pi(q^2) \\
     &= \frac{1}{\pi} \Ima \left[ p^2 - M^2 + i\epsilon + \frac{\lambda^2}{32 \pi} \sqrt{1 - 4\frac{m^2}{M^2}} \theta(M - 2m) \right]^{-1} \\
-    &= \delta(q^2 - M^2) + \theta(q^2 - 4m^2)\frac{\lambda^2}{32 \pi^2} \frac{1}{(q^2 - M^2)^2} \sqrt{\frac{q^2 - 4m^2}{q^2}}
+    &= \delta(q^2 - M^2) + \theta(q^2 - 4m^2)\frac{\lambda^2}{32 \pi^2}
+    \frac{1}{(q^2 - M^2)^2} \sqrt{\frac{q^2 - 4m^2}{q^2}},
   \end{split}
 \end{equation}
-The scalar QCD two point function can then be described by the spectrum of
-hadronic states. The correlator is then related to an integral over the
-\textit{spectral function} $\rho(s)$ via the \textit{Källén-Lehmann spectral
-  representation} \cite{Kallen1952,Lehmann1954}, which is known since the early
-fifties
+where we have used \cref{eq:cuttingRules}.
+
+
+\textcolor{red}{correct sum up}
+What have we done so far:
+The scalar QCD two point function can
+then be described by the spectrum of hadronic states. The correlator is then
+related to an integral over the \textit{spectral function} $\rho(s)$ via the
+\textit{Källén-Lehmann spectral representation} \cite{Kallen1952,Lehmann1954},
+which is known since the early fifties
 \begin{equation}
   \label{eq:dispersionRelation}
   \Pi(q^2) = \int_0^\infty \dif s \frac{\rho(s)}{s - q^2 - i \epsilon}.
@@ -485,49 +499,62 @@ two-point function (see Fig. \cref{fig:analyticStructureCorrelator}).
     bound-states poles or a continues ``discontinuity cut'' \cite{Peskin1995}.}
   \label{fig:analyticStructureCorrelator}
 \end{figure}
-\subsubsection{Analytic structure}
-Scalar theory with quartic potential
-\begin{equation}
-  \mathcal{L} = - (\partial \phi)^2 - \mu^2 \phi^2 -\kappa \mu \phi^3 - \kappa^2\lambda \phi^4
-\end{equation}
-$\kappa$ small, $\lambda$ freely tuneable parameter.
-time\-/ordered two-point correlator \cref{fig:twoPointFunctionSelfEnergy}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.8\textwidth]{./images/twoPointFunctionSelfEnergy}
-  \caption{Self energy}
-  \label{fig:twoPointFunctionSelfEnergy}
-\end{figure}
-\begin{equation}
-  M^{(0)}(p) = \frac{1}{p^2+\mu^2-i\epsilon}
-\end{equation}
 
+
+The vacuum expectation value of the product of the conserved Noether current
+$J_\mu(x)$ at different space-time points $x$ and $y$ is known as the
+\textbf{two-point function} (or simply \textbf{correlator})
 \begin{equation}
+  \label{eq:twoPointFunction}
+  \Pi_{\mu\nu}(q^2) = \int \dif x \, e^{iqx} \langle  0 | J_\mu(x) J_\nu(0) | 0 \rangle,
+\end{equation}
+where the Noether current is given by
+\begin{equation}
+  \label{eq:qcdCurrent}
+  J_\mu(x) = \anti{q}(x) \Gamma q(x),
+\end{equation}
+where $\Gamma$ can be any of the following dirac matrices $\Gamma \in \{ 1,
+i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
+the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
+\textit{vectorial}, A: \textit{axial-vectorial}, respectively).
+
+The vector correlator $\Pi_{\mu\nu}(q^2)$ can be Lorentz decomposed to a scalar
+function $\Pi(q^2)$. There are only two possible terms that can reproduce the
+second order tensor $q_\mu q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both
+multiplied with two arbitrary functions $A(q^2)$ and $B(q^2)$ yields
+\begin{equation}
+  \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
+\end{equation}
+By making use of the \textit{Ward\-/identity}
+\begin{equation}
+  \label{eq:wardIdentity}
   \begin{split}
-    M^{(2)} &= \frac{i (-i \mu \kappa)^2(-i)^4}{(p^2 + \mu^2 - i\epsilon)^2} i I(-p^2), \\
-    I(-p^2) = \int - i \frac{\dif^4}{(2\pi)^4} \frac{1}{l^2 + \mu^2 - i\epsilon} \frac{1}{(p-l)^2 + \mu^2 -i \epsilon}
+    q^\mu \Pi_{\mu\nu} &= \int \dif x q^\mu e^{iqx} \langle 0 \vert  J_\mu(x) J_\nu(0) \vert 0 \rangle \\
+    &= -i \int \dif x i q^\mu e^{i q^\nu x_\nu} \langle 0 \vert J_\mu(x) J_\nu(0) \vert 0 \rangle \\
+    &= i \int \dif x e^{iqx} \langle 0 \vert \partial_\mu[J_\mu(x)] J_\nu(0)
+    \vert 0 \rangle \\
+    &= 0, \quad \text{with} \quad \partial_\mu J_\mu(x) = 0,
   \end{split}
 \end{equation}
-
-\begin{equation}
-  M(p) = \frac{1}{p^2 + \mu^2 - i\epsilon} + \frac{\mu^2 \kappa^2 I(-p^2)}{(p^2 + \mu^2 -i \epsilon)^2}
-\end{equation}
-
-\begin{equation}
-  \frac{1}{x-i\epsilon} = \frac{1}{x} + i \pi \delta(x) \quad \text{and} \quad \frac{1}{(x-i\epsilon)^2} = \frac{1}{x^2} - i \pi \delta^\prime(x)
-\end{equation}
-
-\begin{equation}
-  \rho(-p^2) = 2 \Ima M(p)
-\end{equation}
-
+where we used $i q^\mu e^{i q^\nu x_\nu} = \partial_\mu e^{i q^\nu x_\nu}$ in
+the second and integration by parts in the third line. The Ward identity is
+dependent on the conserved Noether\-/current $J_\mu$ and thus only holds for
+same flavour quarks. With the Ward\-/identity we are able to demonstrate, that
+the two arbitrary functions are related
 \begin{equation}
   \begin{split}
-    \rho(s) &= 2 \pi \delta(-s + \mu^2) - 2\pi \mu^2 \kappa^2 \Rea I(s) \delta^\prime(-s + \mu^2) + \frac{2\mu^2 \kappa^2 \Ima I(s)}{(-s +\mu^2)^2} \\
-    &= 2 \pi \delta(s-\mu^2 + \mu^2 \kappa^2 \Rea I(\mu^2))(1 -\mu^2 \kappa^2 \Rea I(\mu^2)) + \frac{2 \mu^2 \kappa^2 \Ima I(s)}{(s-\mu^2)^2} \\
-    &= 2 \pi Z \delta(s-m^2) + \frac{2\mu^2 \kappa^2 \Ima I(s)}{(s-\mu^2)^2}
+    q^\mu q^\nu \Pi_{\mu\nu} &= q^4 A(q^2) + q^4 B(q^2) = 0 \\
+    &\quad \implies A(q^2) = -B(q^2).
   \end{split}
 \end{equation}
+Thus redefining $A(q^2) \equiv \Pi(q^2)$ we expressed the correlator as a scalar
+function
+\begin{equation}
+  \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
+\end{equation}
+
+
+
 
 
 These discontinuities can be tackled with \textit{Cauchy's theorem}, which we
@@ -728,4 +755,5 @@ evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$.
 % LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav
 % LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules
 % LocalWords:  OPEFeynmanDiagram correlatorComplexContour qcdSumRules
-% LocalWords:  LocalWords
+% LocalWords:  LocalWords simpleTwoPointFunction twoPointFunctionSelfEnergy
+% LocalWords:  cuttingRules
