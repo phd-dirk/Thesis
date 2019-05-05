@@ -176,7 +176,7 @@ then given by
 and the corresponding Feynman\-/rules have been displayed in
 \cref{fig:qcdFeynmanRules}.
 \begin{figure}
-  \includegraphics[width=\textwidth]{./images/qcdFeynmanRules.png}
+  \includegraphics[width=\textwidth]{./images/qcdFeynmanRules.eps}
   \caption{QCD Feynman rules.}
   \label{fig:qcdFeynmanRules}
 \end{figure}
@@ -189,7 +189,12 @@ approaches:
 \begin{itemize}
 \item \textbf{$\bm{\lambda}$ regularisation:} In $Lambda$ regularisation we
   limit the divergent momentum integrals by a cutoff $\abs{\vec p} < \Lambda$.
-  Here $\Lambda$ has the dimension of mass. The cutoff regularisation breaks
+  Here $\Lambda$ has the dimension of mass. In \textsc{qcd} $\Lambda$ marks the
+  separation between short\-/ and long\-/distance effects. For momenta smaller
+  than the cutoff ($\abs{\vec p} < \Lambda$) we probe short\-/distances. On the
+  contrary for large momenta $\abs{\vec p} > \Lambda$ we have to include
+  long\-/distance effects. We will see that we can make use of \textsc{pt} only
+  for high\-/momenta (short\-/distances). The cutoff regularisation breaks
   translational invariance, which can be guarded by making use of other
   regularisation methods.
 \item \textbf{\define{Pauli-Villars}{P-I} regularisation:} \cite{Pauli1949} In
@@ -324,22 +329,105 @@ energies, around \SI{1}{\giga\eV}, the strong coupling reaches a critical value
 of $\approx 0.5$ leading to a break down of \textsc{pt}.
 
 In this work we try to achieve a higher precision in the value of $\alpha_s$.
-Our method to measure the strong coupling are the \textsc{qcdsr}, which in our
-case make use of the \textit{two-point function} for which we will devote the
-following section
-
-
+The framework we use to measure the strong coupling constant are the
+\textsc{qcdsr}. A central object needed to describe hadronic states with the
+help of \textsc{qcd} is the \textit{two-point function} for which we will devote the
+following section.
 
 \section{Two-Point function}
 \label{sec:twoPointFunction}
+A lot of particle physics is dedicated of calculating the \textit{S\-/matrix}, which
+contains all the information about how initial states evolve in time. One
+important tool for obtaining the S\-/matrix is the \textit{LSZ (Lehmann\-/Symanzik\-/Zimmermann)-reduction
+  formula} \cite{Lehmann1954a,Schwartz2013}
+\begin{equation}
+  \begin{split}
+    \langle f\vert S \vert i\rangle =
+    \left[ i\int_0^\infty \fdif{x_1} e^{-ip_1x_1} (\Box^2 + m^2)\right] \cdots
+    \left[ i\int_0^\infty \fdif{x_n} e^{ip_nx_n} (\Box^2 + m^2)\right] \\
+    \times \langle\Omega\vert T\{\phi(x_1)\cdots\phi(x_n)\} \vert\Omega\rangle,
+  \end{split}
+\end{equation}
+with the $-i$ in the exponent applying for initial states and the $+i$ for final
+states. The LSZ\-/reduction formula relates the S\-/matrix to the \textit{correlator} (also referred to as
+\textit{n\-/point function})
+\begin{equation}
+  \langle\Omega\vert T\{\phi(x_1)\phi(x_2)\cdots\phi(x_n)\} \vert\Omega\rangle,
+\end{equation}
+where $T\{\cdots\}$ is the time\-/ordered product and $\vert\Omega\rangle$
+is the ground state/ vacuum of the interacting theory. Note that the fields are in
+general given in the Heisenberg picture, which implies translational invariance.
+\begin{equation}
+  \begin{split}
+    \langle\Omega\vert \phi(x)\phi(y) \vert\Omega\rangle &= \langle\Omega\vert \phi(x) e^{i\hat P y}e^{-i\hat P y}\phi(y)e^{i\hat P y}e^{-i\hat P y} \vert\Omega\rangle \\
+    &= \langle\Omega\vert \phi(x-y)\phi(0) \vert\Omega\rangle,
+  \end{split}
+\end{equation}
+where we made use of the translation operator $\hat T(x) = e^{-i \hat P x}$.
 
-The \textit{two\-/point} function (or \textit{correlator}) is the vacuum
-expectation value of two local fields. In the simplest case, for a scalar field
-$\phi$, it is defined as
+In this work we are concerned about the \textit{two\-/point function}.
+We are especially interested in the vacuum expectation value of $2$ time\-/ordered \textsc{qcd} quark Noether\-/currents
+\begin{equation}
+  \Pi_{\mu\nu}(q^2) \equiv \int \fdif{q} e^{iqx} \langle\Omega\vert J_\mu(x)J_\nu(0) \vert\Omega\rangle,
+\end{equation}
+where the Noether current $J_\mu(x)$ is given by
+\begin{equation}
+  \label{eq:qcdCurrent}
+  J_\mu(x) = \anti{q}(x) \Gamma q(x).
+\end{equation}
+Here, $\Gamma$ can be any of the following dirac matrices $\Gamma \in \{ 1,
+i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}$, specifying the quantum number of
+the current (S: \textit{scalar}, P: \textit{pseudo-Scalar}, V:
+\textit{vectorial}, A: \textit{axial-vectorial}, respectively). By choosing the
+right quantum numbers we can theoretically represent the processes we want to
+study.
+
+\begin{wrapfigure}{r}{4cm}
+  \centering
+  \begin{tkizpicture}
+    \feynmandiagram [small, vertical=a to b] {
+      i1 [particle=\(e^-\)]-- [fermion] a -- [fermion] i2 [particle=\(e^-\)],
+      a -- [photon] b,
+      b -- [fermion, half left, edge label=\(\anti{q}\)] c  
+      -- [fermion, half left, edge label=\(q\)] b,
+      c -- [photon] d,
+      f1 [particle=\(e^-\)]-- [fermion] d -- [fermion] f2 [particle=\(e^-\)],
+    };
+  \end{tkizpicture}
+  \caption{$e^+e^-$\-/scattering with a quark\-/antiquark pair.}
+  \label{fig:electronElectronScattering}
+\end{wrapfigure}
+From a Feynman diagram point of view we can illustrate the two\-/point function
+as quark\-/antiquark pair, which is produced by an external source, e.g. the
+virtual photon of electron\-/electron elastic scattering as seen in \cref{fig:electronElectronScattering}.
+Here the quarks are propagating at \textit{short\-/distances}, which implies
+that we can make use of \textsc{pt}, thus avoiding \textit{long\-/distance}\-/
+(\textsc{npt}\-/) effects, that would appear if the initial and final states
+where given by hadrons \cite{Colangelo2000}. 
+
+
+A central object, while studying propagating fields is the correlator. In the
+most general case we describe a correlator as the vacuum expectation value of $n$ time\-/ordered local fields:
+\begin{equation}
+  \Pi_n(x_1,\cdots,x_n) \equiv \langle\Omega\vert \hat\phi_H(x_1)\cdots\hat\phi(x_n) \vert\Omega\rangle.
+\end{equation}
+These fields are given in the Heisenberg picture, such that $\vert\Omega\rangle$
+is the ground state of the complete Hamiltonian $\hat H$. This ground state is
+referred to as physical vacuum, in contrast to the free vacuum $\vert 0 \Omega$.
+The differentiation of the vacua is of high importance, because the
+\textsc{qcd}\-/vacuum has non\-/vanishing vacuum expectation values of
+normal\-/ordered products, which lead to non\-/perturbative contributions.
+The general correlator, including $n$\-/fields is referred to as \textit{n\-/point
+  function}. We are solely interested in the \textit{two\-/point function},
+which has the following form if we only consider scalar\-/fields
 \begin{equation}
   \label{eq:simpleTwoPointFunction}
-  \langle\Omega\vert \phi(x) \phi(y) \vert\Omega\rangle.
+  \Pi^{(scalar)}(x,y) \equiv \langle\Omega\vert \phi(x) \phi(y) \vert\Omega\rangle.
 \end{equation}
+If we make use of the translational and Lorentz invariance properties of the correlator and
+consider the for us more interesting \textsc{qcd} currents $J_\mu$ the
+two\-/point function is given as
+
 Here $\vert \Omega \rangle$ is the physical vacuum and the fields operators
 $\phi(x)$ and $\phi(y)$ are time dependent Heisenberg operators, which can be
 translated to its origin. The two\-/point function can be interpreted physically
