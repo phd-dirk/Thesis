@@ -426,25 +426,56 @@ length scale we can say that the length scale should be smaller than the radius
 of a hadron. 
 
 \subsection{Relating Two\-/Point Function and Hadrons}
-The correlator \cref{eq:qcdCorrelator} describes the interactions of the
-fundamental \textsc{dof} of \textsc{qcd}, namely the quarks and gluons, but we
-can also relate the correlator to hadrons. 
+The two\-/point function can be interpreted physically
+as the amplitude of propagating single- or multi\-/particle states and their
+excitations. The possible states, in our case hadrons we describe through the
+correlator is fixed by the quantum numbers of the current we set for the vacuum
+expectation value. For example the neutral $\rho$\-/meson has a quark content of
+\((u\anti{u} - d\anti{d})/\sqrt{2}\) and is a spin\-/1 vector meson.
+Consequently by choosing a current
+\begin{equation}
+  J_\mu(x) = \frac{1}{2} ( \anti{u}(x)\gamma_\mu u(x) - \anti{d}(x)\gamma_\mu d(x) )
+\end{equation}
+the two\-/point function contains the same quantum numbers as the
+\(\rho\)\-/meson and is said to materialise to it. A list of some ground\-/state mesons for
+combinations of the light\-/quarks \(u, d\) and \(s\) is given in \cref{table:groundStateMesons}.
+\begin{table}
+  \centering
+  \begin{tabular*}{\textwidth}{lccc @{\extracolsep{\fill}}c}
+    \toprule
+    Symbol & Quark content & Isospin & \(J\) & Current \\
+    \midrule
+    \(\pi^0\)  & \(\frac{u\anti{u} - d\anti{d}}{2}\) & \(1\) & \(0\)
+    & \(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5 d\) \\
+    \(\eta\)   & \(\frac{u\anti{u} + d\anti{d} - 2s\anti{s}}{\sqrt{6}}\) & \(0\)
+    & \(0\) & \(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5d
+    - 2\anti{s}\gamma_\mu\gamma_5 s\) \\
+    \(\eta\prime\) & \(\frac{u\anti{u} + d\anti{d} + s\anti{s}}{\sqrt{3}}\)
+    & \(0\) & \(0\) & \(\anti{u}\gamma_\mu\gamma_5 u +
+    \anti{d}\gamma_\mu\gamma_5 d + \anti{s}\gamma_\mu\gamma_5 s\) \\
+    \(\rho^0\) & \(\frac{u\anti{u} - d\anti{d}}{\sqrt{2}}\) & \(1\) & \(1\)
+    & \(\anti{u}\gamma_\mu u - \anti{d}\gamma_\mu d\) \\
+    \(\omega\) & \(\frac{u\anti{u}+d\anti{d}}{\sqrt{2}}\) & \(0\) & \(1\)
+    & \(\anti{u}\gamma_\mu u + \anti{d}\gamma_\mu d\) \\
+    \(\phi\) & \(s \anti{s}\) & \(0\) & \(1\)
+    & \(\anti{s}\gamma_\mu\gamma_5 s\)\\                                        
+    \bottomrule
+  \end{tabular*}
+  \caption{Ground\-/state vector and pseudoscalar mesons for the light\-/quarks
+    \(u, d\) and \(s\). Note that we use $\gamma_\mu$ for vector and
+    $\gamma_\mu\gamma_5$ for the pseudoscalar mesons.}
+  \label{table:groundStateMesons}
+\end{table}
 
-\begin{tcolorbox}[ams equation,myformula]
-  x = y
-\end{tcolorbox} 
-
-
-Here $\vert \Omega \rangle$ is the physical vacuum and the fields operators
-$\phi(x)$ and $\phi(y)$ are time dependent Heisenberg operators, which can be
-translated to its origin. The two\-/point function can be interpreted physically
-as the amplitude of propagating single\-/ or multi\-/particles and their
-excitations. The correlator can be expressed as a \textit{spectral
+The correlator can be expressed as a \textit{spectral
   decomposition}, which has been discovered early on by
 \cite{Kallen1952,Lehmann1954} and is named \textit{Källén-Lehmann spectral
   representation}. This spectral representation is interesting to us for two
 main reasons. First it is experimentally measurable and second it carries a
 problematic ``branch cut'', which we want to discuss now.
+\begin{tcolorbox}[ams equation,myformula]
+  \Pi(q^2) = \int_0^\infty \dif t \frac{\rho(t)}{t-q^2-i\epsilon}@{\extracolsep{\fill}}
+\end{tcolorbox} 
 
 \subsection{Källén-Lehmann spectral representation}
 In the second quantisation we applied latter operators $a_o^\dagger$ on the free
@@ -915,8 +946,9 @@ summed up in the following expression
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
 evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$.
 \end{document}
-% LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav
-% LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules
+% LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav itm
+% LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules lccc
 % LocalWords:  OPEFeynmanDiagram correlatorComplexContour qcdSumRules
 % LocalWords:  LocalWords simpleTwoPointFunction twoPointFunctionSelfEnergy
-% LocalWords:  cuttingRules qcdLagrangian
+% LocalWords:  cuttingRules qcdLagrangian electronElectronScattering
+% LocalWords:  lambdaRegularisation groundStateMesons
