@@ -484,10 +484,9 @@ to represent the two\-/point correlator via a spectral function \(\rho(t)\)
   \Pi(q^2) = \int_0^\infty \dif s \frac{\rho(s)}{s-p^2-i\epsilon}.
 \end{tcolorbox}
 The above relation is referred to as \textit{Källén-Lehmann spectral
-  representation} and has been discovered early on by
-\cite{Kallen1952,Lehmann1954}. It relates the two\-/point function to the
-spectral function $\rho$, which can be represented as sum over all possible
-hadronic states
+  representation} \cite{Kallen1952,Lehmann1954} or \textit{dispersion relation}.
+It relates the two\-/point function to the spectral function $\rho$, which can
+be represented as sum over all possible hadronic states
 \begin{equation}
   \rho(s) = (2\pi)^3 \SumInt_X \abs{\langle\Omega\vert J_{\mu}(0) \vert X\rangle}^2 \delta^4(s-p_X).
 \end{equation}
@@ -495,9 +494,11 @@ Note that the analytic properties of the two\-/point are in one\-/to\-/one
 correspondence with the newly introduced spectral function and thus determined
 by the possible hadrons states, which only form on positive real axis. A full
 derivation of the \textit{Källén\-/Lehmann spectral representation} can be found
-in the appendix The spectral function is interesting to us for two reasons.
-First it is experimentally measurable and second it carries a problematic
-``branch cut'', which we want to discuss now.
+in the appendix \cref{ch:kallenLehmannSpectralRepresentation}. We will derive
+the same representation to a later point by solely using the analytic properties
+of the correlator (see. \cref{sec:sumRules}). The spectral function is
+interesting to us for two reasons. First it is experimentally measurable and
+second it carries a problematic ``branch cut'', which we want to discuss now.
 
 \subsection{Analytic Structure of the Two\-/Point Function}
 The general two\-/point function $\rho(s)$ has some interesting, but problematic
@@ -764,64 +765,119 @@ Cauchy's Theorem. In total we will bring together the two\-/point function, the
 
 \section{Sum Rules}
 \label{sec:sumRules}
-To relate the measurable hadronic final states of a \textsc{qcd} process (e.g.
-$\tau$-decays into hadrons) to a theoretical calculable \textsc{qcdsr} have been
-employed by Shifman in the late seventies \cite{Shifman1978}.
-
-The sum rules are a combination of the two-point function, its analyticity, the
-\textsc{ope}, a dispersion relation, the optical theorem and quark hadron
-duality.
-
-The previously introduced two-point function \cref{eq:twoPointFunction} is
-generally described by the \textsc{ope} to account for \textsc{npt} effects.
+The \textsc{qcdsr} are a procedure in phenomenology to bridge the fundamental
+degrees of \textsc{qcd}, in our case the strong coupling, to the observable
+spectrum of hadrons. To do so we have to treat the in
+\cref{sec:twoPointFunction} introduced two\-/point function in
+non\-/perturbatively with the help of the \textsc{ope}
 \begin{equation}
-  \Pi(q^2) = \Pi^{OPE}(q^2).
+  \Pi(s) \to \Pi_{OPE}(s).
 \end{equation}
-Furthermore it is related to the theoretical spectral function $\rho(s)$ via a
-dispersion relation (\cref{eq:dispersionRelation}). Using \textsc{qcd} we are
-computing interactions based on quarks and gluons, but as we have seen
-(confinement), we are only able to observe hadrons. Consequently to connect the
-theory to the experiment we have to assume \textbf{quark-hadron
-  duality}\footnote{Or simply duality.}, which implies that physical quantities
-can be described equally good in the hadronic or in the quark-gluon picture.
-Thus we rewrite the dispersion relation \cref{eq:dispersionRelation} as
-\begin{equation}
-  \Pi^{OPE}_{th}(q^2) = \int_0^\infty \frac{\rho_{exp}(q^2)}{(s-q^2-i\epsilon)},
-\end{equation}
-where we connected the theoretical correlator $\Pi_{th}$ with the experimental
-measurable spectral function $\rho_{exp}$.
+\textsc{qcdsr} introduce an ad hoc assumption, namely \textit{quark\-/hadron
+  duality}, of stating that the observable hadron picture can be equally
+described by the \textsc{qcd} quark\-/gluon picture. As the experimentally
+measurable hadronic states are represented in poles and cuts on the positive
+real axis of the two\-/point function, which we have encountered in the analytic
+properties of its spectral decomposition, the \textsc{qcdsr} give us a
+description on how to apply \textit{Cauchy's theorem} and weight functions to
+take care of perturbative complications close to the positive real axis.
 
-We have seen, that the theoretical description of the correlator $\Pi_{th}$
-contains poles on the real axis. Unfortunately the experimental data
-$\rho_{exp}$ is solely accessible on the positive real axis. As a result we have
-to make use of Cauchy's theorem to access the theoretical values of the
-two-point function close to the positive real axis (see
-\cref{fig:correlatorComplexContour}), which is given by
-\begin{equation}
-  \label{eq:cauchysTheorem}
-  \int_{\mathcal{C}} f(z) \dif z = 0,
-\end{equation}
-where $f(z)$ is an analytic function on a closed contour $\mathcal{C}$.
-\begin{figure}[h]
+In the following we will follow the order of the short introduction of
+\textsc{qcdsr} to explain them, using the same order as before, in more details.
+
+\subsection{Dispersion Relation}
+\begin{figure}
   \centering
   \label{fig:correlatorComplexContour}
   \includegraphics[width=0.6\textwidth]{./images/correlatorComplexContour.eps}
   \caption{Analytical structure of $\Pi(s)$ with the used contour $\mathcal{C}$
     for the final QCD Sum Rule expression \cref{eq:qcdSumRules}.}
 \end{figure}
-
-The final ingredient of the \textsc{qcd} sum rules is the \textit{optical
-  theorem}, relating experimental data with the imaginary part of the correlator
-(the spectral function $\rho(s)$).
-
-In total, with the help Cauchy's theorem, the \textsc{qcd} sum rules can be
-summed up in the following expression
+We have already seen the spectral decomposition of the two\-/point function in
+\cref{eq:KallenLehmannSpectralDecomposition}, which is also referred to as
+dispersion relation. The relation can also be arrived by solely using the
+analytic properties of the two\-/point function, which is analytic on the
+physical sheet, except for the positive real axis. For the derivation we need to
+make use of \textit{Cauchy's integral formula}
 \begin{equation}
-  \label{eq:qcdSumRules}
-  \frac{1}{\pi}\int_0^\infty \frac{\rho_{exp}(t)}{t - s}\dif t = \frac{1}{\pi} \oint_{\mathcal{C}} \frac{\Ima \Pi_{OPE}(t)}{t -s}\dif t,
+  f(a) = \frac{1}{2\pi i} \oint_\gamma \frac{f(z)}{z-a}\dif z,
 \end{equation}
+which states that, we can evaluate \(f(a)\) by integrating over a closed
+contour, under the conditions that \(f(z)\) is holomorphic on the contour
+\(\gamma\) and the point \(a\) is inside the closed contour. In addition we also
+make to use of \textit{Schwartz reflection principle}:
+\begin{equation}
+  f(\overline{z}) = \overline{f(z)},
+\end{equation}
+which can be applied if \(f\) is analytic and takes only real values on the real
+axis. Thus for the scalar two\-/point function we get
+\begin{equation}
+  \begin{split}
+    \Pi(s) &= \frac{1}{2\pi i}\oint_\gamma \frac{\Pi(s^\prime)}{s^\prime-s} \dif s^\prime \\
+    &= \frac{1}{2\pi i} \left[ \int_0^R
+      \frac{\Pi(s^\prime+i\epsilon)}{s^\prime-s+i\epsilon}\dif s^\prime \right.
+    + \int_R^0 \frac{\Pi(s^\prime - i\epsilon)}{s^\prime-s-i\epsilon} +
+    \cancelto{0}{\int_0^{2\pi} \frac{\Pi(R e^{i\theta})}{Re^{i\theta}-s}\dif
+      \theta}
+    + \cancelto{0}{ \int_\pi^0 \frac{\Pi(R e^{i\theta})}{Re^{i\theta}-s}\dif \theta} \left. \phantom{\int_0^R} \right] \\
+    &= \frac{1}{2\pi i}\int_0^R \frac{\Pi(s^\prime) -
+      \Pi^*(s^\prime)}{s^\prime-s-i\epsilon} \dif s^\prime =
+    \cancelto{1}{\frac{2 \pi i}{2 \pi i}}\int_0^R
+    \frac{\rho(s^\prime)}{s^\prime-s-i\epsilon}
+  \end{split}
+\end{equation}
+where we have used Cauchy's integral formula in the first line, Schwartz
+reflection principle in the third line and been sloppy to set the circular
+contours to zero. Taking the circle to infinity, we can recover the previously
+seen spectral decomposition from purely analytic properties of the scalar
+two\-/point function, with a polynomial coming from the before neglected
+circular contour integrations
+\begin{equation}
+  \cref{eq:dispersionRelation}
+  \Pi(s) = \int_0^\infty \frac{\rho(s^\prime)}{s^\prime-s-i\epsilon} + P(s).
+\end{equation}
+Note that we have used the analyticity of the two\-/point function to
+
+\subsection{Duality}
+We have seen, that \textsc{qcd} treats quarks and gluon as its fundamental
+\textsc{dof}, but due to confinement we are only ever able to observe hadrons.
+The mechanism that connects the two worlds is the \textit{quark\-/hadron
+  duality} (or simply duality), which implies that physical quantities can be
+described equally good in the hadronic or in the quark-gluon picture. Thus we
+can connect experimental detected with theoretically calculated values from the
+two\-/point function in the dispersion relation \cref{eq:dispersionRelation} as
+\begin{equation}
+  \Pi_{th}(s) = \int_0^\infty \frac{\rho(s^\prime)_{exp}}{s^\prime-s-i\epsilon} + P(s),
+\end{equation}
+where we connected the theoretical correlator $\Pi_{th}$ with the experimental
+measurable spectral function $\rho_{exp}$.
+
+\subsection{Finite Energy Sum Rules}
+To theoretical calculate the two\-/point function we have to integrate the
+experimental data \(\rho_{exp}(s)\) to infinity. No experiment will ever take
+data for an infinite momentum \(s\) and for tau\-/decays we are currently
+limited to energies around the tau\-/mass of
+\siunits{1.776}{\giga\electronvolt}. To deal with the upper integration limit
+several approaches have been made. One of them, the \textit{Borel
+  transformation} is to exponentially suppress higher energy contributions (see
+\cite{Weinberg1996,Rafael1997}). The technique we are using is called
+\define{fesr}{finite energy sum rules} and introduces a energy cutoff. We thus
+integrate the experimental data \(\rho(s)\) only to a certain energy \(s_0\),
+like
+\begin{equation}
+  \int_0^{s_0} \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0} \Pi(s) \dif s.
+\end{equation}
+We are furthermore free to multiply the upper equation with an analytic function
+\(\omega(s)\), which completes the \textsc{fesr}
+\begin{tcolorbox}[ams equation,myformula]
+  \int_0^{s_0} \omega(s) \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0}\omega(s)
+  \Pi_{OPE}(s) \dif s
+\end{tcolorbox}
 where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
-evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$.
+evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$. The
+analytic function \(\omega(s)\) plays the role of a weight and can enhance or
+suppress different contributions of the \textsc{ope} as we will see.
+
 \end{document}
 % LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav itm
 % LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules lccc
