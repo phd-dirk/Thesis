@@ -232,15 +232,15 @@ strong coupling and the quark masses. As we are mainly concerned with the
 non\-/abelian gauge theory \textsc{qcd} we will focus on dimensional
 regularisation, which introduced the parameter $\mu$. Measurable observables
 (\textit{Physical quantities}) cannot depend on the renormalisation scale $\mu$.
-In the Therefore the derivative by $\mu$ of a general physical quantity has to
-yield zero. The physical quantity $R(q, a_s, m)$, that depends on the external
+Therefore the derivative by $\mu$ of a general physical quantity has to
+yield zero. A physical quantity $R(q, a_s, m)$, that depends on the external
 momentum q, the renormalised coupling $a_s\equiv\alpha_s/\pi$ and the
 renormalised quark mass $m$ can then be expressed as
 \begin{equation}
   \label{eq:RGE}
   \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{m} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
 \end{equation}
-\Cref{eq:RGE} is referred to as \textbf{renormalisation group equation} and is
+\Cref{eq:RGE} is referred to as \define{rge}{renormalisation group equation} and is
 the basis for defining the two \textit{renormalisation group functions}:
 \begin{align}
   \beta(a_s) &\equiv -\mu \od{a_s}{\mu} = \beta_1 a_s^2 + \beta_2 a_s^3 + \dots & \beta-\text{function}
@@ -248,20 +248,52 @@ the basis for defining the two \textit{renormalisation group functions}:
   \gamma(a_s) &\equiv - \frac{\mu}{m} \od{m}{\mu} = \gamma_1 a_s + \gamma_2 a_s^2 + \dots & \text{anomalous mass dimension}.
                                                                                             \label{eq:anomalousMassDimension}
 \end{align}
-The coefficients of the $\beta$-function and the mass anomalous dimension are
-currently known up to the 5\textsuperscript{th} order and listed in the appendix
-\ref{sec:betaCoefficients}.
+The \(\beta\)\-/function dictates the running of the strong coupling, whereas
+the anomalous mass dimension is responsible for the running of the quark masses.
+We have a special interest in the running of the strong coupling, but will also
+shortly sum up the running of the quark masses.
 
 \subsubsection{Running gauge coupling}
-The $\beta$-function and the anomalous mass dimension are responsible for the
-running of the strong coupling and the running of the quark mass respectively.
-In this section we will shortly review the $\beta$-function and its implications
-on the strong coupling, whereas in the following section we will discuss the
-anomalous-mass dimension.
-
 Regarding the $\beta$-function we notice, that $a_s(\mu)$ is not a constant, but
-\textit{runs} by varying its scale $\mu$. Lets observe the running of the strong
-coupling constant by integrating the $\beta$-function
+that it \textit{runs} by varying its scale $\mu$. This has some important
+implications:
+\begin{itemize}
+\item The strong coupling we want to extract has different values at different
+  scales. In the literature (e.g. \cite{pdg2016}) \(\alpha_s\) is commonly
+  compared at the \(Z\)\-/boson scale of around \siuntis{91}{\giga\eV}. As we a
+  extracting the strong coupling at the mass of the tau\-/lepton, around
+  \siunits{1.776}{\giga\electronvolts} we need to run the strong coupling up to
+  the desired scale. While this running we have to take care of the
+  quark\-/threshold. Quark\-/thresholds are cause by quarks that decouple for
+  low energies. Typically one runs the coupling with the aid of software
+  packages like \textit{RunDec} \cite{Chetyrkin2000,Herren2017}, which has also
+  been ported to support \(C\) (\textit{CRunDec}, \cite{Schmidt2012}) and Python
+  \cite{Straub2016}.
+\item The strong coupling becomes strong for low energies. It reaches a critical
+  value at
+  \begin{equation}
+    \alpha_s(\siunits{1}{\giga\eV}) \approx 0.5,
+  \end{equation}
+  which questions the applicability of \textsc{pt} for energies lower than
+  \siunits{1}{\giga\eV}.
+\item It leads to confinement and asymptotic freedom. Asymptotic freedom states,
+  that for high energies (small distances), the strong coupling becomes
+  diminishing small and quarks and gluons do not interact. Thus in isolated
+  baryons and mesons the quarks are separated by small distances, move freely
+  and do not interact. On the other hand we are not able to separate the quarks
+  in a meson or baryon. No quark has been detected as single particle yet. This
+  is qualitatively explained with the gluon field carrying colour charge. These
+  gluons form so-called \textit{flux-tubes} between quarks, which cause a
+  constant strong force between particles regardless of their separation.
+  Consequently the energy needed to separate quarks is proportional to the
+  distance between them and at some point there is enough energy to favour the
+  creation of a new quark pair. Thus before separating two quarks we create a
+  quark\-/antiquark pair. As a result we will probably never be able to observe
+  an isolated quark. This phenomenon is referred to as colour confinement or
+  simply confinement.
+\end{itemize}
+To display the running of the strong coupling we integrate the
+\(\beta\)\-/function
 \begin{equation}
   \int_{a_s(\mu_1)}^{a_s(\mu_2)}\frac{\dif a_s}{\beta(a_s)} = - \int_{\mu_1}^{\mu_2} \frac{\dif \mu}{\mu} = \log \frac{\mu_1}{\mu_2}.
 \end{equation}
@@ -278,31 +310,17 @@ yielding
 As we have three colours ($N_c=3$) and six flavours ($N_f=6$) the first
 $\beta$-function \ref{eq:betaFunction} is positive. Thus for $\mu_2>\mu_1$
 $a_s(\mu_2)$ decreases logarithmically and vanishes for $\mu_2 \to \infty$. This
-behaviour is known as \textit{asymptotic freedom} and leads to
+behaviour is known, as the previously mentioned, \textit{asymptotic freedom} and
 \textit{confinement}.
 
-Asymptotic freedom states, that for high energies (small distances), the strong
-coupling becomes diminishing small and quarks and gluons do not interact. Thus
-in isolated baryons and mesons the quarks are separated by small distances, move
-freely and do not interact. On the other hand we are not able to separate the
-quarks in a meson or baryon. No quark has been detected as single particle yet.
-This is qualitatively explained with the gluon field carrying colour charge.
-These gluons form so-called \textit{flux-tubes} between quarks, which cause a
-constant strong force between particles regardless of their separation.
-Consequently the energy needed to separate quarks is proportional to the
-distance between them and at some point there is enough energy to favour the
-creation of a new quark pair. Thus before separating two quarks we create a
-quark\-/antiquark pair. As a result we will probably never be able to observe an
-isolated quark. This phenomenon is referred to as colour confinement or simply
-confinement.
+From the \textsc{rge} we have seen, that not only the coupling but also the
+masses carry an energy dependencies.
 
 \subsubsection{Running quark mass}
-Not only the coupling but also the masses carry an energy dependencies, which is
-governed by the \textit{anomalous mass dimension} $\gamma(a_s)$.
-
-The properties of the running quark mass can be derived similar to the gauge
-coupling. Starting from integrating the \textit{anomalous mass dimension}
-\cref{eq:anomalousMassDimension}
+The mass dependence on energy is governed by the \textit{anomalous mass
+  dimension} $\gamma(a_s)$. Its properties of the running quark mass can be
+derived similar to the gauge coupling. Starting from integrating the
+\textit{anomalous mass dimension} \cref{eq:anomalousMassDimension}
 \begin{equation}
   \log \frac{m(\mu_2)}{m(\mu_1)} = \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}
 \end{equation}
@@ -318,6 +336,10 @@ different scales is given by
   m(\mu_2) = m(\mu_1) \exp \left( \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}  \right)
 \end{equation}
 and can be solved numerically to run the quark mass to the needed scale $\mu_2$.
+
+Both, the \(\beta\)\-/function and the anomalous mass dimension are currently
+known up to the 5\textsuperscript{th} order and listed in the appendix
+\ref{sec:betaCoefficients}.
 
 \textsc{qcd} in general has a precision problem caused by uncertainties and
 largeness of the strong coupling constant $\alpha_s$. The fine-structure
@@ -865,6 +887,25 @@ several approaches have been made. One of them, the \textit{Borel
 integrate the experimental data \(\rho(s)\) only to a certain energy \(s_0\),
 like
 \begin{equation}
+  \Pi(s) = \int_0^{s_0} \frac{\rho(s^\prime)}{s^\prime-s-i\epsilon} + P(s).
+\end{equation}
+Unfortunately we still cannot theoretically evaluate \define{rhs}{right\-/hand
+  side} as the line integral includes the singularities of the spectral
+function. As a result we have to apply Cauchy's theorem one last time. The
+calculation is similar to the dispersion relation we derived in
+\cref{eq:dispersionRelation} and is visualised in
+\cref{fig:theoreticalTwoPointFunction}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{./images/rTauCauchysTheorem.eps}
+  \caption{Visualization of the usage of Cauchy's theorem to transform
+    \cref{eq:dispersionRelation} into a closed contour integral over a circle of
+    radius $s_0$.}
+  \label{fig:theoreticalTwoPointFunction}
+\end{figure}
+Therefore we can avoid the positive real axis, by introducing a closed contour
+integral, in the theoretical calculation of the two\-/point function
+\begin{equation}
   \int_0^{s_0} \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0} \Pi(s) \dif s.
 \end{equation}
 We are furthermore free to multiply the upper equation with an analytic function
@@ -873,9 +914,11 @@ We are furthermore free to multiply the upper equation with an analytic function
   \int_0^{s_0} \omega(s) \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0}\omega(s)
   \Pi_{OPE}(s) \dif s
 \end{tcolorbox}
-where the l.h.s. is given by the experiment and the r.h.s. can be theoretically
-evaluated by applying the \textsc{ope} of the correlator $\Pi_{OPE}(s)$. The
-analytic function \(\omega(s)\) plays the role of a weight and can enhance or
+where the \define{lhs}{left\-/hand side} is given by the experiment and the
+\textsc{rhs}. can be theoretically evaluated by applying the \textsc{ope} of the
+correlator $\Pi_{OPE}(s)$. The analytic function \(\omega(s)\) plays the role of
+a weight. It can be used to further suppress the non\-/perturbative
+contributions coming from as \textit{duality violations} and also enhance or
 suppress different contributions of the \textsc{ope} as we will see.
 
 \end{document}
