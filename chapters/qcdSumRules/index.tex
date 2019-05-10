@@ -3,76 +3,79 @@
 \begin{document}
 \chapter{QCD Sum Rules}
 \label{ch:theoreticalBackground}
-It is most remarkably that we can describe the properties of quarks and gluons
-via a local \textsc{qft} based on the gauge group $SU(3)$. However \textsc{qcd}
-only applies to coloured particles and not to colourless particles like hadrons.
-Due to confinement we can only ever observe hadrons, but our theoretical
-foundation is ruled by the \textsc{dof} of quarks and gluons. To extract
-\textsc{qcd}\-/parameters (the six quark\-/masses and the strong\-/coupling)
-from hadrons we need to bridge the quark\-/gluon picture with the hadron
-picture. To do so we will introduce the framework of \textsc{qcdsr}.
+The theory of \textsc{QCD} was formulated to find one single framework that
+describes the many hadrons that exist. Unfortunately making use of
+\define{pqcd}{perturbative \textsc{qcd}} is limited. \textsc{qcd} predicts a
+large coupling constant for low energies. As a consequence we can only ever
+observe hadrons, but our theoretical foundation is ruled by the \textsc{dof} of
+quarks and gluons. To extract \textsc{qcd} parameters (the six quark masses
+and the strong coupling) from hadrons we need to bridge the quark\-/gluon
+picture with the hadron picture. To do so we will introduce the framework of
+\textsc{qcdsr}.
 
 We will start by setting up the foundations of strong interaction with
-introducing the \textsc{qcd}\-/Lagrangian. The \textsc{qcd}\-/Lagrangian
-describes the quark\-/gluon picture solely and is ruled by the abelian gauge
-group $SU(3)$. The group has important implications on the strong coupling and
-the applicability of \textsc{pt}. Next we will focus on the two\-/point
+introducing the \textsc{qcd}\-/Lagrangian. The \textsc{qcd}\-/Lagrangian is
+ruled by the abelian gauge group $SU(3)$. The group implies a energy dependence
+of the coupling and thus limits the applicability of \textsc{pt} for low
+energies, where the coupling is large. Next we will focus on the two\-/point
 function, which plays a major role in the framework of \textsc{qcdsr}. The
 two\-/point function is defined as vacuum\-/expectation values of two local
-fields. We can use it to theoretically describe processes, like
-$\tau$\-/decays into hadrons, by matching the quantum numbers of the
-fields, we choose in specifying the two\-/point function, to the
-outgoing hadrons. We will see, that the two\-/point function $\Pi(q^2)$ is
-related to hadronic states, by poles for $q^2 > 0$. Here \textsc{np}\-/effects
-become important and we need to introduce the \textsc{ope}, which handles
-\textsc{np} parts as \textsc{qcd}\-/condensates. These condensates are
-remainders of the \textsc{qcd}\-/vacuum $\Omega_{QCD}$, which in contrast to the
-normal\-/ordered products of field in $\textsc{qed}$, do not vanish, but remain
-as parameters and have to be phenomenological fitted or calculated by other
-\textsc{np} tools, like \textsc{lqcd}. Finally we will combine a dispersion
-relation and Cauchy's theorem to finalise the discussion on the \textsc{qcdsr}
-with developing the \define{fesr}{finite energy sum rules}, which we will apply
-to extract the strong coupling from tau\-/decays into hadrons.
+fields
+\begin{equation}
+  \Pi(s) = \langle\Omega\vert q(x)q(y) \vert\Omega\rangle.
+\end{equation}
+We can use it to theoretically describe processes, like $\tau$\-/decays into
+hadrons, by matching the quantum numbers of the fields, we choose in specifying
+the two\-/point function, to the outgoing hadrons. We will see, that the
+two\-/point function $\Pi(q^2)$ is related to hadronic states, by poles for $q^2
+> 0$. Here \textsc{np}\-/effects become important and we need to introduce the
+\textsc{ope}, which handles \textsc{np} parts through \textsc{qcd}\-/condensates.
+The condensates form part of the full physical vacuum and would not exist
+regarding the perturbative vacuum solely. Consequently the condensates are not
+accessible trough \textsc{pt} methods and have to be fitted from experiment or
+calculated with the help of \textsc{np} tools, like \textsc{lqcd}. Finally we will
+combine a dispersion relation and Cauchy's theorem to finalise the discussion on
+the \textsc{qcdsr} with developing the \define{fesr}{finite energy sum rules},
+which we will apply to extract the strong coupling from tau\-/decays into
+hadrons.
 
 
 \section{Quantum\-/chromodynamics}
 \label{sec:quantumchromodynamics}
-Since the formulation of \textsc{qed} in the end of the 40's it has been
+Since the formulation of \textsc{qed} in the end of the 40's it had been
 attempted to describe the strong nuclear force as a \textsc{qft}, which has been
 achieved in the 70's as \textsc{qcd}
 \cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}.
-\textsc{qcd} is a renormalisable \textsc{qft} of the strong interaction, which
-fundamental fields are given by dirac spinors of spin\-/$1/2$, the so\-/called
-quarks, with a fractional electric charge of $\pm 1/3$ or $\pm 2/3$. The theory
-furthermore contains gauge\-/fields of spin 1, which are chargeless, massless
-and referred to as gluons. The gluons are the force\-/mediators, which interact
-with quarks and themselves, in contrast to photons of \textsc{qed}, which
-interact only with fermions (see \cref{fig:qcdFeynmanDiagrams}).
+\textsc{qcd} is a renormalisable \textsc{qft} constructed to describe the strong
+interaction. Its fundamental fields are given by dirac spinors of spin\-/$1/2$,
+the so\-/called quarks, with a fractional electric charge of $\pm 1/3$ or $\pm
+2/3$. The theory furthermore contains gauge fields of spin 1. These gauge fields
+are called gluons, do not carry electric charge and are massless. They are the
+force mediators, which interact with quarks and themselves, because they carry
+colour charge, in contrast to photons of \textsc{qed}, which interact only with
+fermions. %(see \cref{fig:qcdFeynmanDiagrams}).
 
 The corresponding gauge\-/group of \textsc{qcd} is the non\-/abelian group
 $SU(3)$. Each of the quark flavours $u,d,c,s,t$ and $b$ belongs to the
 fundamental representation of $SU(3)$ and contains a triplet of fields $\Psi$.
 \begin{equation}
-  \Psi = \begin{pmatrix} \Psi_1 \\ \Psi_2 \\ \Psi_3 \end{pmatrix}
-  = \begin{pmatrix} \textcolor{red}{red} \\ \textcolor{green}{green} \\ \textcolor{blue}{blue} \end{pmatrix}
+  \Psi = \begin{pmatrix} \color{red}\Psi_1 \\ \color{green}\Psi_2 \\ \color{blue}\Psi_3 \end{pmatrix}
 \end{equation}
-The components of the triplet are the colours\footnote{The colour
-  denomination is not gauge\-/invariant. After a colour gauge transformation the
-  new colours are a linear combination of the old colours, which breaks
-  gauge\-/symmetry.} red, green and blue, which play the role of
-\textit{colour\-/charge}, similar to the electric charge of \textsc{qed}. The
-gluons belong to the adjoint representation of $SU(3)$, contain an octet of
+The labels of the triplet are the colours red, green and blue, which play the
+role of \textit{colour charge}, similar to the electric charge of \textsc{qed}.
+The gluons belong to the adjoint representation of $SU(3)$, contain an octet of
 fields and can be expressed using the Gell-Mann matrices $\lambda_a$
 \begin{equation}
   B_\mu = B_\mu^a \lambda_a \qquad a = 1,2,\dotsc 8
 \end{equation}
-\begin{figure}
-  \centering \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
-  \caption{Feynman diagrams of the strong interactions with corresponding
-    electromagnetic diagrams. We see that the gluons carry colour charge and
-    thus couple to other gluons, which is not the case for the photons.}
-  \label{fig:qcdFeynmanDiagrams}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=\textwidth]{./images/qcdFeynmanDiagrams.eps}
+%   \caption{Feynman diagrams of the strong interactions with corresponding
+%   electromagnetic diagrams. We see that the gluons carry colour charge and
+%   thus couple to other gluons, which is not the case for the photons.}
+%   \label{fig:qcdFeynmanDiagrams}
+% \end{figure}
 \begin{table}
   \centering
   \begin{minipage}[c]{0.4\textwidth}
@@ -80,28 +83,30 @@ fields and can be expressed using the Gell-Mann matrices $\lambda_a$
       \toprule
       Flavour & Mass\\
       \midrule
-      $u$ & \SI{3.48(24)}{\mega\eV} \\
-      $d$ & \SI{6.80(29)}{\mega\eV} \\
-      $s$ & \SI{130.0(18)}{\mega\eV} \\
-      $c$ & \SI{1.523(18)}{\giga\eV} \\
-      $b$ & \SI{6.936(57)}{\giga\eV} \\
+      $u$ & \SI{2.50(17)}{\mega\eV} \\
+      $d$ & \SI{4.88(20)}{\mega\eV} \\
+      $s$ & \SI{93.44(68)}{\mega\eV} \\
+      $c$ & \SI{1.280(13)}{\giga\eV} \\
+      $b$ & \SI{4.198(12)}{\giga\eV} \\
       $t$ & \SI{173.0(40)}{\giga\eV} \\
       \bottomrule 
     \end{tabular}
   \end{minipage}\hfill
   \begin{minipage}[c]{0.59\textwidth}
-    \caption{List of Quarks and their masses. The masses of the up, down,
-      strange, charm and bottom quark are the renormalisation group invariant
-      (RGI) quark masses and are quoted in the four-flavour theory ($N_f=2+1$)
-      at the scale $\mu=\SI{2}{\giga\eV}$ in the $\overline{MS}$ scheme and are
-      taken from the \textit{Flavour Lattice Averaging Group} \cite{FLAG2019}.
-      The mass of the top quark is not discussed in \cite{FLAG2019} and has been
-      taken from \cite{PDG2018} from direct observations of top events.}
+    \caption{List of quarks and their masses. The masses of the up, down and
+      strange quark are quoted in the four\-/flavour theory (\(N_f=2+1+1\) at
+      the scale \(\mu=\SI{2}{\giga\eV}\) in the \(\overline{MS}\). The charm and
+      bottom quark are also taken in the four\-/flavour theory and in the
+      \(\overline{MS}\) scheme, but at the scales \(\mu=m_c\) and \(\mu=\m_b\)
+      correspondingly. All quarks except for the top quark are taken from the
+      \textit{Flavour Lattice Averaging Group} \cite{FLAG2019}. The mass of the
+      top quark is not discussed in \cite{FLAG2019} and has been taken from
+      \cite{PDG2018} from direct observations of top events.}
   \end{minipage}
   \label{table:quarkList}
 \end{table}
 The classical \textit{Lagrange density} of \textsc{qcd} is given by
-\cite{Jamin2006,Pascual1984}:
+\cite{Yndurain2006,Pascual1984}:
 
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:qcdLagrangian}
@@ -136,6 +141,17 @@ flavour. The rest of the terms are the interaction terms. The fifth term
 represents the interaction between quarks and gluons and the last two terms the
 self\-/interactions of gluon fields.
 
+The corresponding Feynman rules have been displayed in
+\cref{fig:qcdFeynmanRules}.
+\begin{figure}
+  \includegraphics[width=\textwidth]{./images/qcdFeynmanRules.eps}
+  \caption{QCD Feynman rules.}
+  \label{fig:qcdFeynmanRules}
+\end{figure}
+The rules are based on \textsc{pt}, but can be enhanced with the \textsc{qcd}
+condensates, as we will see in the discussion of the \textsc{ope} in
+\cref{sec:ope}
+
 Having derived the Lagrangian leaves us with its quantisation. The
 dirac\-/spinors can be quantised as in \textsc{qed} without any problems. The
 $\Psi(x)$ quantum field can be written as:
@@ -154,12 +170,13 @@ momentum space
 \end{equation}
 with $\lambda$ representing the helicity state of the spinors.
 
-The quantisation of the gauge\-/fields are more cumbersome. One is forced to
+The quantisation of the gauge fields is more cumbersome. One is forced to
 introduce supplementary non\-/physical fields, the so\-/called Faddeev\-/Popov
-ghosts $c^a(x)$ \cite{Faddeev1967}.
+ghosts $c^a(x)$ \cite{Faddeev1967}, to cancel unphysical helicity degrees of
+freedom of the gluon fields.
 
-The free propagators for the quark\-/, the gluon\-/ and the ghost\-/fields are
-then given by
+The free propagators for the quark, the gluon and the ghost fields are then
+given by
 \begin{equation}
   \begin{split}
     i S^{(0)AB}_{\alpha\beta}(x-y) &\equiv \wick{ \c q_\alpha^A(x) \anti{\c
@@ -179,37 +196,29 @@ then given by
     e^{-iq(x-y)},
   \end{split}
 \end{equation}
-and the corresponding Feynman\-/rules have been displayed in
-\cref{fig:qcdFeynmanRules}.
-\begin{figure}
-  \includegraphics[width=\textwidth]{./images/qcdFeynmanRules.eps}
-  \caption{QCD Feynman rules.}
-  \label{fig:qcdFeynmanRules}
-\end{figure}
-The Feynman\-/rules are the standard tool to make theoretical predictions in any
-\textsc{qft}. Unfortunately the Feynman\-/rules are a \textsc{pt} tool and do
-not always give the correct results in \textsc{qcd}, as we will see in the
-following section.
+
+The previously introduced Feynman rules and propagators all make use of the
+perturbative vacuum \(\vert 0 \rangle\) and are thus counted as tools of
+\textsc{pt}. Consequently they need a small coupling to approximate excitations
+the full \textsc{qcd} vacuum. We will see in the following section, that the
+strong coupling runs with energy and unfortunately is large for small energy
+scales.
 
 \subsection{Renormalisation Group}
-The perturbations of the QCD Lagrangian in \cref{eq:qcdLagrangian} lead to
-divergencies, which have to be \textit{renormalised}. Making these divergencies
-finite is referred to as \textit{regularisation} and there are various
-approaches:
+Computing observables with the \textsc{qcd} Lagrangian (\cref{eq:qcdLagrangian})
+lead to divergencies, which have to be \textit{renormalised}. To render these
+divergent quantities finite we have to introducing a suitable parameter such
+that the ``original divergent theory'' corresponds to a certain value of that
+parameter. These procedure is referred to as \textit{regularisation} and there
+are various approaches:
 \begin{itemize}
-\item \label{itm:lambdaRegularisation}\textbf{$\bm{\lambda}$ regularisation:} In
+\item \label{itm:lambdaRegularisation}\textbf{Cut\-/off regularisation:} In
   $Lambda$ regularisation we limit the divergent momentum integrals by a cutoff
-  $\abs{\vec p} < \Lambda$. Here $\Lambda$ has the dimension of mass. In
-  \textsc{qcd} $\Lambda$ marks the separation between short\-/ and
-  long\-/distance effects. For momenta smaller than the cutoff ($\abs{\vec p} <
-  \Lambda$) we probe short\-/distances. On the contrary for large momenta
-  $\abs{\vec p} > \Lambda$ we have to include long\-/distance effects. We will
-  see that we can make use of \textsc{pt} only for high\-/momenta
-  (short\-/distances). The cutoff regularisation breaks translational
+  $\abs{\vec p} < \Lambda$. Here $\Lambda$ has the dimension of mass.  The cutoff regularisation breaks translational
   invariance, which can be guarded by making use of other regularisation
   methods.
-\item \textbf{\define{Pauli-Villars}{P-I} regularisation:} \cite{Pauli1949} In
-  \textsc{P-I} regularisation the propagator is forced to decrease faster than
+\item \textbf{\define{Pauli-Villars}{P-V} regularisation:} \cite{Pauli1949} In
+  \textsc{P-V} regularisation the propagator is forced to decrease faster than
   the divergence to appear. It replaces the nominator by
   \begin{equation}
     (\vec p^2 + m^2)^{-1} \to (\vec p^2 + m^2)^{-1} - (\vec p^2 + M^2)^{-1},
@@ -379,7 +388,7 @@ the following section.
 
 \section{Two-Point function}
 \label{sec:twoPointFunction}
-A lot of particle physics is dedicated of calculating the \textit{S\-/matrix},
+A lot of particle physics is dedicated to calculating the \textit{S\-/matrix},
 which contains all the information about how initial states evolve in time. One
 important tool for obtaining the S\-/matrix is the \textit{LSZ
   (Lehmann\-/Symanzik\-/Zimmermann)-reduction formula}
@@ -411,7 +420,7 @@ where we made use of the translation operator $\hat T(x) = e^{-i \hat P x}$.
 
 In this work we are solely concerned about the \textit{two\-/point function},
 especially in the vacuum expectation value of the Fourier transform of two
-time\-/ordered \textsc{qcd} quark Noether\-/currents
+time\-/ordered \textsc{qcd} quark Noether currents
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:qcdCorrelator}
   \Pi_{\mu\nu}(q^2) \equiv \int \fdif{q} e^{iqx} \langle\Omega\vert
@@ -632,6 +641,7 @@ non\-/negligible contributions. Thus before continuing with the \textit{Sum
 
 
 \section{Operator Product Expansion}
+\label{sec:ope}
 The \textsc{ope} was introduced by Wilson in 1969 \cite{Wilson1969} as an
 alternative to the in this time commonly used current\-/algebra. The expansion
 states that non\-/local operators can be rewritten into a sum of composite local
@@ -943,7 +953,8 @@ contributions coming from as \textit{duality violations} and also enhance or
 suppress different contributions of the \textsc{ope} as we will see.
 
 For the interested reader we gathered several introduction texts to the
-\textsc{qcdsr}, which where of greate use to us \cite{Narison1989,Rafael1997,Colangelo2000,Dominguez2013}.
+\textsc{qcdsr}, which where of greate use to us
+\cite{Narison1989,Rafael1997,Colangelo2000,Dominguez2013}.
 \end{document}
 % LocalWords:  qcdFeynmanDiagrams qcdFeynmanRules dispersionRelation sav itm
 % LocalWords:  qcdCurrent twoPointFunction anomalousMassDimension sumRules lccc
