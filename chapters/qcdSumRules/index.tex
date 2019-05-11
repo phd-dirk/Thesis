@@ -213,7 +213,7 @@ parameter. These procedure is referred to as \textit{regularisation} and there
 are various approaches:
 \begin{itemize}
 \item \label{itm:lambdaRegularisation}\textbf{Cut\-/off regularisation:} In
-  $Lambda$ regularisation we limit the divergent momentum integrals by a cutoff
+  cut\-/off regularisation we limit the divergent momentum integrals by a cutoff
   $\abs{\vec p} < \Lambda$. Here $\Lambda$ has the dimension of mass.  The cutoff regularisation breaks translational
   invariance, which can be guarded by making use of other regularisation
   methods.
@@ -242,7 +242,7 @@ are various approaches:
     subtraction scheme} \cite{tHooft1973,Weinberg1973a}.
 \end{itemize}
 In all of the three regularisation schemes we introduced an arbitrary parameter
-to regularise the divergence. This parameter causes an scale dependence of the
+to regularise the divergence. This parameter causes scale dependence of the
 strong coupling and the quark masses. As we are mainly concerned with the
 non\-/abelian gauge theory \textsc{qcd} we will focus on dimensional
 regularisation, which introduced the parameter $\mu$. Measurable observables
@@ -255,7 +255,7 @@ mass $m$ can then be expressed as
   \label{eq:RGE}
   \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{m} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
 \end{equation}
-\Cref{eq:RGE} is referred to as \define{rge}{renormalisation group equation} and
+\Cref{eq:RGE} is referred to as a \define{rge}{renormalisation group equation} and
 is the basis for defining the two \textit{renormalisation group functions}:
 \begin{align}
   \beta(a_s) &\equiv -\mu \od{a_s}{\mu} = \beta_1 a_s^2 + \beta_2 a_s^3 + \dots & \beta-\text{function}
@@ -264,63 +264,14 @@ is the basis for defining the two \textit{renormalisation group functions}:
                                                                                             \label{eq:anomalousMassDimension}
 \end{align}
 The \(\beta\)\-/function dictates the running of the strong coupling, whereas
-the anomalous mass dimension is responsible for the running of the quark masses.
+the anomalous mass dimension describes the running of the quark masses.
 We have a special interest in the running of the strong coupling, but will also
 shortly sum up the running of the quark masses.
 
 \subsubsection{Running gauge coupling}
 Regarding the $\beta$-function we notice, that $a_s(\mu)$ is not a constant, but
-that it \textit{runs} by varying its scale $\mu$. This has some important
-implications:
-\begin{itemize}
-\item The strong coupling we want to extract has different values at different
-  scales. In the literature (e.g. \cite{pdg2016}) \(\alpha_s\) is commonly
-  compared at the \(Z\)\-/boson scale of around \SI{91}{\giga\eV}. As we a
-  extracting the strong coupling at the mass of the tau\-/lepton, around
-  \SI{1.776}{\giga\eV} we need to run the strong coupling up to the desired
-  scale. While running the coupling, we have to take care of the
-  quark\-/thresholds. Each quark gets active at a certain energy scale, which
-  leads to a running of \(\alpha_s\) as shown in \cref{fig:runningOfAs}.
-  Typically one runs the coupling with the aid of software packages like
-  \textit{RunDec} \cite{Chetyrkin2000,Herren2017}, which has also been ported to
-  support \(C\) (\textit{CRunDec}, \cite{Schmidt2012}) and Python
-  \cite{Straub2016}.
-\item The strong coupling becomes strong for low energies. It reaches a critical
-  value at
-  \begin{equation}
-    \alpha_s(\siunits{1}{\giga\eV}) \approx 0.5,
-  \end{equation}
-  which questions the applicability of \textsc{pt} for energies lower than
-  \siunits{1}{\giga\eV} (as seen from the grey zone in \cref{fig:runningOfAs}).
-\item It leads to confinement and asymptotic freedom. Asymptotic freedom states,
-  that for high energies (small distances), the strong coupling becomes
-  diminishing small and quarks and gluons do not interact. Thus in isolated
-  baryons and mesons the quarks are separated by small distances, move freely
-  and do not interact. On the other hand we are not able to separate the quarks
-  in a meson or baryon. No quark has been detected as single particle yet. This
-  is qualitatively explained with the gluon field carrying colour charge. These
-  gluons form so-called \textit{flux-tubes} between quarks, which cause a
-  constant strong force between particles regardless of their separation.
-  Consequently the energy needed to separate quarks is proportional to the
-  distance between them and at some point there is enough energy to favour the
-  creation of a new quark pair. Thus before separating two quarks we create a
-  quark\-/antiquark pair. As a result we will probably never be able to observe
-  an isolated quark. This phenomenon is referred to as colour confinement or
-  simply confinement.
-\end{itemize}
-\begin{figure}
-  \centering \includegraphics[width=\textwidth]{./images/runningOfAs.eps}
-  \caption{Running of the strong coupling \(\alpha_s(Q^2)\) at first order. The
-    blue line represents the uncorrected coupling constant, with an
-    \(\Lambda^{nf=5}\) chosen to match an experimental value of the coupling at
-    \(Q^2=M_Z^2\). The quark\-/thresholds are shown by the black line and the
-    corrected running is given by the red line. We additionally marked the
-    breakdown of \text{pt} with a grey background for \(Q^2<1\). The image is
-    taken from an recent review of the strong coupling \cite{Deur2016}.}
-  \label{fig:runningOfAs}
-\end{figure}
-To display the running of the strong coupling we integrate the
-\(\beta\)\-/function
+that it \textit{runs} by varying its scale $\mu$. To better understand the
+running of the strong coupling we integrate the \(\beta\)\-/function
 \begin{equation}
   \int_{a_s(\mu_1)}^{a_s(\mu_2)}\frac{\dif a_s}{\beta(a_s)} = - \int_{\mu_1}^{\mu_2} \frac{\dif \mu}{\mu} = \log \frac{\mu_1}{\mu_2}.
 \end{equation}
@@ -332,13 +283,64 @@ $\beta$-function to first order, with the known coefficient
 \end{equation}
 yielding
 \begin{equation}
+  \label{eq:strongCouplingFirstOrder}
   a_s(\mu_2) = \frac{a_s(\mu_1)}{\left( 1 - a_s(\mu_1) \beta_1 \log\frac{\mu_1}{\mu_2} \right)}.
 \end{equation}
-As we have three colours ($N_c=3$) and six flavours ($N_f=6$) the first
-$\beta$-function \ref{eq:betaFunction} is positive. Thus for $\mu_2>\mu_1$
-$a_s(\mu_2)$ decreases logarithmically and vanishes for $\mu_2 \to \infty$. This
-behaviour is known, as the previously mentioned, \textit{asymptotic freedom} and
-\textit{confinement}.
+
+\begin{figure}
+  \centering \includegraphics[width=\textwidth]{./images/runningOfAs.eps}
+  \caption{Running of the strong coupling \(\alpha_s(Q^2)\) at first order. The
+    blue line represents the uncorrected coupling constant, with an
+    \(\Lambda^{nf=5}\) chosen to match an experimental value of the coupling at
+    \(Q^2=M_Z^2\). The quark\-/thresholds are shown by the black line and the
+    corrected running is given by the red line. We additionally marked the
+    breakdown of \text{pt} with a grey background for \(Q^2<1\). The image is
+    taken from an recent review of the strong coupling \cite{Deur2016}.}
+  \label{fig:runningOfAs}
+\end{figure}
+
+\Cref{eq:strongCouplingFirstOrder} has some important implications for the
+strong coupling:
+\begin{itemize}
+\item The coupling at a scale \(\mu_2\) depends on \(a_s(\mu_1)\). Thus we have
+  to take care of the scale \(\mu\), while comparing different values of
+  \(\alpha_s\). In the literature (e.g. \cite{pdg2016}) \(\alpha_s\) is commonly
+  compared at the \(Z\)\-/boson scale of around \SI{91}{\giga\eV}. As we are
+  extracting the strong coupling at the mass of the tau lepton, around
+  \SI{1.776}{\giga\eV} we need to run the strong coupling up to the desired
+  scale. While running the coupling, we have to take care of the
+  quark\-/thresholds. Each quark gets active at a certain energy scale, which
+  leads to a running of \(\alpha_s\) as shown in \cref{fig:runningOfAs}.
+  Typically one runs the coupling with the aid of software packages like
+  \textit{RunDec} \cite{Chetyrkin2000,Herren2017}, which has also been ported to
+  support \(C\) (\textit{CRunDec}, \cite{Schmidt2012}) and Python
+  \cite{Straub2016}.
+\item As we have three colours (\(N_c=3\) and six flavours (\(N_f=6\) the first
+  \(\beta_1\) coefficient \ref{eq:betaFunction} is positive. Thus for
+  \(\mu_2<\mu_1\) \(a_s(\mu_2)\) increases logarithmically and at a scale of
+  \(\mu_2=\SI{1}{\g\eV}\) reaches a value of
+  \begin{equation}
+    \alpha_s(\SI{1}{\giga\eV}) \approx 0.5,
+  \end{equation}
+  which questions the applicability of \textsc{pt} for energies lower than
+  \SI{1}{\giga\eV} (as seen from the grey zone in \cref{fig:runningOfAs}).
+\item A large coupling for small scales implies confinement. We are not able to
+  separate quarks in a meson or baryon. No quark has been detected as single
+  particle yet. This is qualitatively explained with the gluon field carrying
+  colour charge. These gluons form so-called \textit{flux-tubes} between quarks,
+  which cause a constant strong force between particles regardless of their
+  separation. Consequently the energy needed to separate quarks is proportional
+  to the distance between them and at some point there is enough energy to
+  favour the creation of a new quark pair. Thus before separating two quarks we
+  create a quark\-/antiquark pair. As a result we will probably never be able to
+  observe an isolated quark. This phenomenon is referred to as colour
+  confinement or simply confinement.
+\item With the first \(beta_1\) coefficient being positive we notice that for
+  increasing scales (\(\mu_2>\mu_1\)) the coupling decreases logarithmically.
+  This leads to asymptotic freedom, which states, that for high energies (small
+  distances), the strong coupling becomes diminishing small and quarks and
+  gluons do not interact. Thus in isolated baryons and mesons the quarks are
+  separated by small distances, move freely and do not interact. \end{itemize}
 
 From the \textsc{rge} we have seen, that not only the coupling but also the
 masses carry an energy dependencies.
