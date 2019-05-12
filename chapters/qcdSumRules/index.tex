@@ -619,11 +619,85 @@ function
   \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
 \end{equation}
 
+\subsection{More Decompositions}
+\textcolor{red}{compositions check!}
+The two-point function can be Lorentz decomposed, but we can also decompose it
+into its transversal and longitudinal components. Both, the longitudinal and
+transversal components are related and have implications for a common used
+approximation: the \textbf{chiral limit}, where the quark masses are taken to
+zero (\(m_q \to 0\)).
+
+Starting with the decomposition into \define{V}{vector}, \define{A}{axial\-/vector},
+\define{S}{scalar} and \define{P}{pseudo-scalar}  components we can write
+\cite{Broadhurst1981,Jamin1992}
+\begin{equation}
+  \label{eq:correlatorVectorScalarDecomposition}
+  \begin{split}
+    \Pi^{\mu\nu}(q^2) &= (q^\mu q^\nu - q^2 g^{\mu\nu}) \Pi^{V,A}(q^2) + \frac{g^{\mu\nu}}{q^2} (m_i \mp m_j)\Pi^{S,P}(q^2) \\
+    &+ g^{\mu\nu}\frac{(m_i \mp m_j)}{q^2} [ \langle\Omega\vert \anti{q}_i q_i
+    \vert\Omega\rangle \mp \langle\Omega\vert \anti{q}_j q_j
+    \vert\Omega\rangle],
+  \end{split}
+\end{equation}
+which is composed of a vector $\Pi^{V,A}$ and scalar $\Pi^{S,P}$ part. The third
+term is a correction arising due to the physical vacuum $|\Omega\rangle$. The
+latter decomposition rewrites the correlator $\Pi^{\mu\nu}(q^2)$ into
+transversal and longitudinal components:
+\begin{equation}
+  \label{eq:correlatorTransversalLongitudinalDecomposition}
+  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2).
+\end{equation}
+With the two decompositions \cref{eq:correlatorVectorScalarDecomposition} and
+\cref{eq:correlatorTransversalLongitudinalDecomposition} we can now identify the
+longitudinal components of the correlator as being purely scalar, by multiplying
+\cref{eq:correlatorVectorScalarDecomposition} by two four-momenta and making use
+of the Ward-idendity \cref{eq:wardIdentity} we can write
+\begin{equation}
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
+\end{equation}
+which then can be related to the longitudinal component of
+\cref{eq:correlatorTransversalLongitudinalDecomposition} by comparison of the
+two equations
+\begin{equation}
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
+\end{equation}
+In a more eloquent way this can be expressed as
+\begin{equation}
+  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
+\end{equation}
+where we can see, that all mass terms are related to the longitudinal component
+of the correlator. By defining a combination of the transversal and longitudinal
+correlator
+\begin{equation}
+  \label{eq:correlatorCombination}
+  \Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)
+\end{equation}
+we can additionally relate the transversal and vectorial components via
+\begin{equation}
+  \label{eq:longitudinalCorrelator}
+  \begin{split}
+    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) +
+      (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu}
+      q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s),
+  \end{split}
+\end{equation}
+such that
+\begin{equation}
+  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)},
+\end{equation}
+where the vector/ axial-vector component of the correlator is now related to the
+newly defined transversal and longitudinal combination of the correlator. As the
+tau decays, with the limiting factor of the tau mass, can only decay into light
+quarks we will often neglect the quark masses and work in the so called chiral
+limit. In the chiral limit the longitudinal component of the correlator, which
+is proportional to the quark masses, vanishes.
+
 Having dealt exclusively with the perturbative part of the theory, we have to
 discuss \textsc{np} contributions. These arise due to non negligible
 long\-/distance effects. Thus to complete the needed ingredients for \textit{Sum
   Rules} we need a final ingredient the \define{ope}{Operator Product
   Expansion}, which treats the non\-/perturbative contributions of our theory.
+
 
 \section{Operator Product Expansion}
 \label{sec:ope}
@@ -919,6 +993,7 @@ cancel in the contour integral.
 We are free to multiply the upper equation with an analytic function
 \(\omega(s)\), which completes the \textsc{fesr}
 \begin{tcolorbox}[ams equation,myformula]
+  \label{eq:qcdSumRules}
   \int_0^{s_0} \omega(s) \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0}\omega(s)
   \Pi_{OPE}(s) \dif s
 \end{tcolorbox}
@@ -928,6 +1003,93 @@ correlator $\Pi_{OPE}(s)$. The analytic function \(\omega(s)\) plays the role of
 a weight. It can be used to further suppress the non\-/perturbative
 contributions coming from as \textit{duality violations} and also enhance or
 suppress different contributions of the \textsc{ope} as we will see.
+
+\subsection{Pinched weights to avoid DVs}
+We are free to multiply \cref{eq:correlatorContourIntegral} by an analytic weight function $\omega(s)$
+\begin{equation}
+  \int_0^{m_\tau} \omega(s) \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \omega(s) \Pi(s) \dif s.
+\end{equation}
+We can use this technique to suppress contributions for the two-point function
+close to the positive real axis by implementing so called pinched
+  weights of the form
+\begin{equation}
+  \omega(s) = \left(1-\frac{s}{m_\tau^2}\right)^k,
+\end{equation}
+where k is the degree of the pinched weight. The higher the degree the farther
+we operate from the critical positive real axis (see. \cref{fig:pinchedWeightGraphs}), which suppresses the effects of
+duality violations. This pinching of second degree appears quite naturally.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/monomialWeightGraphs.eps}
+  \caption{Monomial weights $(1-s/m_\tau^2)^k$ for degrees $1\to4$. We can see
+    that weights of higher pinching decrease faster, which comes in handy if we
+  want to suppress duality violations.}
+  \label{fig:monomialWeightGraphs}
+\end{figure}
+If we regard the include $\tau-decay$ ratio \cref{eq:rTauT+L}, we note that for the
+transversal component we already have a double pinched weight, the
+\textit{kinematic weight}
+\begin{equation}
+  \label{eq:kinematicWeight}
+  \omega_\tau(s) = \left( 1-\frac{s}{m_\tau^2} \right) \left( 1 + 2 \frac{s}{m_\tau^2} \right).
+\end{equation}
+In general it is said that a double pinched weight is sufficient to neglect
+effects caused by duality violation.
+
+We can also use different weights to control the dimensions of the OPE that
+contribute. The weights we are using have to be analytic, so that we can make
+use of Cauchy's theorem. Thus they can be represented as polynomials
+\begin{equation}
+  \omega(x) = \sum_i a_i x^i,
+\end{equation}
+every contributing monomial is responsible for a dimension of the OPE.
+Dimensions that are not represented in the weight polynomial do not contribute
+at all or are very suppressed as we will demonstrate now.
+
+The residue of a monomial $x^k$ is only different from 0 if its power $k=-1$:
+\begin{equation}
+  \label{eq:monomialWeights}
+  \oint_{C} x^k \dif x = i \int_0^{2\pi}\left(e^{i \theta}\right)^{k+1} \dif \theta
+  = \begin{cases} \mbox{$2 \pi i$} & \mbox{if } k=-1, \\ \mbox{0} & \mbox{otherwise} \end{cases}.
+\end{equation}
+Consequently if we exchange the kinematic weight of the include ratio
+\cref{eq:inclusiveRatio} through a monomial and neglect all terms of no interest
+to us we can write
+\begin{equation}
+  \label{eq:monomialInclusiveRatio}
+  \begin{split}
+  \left. R(x m_\tau) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \frac{x^k}{(x m_\tau)^{\frac{D}{2}}}C^{D}(x m_\tau) \\
+  &= \frac{1}{(m_\tau)^{\frac{D}{2}}} \oint_{\abs{x}=1} x^{k-D/2} \,C^{D}(x m_\tau),
+  \end{split}
+\end{equation}
+where $C^{D}$ are the $D$-dimensional Wilson coefficients. Thus combining
+\cref{eq:monomialWeights} with \cref{eq:monomialInclusiveRatio} we see that
+only Dimension  which fulfill
+\begin{equation}
+  k - D/2 = -1 \quad \implies \quad  D = 2(k+1)
+\end{equation}
+contribute to the OPE. For example the polynomial of the kinematic weight is
+given by
+\begin{equation}
+  (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3\underbrace{x^2}_{D=6} + 2\underbrace{x^3}_{D=8},
+\end{equation}
+where we underbraced the monomial and gave the active dimensions. A list of
+monomomials and their corresponding Dimensions up to dimension 14 can be found
+in \cref{table:monomialDimensions}.
+\begin{table}
+  \centering
+  \begin{tabular}{l|ccccccc}
+    \toprule
+    \textbf{monomial:} & $x^0$ & $x^1$ & $x^2$ & $x^3$ & $x^5$ & $x^6$ & $x^7$\\
+    \textbf{dimension:} & $D^{(2)}$ & $D^{(4)}$ & $D^{(6)}$ & $D^{(8)}$ & $D^{(10)}$ & $D^{(12)}$ & $D^{(14)}$\\
+    \bottomrule 
+  \end{tabular}
+  \caption{List of monomial and their corresponding ``active'' dimensions in the OPE.}
+  \label{table:monomialDimensions}
+\end{table}
+This behavior enables us to bring out different dimensions of the OPE and
+suppress contributions of higher order ($D\geq10$) for which less is known. 
+
 
 For the interested reader we gathered several introduction texts to the
 \textsc{qcdsr}, which where of great use to us
