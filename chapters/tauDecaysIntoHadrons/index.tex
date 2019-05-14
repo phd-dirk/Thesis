@@ -29,25 +29,30 @@ can be taken from \cite{Schwab2002}.
 The inclusive ratio is given by:
 \begin{equation}
   \label{eq:hadronicTauDecayRatio}
-  R_\tau(s) = 12 \pi \int_0^{m_\tau} \frac{\dif s}{m_\tau^2}
+  R_\tau(s) = 12 \pi S_{EW} \abs{V_{ud}}^2 \int_0^{m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
-  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(T)}(s) + \Ima \Pi^{(L)}(s) \right],
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Ima \Pi^{(1)}(s) + \Ima \Pi^{(0)}(s) \right],
 \end{equation}
-where $\Ima \Pi$ is imaginary part of the two-point function we introduced in
-\cref{sec:twoPointFunction}. Applying Cauchy's theorem, as seen in
+where \(S_{EW}\) is the electro\-/weak correction,
+\(V_{ud}\) the corresponding \define{ckm}{Cabibbo-Kobayashi-Maskawa} matrix
+element and $\Ima \Pi$ is imaginary part of the two-point function we introduced in
+\cref{sec:twoPointFunction}. For brevity we will omit the electro\-/weak
+\(S_{EW}\) and \textsc{ckm} factors from now on. \textscolor{red}{longitudinal transversal decomposition}. Applying Cauchy's theorem, as seen in
 \cref{eq:qcdSumRules}, to the \cref{eq:hadronicTauDecayRatio} we get
 \begin{equation}
   \label{eq:rTauT+L}
   R_\tau = 6 \pi i \oint_{s=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)
-  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(T)}(s) + \Pi^{(L)}(s) \right].
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(1)}(s) + \Pi^{(0)}(s) \right].
 \end{equation}
 It is furthermore convenient to work with \(\Pi^{(T+L)}\), which has been
 defined in \cref{eq:correlatorCombination}. As a result we can further rewrite
 the hadronic tau decay ratio into
 \begin{equation}
   \label{eq:tauDecayRatioT+L}
-  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2} \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \right].
+  R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2}
+  \left( 1 - \frac{s}{m_\tau^2} \right)^2
+  \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(1+0)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(0)}(s) \right].
 \end{equation}
 In the case of tau decays we only have to consider vector and axial-vector
 contributions of decays into up, down and strange quarks. Thus taking $i,j$ as
@@ -91,7 +96,7 @@ physical quantity from the two\-/point function:
 longitudinal plus transversal and the solely longitudinal part contributions:
 \begin{equation}
   \label{eq:adlerFunction}
-  D^{(T+L)}(s) \equiv -s \od{}{s} \Pi^{(T+L)}(s), \qquad D^{(L)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(L)}(s)).
+  D^{(1+0)}(s) \equiv -s \od{}{s} \Pi^{(1+0)}(s), \qquad D^{(0)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(0)}(s)).
 \end{equation}
 The two-point functions in \cref{eq:tauDecayRationT+L} can now be replaced with
 the help of partial integration
@@ -102,12 +107,19 @@ We will do the computation for each of the two cases $(T+L)$ and $(L)$ separate.
 Starting by the transversal plus longitudinal contribution we get:
 \begin{equation}
   \begin{split}
-    R_\tau^{(1)} &= \frac{6 \pi i}{m_\tau^2} \oint_{\abs{s}=m_\tau^2}\underbrace{\left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right)}_{=u(x)} \underbrace{ \vphantom{\left( \frac{s}{m_\tau^2} \right)} \Pi^{(L+T)}(s)}_{=V(x)} \\
-    &= \frac{6 \pi i}{m_\tau^2} \left\{  \left[ -\frac{m_\tau^2}{2} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right) \Pi^{(L+T)}(s) \right]_{\abs{s}=m_\tau^2} \right. \\
-    &\quad+ \oint_{\abs{s}=m_\tau^2} \underbrace{-\frac{m_\tau^2}{2} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right)}_{=U(x)} \underbrace{\vphantom{\left( \frac{1}{m_\tau^2} \right)}\od{}{s} \Pi^{(L+T)}(s)}_{=v(x)} \left. \vphantom{\left[ \left( \frac{1}{m_\tau^2} \right) \right]} \right\} \\
+    R_\tau^{(1)} &= \frac{6 \pi i}{m_\tau^2} \oint_{\abs{s}=m_\tau^2}\underbrace{
+      \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right)
+    }_{=u(x)} \underbrace{ \vphantom{\left( \frac{s}{m_\tau^2} \right)} \Pi^{(1+0)}(s)}_{=V(x)} \\
+    &= \frac{6 \pi i}{m_\tau^2} \left\{  \left[ -\frac{m_\tau^2}{2}
+    \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right)
+    \Pi^{(1+0)}(s) \right]_{\abs{s}=m_\tau^2} \right. \\
+    &\quad+ \oint_{\abs{s}=m_\tau^2} \underbrace{-\frac{m_\tau^2}{2}
+      \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right)
+    }_{=U(x)} \underbrace{\vphantom{\left( \frac{1}{m_\tau^2} \right)}\od{}{s} \Pi^{(1+0)}(s)}_{=v(x)}
+    \left. \vphantom{\left[ \left( \frac{1}{m_\tau^2} \right) \right]} \right\} \\
     &= -3 \pi i \oint_{\abs{s}=m_\tau^2s} \frac{\dif s}{s} \left( 1 -
       \frac{s}{m_\tau^2} \right)^3 \left( 1 + \frac{s}{m_\tau^2} \right)
-    \od{}{s} D^{(L+T)}
+    \od{}{s} D^{(1+0)}(s)
   \end{split}
 \end{equation}
 where we fixed the integration constant to $C=-\frac{m_\tau^2}{2}$ in the second
@@ -122,54 +134,78 @@ where \(s \to m_\tau^2 e^{-i \phi}\) and \((1 - e^{-i \cdot 0}) = (1 - e^{-i
 yields
 \begin{equation}
   \begin{split}
-    R_\tau^{(L)} &= \oint_{\abs{s}=m_\tau^2} \dif s \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( - \frac{2 s}{m_\tau^2} \right) \Pi^{(L)}(s) \\
+    R_\tau^{(0)} &= \oint_{\abs{s}=m_\tau^2} \dif s
+    \left( 1 - \frac{s}{m_\tau^2} \right)^2
+    \left( - \frac{2 s}{m_\tau^2} \right) \Pi^{(0)}(s) \\
     &= - 4 \pi i \oint \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3
-    D^{(L)}(s)
+    D^{(0)}(s)
   \end{split}
 \end{equation}
 Consequently combining the two parts results in
 \begin{equation}
-  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{s} \left( 1 - \frac{s}{m_\tau^2} \right)^3 \left[ 3 \left( 1 + \frac{s}{m_\tau^2} D^{(L+T)}(s) + 4 D^{(L)}(s) \right) \right].
+  R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif s}{s}
+  \left( 1 - \frac{s}{m_\tau^2} \right)^3
+  \left[ 3 \left( 1 + \frac{s}{m_\tau^2} D^{(1+0)}(s) + 4 D^{(0)}(s) \right) \right].
 \end{equation}
-It is convenient to define $x=s/m_\tau^2$ such that we can rewrite the inclusive
+It is convenient to define \(x=s/m_\tau^2\) such that we can rewrite the inclusive
 ratio as
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:rTauFinal}
   R_\tau = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif x}{x} (1 - x)^3 \left[ 3
-    (1 + x) D^{(L+T)}(m_\tau^2 x) + 4 D^{(L)}(m_\tau^2 x) \right],
+    (1 + x) D^{(1+0)}(m_\tau^2 x) + 4 D^{(0)}(m_\tau^2 x) \right],
 \end{tcolorbox}
 which will be the final expression we will be using to express the inclusive tau
 decay ratio.
 
 
 
-\section{Computation of \(R_\tau\)}
-The previously derived expression for the tau decay ratio can be further
-organised in different \(\delta\) contributions
+\section{Theoretical computation of \(R_\tau\)}
+The previously derived expression for the tau decay ratio is at a first
+approximation equal to the number of colours
+\begin{equation}
+  R_\tau \approx N_c.
+\end{equation} 
+If we take into account the \textsc{ckm} matrix
+\(V_{ud}\) and the perturbative \(\delta_{pt}\), non\-/perturbative
+\(\delta_{npt}\) and electroweak corrections \(S_{EW}\) we can organise the
+vector and axial\-/vector inclusive decay ratio as
 \begin{equation}
   \label{eq:rTauContributions}
-  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{\omega}^{(0)} + \delta^{EW}_{\omega} + \delta_{\omega}^{DVs} + \sum_{D \leq 2} \delta^{(D)}_{ud,\omega} \right),
+  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} \right).
 \end{equation}
-where \(\delta^{(0)}\) is the perturbative contribution, \(\delta^{(EW)}\) is a
-electroweak correction, \(\delta^{(DV)}\) is the duality violation correction
-and \(\delta^{(D)}\) are the higher dimensional contributions from the
-\textsc{ope}. Note that in this work we will assume \(delta^{(DV)}\) to be
-negligible small for the weights we will apply.
+Note that the factor \(1/2\) comes from the fact that in the chiral limit the
+vector and axial\-/vector contributions are equal and that the perturbative and
+non\-/perturbative corrections depend on the chosen weight function \(\omega\).
 
-We now want to derive the theoretical expressions needed to calculate every
-contribution to \cref{eq:rTauContributions} starting with the perturbative
-contribution.
+For the kinematic weight
+\begin{equation}
+  \omega_\tau \equiv (1-x)^2(1+2x),
+\end{equation}
+we have a dominant perturbative contribution of \(\delta_{pt} \approx 20\%\)
+\cite{Pich2013} and a minor, but not negligible, non\-/perturbative contribution
+of \(\delta_{npt} = -0.007 \pm 0.004\) \cite{Braaten1991}.
+
+We now want to derive the theoretical expressions needed to calculate both of
+the corrections to \cref{eq:rTauContributions} starting with the perturbative
+one.
 
 
 \subsection{The perturbative contribution}
-We will treat the correlator in the chiral limit for which the longitudinal
-components $\Pi^{L}(s)$ of \cref{eq:longitudinalCorrelator} vanish. Thus the
-axial and vectorial contributions are equal. In the massless case we then can
-write the vector correlation function $\Pi(s)$ as a sum over different orders of
-\(\alpha\) \cite{Beneke2008}:
+The perturbative contribution \(\delta_{pt}\) to the inclusive tau decay ratio
+is given as the first term of the \textsc{ope}. Currently the perturbative
+expansion has been calculated to fourth order \(\mathcal{O}(\alpah_s^4)\). Due to
+their role as dominant corrections their uncertainties from unknown higher-order
+corrections dominate the final error of the determination of the strong
+coupling \cite{Pich2016}.
+
+We will treat the correlator in the chiral limit, in which the scalar and
+pseudo\-/scalar contribution of the two\-/point function vanish and the axial
+and vectorial contributions are equal. As a result we can focus ourselves of the
+vector correlation function two\-/point function \(\Pi_V(s)\), which can be
+expanded as a sum over different orders of \(\alpha\) \cite{Beneke2008}:
 \begin{equation}
   \label{eq:correlatorExpansion}
-  \Pi_V^{T+L}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
+  \Pi_V^{1+0}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
 \end{equation}
 The coefficient $c_{n,k}$ up to two-loop order can be obtained by Feynman
 diagram calculations. With the diagrams of
@@ -236,15 +272,15 @@ needs to be a physical quantity, which we can be achieved with the previously
 defined Adler function (\cref{eq:adlerFunction}). The correct expression for the
 correlator expansion in \cref{eq:correlatorExpansion} is then given by
 \begin{tcolorbox}[ams equation,myformula]
-  D_V^{(T+L)} = - s \od{\Pi_V^{(T+L)}(s)}{s} = \frac{N_c}{12 \pi^2}
+  D_V^{(1+0)} = - s \od{\Pi_V^{(1+0)}(s)}{s} = \frac{N_c}{12 \pi^2}
   \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1},
 \end{tcolorbox}
 where we used \(\dif L^k/ \dif s=k\ln(-s/\mu^2)^{k-1}(-1/\mu^2)\). Applying the
 \textsc{rge} (\cref{eq:rge}) to the scale\-/invariant Adler function yields
 \begin{equation}
   \label{eq:rgeAdler}
-  -\mu \od{}{\mu} D_V^{(T+L)} = -\mu \od{}{\mu} \left( \pd{}{L} \dif L + \pd{}{a_s} \dif a_s \right) D_V^{T+L}
-  = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{T+L} = 0,
+  -\mu \od{}{\mu} D_V^{(1+0)} = -\mu \od{}{\mu} \left( \pd{}{L} \dif L + \pd{}{a_s} \dif a_s \right) D_V^{1+0}
+  = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{1+0} = 0,
 \end{equation}
 where we made use of the \(\beta\) function, which is defined in
 \cref{eq:betaFunction}, and of the expression \(\dif L / \dif \mu = - 2/ \mu\).
@@ -274,53 +310,58 @@ function to the first order:
   D(s) = \frac{N_c}{12 \pi^2} \left[ c_{01} + c_{11} a_\mu \left( c_{21} - \frac{1}{2} \beta_1 c_{11} L  \right) a_\mu^2 \right] + \mathcal{O}(a_\mu^3).
 \end{equation}
 
-\textcolor{red}{continue here}
-We have used the \textsc{rge} to relate Adler-function coefficients and thus
-reduce its numbers. But as we will see in the following section the \textsc{rge}
-gives us two different choices in the order of the computation of the
-perturbative contribution to the inclusive tau decay ratio.
+\textcolor{red}{continue here} We have used the \textsc{rge} to relate
+Adler-function coefficients and thus reduce its numbers. But as we will see in
+the following section the \textsc{rge} gives us two different choices in the
+order of the computation of the perturbative contribution to the inclusive tau
+decay ratio.
 
-\subsection{Renormalization group summation}
-By making use of the RGE we have to decide about the order of mathematical
-operations we perform. As the perturbative contribution $\delta^{(0)}$ is
-independent on the scale $\mu$ we are confronted with two choices
-\textbf{fixed-order perturbation theory} (FOPT) or \textbf{contour-improved
-  perturbation theory}. Each of them yields a different result and is the main
-source of error in extracting the strong coupling from $\tau$-decays.
+\subsubsection{Renormalization group summation}
+By making use of the \textsc{rge} we have to decide about the order of
+mathematical operations we perform. As the perturbative contribution
+\(\delta_{pt}}\) is independent on the scale \(\mu\) we are confronted with two
+choices \define{fopt}{fixed\-/order perturbation theory} or
+\define{cipt}{contour\-/improved perturbation theory}. Each of them yields a
+different result, which is the main source of error in extracting the strong
+coupling from tau decays.
 
-We can write the perturbative contribution $\delta^{(0)}$ to $R_\tau$ (see
-\cref{eq:rTauContributions}) in the chiral limit, such that $D^{(L)}$ vanishes
-as
+We can write the perturbative contribution \(\delta_{pt}\) of \(R_\tau\)
+(\cref{eq:rTauContributions}) in the chiral limit, such that the longitudinal
+contribution \(D^{(0)}\), in \cref{eq:rTauFinal} vanishes. Thus inserting the
+expansion of \(D_V^{(1+0)}\) into the hadronic tau decay width
+\cref{eq:rTauFinal} yields
 \begin{equation}
   \label{eq:rTauDelta0}
-  \delta^{(0)} = \sum_{n=1}^{\infty} a_\mu^n \sum_{k=1}^n k c_{n,k} \frac{1}{2 \pi i} \oint_{\abs{x}=1} \frac{\dif x}{x} (1-x)^3(1+x) \log \left( \frac{-M_\tau^2 x}{\mu^2} \right)^{k-1},
+  \delta_{pt} = \sum_{n=1}^{\infty} a_\mu^n \sum_{k=1}^n k c_{n,k} \frac{1}{2 \pi i} \oint_{\abs{x}=1} \frac{\dif x}{x} (1-x)^3(1+x) \log \left( \frac{-m_\tau^2 x}{\mu^2} \right)^{k-1}.
 \end{equation}
-where we inserted the expansion of $D_V^{(T+L)}$ \cref{eq:adlerFunction} into
-$R_\tau$ \cref{eq:rTauFinal}. Keep in mind that the contributions from the
-vector and axial-vector correlator are identical in the massless case:
+Keep in mind that the contributions from the vector and axial-vector correlator
+are identical in the massless case:
 \begin{equation}
-  D^{(T+L)} = D^{(T+L)}_V + D^{(T+L)}_A = 2 D^{(T+L)}_V.
+  D^{(1+0)} = D^{(1+0)}_V + D^{(1+0)}_A = 2 D^{(1+0)}_V.
 \end{equation}
 
-In the following we will explain both the descriptions, starting by FOPT. By
-using the FOPT prescription we fix $\mu^2=m_\tau^2$ leading to
+To continue evaluating the perturbative part we can now either follow the
+description of \textsc{fopt} or \textsc{cipt}. We will now present both.
+
+In \textsc{fopt} we fix the scale at the tau mass (\(\mu^2=m_\tau^2\)), which
+leaves us with the integration over the logarithm, as seen in
 \begin{equation}
   \delta_{FO}^{(0)} = \sum_{n=1}^\infty a(m_\tau^2)^n \sum_{k=1}^n k c_{n,k} J_{k-1}
 \end{equation}
-where the contour integrals $J_l$ are defined by
+where the contour integrals \(J_l\) are defined by
 \begin{equation}
   J_l \equiv \frac{1}{2\pi i} \oint_{\abs{x}=1} \frac{\dif x}{x} (1-x)^3(1+x) \log^l(-x).
 \end{equation}
-The integrals $J_l$ up to order $\alpha_s^4$ are given by \cite{Beneke2008}:
+The integrals \(J_l\) up to order \(\alpha_s^4\) are given by \cite{Beneke2008}:
 \begin{equation}
   J_0 = 1, \quad J_1 = -\frac{19}{12} \quad J_2 = \frac{265}{72} - \frac{1}{3} \pi^2, \quad J_3 = - \frac{3355}{288} + \frac{19}{12}\pi^2.
 \end{equation}
-Using FOPT the strong coupling $a(\mu)$, which runs with the scale $\mu$, is
-fixed at $a(m_\tau^2)$ and can be taken out of the closed-contour integral. Thus
-we solely to integrate over the logarithms $\log(-s/m_\tau^2)$.
+Using \textsc{fopt} the strong coupling \(a(\mu)\) is fixed at the tau mass
+scale \(a(m_\tau^2)\) and can be taken out of the closed-contour integral. Thus
+we solely have to integrate over the logarithms \(\log(x)\).
 
-Using CIPT we can sum the logarithms by setting the scale to $\mu^2 = -m_\tau^2
-x$ in \cref{eq:rTauDelta0}, resulting in:
+Using \textsc{cipt} we can sum the logarithms by setting the scale to \(\mu^2 = -m_\tau^2
+x\) in \cref{eq:rTauDelta0}, resulting in:
 \begin{equation}
   \delta^{(0)}_{CI} = \sum_{n=1}^\infty c_{n,1} J_n^a(m_\tau^2),
 \end{equation}
@@ -328,109 +369,108 @@ where the contour integrals $J_l$ are defined by
 \begin{equation}
   J_n^a(m_\tau^2) \equiv \frac{1}{2 \pi i} \oint_{\abs{x}=1} \frac{\dif x}{x} (1-x)^3(1+x) a^n(-m_\tau^2 x).
 \end{equation}
-All logarithms vanish except the ones for $k=1$:
+Note that all logarithms vanish, except the ones with index \(k=1\):
 \begin{equation}
   \log(1)^{k-1} =  \begin{cases} \mbox{1} & \mbox{if } k=1, \\ \mbox{0} & k\neq 1 \end{cases}
 \end{equation}
-which selects adler function coefficients $c_{n,1}$ with a fixed $k=1$. Handling
-the logarithms left us with the integration of $\alpha_s(- m_\tau^2 x)$ over the
-closed-contour $\oint_{\abs{x}=1}$, which now depends on the integration
-variable x. In general we have to decide if we want to perform a contour
-integration with a constant coupling constant and variable logarithms (FOPT) or
-``constant logarithms'' and a running coupling (CIPT).
+which selects the Adler function coefficients \(c_{n,1}\). Handling the
+logarithms left us with the integration of \(\alpha_s(- m_\tau^2 x)\) over the
+closed-contour \(\oint_{\abs{x}=1}\), which now depends on the integration
+variable \(x\).
 
-To emphasize the differences in both approaches we can calculate the
-perturbative contribution $\delta^{(0)}$ to $R_\tau$ for the two different
-prescriptions yielding \cite{Beneke2008}
+In general we have to decide if we want to perform a contour integration with a
+constant coupling constant and variable logarithms (\textsc{fopt}) or ``constant
+logarithms'' and a running coupling (\textsc{cipt}). To emphasize the
+differences in both approaches we can calculate the perturbative contribution
+\(\delta^{(0)}\) to \(R_\tau\) for the two different prescriptions yielding
+\cite{Beneke2008}
 \begin{align}
   & \quad\qquad \alpha_s^2 \qquad \alpha_s^2 \qquad \alpha_s^3 \qquad \alpha_s^4 \quad\qquad \alpha_s^5 \nonumber\\
   \delta_{FO}^{(0)} &= 0.1082 + 0.0609 + 0.0334 + 0.0174 (+ 0.0088) = 0.2200 (0.2288) \\
   \delta_{CI}^{(0)} &= 0.1479 + 0.0297 + 0.0122 + 0.0086 (+ 0.0038) = 0.1984 (0.2021).
 \end{align}
-The series indicate, that CIPT converges faster and that both series approach a
-different value. This discrepancy represents currently the biggest theoretical
-uncertainty while extracting the strong coupling $\alpha_s$.
+The series indicate, that \textsc{cipt} converges faster and that both series
+approach a different value. This discrepancy represents currently the biggest
+theoretical uncertainty while extracting the strong coupling.
 
-As today we do not know if FOPT or CIPT is the correct approach of measuring
-$\alpha_s$. Therefore there are currently three ways of stating results:
-\begin{itemize}
-\item Quoting the average of both results.
-\item Quoting the CIPT result.
-\item Quoting the FOPT result.
-\end{itemize}
-
-We follow the approach of Beneke and Jamin \cite{Beneke2008} who have shown
-advantages of FOPT over CIPT.
+As today we do not know if \textsc{fopt} or \textsc{cipt} is the correct
+approach of measuring the strong coupling. Therefore there are currently three
+ways of stating results: Quoting the average of both results, quoting the
+\textsc{cipt} result or quoting the \textsc{fopt} result. We follow the approach
+of Beneke and Jamin \cite{Beneke2008} who prefere \textsc{fopt}, but also state
+their results in \textsc{cipt}.
 
 
-\section{Non-Perturbative OPE Contribution}
-The perturbative contribution to the Sum-Rule, that we have seen so far, is the
-dominant one. With
+\subsection{The Non-Perturbative OPE Contribution}
+The perturbative contribution to the sum rule is the dominant one. The
+contribution of the \textsc{npt} part can be quoted as
 \begin{equation}
-  \begin{split}
-    R_\tau^{FOPT} &= \\ 
-    R_\tau^{CIPT} &=  
-  \end{split}
+  \delta_{NP} = 0,007 \pm 0.004 \qquad \cite{Braaten1991},
 \end{equation}
+which is small, but not negligible. The \textsc{np} \textsc{ope} contributions
+are commonly categorised by even, increasing dimensions. Contributions of
+dimension larger than eight are normally neglected, due to the increasing
+suppression by factors of \(1/m_\tau^{2D}\), where \(D\) stands for the
+corresponding dimension.
 
-The NP vs perturbative contributions can be varied by chosen different weights
-than $\omega_\tau$.
-
+The dimension two contributions are proportional to the quark masses. As we are
+working in the chiral limit we will neglect them.
 
 \subsection{Dimension four}
-For the OPE contributions of dimension four we have to take into account the
-terms with masses to the fourth power $m^4$, the quark condensate multiplied by
-a mass $m \langle \anti{q} q \rangle$ and the gluon condensate $\langle GG
-\rangle$. The resulting expression can be taken from the appendix of
-\cite{Pich1999}, yielding:
+The next apparent \textsc{ope} contribution is of dimension four. Here we have
+to take into account the terms with masses to the fourth power $m^4$, the quark
+condensate multiplied by a mass $m \langle \anti{q} q \rangle$ and the gluon
+condensate $\langle GG \rangle$. The resulting expression can be taken from the
+appendix of \cite{Pich1999}, yielding:
 \begin{equation}
-  \left. D_{ij}^{(L+T)}(s) \right\rvert_{D=4} = \frac{1}{s^2} \sum_n \Omega^{(1+0)}(s/\mu^2)a^n,
+  \left. D_{ij}^{(1+0)}(s) \right\rvert_{D=4} = \frac{1}{s^2} \sum_n \Omega^{(1+0)}(s/\mu^2)a^n,
 \end{equation}
 where
 \begin{equation}
   \begin{split}
-    \Omega_n^{(1+0)} (s/\mu^2) &\,=\, \frac{1}{6}\langle aGG \rangle p_n^{(L+T)}(s/\mu^2) + \sum_k m_k \langle \anti{q}_k q_k \rangle r_n^{(L+T)}(s/\mu^2) \\
-    &\,+ 2\langle m_i \anti{q}_i q_i + m_j \anti{q}_j q_j \rangle q_n^{(L+T)} (s/\mu^2) \pm \frac{8}{3} \langle m_j \anti{q}_i q_i + m_i \anti{q}_j q_j \rangle t_n^{(L+T)} \\
-    &\,- \frac{3}{\pi^2} (m_i^4 + m_j^4) h_n^{(L+T)} (s/\mu^2) \mp \frac{5}{\pi^2} m_i m_j (m_i^2 + m_j^2) k_n^{(L+T)}(s/\mu^2)\\
-    &\,+ \frac{3}{\pi^2} m_i^2 m_j^2 g_n^{(L+T)}(s/\mu^2) + \sum_k m_k^4 j_n^{(L+T)}(s/\mu^2) + 2 \sum_{k \neq l} m_k^2 m_l^2 u_n^{(L+T)}(s/\mu^2)
+    \Omega_n^{(1+0)} (s/\mu^2) &\,=\, \frac{1}{6}\langle aGG \rangle p_n^{(1+0)}(s/\mu^2) + \sum_k m_k \langle \anti{q}_k q_k \rangle r_n^{(1+0)}(s/\mu^2) \\
+    &\,+ 2\langle m_i \anti{q}_i q_i + m_j \anti{q}_j q_j \rangle q_n^{(1+0)} (s/\mu^2) \pm \frac{8}{3} \langle m_j \anti{q}_i q_i + m_i \anti{q}_j q_j \rangle t_n^{(1+0)} \\
+    &\,- \frac{3}{\pi^2} (m_i^4 + m_j^4) h_n^{(1+0)} (s/\mu^2) \mp \frac{5}{\pi^2} m_i m_j (m_i^2 + m_j^2) k_n^{(1+0)}(s/\mu^2)\\
+    &\,+ \frac{3}{\pi^2} m_i^2 m_j^2 g_n^{(1+0)}(s/\mu^2) + \sum_k m_k^4
+    j_n^{(1+0)}(s/\mu^2) + 2 \sum_{k \neq l} m_k^2 m_l^2 u_n^{(1+0)}(s/\mu^2)
   \end{split}
 \end{equation}
 The perturbative expansion coefficients are known to $\mathcal{O}(a^2)$ for the
 condensate contributions,
 \begin{equation}
   \begin{array}{lll}
-    p_0^{(L+T)}=0, & p_1^{(L+T)}=1, & p_2^{(L+T)}=\frac{7}{6}, \\
-    r_0^{(L+T)}=0, & r_1^{(L+T)}=0, & r_2^{(L+T)}=-\frac{5}{3}+\frac{8}{3}\zeta_3-\frac{2}{3}\log(s/\mu^2), \\
-    q_0^{(L+T)}=1, & q_1^{(L+T)}=-1, & q_2^{(L+T)}=-\frac{131}{24}+\frac{9}{4}\log(s/\mu^2) \\
-    t_0^{(L+T)}=0 & t_1^{(L+T)}=1, & t_2^{(L+T)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2).
+    p_0^{(1+0)}=0, & p_1^{(1+0)}=1, & p_2^{(1+0)}=\frac{7}{6}, \\
+    r_0^{(1+0)}=0, & r_1^{(1+0)}=0, & r_2^{(1+0)}=-\frac{5}{3}+\frac{8}{3}\zeta_3-\frac{2}{3}\log(s/\mu^2), \\
+    q_0^{(1+0)}=1, & q_1^{(1+0)}=-1, & q_2^{(1+0)}=-\frac{131}{24}+\frac{9}{4}\log(s/\mu^2) \\
+    t_0^{(1+0)}=0 & t_1^{(1+0)}=1, & t_2^{(1+0)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2).
   \end{array}
 \end{equation}
 while the $m^4$ terms have been only computed to $\mathcal{O}(a)$
 \begin{equation}
   \begin{array}{lll}
-    h_0^{(L+T)}=1-1/2 \log(s/\mu^2), & h_1^{(L+T)}=\frac{25}{4}-2\zeta_3-\frac{25}{6}\log(s/\mu^2)-2 \log(s/\mu^2)^2, \\
-    k_0^{(L+T)}=0, & k_1^{(L+T)}=1-\frac{2}{5}\log(s/\mu^2), \\
-    g_0^{(L+T)}=1, & g_1^{(L+T)}=\frac{94}{9}-\frac{4}{3}\zeta_3-4 \log(s/\mu^2), \\
-    j_0^{(L+T)}=0, & j_1^{(L+T)}=0, \\
-    u_0^{(L+T)}=0, & u_2^{(L+T)}=0.
+    h_0^{(1+0)}=1-1/2 \log(s/\mu^2), & h_1^{(1+0)}=\frac{25}{4}-2\zeta_3-\frac{25}{6}\log(s/\mu^2)-2 \log(s/\mu^2)^2, \\
+    k_0^{(1+0)}=0, & k_1^{(1+0)}=1-\frac{2}{5}\log(s/\mu^2), \\
+    g_0^{(1+0)}=1, & g_1^{(1+0)}=\frac{94}{9}-\frac{4}{3}\zeta_3-4 \log(s/\mu^2), \\
+    j_0^{(1+0)}=0, & j_1^{(1+0)}=0, \\
+    u_0^{(1+0)}=0, & u_2^{(1+0)}=0.
   \end{array}
 \end{equation}
 
 \subsection{Dimension six and eight}
 Our application of dimension six contributions is founded in \cite{Braaten1991}
-and has previously been calculated beyond leading order by \cite{Lanin1986}.
-The operators appearing are the masses to the power six $m^6$, the four-quark
+and has previously been calculated beyond leading order by \cite{Lanin1986}. The
+operators appearing are the masses to the power six $m^6$, the four-quark
 condensates $\langle \anti q q \anti q q \rangle$, the three-gluon condensates
 $\langle g^3 G^3 \rangle$ and lower dimensional condensates multiplies by the
 corresponding masses, such that in total the mass dimension of the operator will
-be six.
-As there are too many parameters to be fitted with experimental data we have to
-omit some of them, starting with the three-gluon condensate, which does not
-contribute at leading order. The four-quark condensates known up to
+be six. As there are too many parameters to be fitted with experimental data we
+have to omit some of them, starting with the three-gluon condensate, which does
+not contribute at leading order. The four-quark condensates known up to
 $\mathcal{O}(a^2)$, but we will make use of the \textit{vacuum saturation
-  approach} \cite{Beneke2008,Braaten1991,Shifman1978} to express them in quark, anti-quark condensates $\langle q \anti{q} \rangle$.
-In our work we take the simplest approach possible: Introducing an effective
-dimension six coefficient $\rho_{V/A}^{(6)}$ divided by the appropriate power in s
+  approach} \cite{Beneke2008,Braaten1991,Shifman1978} to express them in quark,
+anti-quark condensates $\langle q \anti{q} \rangle$. In our work we take the
+simplest approach possible: Introducing an effective dimension six coefficient
+$\rho_{V/A}^{(6)}$ divided by the appropriate power in s
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)} \right\rvert_{D=6} = 0.03 \frac{\rho_{V/A}^{(6)}}{s^3}
 \end{equation}
@@ -442,7 +482,68 @@ dimension six one we keep the simplest approach, leading to
 \end{equation}
 
 
-\subsection{Duality Violations}
+\section{Duality Violations}
+As seen in \cref{sec:duality} we have to assume quark\-/hadron duality for the
+\textsc{qcdsr} to work. Unfortunately duality cannot always be taken for granted
+and the existence of \define{dv}{duality violations} is a well known
+\cite{Cata2008,Cata2009}. As we will see in the following section, the
+experimental measured total tau decay ratio has a exponential decreasing,
+sinusoidal contributions, that cannot be reproduced by the \textsc{ope} solely.
+Consequently for the cases with apparent \textsc{dv} we also have to take into
+account \textsc{dv} corrections and adapt \cref{eq:rTauContributions}
+\begin{equation}
+  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{dv}^{\omega} \right).
+\end{equation}
+The \textsc{dv} correction has been modelled by a series of papers
+\cite{Boito2011a,Boito2012,Boito2014} with the following ansatz 
+\begin{equation}
+  \rho_{V/A}^{DV}(s) = e^{-(\delta_{V/A}+\gamma_{V/A}s)} \sin(\alpha_{V/A} + \beta_{V/A}s),
+\end{equation}
+to parametrise the \textsc{dv} contributions. The \textsc{dv} would then appear
+as an additional term in the inclusive tau decay ratio
+\begin{equation}
+  R_{\tau,V/A} = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif x}{x} (1 - x)^3 \left[ 3
+    (1 + x) D^{(1+0)}(m_\tau^2 x) + 4 D^{(0)}(m_\tau^2 x) \right] +  \mathcal{D}_{V/A}(m_\tau^2),
+\end{equation}
+where the \textsc{dv} would be given as
+\begin{equation}
+  \mathcal{D}_\omega(m_\tau^2) = -12 \pi^2 \int_{m_\tau^2}^\infty \frac{\dif s}{m_\tau^2} \omega(s) \rho_{V/A}.
+\end{equation}
+
+\subsection{Pinched weights to avoid DVs}
+We are free to multiply \cref{eq:correlatorContourIntegral} by an analytic
+weight function $\omega(s)$
+\begin{equation}
+  \int_0^{m_\tau} \omega(s) \Pi(s) \dif s = \frac{i}{2} \oint_{s=m_\tau} \omega(s) \Pi(s) \dif s.
+\end{equation}
+We can use this technique to suppress contributions for the two-point function
+close to the positive real axis by implementing so called pinched weights of the
+form
+\begin{equation}
+  \omega(s) = \left(1-\frac{s}{m_\tau^2}\right)^k,
+\end{equation}
+where k is the degree of the pinched weight. The higher the degree the farther
+we operate from the critical positive real axis (see.
+\cref{fig:pinchedWeightGraphs}), which suppresses the effects of duality
+violations. This pinching of second degree appears quite naturally.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/monomialWeightGraphs.eps}
+  \caption{Monomial weights $(1-s/m_\tau^2)^k$ for degrees $1\to4$. We can see
+    that weights of higher pinching decrease faster, which comes in handy if we
+    want to suppress duality violations.}
+  \label{fig:monomialWeightGraphs}
+\end{figure}
+If we regard the include $\tau-decay$ ratio \cref{eq:rTauT+L}, we note that for
+the transversal component we already have a double pinched weight, the
+\textit{kinematic weight}
+\begin{equation}
+  \label{eq:kinematicWeight}
+  \omega_\tau(s) = \left( 1-\frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right).
+\end{equation}
+In general it is said that a double pinched weight is sufficient to neglect
+effects caused by duality violation.
+
 
 
 \section{Experiment}
