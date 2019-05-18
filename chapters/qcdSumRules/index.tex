@@ -643,7 +643,7 @@ latter decomposition rewrites the correlator $\Pi^{\mu\nu}(q^2)$ into
 transversal and longitudinal components:
 \begin{equation}
   \label{eq:correlatorTransversalLongitudinalDecomposition}
-  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(T)}(q^2) + q^\mu q^\nu \Pi^{(L)}(q^2).
+  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(1)}(q^2) + q^\mu q^\nu \Pi^{(0)}(q^2).
 \end{equation}
 With the two decompositions \cref{eq:correlatorVectorScalarDecomposition} and
 \cref{eq:correlatorTransversalLongitudinalDecomposition} we can now identify the
@@ -657,12 +657,12 @@ which then can be related to the longitudinal component of
 \cref{eq:correlatorTransversalLongitudinalDecomposition} by comparison of the
 two equations
 \begin{equation}
-  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(L)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(0)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
 \end{equation}
 In a more eloquent way this can be expressed as
 \begin{equation}
   \label{eq:longitudinalTwoPointFunction}
-  s^2 \Pi^{(L)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
+  s^2 \Pi^{(0)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
 \end{equation}
 where we can see, that all mass terms are related to the longitudinal component
 of the correlator.
@@ -985,7 +985,7 @@ function
 \end{equation}
 which is by definition equal to the spectral function
 \begin{equation}
-  \rho(s) \equiv \frac{\Pi(s)}{\pi}.
+  \rho(s) \equiv \frac{\Ima\Pi(s)}{\pi}.
 \end{equation}
 After taking the limit of small epsilon we can relate the line integral to a
 finite momentum \(s0\) experimental spectral function to a theoretical

@@ -205,7 +205,7 @@ vector correlation function two\-/point function \(\Pi_V(s)\), which can be
 expanded as a sum over different orders of \(\alpha\) \cite{Beneke2008}:
 \begin{equation}
   \label{eq:correlatorExpansion}
-  \Pi_V^{1+0}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
+  \Pi_V^{(1+0)}(s) = - \frac{N_c}{12 \pi^2} \sum_{n=0}^\infty a_\mu^n \sum_{k=0}^{n+1} c_{n,k} L^{k} \quad \text{with} \quad L \equiv \ln \frac{-s}{\mu^2}.
 \end{equation}
 The coefficient $c_{n,k}$ up to two-loop order can be obtained by Feynman
 diagram calculations. With the diagrams of
@@ -547,22 +547,28 @@ effects caused by duality violation.
 
 
 \section{Experiment}
-The $\tau$-decay data we use to perform our QCD-analysis is from the
-\textbf{ALEPH} experiment. The ALEPH experiment was located at the
-large-electron-positron (LEP) collider at CERN laboratory in Geneva. LEP started
-producing particles in 1989 and was replaced in the late 90s by the
-large-hadron-collider, which makes use of the same tunnel of 27km circumference.
-The data produced within the experiment is still maintained by former ALEPH
-group members under led by M. Davier, which have performed regular updates on
-the data-sets \cite{Davier2013,Davier2008,Aleph2005}.
+The tau decay data we use to perform our \textsc{qcd} analysis is from the
+\textsc{aleph} experiment. The \textsc{aleph} experiment was located at the
+\define{lep}{large\-/electron\-/positron} collider at \define{cern}{European
+  Organisation for Nuclear Research} in Geneva. \textsc{lep} started producing
+particles in 1989 and was replaced in the late 90s by the
+\define{lhc}{large\-/hadron\-/collider}, which makes use of the same tunnel of
+\SI{27}{\kilo\meter} circumference. The data produced within the experiment is
+still maintained by former \textsc{aleph} group members under led by M. Davier,
+which have performed regular updates on the data-sets
+\cite{Davier2013,Davier2008,Aleph2005}.
 
-The measured spectral functions for the Aleph data are defined in
-\cite{Davier2007} and given for the transverse and longitudinal components separately:
+The measured spectral functions for the \textsc{aleph} data are defined in
+\cite{Davier2007} and given for the transverse and longitudinal components
+separately
 \begin{equation}
   \begin{split}
-    \rho^{(T)}_{V/A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}^2}S_{EW}} \frac{\mathcal{B}(\tau^- \to V^-/A^- \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \\
+    \rho^{(1)}_{V/A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}}^2S_{EW}} \frac{\mathcal{B}(\tau^- \to V^-/A^- \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \\
     &\quad\times \frac{\dif N_{V/A}}{N_{V/A}\dif s} \left[ \left( 1 - \frac{s}{m_\tau^2} \right)^2 \left( 1 + \frac{2s}{m_\tau^2} \right) \right]^{-1} \\
-  \rho^{(L)}_{A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}^2 S_{EW}}} \frac{\mathcal{B}(\tau^- \to \pi^-(K^-) \nu_\tau)}{\mathcal{B}(\tau^- \to e^- \anti{\nu}_e \nu_\tau)} \times \frac{\dif N_A}{N_A \dif s} \left( 1 - \frac{s}{m_\tau^2} \right)^{-2}.
+    \rho^{(0)}_{A}(s) &= \frac{m_\tau^2}{12 \abs{V_{ud}}^2 S_{EW}}
+    \frac{\mathcal{B}(\tau^- \to \pi^-(K^-) \nu_\tau)}{\mathcal{B}(\tau^- \to
+      e^- \anti{\nu}_e \nu_\tau)} \times \frac{\dif N_A}{N_A \dif s} \left( 1 -
+      \frac{s}{m_\tau^2} \right)^{-2}.
   \end{split}
 \end{equation}
 
@@ -575,57 +581,153 @@ The measured spectral functions for the Aleph data are defined in
 \end{equation}
 
 The data relies on a separation into vector and axial-vector channels. In the
-case of the Pions this can be achieved via counting. The vector channel is
+case of the pions this can be achieved via counting. The vector channel is
 characterised by a negative parity, whereas the axial-vector channel has
 positive parity. A quark has by definition positive parity, thus an anti-quark
-has a negative parity. A meson, like the Pion particle, is a composite particle
-consisting of an quark an anti-quark. Consequently a single Pion carries negative
-parity, an even number of Pions carries positive parity and an odd number of
-Pions carries negative parity:
+has a negative parity. A meson, like the pion particle, is a composite particle
+consisting of an quark an anti-quark. Consequently a single pion carries
+negative parity, an even number of Pions carries positive parity and an odd
+number of Pions carries negative parity:
 \begin{equation}
   n \times \pi = \begin{cases} \mbox{vector} & \mbox{if } n \text{ is even}, \\ \mbox{axial-vector} & \mbox{otherwise} \end{cases}.
 \end{equation}
 
-The contributions to the vector and axial channel can be seen in
-\textcolor{red}{figure}. The dominant modes in the vector case are
-\cite{Davier2006} $\tau^- \to \pi^-\pi^0 \nu_\tau$ and the $\tau^- \to \pi^-
-\pi^- \pi^+ \pi^0 \nu_\tau$. The first of these is produced by the $\rho(770)$
-meson, which in contrary to the pions carries angular momentum of one, which is
-also clearly visible as peak around $\SI{770}{\giga\eV}$ in
-\textcolor{red}{figure vector}. The dominant modes in the axial-vector case are
-$\tau^-\to \pi^-\nu_\tau$, $\tau^-\to \pi^- \pi^0 \pi^0 \nu_\tau$ and
-$\tau^- \to \pi^- \pi^- \pi^+\nu_\tau$. Here the three pion final states stem
-from the $a_1^-$-meson, which is also clearly visible as a peak in \textcolor{red}{figure}.
+The contributions to the spectral function for the vector, axial\-/vector and
+V+A channel can be seen in \cref{fig:aleph}. The dominant modes in the vector
+case are \cite{Davier2006} \(\tau^- \to \pi^-\pi^0 \nu_\tau\) and the \(\tau^-
+\to \pi^- \pi^- \pi^+ \pi^0 \nu_\tau\). The first of these is produced by the
+\(\rho(770)\) meson, which in contrary to the pions carries angular momentum of
+one, which is also clearly visible as peak around \(\SI{770}{\giga\eV}\) in
+\cref{fig:alephV}. The dominant modes in the axial-vector case are \(\tau^-\to
+\pi^-\nu_\tau\), \(\tau^-\to \pi^- \pi^0 \pi^0 \nu_\tau\) and \(\tau^- \to \pi^-
+\pi^- \pi^+\nu_\tau\). Here the three pion final states stem from the
+\(a_1^-\)\-/meson, which is also clearly visible as a peak in \cref{fig:alephA}.
 \begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{./images/specFuncAleph_V.eps}
+    \caption{Vector}
+    \label{fig:alephV}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.49\textwidth}
+    \includegraphics[width=\textwidth]{./images/specFuncAleph_A.eps}
+    \caption{Axial-Vector}
+    \label{fig:alephA}
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
     \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{./images/specFuncAleph_V.eps}
-        \caption{A gull}
-        \label{fig:gull}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{./images/specFuncAleph_A.eps}
-        \caption{A mouse}
-        \label{fig:mouse}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.8\textwidth}
-      \centering
-      \includegraphics[width=\textwidth]{./images/specFuncAleph_VpA.eps}
-      \label{fig:}
-    \end{subfigure}
-    \caption{Pictures of animals}\label{fig:animals}
+    \includegraphics[width=\textwidth]{./images/specFuncAleph_VpA.eps}
+    \caption{Vector plus Axial-Vector}
+    \label{fig:alephVPlusA}
+  \end{subfigure}
+  \caption{Visualisation of the vector, axial\-/vector and V+A spectral function
+    given by the \textsc{aleph} data \cite{Davier2013} in red with errors. We
+    also plotted the \textsc{FOPT} theoretical calculation up to third order in
+    \(\alpha_s\), for a fixed \(\alpha_s(\m_\tau)=0.329\) in blue. Note that the
+    perturbative contribution can only limited represent the experimental data.
+    It does not reproduce the sinusoidal form.}
+  \label{fig:aleph}
 \end{figure}
 
-wavy => DV
-OPE cannot reproduce
-suppressed in VpA
-regions below 1.5 GeV can still not be applied
+We furthermore added the perturbative result for a fixed
+\(\alpha_s(m_\tau)=0.329\) using \textsc{fopt} in \cref{fig:alephVPlusA}. Here
+we can see, that the perturbative result (the blue line) is an almost straight
+line and cannot reproduce the sinusoidal graph, given by the \textsc{aleph}
+data. This is especially the case for the \textsc{v} and \textsc{a} channel and
+is seen as an indicator for \textsc{dv}. Even including \textsc{np}, higher
+dimensions of the \textsc{ope} is not reproducing the wavy structure. In the
+case of \textsc{v+a}, we have an higher agreement between our perturbative graph
+and the data. In general we believe that \textsc{dv} are sufficiently suppressed
+in the case of \textsc{v+a} and will argument in favour of this statement in the
+following chapter. This is only the case for energies larger than
+\SI{1.5}{\giga\eV}, as the \(\rho\) resonance of the \textsc{v} channel is
+impossible to be represented by perturbative tools. For lower energies
+\textsc{dv} become to important to be neglected.
 
-The different inclusive $\tau$-decay ratios are then given by
-\begin{align}
-  R_{\tau,V} &= ...
-\end{align}
+\subsection{Total decay ratio from experimental data}
+The data has been last revised in 2014 \cite{Davier2014} and is publicly
+available \cite{AlephData}. It consists of the mass squared bin center
+\textit{sbin}, the bin size \textit{dsbin}, the normalised invariant mass
+squared distribution \textit{sfm2}, the total errors \textit{derr} and their
+correlations \textit{corerr}. To make the data comparable to our theoretical
+calculations we have to give the normalised invariant mass squared distribution
+\textit{sfm2} in form of the total decay ratio \(R_\tau\). The data is given as
+the normalised invariant mass squared distribution \((\dif N_i/\dif s)/N_i\)
+scaled by a factor \(100\) and further normalised to the corresponding branching
+ratio \(i\in\{\text{V,A,VpA}\}\). Thus we can connect the branching ratio of the
+\(i\)\-/channel to \textit{sfm2} as follows
+\begin{equation}
+  \mathcal{B}_{V/A} \equiv \int_0^{s_\tau} \dif s \frac{\sfm2_{V/A}(s)}{100}
+  \equiv \int_0^{s_\tau} \dif s \mathcal{B}_{V/A}
+  \left( \frac{\dif N_{V/A}}{N_{V/A}\dif s} \right)
+\end{equation}
+where we defined \(s_\tau \equiv m_\tau^2\). The total decay ratio \(R_\tau\) is
+defined as the decay width of taus decaying into hadrons over taus decaying into
+electrons and can be expressed via the corresponding branching ratios, which
+then can be connected to the invariant mass squared distribution \(\sfm2\)
+\begin{equation}
+  R_{\tau, V/A} = \frac{\mathcal{B}_{V/A}}{\mathcal{B_e}}
+  = \int_0^{s_\tau} \dif s \frac{\sfm2_{V/A}(s)}{100 \mathcal{B}_e}.
+\end{equation}
+Theoretically the decay ratio is given in \cref{eq:totalDecayRatio}. If we
+neglect the longitudinal contribution \(\Ima \Pi^{(0)}(s)\) and remember the
+definition of the spectral function (\cref{eq:spectralFunction}) and the
+kinematic weight (\cref{eq:kinematicWeight}), we can write the decay ratio as
+\begin{equation}
+  R_{\tau, i} = \int_0^{s_\tau} \frac{dif s}{s_\tau} \omega_\tau(s) \rho(s)
+\end{equation}
+and thus relate the spectral function to the experimental data
+\begin{equation}
+  \Rightarrow \rho(s) = \frac{s_\tau}{12 \pi^2 100 \mathcal{B}_e} \frac{\sfm2}{\omega_\tau}.
+\end{equation}
+To fit the experimental data we define a so\-/called \textit{spectral function
+  moment} (or \textit{moment})
+\begin{equation}
+  I_{i}^{exp, \omega} \equiv \int_0^{s_0} \frac{\dif s}{s_0} \omega\left( \frac{s}{s_0} \right) \rho(s),
+\end{equation}
+which will be used in our \(\chi^2\) fits, explained in the upcoming section.
+The data is given for discrete bins so we have to express the integral of the
+spectral function moment as sum over those bins. The final expression we use to fit parameters to the experimental data is then
+given by
+\begin{tcolorbox}[ams equation,myformula]
+  I_{exp, V/A}^{\omega}(s_0) = \frac{s_\tau}{100 \mathcal{B}_e s_0}
+  \sum_{i=1}^{N(s_0)} \frac{\omega\left( \frac{s_i}{s_0}
+    \right)}{\omega_\tau\left( \frac{s_i}{s_\tau}\right)} \sfm2_{V/A}(s_i).
+\end{tcolorbox}
 
+\section{Chisquare}
+\begin{equation}
+  \chi^2 = \left( I_i^{exp} - I_i^{th}(\vec\alpha) \right) C^{exp}_{ij}^{-1} \left( I_j^{exp} - I_j^{th}(\vec\alpha) \right)
+\end{equation}
+
+\subsection{Block Diagonal ``Fit\-/Quality''}
+extended \(\chi^2\) \cite{Boito2014}
+\begin{tcolorbox}[ams equation,myformula]
+  Q^2 = \sum_{\omega} \sum_{s_0^i,s_0^j}
+  \left(I_{\omega}^{exp}(s_0^i) - I_{\omega}^{th}(s_0^i,\vec\alpha)\right)
+  \widetilde{C}_{ij,\omega}^{-1}
+  \left(I_{\omega}^{exp}(s_0^j) - I_{\omega}^{th}(s_0^j,\vec\alpha)\right)
+\end{tcolorbox}
+
+\begin{equation}
+  \widetilde{C} = \begin{pmatrix}
+    C_{\omega=1} & 0           & \dots  & 0      \\
+    0           & C_{\omega=2} & \ddots & \vdots \\
+    \vdots      & \ddots      & \ddots & 0      \\
+    0           & \dots       & 0      & C_{\omega=n} 
+  \end{pmatrix}
+\end{equation}
+
+\subsubsection{Error Propagation}
+error propagation \cite{Boito2011a,Boito2011}
+\begin{equation}
+  \langle \delta \alpha_k \alpha_l \rangle = A_{km}^{-1}A_{ln}^{-1}
+  \pd{I_i^{th}(\vec\alpha)}{\alpha_m} \pd{I_r^{th}(\vec \alpha)}{\alpha_n}
+  \widetilde{C}_{ij}^{-1} \widetilde{C}_{ij}^{-1} \langle \delta I_k^{exp} \delta I_l^{exp} \rangle
+\end{equation}
+\begin{equation}
+  A_{kl} = \pd{I^{th}(\vec\alpha)}{\alpha_k} \widetile{C}_{ij}^{-1} \frac{I^{th}_j(\vec\alpha)}{\alpha_l}
+\end{equation}
 \end{document}
 % LocalWords:  adlerFunction rTauContributions adlerSndOrder betaFunction rTauT
 % LocalWords:  correlatorExpansion correlatorLoopDiagrams antiderivatives AlD
