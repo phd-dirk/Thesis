@@ -695,38 +695,77 @@ given by
     \right)}{\omega_\tau\left( \frac{s_i}{s_\tau}\right)} \sfm2_{V/A}(s_i).
 \end{tcolorbox}
 
-\section{Chisquare}
+\section{The Method of Least Squares}
+We apply \define{ls}{method of least squares} to fit the parameters
+\(\vec\alpha\) from the experimental data. We consequently construct a
+\(\chi^2\)\-/function
 \begin{equation}
-  \chi^2 = \left( I_i^{exp} - I_i^{th}(\vec\alpha) \right) C^{exp}_{ij}^{-1} \left( I_j^{exp} - I_j^{th}(\vec\alpha) \right)
+  \label{eq:ls}
+  \chi^2 = \left( I_i^{exp} - I_i^{th}(\vec\alpha) \right) C^{exp}_{ij}^{-1} \left( I_j^{exp} - I_j^{th}(\vec\alpha) \right),
 \end{equation}
+where \(I^{exp}\)/ \(I^{th}\) is a vector of experimental moments/ theoretical
+moments with the same weight, but different energy cutoffs \(s_0\), labelled by
+the index \(i\). In addition \(C^{exp}\) is the covariance matrix describing the
+correlation of the different experimental moments
+\(C_{ij}^{exp}=cov[I_i^{exp}I_j^{exp}]\), which is given by the \textsc{aleph} data.
+
+In general we aim to minimise the value of \(\chi^2\), which will fix the
+parameter vector \(\vec\alpha\). The properties of the \(\chi^2\)\-/function are
+well known and the best fits are characterised through \(\chi^2/dof\approx 1\),
+where the \textsc{dof} of the fit can be calculated through
+\begin{equation}
+  \text{#\textsc{dof}} = \text{#experimental moments} - \text{#parameters}.
+\end{equation}
+E.g. if we want to fit \(\alpha_s\) and the dimension four Wilson coefficient
+\(C_4\) we get \(7-2=5\) \textsc{dof}.
+
+The parameter vector \(\vec\alpha\) includes the strong coupling \(\alpha_s\),
+but also the included \textsc{ope} Wilson coefficient. Consequently we should
+have at least as many, if not more moments as parameters we want to fit. As the
+moments for different \(s_0\) are highly correlated we are limited to fit a set of
+only a few parameters.
+
+It is also possible to increase the number of moments used by using multiple
+weights \(\omega\). Unfortunately using different weights leads to highly
+correlated moments, which leads to numerical complications by inverting the
+covariance matrix in \cref{eq:ls}. To handle the high correlations we have to
+redefine our fit quality.
+
 
 \subsection{Block Diagonal ``Fit\-/Quality''}
-extended \(\chi^2\) \cite{Boito2014}
+Following \cite{Boito2014} we can redefine \textsc{ls} to
 \begin{tcolorbox}[ams equation,myformula]
-  Q^2 = \sum_{\omega} \sum_{s_0^i,s_0^j}
-  \left(I_{\omega}^{exp}(s_0^i) - I_{\omega}^{th}(s_0^i,\vec\alpha)\right)
-  \widetilde{C}_{ij,\omega}^{-1}
-  \left(I_{\omega}^{exp}(s_0^j) - I_{\omega}^{th}(s_0^j,\vec\alpha)\right)
+  Q^2 = \sum_{\omega} \sum_{s_0^i,s_0^j} \left(I_{\omega}^{exp}(s_0^i) -
+    I_{\omega}^{th}(s_0^i,\vec\alpha)\right) \widetilde{C}_{ij,\omega}^{-1}
+  \left(I_{\omega}^{exp}(s_0^j) - I_{\omega}^{th}(s_0^j,\vec\alpha)\right),
 \end{tcolorbox}
-
+where the covariance matrix \(\widetilde{C}\) is now a diagonal of the experimental covariance
+matrices \(C_{\omega}^{exp}\) for each weight
 \begin{equation}
   \widetilde{C} = \begin{pmatrix}
-    C_{\omega=1} & 0           & \dots  & 0      \\
-    0           & C_{\omega=2} & \ddots & \vdots \\
+    C_{\omega=1}^{exp} & 0           & \dots  & 0      \\
+    0           & C_{\omega=2}^{exp} & \ddots & \vdots \\
     \vdots      & \ddots      & \ddots & 0      \\
-    0           & \dots       & 0      & C_{\omega=n} 
-  \end{pmatrix}
+    0           & \dots       & 0      & C_{\omega=n}^{exp}
+  \end{pmatrix}.
 \end{equation}
+As a result we are still able to invert the newly defined covariance matrix
+\(\widetilde{C}\), but minimisation routines like \textsc{CERN} \textsc{minuit}
+are now able to calculate the proper errors for the parameters we want to
+extract. We have to perform our own error propagation to obtain meaningful
+errors for the parameters.
+
 
 \subsubsection{Error Propagation}
-error propagation \cite{Boito2011a,Boito2011}
+The error propagation has been derived in \cite{Boito2011a,Boito2011} and is given as
 \begin{equation}
   \langle \delta \alpha_k \alpha_l \rangle = A_{km}^{-1}A_{ln}^{-1}
   \pd{I_i^{th}(\vec\alpha)}{\alpha_m} \pd{I_r^{th}(\vec \alpha)}{\alpha_n}
-  \widetilde{C}_{ij}^{-1} \widetilde{C}_{ij}^{-1} \langle \delta I_k^{exp} \delta I_l^{exp} \rangle
+  \widetilde{C}_{ij}^{-1} \widetilde{C}_{ij}^{-1} \langle \delta I_k^{exp} \delta I_l^{exp} \rangle,
 \end{equation}
+where
 \begin{equation}
-  A_{kl} = \pd{I^{th}(\vec\alpha)}{\alpha_k} \widetile{C}_{ij}^{-1} \frac{I^{th}_j(\vec\alpha)}{\alpha_l}
+  A_{kl} = \pd{I^{th}(\vec\alpha)}{\alpha_k} \widetile{C}_{ij}^{-1} \frac{I^{th}_j(\vec\alpha)}{\alpha_l}.
 \end{equation}
 \end{document}
 % LocalWords:  adlerFunction rTauContributions adlerSndOrder betaFunction rTauT
