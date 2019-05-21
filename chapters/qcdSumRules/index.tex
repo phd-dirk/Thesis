@@ -675,20 +675,20 @@ will become handy in the next chapter.
 By defining a combination of the transversal and longitudinal correlator
 \begin{equation}
   \label{eq:correlatorCombination}
-  \Pi^{(T+L)}(s) \equiv \Pi^{(T)}(s) + \Pi^{(L)}(s)
+  \Pi^{(1+0)}(s) \equiv \Pi^{(1)}(s) + \Pi^{(0)}(s)
 \end{equation}
 we can additionally relate the transversal and vectorial components via
 \begin{equation}
   \label{eq:longitudinalCorrelator}
   \begin{split}
-    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(T)}(s) +
-      (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(L)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu}
-      q^2) \Pi^{(T+L)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(L)}(s),
+    \Pi^{\mu\nu}(s) &= \underbrace{(q^\mu q^\nu - g^{\mu\nu}q^2)\Pi^{(1)}(s) +
+      (q^\mu q^\nu - g^{\mu\nu} q^2)\Pi^{(1)}(s)}_{=(q^\mu q^\nu - g^{\mu\nu}
+      q^2) \Pi^{(1+0)}(s)} + \frac{g^{\mu\nu}s^2}{q^2}\Pi^{(0)}(s),
   \end{split}
 \end{equation}
 such that
 \begin{equation}
-  \Pi^{(V,A)}(s) = \Pi^{(T)}(s) + \Pi^{(L)} = \Pi^{(T+L)},
+  \Pi^{(V,A)}(s) = \Pi^{(1)}(s) + \Pi^{(0)} = \Pi^{(1+0)},
 \end{equation}
 where the vector/ axial-vector component of the correlator is now related to the
 newly defined transversal and longitudinal combination of the correlator. As the
@@ -1021,7 +1021,7 @@ every contributing monomial is responsible for a dimension of the OPE.
 Dimensions that are not represented in the weight polynomial do not contribute
 at all or are very suppressed as we will demonstrate now.
 
-The residue of a monomial $x^k$ is only different from 0 if its power $k=-1$:
+The residue of a monomial \(x^k\) is only different from 0 if its power \(k=-1\):
 \begin{equation}
   \label{eq:monomialWeights}
   \oint_{C} x^k \dif x = i \int_0^{2\pi}\left(e^{i \theta}\right)^{k+1} \dif \theta
