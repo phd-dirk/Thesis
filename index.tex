@@ -20,7 +20,7 @@
 \usepackage{bm} % bold math
 \usepackage{float} % [H] for floats
 \usepackage{commath} % derivatives
-\usepackage{xcolor}
+\usepackage[x11names,table]{xcolor}
 \usepackage{hyperref}
 \hypersetup{colorlinks,linkcolor=[rgb]{0.2,0.6,0.86}}
 \usepackage[nameinlink]{cleveref} % \ref{eq:1} => eq. 1
@@ -44,6 +44,13 @@
   }}
 \usepackage[compat=1.0.0]{tikz-feynman}
 \usepackage{cancel} % cross out to zero in math
+
+
+% Timeline https://tex.stackexchange.com/questions/196794/how-can-you-create-a-vertical-timeline
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\newcommand{\foo}{\color{LightSteelBlue3}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+\newcommand{\specialcell}[2][c]{% force line break
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
 % following https://codeinthehole.com/guides/writing-a-thesis-in-latex/
 \usepackage{fancyhdr}

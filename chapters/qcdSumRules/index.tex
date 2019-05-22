@@ -500,19 +500,19 @@ mesons for combinations of the light quarks \(u, d\) and \(s\) is given in
     Symbol & Quark content & Isospin & \(J\) & Current \\
     \midrule
     \(\pi^0\)  & \(\frac{u\anti{u} - d\anti{d}}{2}\) & \(1\) & \(0\)
-    & :\(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5 d\): \\
+                                             & :\(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5 d\): \\
     \(\eta\)   & \(\frac{u\anti{u} + d\anti{d} - 2s\anti{s}}{\sqrt{6}}\) & \(0\)
-    & \(0\) & :\(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5d
-    - 2\anti{s}\gamma_\mu\gamma_5 s\): \\
+                                     & \(0\) & :\(\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5d
+                                               - 2\anti{s}\gamma_\mu\gamma_5 s\): \\
     \(\eta\prime\) & \(\frac{u\anti{u} + d\anti{d} + s\anti{s}}{\sqrt{3}}\)
-    & \(0\) & \(0\) & :\(\anti{u}\gamma_\mu\gamma_5 u +
-    \anti{d}\gamma_\mu\gamma_5 d + \anti{s}\gamma_\mu\gamma_5 s\): \\
+                           & \(0\) & \(0\) & :\(\anti{u}\gamma_\mu\gamma_5 u +
+                                             \anti{d}\gamma_\mu\gamma_5 d + \anti{s}\gamma_\mu\gamma_5 s\): \\
     \(\rho^0\) & \(\frac{u\anti{u} - d\anti{d}}{\sqrt{2}}\) & \(1\) & \(1\)
-    & :\(\anti{u}\gamma_\mu u - \anti{d}\gamma_\mu d\): \\
+                                             & :\(\anti{u}\gamma_\mu u - \anti{d}\gamma_\mu d\): \\
     \(\omega\) & \(\frac{u\anti{u}+d\anti{d}}{\sqrt{2}}\) & \(0\) & \(1\)
-    & :\(\anti{u}\gamma_\mu u + \anti{d}\gamma_\mu d\): \\
+                                             & :\(\anti{u}\gamma_\mu u + \anti{d}\gamma_\mu d\): \\
     \(\phi\) & \(s \anti{s}\) & \(0\) & \(1\)
-    & :\(\anti{s}\gamma_\mu\gamma_5 s\): \\                                        
+                                             & :\(\anti{s}\gamma_\mu\gamma_5 s\): \\                                        
     \bottomrule
   \end{tabular*}
   \caption{Ground\-/state vector and pseudoscalar mesons for the light\-/quarks
@@ -543,11 +543,10 @@ Note that the analytic properties of the two\-/point are in one\-/to\-/one
 correspondence with the newly introduced spectral function and thus determined
 by the possible hadrons states, which only form on the positive real axis. A
 full derivation of the \textit{Källén\-/Lehmann spectral representation} can be
-found in the appendix \cref{ch:kallenLehmannSpectralRepresentation}. We will
-derive the same representation to a later point by solely using the analytic
-properties of the correlator (see. \cref{sec:sumRules}). The spectral function
-is interesting to us for two reasons. First it is experimentally measurable and
-second it carries a problematic ``branch cut'', which we want to discuss now.
+found in the appendix \cref{ch:kallenLehmannSpectralRepresentation}. The
+spectral function is interesting to us for two reasons. First it is
+experimentally measurable and second it carries a problematic ``branch cut'',
+which we want to discuss now.
 
 \subsection{Analytic Structure of the Two\-/Point Function}
 The general two\-/point function $\rho(s)$ has some interesting, but problematic
@@ -555,8 +554,7 @@ analytic properties. It has poles for single\-/particle states and a continuous
 branch cut for multi\-/particle states. The single and multi\-/particle states,
 for a general correlator, can be mathematically separated by
 \begin{equation}
-  \rho(s) = Z \delta(s-m^2) + \theta(s-s_0)\sigma(s)
-  + \sigma(s),
+  \rho(s) = Z \delta(s-m^2) + \theta(s-s_0)\sigma(s),
 \end{equation}
 where the second term is the contribution from multi\-/particle states.
 \(\sigma(s)\) is zero till we reach the threshold, where we have sufficient
@@ -577,16 +575,24 @@ to poles and a continuous branch cut of the two\-/point function.
   \label{fig:analyticStructureCorrelator}
 \end{figure}
 
-\subsection{Lorentz Decomposition}
-Apart the spectral decomposition we can Lorentz decompose the correlator to a
-scalar function $\Pi(q^2)$. Due to Lorentz invariance, there exist only two
-possible terms that can guard the structure of the second order tensor: $q_\mu
-q_\nu$ and $q^2 g_{\mu\nu}$. The sum of both multiplied with two arbitrary
-functions $A(q^2)$ and $B(q^2)$ yields
+\subsection{Decompositions}
+Apart the spectral decomposition we can also Lorentz decompose the two\-/point
+function or write it in terms of \define{v}{vector}, \define{a}{axial\-/vector},
+\define{s}{scalar} and \define{p}{pseudo-scalar} contributions.
+
+\subsubsection{Lorentz decomposition}
+Due to the Lorentz invariance of the two\-/point function, and by assuming the
+conservation of the Noether current, we can apply the Ward identity to decompose
+the correlator \(\Pi_{\mu\nu}\) into its scalar contribution \(\Pi\).
+
+There exist only two possible terms that can guard the structure of the second
+order tensor: \(q_\mu q_\nu\) and \(q^2 g_{\mu\nu}\). The sum of both multiplied
+with two arbitrary functions \(A(q^2)\) and \(B(q^2)\) yields
 \begin{equation}
   \Pi_{\mu\nu}(q^2) = q_\mu q_\nu A(q^2) + q^2 g_{\mu\nu} B(q^2).
 \end{equation}
-By making use of the \textit{Ward\-/identity}
+By assuming that the vector current is conserved, i.e. \(\partial^\mu j_\mu() =
+0\), we can make use of the \textit{Ward\-/identity}
 \begin{equation}
   \label{eq:wardIdentity}
   q^\mu \Pi_{\mu\nu} = 0
@@ -603,9 +609,7 @@ By making use of the \textit{Ward\-/identity}
 % \end{equation}
 % where we used $i q^\mu e^{i q^\nu x_\nu} = \partial_\mu e^{i q^\nu x_\nu}$ in
 % the second and integration by parts in the third line.
-The Ward identity is dependent on the conserved Noether\-/current $J_\mu$ and
-thus only holds for same flavour quarks. With the Ward\-/identity we are able to
-demonstrate, that the two arbitrary functions are related
+to demonstrate, that the two arbitrary functions are related
 \begin{equation}
   \begin{split}
     q^\mu q^\nu \Pi_{\mu\nu} &= q^4 A(q^2) + q^4 B(q^2) = 0 \\
@@ -617,17 +621,20 @@ function
 \begin{equation}
   \Pi_{\mu\nu}(q^2) = (q_\mu q_\nu - q^2 g_{\mu\nu})\Pi(q^2).
 \end{equation}
+Consequently the standard lorentz decomposition into transversal and
+longitudinal components reads
+\begin{tcolorbox}[ams equation,myformula]
+  \label{eq:standardLorentzDecomposition}
+  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(1)}(q^2) + q^\mu q^\nu
+  \Pi^{(0)}(q^2).
+\end{tcolorbox}
 
-\subsection{More Decompositions}
-\textcolor{red}{compositions check!} The two-point function can be Lorentz
-decomposed, but we can also decompose it into its transversal and longitudinal
-components. Both, the longitudinal and transversal components are related and
-have implications for a common used approximation: the \textbf{chiral limit},
-where the quark masses are taken to zero (\(m_q \to 0\)).
-
-Starting with the decomposition into \define{V}{vector},
-\define{A}{axial\-/vector}, \define{S}{scalar} and \define{P}{pseudo-scalar}
-components we can write \cite{Broadhurst1981,Jamin1992}
+\subsubsection{Transversal and Longitudinal Relations}
+By comparing the standard lorentz decomposition
+(\cref{eq:standardLorentzDecomposition}) with the decomposition into
+\textsc{v}/\textsc{a} and \textsc{s}/\textsc{p} parts we can identify the
+longitudinal components of the correlator as being purely scalar. The latter
+decomposition can be written as \cite{Broadhurst1981,Jamin1992}
 \begin{equation}
   \label{eq:correlatorVectorScalarDecomposition}
   \begin{split}
@@ -637,46 +644,35 @@ components we can write \cite{Broadhurst1981,Jamin1992}
     \vert\Omega\rangle],
   \end{split}
 \end{equation}
-which is composed of a vector $\Pi^{V,A}$ and scalar $\Pi^{S,P}$ part. The third
-term is a correction arising due to the physical vacuum $|\Omega\rangle$. The
-latter decomposition rewrites the correlator $\Pi^{\mu\nu}(q^2)$ into
-transversal and longitudinal components:
-\begin{equation}
-  \label{eq:correlatorTransversalLongitudinalDecomposition}
-  \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(1)}(q^2) + q^\mu q^\nu \Pi^{(0)}(q^2).
-\end{equation}
-With the two decompositions \cref{eq:correlatorVectorScalarDecomposition} and
-\cref{eq:correlatorTransversalLongitudinalDecomposition} we can now identify the
-longitudinal components of the correlator as being purely scalar, by multiplying
-\cref{eq:correlatorVectorScalarDecomposition} by two four-momenta and making use
-of the Ward-idendity \cref{eq:wardIdentity} we can write
+where the third term is a correction arising due to the physical vacuum
+\(|\Omega\rangle\). By multiplying \cref{eq:correlatorVectorScalarDecomposition}
+by two four-momenta and making use of the Ward-idendity \cref{eq:wardIdentity}
+we can write
 \begin{equation}
   q_\mu q_\nu \Pi^{\mu\nu}(q^2) = (m_i \mp m_j)^2 \Pi^{S,P}(q^2) + (m_i \mp m_j)[\langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
 \end{equation}
 which then can be related to the longitudinal component of
-\cref{eq:correlatorTransversalLongitudinalDecomposition} by comparison of the
-two equations
+\cref{eq:standardLorentzDecomposition} by comparison with
 \begin{equation}
-  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(0)}(q^2) = s^2 \Pi^{(L)}(s) \quad \text{with} \quad s\equiv q^2.
+  q_\mu q_\nu \Pi^{\mu\nu}(q^2) = q^4 \Pi^{(0)}(q^2) = s^2 \Pi^{(0)}(s) \quad \text{with} \quad s\equiv q^2,
 \end{equation}
-In a more eloquent way this can be expressed as
+leading to
 \begin{equation}
   \label{eq:longitudinalTwoPointFunction}
-  s^2 \Pi^{(0)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle],
+  s^2 \Pi^{(0)}(s) = (m_i \mp m_j)^2 \Pi^{(S,P)}(s) + (m_i \mp m_j)[ \langle \anti{q}_i q_i \rangle \mp \langle \anti{q}_j q_j \rangle].
 \end{equation}
-where we can see, that all mass terms are related to the longitudinal component
-of the correlator.
+Note that all appearing mass terms are related to the longitudinal component.
 
-We note, that the longitudinal component in
-\cref{eq:longitudinalTwoPointFunction} and the scalar component in
-\cref{eq:correlatorVectorScalarDecomposition} vanish in the chiral limit, which
-will become handy in the next chapter.
+As the tau decays, with the limiting factor of the tau mass, can only decay into
+light quarks we will often neglect the quark masses and work in the so called
+\textit{chiral limit} (\(m_q \to 0\)), in which the longitudinal component is
+going to vanish.
 
 By defining a combination of the transversal and longitudinal correlator
-\begin{equation}
+\begin{tcolorbox}[ams equation,myformula]
   \label{eq:correlatorCombination}
   \Pi^{(1+0)}(s) \equiv \Pi^{(1)}(s) + \Pi^{(0)}(s)
-\end{equation}
+\end{tcolorbox}
 we can additionally relate the transversal and vectorial components via
 \begin{equation}
   \label{eq:longitudinalCorrelator}
@@ -688,20 +684,17 @@ we can additionally relate the transversal and vectorial components via
 \end{equation}
 such that
 \begin{equation}
-  \Pi^{(V,A)}(s) = \Pi^{(1)}(s) + \Pi^{(0)} = \Pi^{(1+0)},
+  \Pi^{(V,A)}(s) = \Pi^{(1)}(s) + \Pi^{(0)}(s) = \Pi^{(1+0)}(s),
 \end{equation}
 where the vector/ axial-vector component of the correlator is now related to the
-newly defined transversal and longitudinal combination of the correlator. As the
-tau decays, with the limiting factor of the tau mass, can only decay into light
-quarks we will often neglect the quark masses and work in the so called chiral
-limit. In the chiral limit the longitudinal component of the correlator, which
-is proportional to the quark masses, vanishes.
+newly defined transversal and longitudinal combination of the correlator.
 
 Having dealt exclusively with the perturbative part of the theory, we have to
 discuss \textsc{np} contributions. These arise due to non negligible
 long\-/distance effects. Thus to complete the needed ingredients for \textit{Sum
   Rules} we need a final ingredient the \define{ope}{Operator Product
   Expansion}, which treats the non\-/perturbative contributions of our theory.
+
 
 
 \section{Operator Product Expansion}
