@@ -21,8 +21,34 @@ with the strong coupling and get smaller with increasing the energy. All in all
 it permits one of the most precise determinations of the
 strong coupling \(\alpha_s\).
 
+
+\textcolor{red}{add list of advantages of tau decays for extracting strong
+  coupling \cite{Pich2016a}}
+\begin{itemize}
+  \item \(tau\) mass is large enough for \(\alpha_s\) to be small enough
+    (\(\alpha(m_\tau^2) \approx 0.33 \)) to make use of the \textsc{ope}, even
+    for values lower than \(s_0 = m_\tau\).
+  \item On the other hand \(alpha_s\) is large enough for the inclusive \(\tau\)
+    decay ratio \(R_\tau\) to be sensitive to it. 
+  \item The perturbative correction is known up to order
+    \(\mathcal{O}(\alpha_s^4)\) and has a total contribution of \(20\%\).
+  \item We can apply weights, like the kinematic weight, to suppress \textsc{dv}.
+  \item The dimension two contribution of the \textsc{ope} is proportional to
+    the quark masses and has only a tiny contribution for light quarks.
+  \item The dimension four contribution of the \textsc{ope} can be suppressed by
+    applying weights. E.g. the kinematic weight
+    \(\omega_\tau=(1-x)^2(1+2x)=1-3x^2+2x^3\) is only sensitive to \textsc{ope}
+    corrections of dimension six and eight (not to dimension four).
+  \item The dimension six contribution of the \textsc{ope} is further suppressed
+    in the \textsc{v+a} channel as the vector and axial\-/vector \(D=6\)
+    contributions have opposite signs and cancel themselves.
+  \item Higher dimensional \textsc{ope} contributions are suppressed by terms
+    \(1/m_\tau^n\) with \(n \leq 8\).
+\end{itemize}
+
 Building on the previously presented \textsc{qcdsr} we will elaborate the needed
 theory to extract \(\alpha_s\) from the process of hadronic tau decays.
+
 
 \section{The Inclusive Decay Ratio}
 The theoretical expression of the inclusive hadronic decay ratio
@@ -551,6 +577,7 @@ where the \textsc{dv} would be given as
 \end{equation}
 
 \subsection{Pinched weights to avoid DVs}
+\label{sec:pinchedWeights}
 The general \textsc{qcdsr} (\cref{eq:qcdSumRules}) contain a weight function
 \(\omega\), which is used to weight higher order dimensions, but also to
 suppress \textsc{dv}. The weights that suppress \textsc{dv} are so\-/called
@@ -570,13 +597,9 @@ protected from the effects of \textsc{dv}.
     want to suppress duality violations.}
   \label{fig:monomialWeightGraphs}
 \end{figure}
-For the transversal component of the inclusive tau decay ratio (\cref{eq:rTauT+L}) a pinching of second degree appears quite
-naturally:  
-\begin{equation}
-  \label{eq:kinematicWeight}
-  \omega_\tau(s) = \left( 1-\frac{s}{m_\tau^2} \right)^2 \left( 1 + 2 \frac{s}{m_\tau^2} \right),
-\end{equation}
-which is known as the \textit{kinematic weight}.
+For the transversal component of the inclusive tau decay ratio
+(\cref{eq:rTauT+L}) a pinching of second degree appears quite naturally as the
+kinematic weight (see \cref{eq:kinematicWeight}).
 
 In general it is said that a double pinched weight is sufficient to neglect
 effects caused by duality violation.
