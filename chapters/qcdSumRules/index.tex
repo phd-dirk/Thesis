@@ -710,8 +710,9 @@ long\-/distance effects. Thus to complete the needed ingredients for \textit{Sum
 \label{sec:ope}
 The \textsc{ope} was introduced by Wilson in 1969 \cite{Wilson1969} as an
 alternative to the in this time commonly used current\-/algebra. The expansion
-states that non\-/local operators can be rewritten into a sum of composite local
-operators and their corresponding coefficients:
+states that products of operators at different space\-/time points can be
+rewritten into a sum of composite local operators and their corresponding
+coefficients:
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:ope}
   \lim_{x\to y} A(x) B(y) = \sum_n C_n(x-y)\mathcal{O}_n(x),
@@ -723,11 +724,21 @@ The OPE lets us separate short distances from long distances. In pure
 \textsc{pt} we can only amount for short distances, which are equal to high
 energies, where the strong coupling \(\alpha_s\) is small. The \textsc{ope} on
 the other hand accounts for long\-/distance effects with higher dimensional
-operators.
+operators. Applying the \textsc{ope} to the two\-/point function we get a sum
+over the vacuum expectation values
+\begin{equation}
+  \Pi_{OPE}(q^2) = -\frac{1}{3 q^2} \sum_n \langle\Omega\vert \mathcal{O}_n(0) \vert\Omega\rangle
+  \int \dif^4 x e^{iqx} C_n(x)
+  \label{eq:opeTwoPointFunction}
+\end{equation}
 
 The form of the composite operators are dictated by gauge- and Lorentz symmetry.
-Thus we can only make use of operators of even dimension. The scalar operators
-up to dimension six are given by \cite{Pascual1984}
+For the two\-/point function in \cref{eq:opeTwoPointFunction} we only have to
+consider operators \(\mathcal{O}_n\) of dimension
+\begin{equation}
+  d \left( \mathcal{O}_n \right) \leq (D - 4) + 2N
+\end{equation}
+The scalar operators up to dimension six are then given by \cite{Pascual1984}
 \begin{equation}
   \begin{array}{ll}
     \text{Dimension 0:} & \mathbb{1} \\
@@ -740,23 +751,25 @@ up to dimension six are given by \cite{Pascual1984}
   \end{array}
 \end{equation}
 where \(\Gamma\) stands for one of possible dirac matrices (as seen
-\cref{eq:qcdCurrent}). The operator of dimension zero is the identity and its
-Wilson coefficient is solely perturbative. The higher dimension operators appear
-as normal ordered products of fields and vanish by being sandwiched into the
-perturbative vacuum. On the contrary, in \textsc{np qcd} they appear as
-\textit{condensates}. Condensates are the vacuum expectation values of
-non\-/vanishing normal ordered fields by applying the full \textsc{qcd} vacuum,
-which contribute to all strong processes. For example the condensates of
-dimension four are the quark-condensate \(m_i\langle \anti{q} q \rangle\) and
-the gluon-condensate \(\langle GG \rangle\).
+\cref{eq:qcdCurrent}). Note, that the \(D=2\) operator violates gauge symmetry
+and is consequently excluded from our list. Within \textsc{pt} only the unit
+operator would exist, as the higher dimensional operators would appear as normal
+ordered products of fields and vanish by being sandwiched into the perturbative
+vacuum. On the contrary, in \textsc{np qcd} they appear as \textit{condensates}.
+Condensates are the vacuum expectation values of non\-/vanishing normal ordered
+fields by applying the full \textsc{qcd} vacuum, which contribute to all strong
+processes. For example the condensates of dimension four are the
+quark-condensate \(m_i\langle \anti{q} q \rangle\) and the gluon-condensate
+\(\langle GG \rangle\).
 
-As we work with dimensionless functions (e.g. the correlator \(\Pi\)), the
-\define{rhs}{right\-/hand side}. of \cref{eq:ope} has to be dimensionless. As a
-result the Wilson coefficients have to cancel the dimension of the operator with
-their inverse mass dimension. To account for the dimensions we can make the
-inverse momenta explicit
+As long as working with dimensionless functions (e.g. the correlator \(\Pi\) in
+\cref{eq:opeTwoPointFunction}), the \define{rhs}{right\-/hand side}. of
+\cref{eq:ope} has to be dimensionless. As a result the Wilson coefficients have
+to cancel the dimension of the operator with their inverse mass dimension. To
+account for the dimensions we can make the inverse momenta explicit
 \begin{equation}
-  \Pi_{V/A}^{OPE}(s) = \sum_{D=0,2,4\dots} \frac{c^{(D)} \langle \mathcal{O}^{(D)}(x) \rangle}{(-q^2)^{D/2}},
+  \Pi_{V/A}^{OPE}(s) = \sum_{D=0,2,4\dots} \frac{C^{(D)}
+    \langle\Omega\vert \mathcal{O}^{(D)}(x) \vert\Omega\rangle}{(-q^2)^{D/2}},
 \end{equation}
 where we used \(C^{(D)}=c/(-s)^{D/2}\) with \(D\) being the dimension. Thus the
 \textsc{ope} should converge with increasing dimension for sufficiently large
@@ -817,11 +830,12 @@ calculation\footnote{The interested reader can follow \cite{Pascual1984} for a
   \end{split}
 \end{equation}
 
-To calculate the higher dimensional contributions of the OPE we use the same
-techniques as before, but leave some of the fields uncontracted. Thus instead of
-applying Wick's theorem for all possible contractions fields, we leave some
-fields uncontracted. For leaving the quark field uncontracted in
-\cref{eq:rhoScalarCorrelator} we get
+To calculate the higher dimensional contributions of the \textsc{ope} we use the
+same techniques as before. We apply Wick's theorem, but in this case, due to the
+\textsc{np} vacuum, we have non\-/vanishing vacuum expectation value of normal
+ordered products of fields. Thus some of the fields are left uncontracted, as
+can be graphically seen in \cref{fig:OPEFeynmanDiagram}. For leaving the quark
+field uncontracted in \cref{eq:rhoScalarCorrelator} we get
 \begin{equation}
   \begin{split}
     \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \left[ \phantom{\wick{ \c u_{j \alpha}(x) \anti{\c u}_{k \beta}(0)}} \right.\\
@@ -835,7 +849,7 @@ where \((u\to d)\) is representing the previous expressions with \(u\) and \(d\)
 interchanged. Here we can observe the condensates as non\-/vanishing vacuum
 values of normal ordered product of fields:
 \begin{equation}
-  \langle\Omega_{QCD}\vert \anti{q}(x) q(0) \vert\Omega_{QCD}\rangle \neq 0.
+  \langle\Omega_{QCD}\vert: \anti{q}(x) q(0) :\vert\Omega_{QCD}\rangle \neq 0.
 \end{equation}
 We emphasised the \textsc{qcd} vacuum \(\Omega_{QCD}\), which is responsible for
 vacuum expectation values different than zero. E.g. for a vacuum of \textsc{qed}
@@ -843,15 +857,17 @@ this contributions would vanish by definition. Pictorial the condensates take
 form of unconnected propagators, sometimes marked with an \(\times\), as seen in
 \cref{fig:OPEFeynmanDiagram}.
 
-To make the non\-/contracted fields local, we can expanded them in $x$
+To make the non\-/contracted fields local, we can expanded them in \(x\)
 \begin{equation}
   \begin{split}
     \langle \Omega \vert: \anti{q}(x) q(0):\vert \Omega \rangle &= \langle\Omega\vert: \anti{q}(0) q(0): \vert\Omega\rangle\\
     &\quad+ \langle\Omega\vert:\left[ \partial_\mu \anti{q}(0) \right]
-    q(0):\vert\Omega\rangle x^\mu + \dots.
+    q(0):\vert\Omega\rangle x^\mu + \dots,
   \end{split}
 \end{equation}
-and introduce a standard notation for the localised condensate
+where terms with derivatives lead to higher dimensional operators, which can be
+seen by applying the equation of motions. We then can focus on
+the first term and introduce a standard notation for the localised condensate
 \begin{equation}
   \langle \anti{q}q \rangle \equiv \langle\Omega\vert: \anti{q}(0) q(0):\vert\Omega\rangle.
 \end{equation}
@@ -890,11 +906,11 @@ formulate the \textsc{qcdsr}.
 
 \section{Sum Rules}
 \label{sec:sumRules}
-The \textsc{qcdsr} are a method of \textsc{qcd} to bridge the fundamental
-\textsc{dof} of \textsc{qcd}, in our case the strong coupling, to the observable
-spectrum of hadrons. To do so we have to treat the in
-\cref{sec:twoPointFunction} introduced two\-/point function \textsc{np} with the
-help of the \textsc{ope}
+The \textsc{qcdsr} are a method to connect the \textsc{dof} of \textsc{qcd}, the
+quarks and gluon fields, to the \textsc{dof} of the vacuum spectrum of hadrons,
+thereby allowing for the determination of the strong coupling. To do so we have
+to treat the in \cref{sec:twoPointFunction} introduced two\-/point function
+\textsc{np} with the help of the \textsc{ope}
 \begin{equation}
   \Pi(s) \to \Pi_{OPE}(s).
 \end{equation}
@@ -910,8 +926,8 @@ complications close to the positive real axis.
 
 \subsection{The Dispersion Relation}
 We have already seen the Källén-Lehmann spectral representation in
-\cref{eq:dispersionRelation}. The general dispersion relation is
-defined to have an additional polynomial function \(P(s)\)
+\cref{eq:dispersionRelation}. The general dispersion relation is defined to have
+an additional polynomial function \(P(s)\)
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:dispersionRelation}
   \Pi(s) = \int_0^\infty \frac{\rho(s^\prime)}{s^\prime-s-i\epsilon} + P(s),
@@ -944,19 +960,16 @@ been given by the author of the \cite{Shifman2000}.
 \subsection{Finite Energy Sum Rules}
 To theoretical calculate the two\-/point function we have to integrate the
 experimental data \(\rho_{exp}(s)\) from 0 to infinity. No experiment will ever
-take data for an infinite momentum \(s\). For \(tau\) decays we are currently
-limited to energies around the \(\tau\) mass of \SI{1.776}{\giga\eV}. To deal
-with the upper integration limit several approaches have been made. One of them,
-the \textit{Borel transformation}, is to exponentially suppress higher energy
+take data for an infinite momentum \(s\). For \(\tau\) decays we are limited to
+energies around the \(\tau\) mass of \SI{1.776}{\giga\eV}. To deal with the
+upper integration limit several approaches have been made. One of them, the
+\textit{Borel transformation}, is to exponentially suppress higher energy
 contributions (see \cite{Weinberg1996,Rafael1997}). The technique we are using
 is called \define{fesr}{finite energy sum rules} and introduces a energy
 cut\-/off. We thus integrate the experimental data \(\rho(s)\) only to a certain
-energy \(s_0\), like
-\begin{equation}
-  \Pi(s) = \int_0^{s_0} \frac{\rho(s^\prime)}{s^\prime-s-i\epsilon} + P(s).
-\end{equation}
-Unfortunately we still cannot theoretically evaluate the \textsc{rhs} as the
-line integral includes the singularities of the spectral function. As a result
+energy \(s_0\). Furthermore we have to theoretically evaluate the integral over
+the spectral function of the dispersion relation (\cref{eq:dispersionRelation}),
+which includes singularities caused by the hadronic spectrum. As a result
 we have to apply Cauchy's theorem
 \begin{equation}
   \oint_{\mathcal{C}} f(z) = 0,
@@ -977,7 +990,7 @@ and mathematically we can express it as
 \begin{equation}
   \label{eq:sumRulesCauchysTheorem}
   \oint \Pi(s) = \int_0^{s_0} \Pi(s+i\epsilon)-\Pi(s-i\epsilon)\dif s
-  + \int_{0+\alpha(\epsilon)}^{2\pi-\alpha(\epsilon)}\Pi(s_0e^{i\theta})\dif \theta + \int_{3\pi/2}^{\pi/2}\Pi(s_0e^{i\theta})\dif \theta 
+  + \int_{0+\alpha(\epsilon)}^{2\pi-\alpha(\epsilon)}\Pi(s_0e^{i\theta})\dif \theta + \int_{3\pi/2}^{\pi/2}\Pi(\epsilon e^{i\theta})\dif \theta 
 \end{equation}
 If we make to use of \textit{Schwartz reflection principle}:
 \begin{equation}
@@ -1000,7 +1013,7 @@ accessible circular contour integral of radius \(s_0\)
 \begin{equation}
   \int_0^{s_0} \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0} \Pi(s) \dif s, \quad \text{where we applied} \quad \epsilon \to 0.
 \end{equation}
-Note that the unphysical of the polynomial in \cref{eq:dispersionRelation}
+Note that the unphysical contribution of the polynomial in \cref{eq:dispersionRelation}
 cancel in the contour integral.
 
 We are free to multiply the upper equation with an analytic function
@@ -1010,17 +1023,22 @@ We are free to multiply the upper equation with an analytic function
   \int_0^{s_0} \omega(s) \rho(s) = \frac{-1}{2\pi i}\oint_{\abs{s}=s_0}\omega(s)
   \Pi_{OPE}(s) \dif s
 \end{tcolorbox}
-where the \define{lhs}{left\-/hand side} is given by the experiment and the
+where the \define{lhs}{left\-/hand side} can be taken from experiment and the
 \textsc{rhs} by the theoretically evaluated correlator \(\Pi_{OPE}(s)\). The
 analytic function \(\omega(s)\) plays the role of a weight. It can be used to
 further suppress the non\-/perturbative contributions coming from
-\define{dv}{duality violations} and also enhance or suppress different contributions
-of the \textsc{ope} as we will see.
+\define{dv}{duality violations} and also enhance or suppress different
+contributions of the \textsc{ope} as we will see.
 
 \subsection{Weighting OPE dimensions}
-We can also use different weights to control the dimensions of the \textsc{ope}
-that contribute. The weights we are using have to be analytic, so that we can
-make use of Cauchy's theorem. Thus they can be represented as polynomials
+While applying the \textsc{ope} to the two\-/point function, we have seen, that
+the perturbative part carries poles on the positive real axis. Consequently in
+enclosing these poles in a contour integral the contribution of the perturbative
+part will always be present. On the other hand, the higher dimension
+contributions of the \textsc{ope} do not have to contribute. We can use
+different weights to control the dimensions of the \textsc{ope} that contribute.
+The weights we are using have to be analytic, so that we can make use of
+Cauchy's theorem. Thus they can be represented as polynomials
 \begin{equation}
   \omega(x) = \sum_i a_i x^i,
 \end{equation}
@@ -1046,9 +1064,9 @@ interest to us we can write
 \begin{equation}
   \label{eq:monomialInclusiveRatio}
   \begin{split}
-    \left. R(x m_\tau) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \frac{x^k}{(x m_\tau)^{\frac{D}{2}}}C^{D}(x m_\tau) \\
-    &= \frac{1}{(m_\tau)^{\frac{D}{2}}} \oint_{\abs{x}=1} x^{k-D/2} \,C^{D}(x
-    m_\tau),
+    \left. R(x m_\tau) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \dif x \frac{x^k}{(x m_\tau)^{\frac{D}{2}}}C^{D}(x m_\tau) \\
+    &= \frac{1}{(m_\tau)^{\frac{D}{2}}} \oint_{\abs{x}=1} \dif x x^{k-D/2}
+    \,C^{D}(x m_\tau),
   \end{split}
 \end{equation}
 where \(C^{D}\) are the \(D\)\-/dimensional Wilson coefficients. Thus combining
@@ -1057,14 +1075,14 @@ Dimension which fulfil
 \begin{equation}
   k - D/2 = -1 \quad \implies \quad  D = 2(k+1)
 \end{equation}
-contribute to the \textsc{ope}. For example the polynomial of the kinematic weight is
-given by
+contribute to the \textsc{ope}. For example the polynomial of the kinematic
+weight is given by
 \begin{equation}
   (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3\underbrace{x^2}_{D=6} + 2\underbrace{x^3}_{D=8},
 \end{equation}
 where the underbraced monomials express the active dimensions. A list of
-monomials and their corresponding Dimensions up to dimension 14 can be found
-in \cref{table:monomialDimensions}.
+monomials and their corresponding Dimensions up to dimension 14 can be found in
+\cref{table:monomialDimensions}.
 \begin{table}
   \centering
   \begin{tabular}{l|ccccccc}
@@ -1074,11 +1092,12 @@ in \cref{table:monomialDimensions}.
     \bottomrule 
   \end{tabular}
   \caption{List of monomial and their corresponding ``active'' dimensions in the
-    \textsc{ope}.}
+    \textsc{ope}. Note that the perturbative contributions of the \textsc{ope}
+    is always active, due to the poles on the positive real axis.}
   \label{table:monomialDimensions}
 \end{table}
-This behaviour enables us to bring out different dimensions of the \textsc{ope} and
-suppress contributions of higher order (\(D\geq10\) for which less is known.
+This behaviour enables us to bring out different dimensions of the \textsc{ope}
+and suppress contributions of higher order (\(D\geq10\) for which less is known.
 
 
 For the interested reader we gathered several introduction texts to the
