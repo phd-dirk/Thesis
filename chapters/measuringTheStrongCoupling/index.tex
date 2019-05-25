@@ -39,20 +39,33 @@ has recently been extended to analyses up to \SI{2}{\giga\eV} \cite{Boito2018}.
 
 
 
-\section{Fit Criteria}
-We are foremost interested in the extraction of \(\alpha_s\), but also want to
-analyse the importance of \textsc{dv} and higher order \textsc{ope} corrections.
-We will reduce our analysis in the \textsc{fopt}, but display our final results
-also in \textsc{cipt}. Consequently to define a fit we have to choose a weight
-\(\omega\) and momentum \(s_0\). The only restriction from choosing a weight is,
-that the weight has to be analytic, leaving us with a variety of choices. For
-our strategy we have chosen three categories of weights, each of them containing
-fits with three different weights. A table with an overview of all used weights
-is given in \cref{table:fitCategories}
+\section{Fit Strategy}
+The objective of this work is to extract \(\alhpa_s\) and argue about the
+importance of \textsc{dv}. Apart from the two main objectives we want to analyse
+the values of the \textsc{ope} Wilson coefficients of up to dimension ten.
+
+Our fitting strategy will be in choosing weights of lower and higher pinching.
+Lower pinched weights should be affected by \textsc{dv}, while higher pinched
+weights should be protected from \textsc{dv}. As a result in comparing different
+fits of lower and higher pinched weights it should be possible to argue about
+strength of the \textsc{dv} that are (or are not) present.
+
+Our hypothesis is that \textsc{dv} are tiny for fits of the combined vector and
+axial\-/vector channel in combination with pinched weights. Consequently we can
+extract parameters, like the strong coupling \(\alpha_s\) from \(\tau\) decays
+to high precision without a \textsc{dv} model.
+
+We will perform our analysis in the framework of \textsc{fopt}, but display our
+final results also in \textsc{cipt}. Consequently to define a fit we have to
+choose a weight \(\omega\) and a momentum \(s_0\). The only restriction from
+choosing a weight is, that the weight has to be analytic, leaving us with a
+variety of choices. For our strategy we have chosen three categories of weights,
+each of them containing fits with three different weights. A table with an
+overview of all used weights is given in \cref{table:fitCategories}
 \begin{table}
   \centering
   \begin{tabular}{ccccc}
-    & Symbol & Term & Expansion & \textsc{ope} contributions \\
+    & Symbol & Term & Expansion & \textsc{ope} Contributions \\
     \toprule
     \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{\small Pinched}}} & \omega_\tau & \((1-x)^2(1+2x)\) & \(1 - 3x^2 + 2x^3\) & \(D6, D8\) \\
     & \omega_{cube} & \((1-x)^3(1+3x)\) & \(1 - 6x^2 + 8x^3 - 3x^4\) & \(D6, D8, D10\) \\
@@ -72,47 +85,66 @@ is given in \cref{table:fitCategories}
     contributions the fitted integral momentum will be sensitive to.}
   \label{table:fitCategories}
 \end{table}
-To test for the stability of the fitted values we furthermore fit every weight
+To test for the stability of the fitted values and have enough \textsc{dof} to
+fit the higher \textsc{ope} contributions we furthermore fit every weight
 for various momenta \(s_0\).
-
-The first category contains the \textit{Pinched Weights without Monomial x}. As
-we do not want to implement a treatment of the \textsc{dv} we have to suppress
-them. This can be achieved with the help of pinched weights (see \cref{sec:pinchedWeights}).
-The higher the pinching the better the suppression of \textsc{dv}. In general it
-is said that \textsc{dv} are suppressed starting by double pinched weights, like the
-kinematic weight \(\omega_\tau\). To probe the stability of the strong coupling
-and additionally analyse the higher order \textsc{ope} contributions we also
-included a cubic \(\omega_{cube}\) and quartic \(\omega_{quartic}\) pinched
-weight, which do not carry a monomial term \(x\). An \(x\) term would make the
-fits sensitive to the \(D=4\) \textsc{ope} contribution, which has been shown to
-be problematic \cite{Beneke2012} \textcolor{red}{why?}
-
-
-
 
 
 
 \section{Fits}
+In the following we will give the results of each of the three previously
+mentioned fit categories.
+
+The first category contains the \textit{Pinched Weights without Monomial x}. The
+chosen weights are double (\(\omega_\tau\)), triple (\(\omega_{cube}\))and
+quadruple (\(\omega_{quartic}\)) pinched and do not contain a monomial term
+\(x\). An \(x\) term would make the fits sensitive to the \(D=4\) \textsc{ope}
+contribution and have a unreliable perturbative expansion \cite{Beneke2012}. The
+higher the pinching, the higher the suppression of \textsc{dv}. Consequently if
+we obtain stable values for \(\alpha_s\) from the different pinched fits we
+should expect the \textsc{dv} to have no influence on the value of the strong
+coupling. The different weights imply an increasing number of active
+\textsc{ope} contributions \(D_6, D_8, D_{10}\) and \(D_{12}\), which can be
+used to compare to the stability of higher order \textsc{ope} contributions and
+to test for the convergence of the \textsc{ope}.
+
+The second category contains the \textit{Single Pinched Monomial weights}. In
+this case all of the weights are only single pinched and, as in the first category, do not carry a
+monomial in \(x\). Consequently if \textsc{dv} affect the fits we should notice
+different fitting results in comparison to the fits of the first category.
+Furthermore the single pinched moments only carry two parameters, the strong
+coupling and an \textsc{ope} Wilson coefficients. Thus we can further compare
+the \(C_6, C_8\) and \(C_{10}\) Wilson coefficients and argue about the
+stability of the fits.
+
+The third and last category contains a similar pinching to the as compared to
+the first category, but this time contains a monomial term in \(x\).
+Consequently these fits are unreliable in the framework of \textsc{fopt} and we
+have to apply the \define{bs}{Borel sum}. Following the logic of the second and
+first category we then can compare the result to analyse the role of \textsc{dv}
+compare the Wilson coefficients. 
+
 
 \subsection{Pinched Weights without Monomial \(x\)}
-\subsubsection{Kinematic weight: $\omega_{\tau}(x) \equiv (1-x)^2(1+2x)$}
+
+\subsubsection{Kinematic weight: \(\omega_{\tau}(x) \equiv (1-x)^2(1+2x)\)}
 We have already encountered the kinematic weight in \cref{eq:kinematicWeight}.
 It is a polynomial weight function, defined as \(\omega_\tau(x) =
 (1-x)^2(1+2x)\), double pinched, contains the unity and does not contain a term
-proportional to \(x\), which makes it an optimal weight \cite{Beneke2012}. As a
-doubled pinched weight it should have a good suppression of
-\textsc{dv} contributions and its polynomial contains terms proportional to
-\(x^2\) and \(x^3\), which makes it sensitive to the dimension six and eight
-\textsc{ope} contributions. The fits have been performed within the framework of
+proportional to \(x\). Consequently it is an optimal weight \cite{Beneke2012}.
+As a doubled pinched weight it should have a good suppression of \textsc{dv}
+contributions and its polynomial contains terms proportional to \(x^2\) and
+\(x^3\), which makes it sensitive to the dimension six and eight \textsc{ope}
+contributions. The fits have been performed within the framework of
 \textsc{fopt} for different numbers of \(s_0\). The momentum sets are
 characterised by its lowest energy \(s_{min}\). We fitted values down to
 \SI{1.5}{\giga\eV}. Going to lower energies is questionable due to the coupling
 constant becoming to large, which implies a breakdown of \textsc{pt} and
-appearing \textsc{dv}s. Furthermore it bares the risk to be affected by the \(\rho(770)\)
-and \(a_1\) peaks in the vector and axial\-/vector spectral function, which we
-cannot model within the framework of the \textsc{ope}. For the
-fitting\-/parameters \(\alpha_s, c_6\) and \(c_8\) we have given the results in
-\cref{table:fitWKinAlD6D8} and graphically in \cref{fig:fitWKinAlD6D8}.
+appearing \textsc{dv}s. Furthermore it bares the risk to be affected by the
+\(\rho(770)\) and \(a_1\) peaks in the vector and axial\-/vector spectral
+function, which we cannot model within the framework of the \textsc{ope}. For
+the fitting\-/parameters \(\alpha_s, C_6\) and \(C_8\) we have given the results
+in \cref{table:fitWKinAlD6D8} and graphically in \cref{fig:fitWKinAlD6D8}.
 \begin{table}
   \centering
   \begin{tabular}{llllll}
@@ -170,8 +202,8 @@ with higher \(s_{min}\) have either a too large \(\chi^2\) (larger than two) or
 have been excluded by us because the \(\chi^2\) value jumps from \(0.19\) to
 \(1.3\) between the \(s_{min}=2.1\) and \(s_\min=2.2\) fits. We experienced this
 behaviour with various of our fits, which will be discussed later. Consequently
-we achieved achieved four good fits with a \(\chi^2\) per \textsc{dof} less or close to one,
-which we divided into two groups:
+we achieved achieved four good fits with a \(\chi^2\) per \textsc{dof} less or
+close to one, which we divided into two groups:
 \begin{itemize}
 \item Fits with \textbf{5\-/7} momenta have \(\chi^2\) per \textsc{dof} larger
   than one and means of \(\alpha(m_\tau^2)=0.3317(33), c_6=-0.77(17)\) and
@@ -194,10 +226,10 @@ We further tested the stability of the dimension six and eight contributions to
 the OPE within the same fit series but for a fixed value of the strong coupling
 to our previous averaged result \(\alpha_s(m_\tau^2)=0.3179\). The fits have
 been plotted in \cref{fig:fitWKinD6D8} and show good stability. The values for
-\(c_6\) and \(c_8\) are larger than the values given in our final results
-from \cref{table:fitWKinAlD6D8}. This is explained with a smaller contribution
-from the strong coupling (\(\alpha_s\) is smaller), which has to be
-compensated by larger OPE contributions.
+\(c_6\) and \(c_8\) are larger than the values given in our final results from
+\cref{table:fitWKinAlD6D8}. This is explained with a smaller contribution from
+the strong coupling (\(\alpha_s\) is smaller), which has to be compensated by
+larger OPE contributions.
 \begin{figure}
   \centering \includegraphics[width=\textwidth]{./images/fitWKinD6D8.eps}
   \caption{}
@@ -299,7 +331,7 @@ Due to the problematic of the fitting routing, which is caused by too many
 \textsc{ope} contributions fitted simultaneously, we will discard the fitting
 results for the quartic weight.
 
-\subsection{Monomial Weights}
+\subsection{Single Pinched Monomial Weights}
 \subsubsection{\(1-x^2\)}
 \subsubsection{\(1-x^3\)}
 \subsubsection{\(1-x^4\)}
