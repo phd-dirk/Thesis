@@ -955,11 +955,35 @@ the dispersion relation \cref{eq:dispersionRelation} as
 \begin{equation}
   \Pi_{th}(s) = \int_0^\infty \frac{\rho(s^\prime)_{exp}}{s^\prime-s-i\epsilon} + P(s),
 \end{equation}
-where we connected the theoretical correlator $\Pi_{th}$ with the experimental
-measurable spectral function $\rho_{exp}$. A detailed discussion of duality has
-been given by the author of the \cite{Shifman2000}.
+where we connected the theoretical correlator \(\Pi_{th}\) with the experimental
+measurable spectral function \(\rho_{exp}\). We can represent duality as,
+substituting the two\-/point function \cite{Cata2005}
+\begin{equation}
+  \Pi(s) \to \Pi_{OPE}(s).
+\end{equation}
+If this approximation carries no error, we would say that the experimental
+spectral function \(rho_{exp}(s) = 1/\pi \Ima \Pi(s)\) is dual to the
+\textsc{ope}. On the contrary if the substitution is not exact we are missing
+contributions, which are represented by the so\-/called \textsc{dv}.
 
-\textcolor{red}{if time add duality violation paragraph}
+
+\subsubsection{Duality Violations}
+There also exist situations where we cannot make use of duality. These situation
+are referred to as \textsc{dv} and belong to the
+non\-/perturbative part of the theory. It is often assumed that by applying the
+\textsc{ope} to all orders we account for all non\-/perturbative effects,
+including \textsc{dv}. Unfortunately this assumption is only partly right. Even
+if we could compute the \textsc{ope} to all orders, we would still experience
+discrepancies to our theoretical results. In general it is said, that if we have
+deviations beyond the natural uncertainty of the \textsc{ope} we call them
+\textsc{dv} \cite{Shifman2000}. E.g. if we compute \(\Pi(s)\) to orders of
+\(\alpha^2\) and \(\frac{1}{Q^4}\), while we cutoff higher orders (\(\alpha^3\)
+and \(\frac{1}{Q^6}\)), where \(Q^2 \equiv -q^2\), then we get a natural error,
+because we have not calculated the full series. Values of the hadronic spectral
+density, out of range of the natural error, are then \textsc{dv}.
+
+A detailed discussion of duality has been given by the author of the
+\cite{Shifman2000}.
 
 
 \subsection{Finite Energy Sum Rules}
@@ -1038,14 +1062,14 @@ contributions of the \textsc{ope} as we will see.
 
 \subsection{Weighting OPE dimensions}
 We have seen that the perturbative part of the two\-/point function carries a
-discontinuity on the positive real axis. Consequently, contrary to Cauchy's
-theorem, the closed circle contour integral is not analytic in all of its
-enclosed domain and has to be different than zero. Thus the perturbative part of
-\cref{eq:qcdSumRules} will always contribute. On the other hand, the higher
-dimension contributions of the \textsc{ope} do not have to contribute. We can
-use different weights to control the dimensions of the \textsc{ope} that
-contribute. The weights we are using have to be analytic, so that we can make
-use of Cauchy's theorem. Thus they can be represented as polynomials
+discontinuity on the positive real axis. Consequently we applied Cauchy's
+theorem to avoid the not analytic part of the two point function. This left us
+with non\-/closed contour integral for the perturbative part of the
+\textsc{ope}, which will always contribute. On the other hand, the strength of
+the higher dimension contributions of the \textsc{ope} can modified. We can use
+different weights to control the dimensions of the \textsc{ope} that contribute.
+The weights we are using have to be analytic, so that we can make use of
+Cauchy's theorem. Thus they can be represented as polynomials
 \begin{equation}
   \omega(x) = \sum_i a_i x^i,
 \end{equation}
@@ -1094,13 +1118,13 @@ monomials and their corresponding Dimensions up to dimension 14 can be found in
   \centering
   \begin{tabular}{l|ccccccc}
     \toprule
-    \textbf{monomial:} & $x^0$ & $x^1$ & $x^2$ & $x^3$ & $x^5$ & $x^6$ & $x^7$\\
-    \textbf{dimension:} & $D^{(2)}$ & $D^{(4)}$ & $D^{(6)}$ & $D^{(8)}$ & $D^{(10)}$ & $D^{(12)}$ & $D^{(14)}$\\
+    \textbf{monomial:} & \(x^0\) & \(x^1\) & \(x^2\) & \(x^3\) & \(x^5\) & \(x^6\) & \(x^7\)\\
+    \textbf{dimension:} & \(D^{(2)}\) & \(D^{(4)}\) & \(D^{(6)}\) & \(D^{(8)}\) & \(D^{(10)}\) & \(D^{(12)}\) & \(D^{(14)}\)\\
     \bottomrule 
   \end{tabular}
   \caption{List of monomial and their corresponding ``active'' dimensions in the
     \textsc{ope}. Note that the perturbative contributions of the \textsc{ope}
-    is always ``active'', due to its discontinuity on the positive real axis.}
+    are always present.}
   \label{table:monomialDimensions}
 \end{table}
 This behaviour enables us to bring out different dimensions of the \textsc{ope}

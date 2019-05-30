@@ -460,8 +460,8 @@ where
     j_n^{(1+0)}(s/\mu^2) + 2 \sum_{k \neq l} m_k^2 m_l^2 u_n^{(1+0)}(s/\mu^2)
   \end{split}
 \end{equation}
-The perturbative expansion coefficients are known to $\mathcal{O}(a^2)$ for the
-condensate contributions,
+The perturbative expansion coefficients are known to second order
+\(\mathcal{O}(a^2)\) for the condensate contributions,
 \begin{equation}
   \begin{array}{lll}
     p_0^{(1+0)}=0, & p_1^{(1+0)}=1, & p_2^{(1+0)}=\frac{7}{6}, \\
@@ -470,27 +470,35 @@ condensate contributions,
     t_0^{(1+0)}=0 & t_1^{(1+0)}=1, & t_2^{(1+0)}=\frac{17}{2}+\frac{9}{2}\log(s/\mu^2).
   \end{array}
 \end{equation}
-while the $m^4$ terms have been only computed to $\mathcal{O}(a)$
+while the \(m^4\) terms have been only computed to first order \(\mathcal{O}(a)\)
 \begin{equation}
-  \begin{array}{lll}
+  \begin{array}{ll}
     h_0^{(1+0)}=1-1/2 \log(s/\mu^2), & h_1^{(1+0)}=\frac{25}{4}-2\zeta_3-\frac{25}{6}\log(s/\mu^2)-2 \log(s/\mu^2)^2, \\
     k_0^{(1+0)}=0, & k_1^{(1+0)}=1-\frac{2}{5}\log(s/\mu^2), \\
     g_0^{(1+0)}=1, & g_1^{(1+0)}=\frac{94}{9}-\frac{4}{3}\zeta_3-4 \log(s/\mu^2), \\
     j_0^{(1+0)}=0, & j_1^{(1+0)}=0, \\
-    u_0^{(1+0)}=0, & u_2^{(1+0)}=0.
+    u_0^{(1+0)}=0, & u_1^{(1+0)}=0.
   \end{array}
 \end{equation}
 
-We can further introduce a scale\-/invariant gluon\-/condensate
+The above condensates all depend on the scale \(\mu^2\), but we can express them
+in form of the scale\-/invariant gluon\-/ and quark\-/condensate
 \cite{Spiridonov1988}, which are combinations of the minimally subtracted
 operators
-\begin{equation}
-  \beta_1 \langle a G^2 \rangle_I \equiv \beta(s) \langle
-  G_{(a)}^{\mu\nu}G_{\mu\nu}^{(a)} \rangle + 4 \gamma(a) \sum_{i=u,d} \langle
-  m_i \anti{q}_i q_i \rangle - \frac{3}{4\pi^2} \sum_{i,j=u,d} m_i^2m_j^2
-  \gamma_0^{ij}(a).
-\end{equation}
-During this work we will state the invariant gluon condensate.
+\begin{align}
+  \beta_1 \langle a G^2 \rangle_I
+  &\equiv \beta(s) \langle
+    G_{(a)}^{\mu\nu}G_{\mu\nu}^{(a)} \rangle + 4 \gamma(a) \sum_{i=u,d} \langle
+    m_i \anti{q}_i q_i \rangle \nonumber \\ 
+  &- \frac{3}{4\pi^2} \sum_{i,j=u,d} m_i^2m_j^2
+    \gamma_0^{ij}(a) \\
+  \langle  m_i \anti{q}_j q_j \rangle
+  &\equiv \langle \anti{q}_j q_j \rangle
+    +\frac{3 m_i m_j^3}{7 \pi^2 a} \left\{ 1 - \frac{53}{24}a + \mathcal{O}(a^2) \right\},
+\end{align}
+where \(\gamma_0^{ij}(a) = -2 - 8/3 a\).
+During this work we will insert the known invariant quark condensates (see \cref{table:coefficients}) as
+constants and state our results for the invariant gluon condensate.
 
 
 \subsection{Dimension Six and Eight}

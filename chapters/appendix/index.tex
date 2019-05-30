@@ -1,6 +1,31 @@
 \documentclass[../../index.tex]{subfiles}
 
 \begin{document}
+  \chapter{Constants}
+  \label{ch:constants}
+  In \cref{table:constants} we collect all used constants that we have used in
+  performing our fits.
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+      \toprule
+      Quantity & Value & Reference \\
+      \midrule
+      \(V_{ud}\) & \(0.9742 \pm 0.00021\) & ? \\
+      \(S_{EW}\) & \(1.0198 \pm 0.0006\) & ? \\
+      \(B_e\) & \(17.815 \pm 0.023\) & ? \\
+      \(m_\tau\) & \(1.77686\) error? & ? \\
+      \(\langle  a GG \rangle_I\) & \SI{0.012}{\giga\eV^2} & ? \\
+      \(\langle \anti{q}_{u/d}q_{u/d} \rangle_I \) & \SI{-0.020123648}{\mega\eV} & ? \\
+      \(\langle \anti{q}_{s}q_{s} \rangle_I \) & \SI{-0.0160989184}{\mega\eV} & ? \\
+      \bottomrule
+    \end{tabular}
+    \caption{Numerical values of used constants in our fitting routine.}
+    \label{table:constants}
+  \end{table}
+
+
+  
   \chapter{Derivation of the used inverse covariance matrix from the Aleph
     data}
   While performing a \textbf{Generalized least squares} (GLS) we estimate our
