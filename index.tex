@@ -47,6 +47,9 @@
   }}
 \usepackage[compat=1.0.0]{tikz-feynman}
 \usepackage{cancel} % cross out to zero in math
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\usepackage{tabu}
 
 
 % Timeline https://tex.stackexchange.com/questions/196794/how-can-you-create-a-vertical-timeline
@@ -162,6 +165,7 @@
   \subfile{chapters/qcdSumRules/index}
   \subfile{chapters/tauDecaysIntoHadrons/index}
   \subfile{chapters/measuringTheStrongCoupling/index}
+  \subfile{chapters/conclusions/index}
   \subfile{chapters/appendix/index}
 
   \printbibliography
