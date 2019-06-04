@@ -531,11 +531,18 @@ the 4\-/quark operators \cite{Narison1983,Jamin1985} and terms of order
 \cite{Launer1983}.
 
 In our work we take the simplest approach possible: Introducing an effective
-dimension six coefficient $\rho_{V/A}^{(6)}$ divided by the appropriate power in
+dimension six coefficient \(\rho_{V/A}^{(6)}\) divided by the appropriate power in
 s
 \begin{equation}
   \left. D_{ij,V/A}^{(1+0)}(s) \right\rvert_{D=6} = 3 \frac{\rho_{V/A}^{(6)}}{s^3}
 \end{equation}
+
+Here we also neglected the scale dependence of the dimension six operator, which
+is determined by the anomalous dimension, similar to the mass anomalous
+dimension given in \cref{eq:anomalousMassDimension}. We have calculated the
+leading\-/order anomalous dimension matrices corresponding to the dimension\-/6
+four\-/quark operators of flavour non\-/diagonal, as well as flavour diagonal,
+mesonic vector and axial\-/vector currents in \cite{Boito2015}.
 
 As for the dimension eight contribution the situation is not better than the
 dimension six one we keep the simplest approach, leading to
@@ -545,34 +552,35 @@ dimension six one we keep the simplest approach, leading to
 
 The \textsc{np} contribution of dimension eight is the highest order that we are
 going to implement. Higher orders will be neglected. Next to the \textsc{np}
-treatment of the \textsc{ope} we have to discuss possible duality
-violations.
+treatment of the \textsc{ope} we have to discuss possible duality violations.
 
 
 
 \section{Duality Violations}
 As seen in \cref{sec:duality} we have to assume quark\-/hadron duality for the
-\textsc{qcdsr} to work. Unfortunately duality cannot always be taken for granted
-and the existence of \define{dv}{duality violations} is well known
-\cite{Cata2008,Cata2009}. Experimental data shows, that the plot of the measured
-total tau decay ratio has exponential decreasing, sinusoidal behaviour, that
-cannot be reproduced by the \textsc{ope}. Consequently for the cases with
-apparent \textsc{dv} we have to somehow include the corrections coming from
-\textsc{dv} and adapt \cref{eq:rTauContributions}, leading to
+\textsc{qcdsr} to work. Unfortunately duality is always to some extend broken
+through so\-/called \define{dv}{duality violations}, which are well known
+\cite{Cata2008,Cata2009}. Experimental data show an oscillating behaviour that
+cannot be reproduced by the \textsc{ope}. Moreover in the large \(N_c\) limit it
+can be shown that \textsc{dv} have an exponential decreasing, sinusoidal
+appearance \cite{Cata2005}. Consequently for the cases with apparent \textsc{dv}
+we have to somehow include the corrections coming from \textsc{dv} and adapt
+\cref{eq:rTauContributions}, leading to
 \begin{equation}
-  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{dv}^{\omega} \right).
+  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{dv}^{\omega} \right),
 \end{equation}
-The \textsc{dv} correction has been modelled by a series of papers
-\cite{Boito2011a,Boito2012,Boito2014} with the following ansatz
+where we extracted \(\delta_{dv}\) from \(\delta_{npt}\), even though
+\textsc{dv} are an \textsc{np}. The \textsc{dv} correction has been modelled
+\cite{Cata2009} with the following ansatz
 \begin{equation}
   \label{eq:dvModel}
   \rho_{V/A}^{DV}(s) = e^{-(\delta_{V/A}+\gamma_{V/A}s)} \sin(\alpha_{V/A} + \beta_{V/A}s).
 \end{equation}
 Here the \textsc{dv} contributions have been parametrised by four parameters for
 the vector and another four parameters for the axial\-/vector contribution. Note
-that for fitting the kinematic weight in the \textsc{V}\-/channel, which is known to be
-sensible for \textsc{dv} at lower energies \cite{Boito2011a}, we would have
-seven parameters instead of only three. Making use of the model
+that for fitting the kinematic weight in the \textsc{V}\-/channel, which is
+known to be sensible for \textsc{dv} at lower energies \cite{Boito2011a}, we
+would have seven parameters instead of only three. Making use of the model
 (\cref{eq:dvModel}) the \textsc{dv} then appear as an additional term in the
 inclusive tau decay ratio
 \begin{equation}
@@ -593,10 +601,10 @@ pinched weights of the form
 \begin{equation}
   \omega(s) = \left(1-\frac{s}{m_\tau^2}\right)^k,
 \end{equation}
-where \(k\) is the degree of the pinched weight. The higher the degree the
-farther we operate from the critical positive real axis (see.
-\cref{fig:monomialWeightGraphs}). The farther we are away the better we are
-protected from the effects of \textsc{dv}.
+where \(k\) is the degree of the pinched weight. The higher the degree of the
+pinching, the lower the suppression of the critical region close to the real
+axis (see. \cref{fig:monomialWeightGraphs}). Thus for higher pinchings we are
+better protected from \textsc{dv} effects.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/monomialWeightGraphs.eps}
@@ -608,10 +616,12 @@ protected from the effects of \textsc{dv}.
 For the transversal component of the inclusive tau decay ratio
 (\cref{eq:rTauT+L}) a pinching of second degree appears quite naturally as the
 kinematic weight (see \cref{eq:kinematicWeight}). In general it is said that a
-double pinched weight is sufficient to neglect effects caused by duality
-violation. Additionally to applying pinched weights we focus on combinations of
-vector and axial\-/vector contributions, which as we will see now have visibly
-suppressed \textsc{dv}.
+double pinched weight is sufficient to neglect effects caused by \textsc{dv}. In
+our analysis we show that double pinched weights indeed sufficiently suppress
+\textsc{dv} and that even single pinched weights yield acceptable results.
+Additionally to applying pinched weights we focus on combinations of vector and
+axial\-/vector contributions, which as we will see now have visibly suppressed
+\textsc{dv}.
 
 
 
@@ -625,7 +635,9 @@ particles in 1989 and was replaced in the late 90s by the
 \SI{27}{\kilo\meter} circumference. The data produced within the experiment is
 still maintained by former \textsc{aleph} group members led by M. Davier, which
 have performed regular updates on the data-sets
-\cite{Davier2013,Davier2008,Aleph2005}.
+\cite{Davier2013,Davier2008,Aleph2005}. The last update was motivated by Boito
+et al. \cite{Boito2010}, who discovered irregularities in the covariances by
+comparing data from a Monte Carlo generator with the \textsc{aleph}.
 
 The measured spectral functions for the \textsc{aleph} data are defined in
 \cite{Davier2007} and given for the transverse and longitudinal components
@@ -642,16 +654,19 @@ separately
 \end{equation}
 
 The data relies on a separation into vector and axial-vector channels. In the
-case of the pions this can be achieved via counting. The vector channel is
-characterised by a negative parity, whereas the axial-vector channel has
-positive parity. A quark has by definition positive parity, thus an anti-quark
-has negative parity. A meson, like the pion particle, is a composite particle
-consisting of a quark and an anti-quark. Consequently a single pion carries
-negative parity, an even number of Pions carries positive parity and an odd
-number of Pions carries negative parity:
+case of the \(\pi\) this can be achieved via counting. The vector channel is
+characterised by a negative G\-/parity, whereas the axial-vector channel has
+positive G\-/parity. A single \(\pi\) carries negative G\-/parity, an even
+number of \(\pi\) carries positive G\-/parity and an odd number of \(\pi\)
+carries negative G\-/parity:
 \begin{equation}
   n \times \pi = \begin{cases} \mbox{vector} & \mbox{if } n \text{ is even}, \\ \mbox{axial-vector} & \mbox{otherwise} \end{cases}.
 \end{equation}
+The separation into vector and axial\-/vector channel of mesons including
+strange quarks, like \(K\anti{K}\) pairs, is more difficult, because these are
+not in general eigenstates of G\-/parity and contribute to both \textsc{V} and
+\textsc{A} channels.
+
 
 The contributions to the spectral function for the vector, axial\-/vector and
 V+A channel can be seen in \cref{fig:aleph}. The dominant modes in the vector
@@ -694,7 +709,7 @@ axial-vector case are decays into one (\(\tau^-\to \pi^-\nu_\tau\)) or three
 We furthermore added the perturbative contribution for a fixed
 \(\alpha_s(m_\tau)=0.329\) using \textsc{fopt} in \cref{fig:alephVPlusA}. We can
 see, that the perturbative contribution (the blue line) is an almost straight
-line and cannot reproduce the sinusoidal graph, given by the \textsc{aleph}
+line and cannot reproduce the oscillating behaviour, given by the \textsc{aleph}
 data. This is especially the case for the \textsc{v} and \textsc{a} channel and
 is seen as an indicator for \textsc{dv}. Even including \textsc{np}, higher
 dimensions of the \textsc{ope} is not reproducing the wavy structure. In the
@@ -783,6 +798,11 @@ where the \textsc{dof} of the fit can be calculated through
 E.g. if we want to fit \(\alpha_s\) and the dimension four Wilson coefficient
 \(C_4\) we get \(7-2=5\) \textsc{dof}.
 
+For our purposes we use the numerical minimisation computer program
+\textsc{minuit}, which was originally written in \textsc{fortran} by Fred James
+in the 1970 \cite{James1975}. Today in its second version the program has been ported to C++ by
+the \textsc{root} \cite{Brun1997} project at \textsc{cern}.
+
 The parameter vector \(\vec\alpha\) includes the strong coupling \(\alpha_s\),
 but also the included \textsc{ope} Wilson coefficient. Consequently we should
 have at least as many, if not more moments as parameters we want to fit. As the
@@ -797,7 +817,8 @@ redefine our fit quality.
 
 
 \subsection{Block Diagonal ``Fit\-/Quality''}
-Following \cite{Boito2014} we can redefine \textsc{ls} to
+For fits including multiple weights, which we do not perform in this work,we can
+redefine \textsc{ls} \cite{Boito2014} to
 \begin{tcolorbox}[ams equation,myformula]
   Q^2 = \sum_{\omega} \sum_{s_0^i,s_0^j} \left(I_{\omega}^{exp}(s_0^i) -
     I_{\omega}^{th}(s_0^i,\vec\alpha)\right) \widetilde{C}_{ij,\omega}^{-1}
@@ -815,14 +836,10 @@ experimental covariance matrices \(C_{\omega}^{exp}\) for each weight
 \end{equation}
 As a result we are still able to invert the newly defined covariance matrix
 \(\widetilde{C}\), but minimisation routines like \textsc{CERN} \textsc{minuit}
-are now able to calculate the proper errors for the parameters we want to
+are not able to calculate the proper errors for the parameters we want to
 extract. We have to perform our own error propagation to obtain meaningful
-errors for the parameters.
-
-
-\subsubsection{Error Propagation}
-The error propagation has been derived in \cite{Boito2011a,Boito2011} and is
-given as
+errors for the parameters. The error propagation has been derived in
+\cite{Boito2011a,Boito2011} and is given as
 \begin{equation}
   \langle \delta \alpha_k \alpha_l \rangle = A_{km}^{-1}A_{ln}^{-1}
   \pd{I_i^{th}(\vec\alpha)}{\alpha_m} \pd{I_r^{th}(\vec \alpha)}{\alpha_n}
