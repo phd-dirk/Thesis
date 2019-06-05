@@ -571,7 +571,7 @@ by a single pinched weight containing a monomial \(x\).
   \centering
   \begin{tabularx}{\textwidth}{ccYYYYY}
     \toprule
-    & \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(c_{6}\) & \(\chi^2/dof\)  \\
+    & \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(C_{6}\) & \(\chi^2/dof\)  \\
     \midrule
     % 1.500 & 23 & 0.3276(13) & -0.0077(10) & 0.330(35) & 2.62 \\
     % 1.525 & 22 & 0.3278(14) & -0.0078(10) & 0.330(38) & 2.75 \\
@@ -623,11 +623,11 @@ notable convergence problems.
   \centering
   \begin{tabular}{cccccccc}
     \toprule
-    & \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(c_{6}\) & \(c_{8}\) & \(\chi^2/dof\)  \\
+    & \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(C_{6}\) & \(C_{8}\) & \(\chi^2/dof\)  \\
     \midrule
     \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{\textsc{bs}}}}
     & 2.000 & 9 & 0.3169(20) & -0.0123(34) & -0.29(12) & -0.05(24) & 2.0 \\
-    & \cellcolor{primary}2.100 & \cellcolor{primary}8 & \cellcolor{primary}0.3240(40) & \cellcolor{primary}-0.0212(42) & \cellcolor{primary}-0.63(15) & \cellcolor{primary}-0.74(29) & \cellcolor{primary}0.46 \\
+    & \cellcolor{primary}2.100 & \cellcolor{primary}8 & \cellcolor{primary}0.3239(40) & \cellcolor{primary}-0.0212(42) & \cellcolor{primary}-0.63(15) & \cellcolor{primary}-0.74(29) & \cellcolor{primary}0.46 \\
     & \cellcolor{primary}2.200 & \cellcolor{primary}7 & \cellcolor{primary}0.3251(17) & \cellcolor{primary}-0.02283(56) & \cellcolor{primary}-0.689(12) & \cellcolor{primary}-0.879(33) & \cellcolor{primary}0.56 \\
     \midrule
     \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{\textsc{fopt}}}}
@@ -643,7 +643,7 @@ notable convergence problems.
     \bottomrule
   \end{tabular}
   \caption{Table of our fitting values of \(\alpha_s(m_\tau^2), \langle aGG
-    \rangle_I, c_6\) and \(c_{8}\) for the optimal weight
+    \rangle_I, C_6\) and \(C_{8}\) for the optimal weight
     \(\omega_{X3}(x)=(1-x)^3\) using the \textsc{bs} or \textsc{fopt} ordered by
     increasing \(s_{min}\). The errors are given in parenthesis after the
     observed value.}
@@ -668,7 +668,7 @@ notable convergence problems.
     \end{tabular}
   \end{adjustbox}
   \caption{Table of our fitting values of \(\alpha_s(m_\tau^2), \langle aGG
-    \rangle_I, c_6, c_8\) and \(c_{10}\) for the optimal weight
+    \rangle_I, C_6, C_8\) and \(C_{10}\) for the optimal weight
     \(\omega_{X4}(x)=(1-x)^4\) using the \textsc{bs} or \textsc{fopt} ordered by
     increasing \(s_{min}\). The errors are given in parenthesis after the
     observed value.}
@@ -679,28 +679,26 @@ notable convergence problems.
 \section{Comparison}
 To create an overview of our previous results we have gathered the most
 compatible rows by hand. These are shown in \cref{table:fitCombinations}, which
-is composed of two parts:
-\begin{itemize}
-\item The upper three rows represent fits we found to have good properties for
-  determining the strong coupling.
-\item The lower five rows are problematic fits due to too many OPE
-  contributions, too low pinching or to terms proportional to \($x$\).
-\end{itemize}
+is composed of two parts. The upper four rows are fits using \textsc{fopt} and
+the lower two rows are fits using \textsc{bs}.
 \begin{table}
   \centering \resizebox{\textwidth}{!}{
-    \begin{tabular}{cccccccc}
+    \begin{tabular}{ccccccccc}
       \toprule
-      weight & \(s_{min}\) & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(c_6\) & \(c_8\) & \(c_{10}\) & \(\chi^2/dof\)  \\
+      & weight & \(s_{min}\) & \(\alpha_s(m_\tau^2)\) & \(\langle aGG \rangle_I\) & \(C_6\) & \(C_8\) & \(C_{10}\) & \(\chi^2/dof\)  \\
       \midrule
-      \(\omega_{kin}\) & 2.2 & 0.3308(44) & - & -0.72(20) & -0.85(38) & - & 0.19 \\
-      \(\omega_{cube}\) & 2.1 & 0.3302(40) & - & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\ 
-      \(\omega_{3,0}^*\) & 2.1 & 0.3239(30) & -0.2125(26) & -0.627(87) & -0.74(17) & - & 0.46 \\
-      \midrule
-      \(\omega_{quartic}\) & 2.0 & 0.3290(11) & - & -0.3030(46) & -0.1874(28) & 0.3678(45) & 0.67 \\
-      \(\omega_{m3}\) & 2.2 & 0.3214(49) & - & - & -1.01(39) & - & 0.41 \\
-      \(\omega_{m4}\) & 2.2 & 0.3203(48) & - & - & - & -1.64(77) & 0.42 \\
-      \(\omega_{2,0}\) & 2.2 & 0.3401(57) & -0.0185(52) & 0.220(88) & - & - & 0.73\\
-      \(\omega_{3,0}\) & 2.1 & 0.3480(47) & -0.0201(36) & -0.264(89) & -1.03(28) & - & 0.31\\
+      \parbox[t]{2mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{fopt}}}}
+      & \(\omega_{\tau}\)    & 2.2 & 0.3308(44) & -            & -0.72(20) & -0.85(38) & - & 0.19 \\
+      & \(\omega_{cube}\)    & 2.1 & 0.3302(40) & -            & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\ 
+      % & \(\omega_{quartic}\) & 2.0 & 0.3290(11) & -            & -0.3030(46) & -0.1874(28) & 0.3678(45) & 0.67 \\
+      & \(\omega_{M2}\)     & 2.2 & 0.3248(52) & -            &  -0.77(22) & - & - & 0.38 \\
+      & \(\omega_{M3}\)     & 2.2 & 0.3214(49) & -            & - & -1.01(39) & - & 0.41 \\
+      % & \(\omega_{M4}\)     & 2.2 & 0.3203(48) & -            & - & - & -1.64(77) & 0.42 \\
+      \midrule 
+      \parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c]{90}{\textsc{bs}}}}
+      & \(\omega_{X2}\)     & 2.2 & 0.3270(54) & -0.0254(61)  & -0.77(21)   & -          & -          & 0.74 \\
+      & \(\omega_{X3}\)     & 2.1 & 0.3239(40) & -0.0212(42)  & -0.63(15)   & -0.74(29)  & -          & 0.46 \\
+      % & \(\omega_{X4}\)     & 2.1 & 0.3248(21) & -0.02230(47) & -0.6724(63) & -0.834(14) & -1.352(28) & 0.23 \\
       \bottomrule
     \end{tabular}
   }
@@ -711,31 +709,43 @@ is composed of two parts:
     have been fitted using the \textit{Borel sum}.}
   \label{table:fitCombinations}
 \end{table}
-We have found that the kinematic weight is in excellent agreement with the cubic
-\(\omega_{cube}\) and Pich's optimal weight \(\omega_{3,0}\), fitted using the borel
-model. The fitted parameters from the kinematic weight (\(\alpha_s, c_6\) and
-\(c_8\)) are all within error ranges and thus compatible. One fact that has to be
-investigated is the negative appearing sign for the gluon\-/condensate from the
-borel\-/sum of \(\omega_{3,0}\).
+The fits are in great agreement with each others. The strong coupling as the
+\textsc{ope} contributions up to dimension eight are compatible within small
+error ranges, which we have visualised in \cref{fig:comparisonAlC6C8}. The fits
+furthermore all have a good \(\chi^2/dof\).
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/comparisonAlC6C8.eps}
+  \caption{dies das}
+  \label{fig:comparisonAlC6C8}
+\end{figure}
 
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{./images/comparisonAlpha.png}
-%   \caption{Comparison of the strong coupling for the best fits (selected by
-%   \($\chi^2/dof$\) closest to one) for each weight including the strong coupling
-%   as a fitting variable.}
-% \end{figure}
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{./images/comparisonD6D8.png}
-%   \caption{Comparison of the dimension six and eight values for the best fits
-%   (selected by \($\chi^2/dof$\) closest to one) for each weight including the OPE
-%   dimensions six and eight as fitting variables.}
-% \end{figure}
-% \begin{figure}[H]
-%   \includegraphics[width=\textwidth]{./images/comparisonD10.png}
-%   \caption{Comparison of the dimension ten values for the best fits (selected
-%   by \($\chi^2/dof$\) closest to one) for each weight including the OPE dimensions
-%   ten as fitting variables.}
-% \end{figure}
+As the weights \(\omega_{M2}\) and \(\omega_{M3}\) are only single pinched, but
+still in high agreement with the other higher pinched weights we conclude that
+\textsc{dv} only play a minor role, even for single pinched weights!
+
+As a result for \(\alpha_s\) we state the outcome of the \(\omega_\tau\) fit.
+The kinematic weight is double pinched, does not contain a monomial \(x\)
+term and has only three parameters to fit. The final value \(\alpha_s\) then reads
+\begin{tcolorbox}[ams equation,myformula]
+  \alpha_s(m_\tau^2) = 0.3308 \pm 0.0044.
+\end{tcolorbox}
+
+The dimension six \textsc{ope} contribution is as the strong coupling parameter
+very stable. Stating the result from the kinetic weight fit yields
+\begin{tcolorbox}[ams equation,myformula]
+  C_6 = -0.72 \pm 0.2.
+\end{tcolorbox}
+Note that the \(C_6\) values from the cubic weight are slightly different. This
+is due to the fact, that the cubic weight includes a fourth fitting parameter,
+which contribution needs to be compensated by the other parameters.
+
+The value of higher dimension \textsc{ope} parameters are still compatible, but
+have a higher variation than the previous two parameters. Beginning from the
+\(D=10\) contribution we do not have enough good fits to compare the parameter
+with and cannot determine the goodness of the variable. Consequently we do not
+want to state a single value for \textsc{ope} parameters of dimension six and
+higher. 
 
 
 \end{document}
