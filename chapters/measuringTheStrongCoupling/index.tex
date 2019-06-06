@@ -6,42 +6,52 @@
 
 \begin{wraptable}{l}{7cm}
   \caption{Timeline}\vskip -2.5ex
-  \begin{tabular}{@{\,}r <{\hskip 5pt} !{\foo} >{\raggedright\arraybackslash}p{5cm}}
+  \begin{tabular}{@{\,}r <{\hskip 5pt} !{\foo}
+      >{\raggedright\arraybackslash}p{5cm}}
     \toprule
     \addlinespace[1.5ex]
     1991 & \cite{Braaten1991}: Systematic description, including \textsc{np} corrections to extract \(\alpha_s\) from \(R_\tau\). \\
-    1992 & \cite{LeDiberder1992}: Introducing weights and fit methodology later used by \textsc{aleph} \cite{Aleph1993} and \textsc{opal} \cite{Opal1998} collaborations \\
-    2011 & \cite{Boito2011a}: Include \textsc{dv} model to extract \(\alpha_s\) from \textsc{opal} data. \\
-    2018 & \cite{Boito2018}: \(\alpha_s\) from \(e^+e^-\to \text{hadrons}\) up to \SI{2}{\giga\eV}.
+    1992 & \cite{LeDiberder1992}: Introducing weights and fit methodology \\
+    1993 & \cite{Aleph1993} \textsc{aleph} measures the strong coupling constant \(\alpha_s\)\\
+    1998 & \cite{Opal1998} \textsc{opal} measures the strong coupling constant \(\alpha_s\)\\
+    2005 & \cite{Aleph2005} \textsc{aleph} improves their data \\
+    2011 & \cite{Boito2011a,Boito2010}: Include \textsc{dv}. Discover inconsistencies in \textsc{aleph} data. \\
+    2014 & \cite{Aleph2014} \textsc{aleph} updates their data. \\
   \end{tabular}
   \label{table:AlphasTauTimeline}
 \end{wraptable}
 The strong coupling has been measured since many years from hadronic \(\tau\)
-decays. Until today most of the applied \textsc{qcdsr} to \(\tau\) decays are
-based on the methodology developed in the early nineties by Braaten,
-Pich and Narison \cite{Braaten1991}. They gathered the at this time available
-perturbative and \textsc{np} contributions to extract the strong coupling from
-comparing their theoretical results to the known inclusive hadronic \(\tau\)
-decay ratio \(R_\tau\). Pich together with Le Dibgerger then formulated the fitting strategy of fitting
-multiple moments of different weights to extract \(\alpha_s\) parallel to Wilson
-coefficients of the \textsc{ope} \cite{LeDiberger1992}, which later has been
-applied as standard in the \textsc{aleph} \cite{Aleph1993} as well as the
-\textsc{opal} \cite{Opal1998} detectors. For the next ten year years the
-methodology of extracting the strong coupling did not run through make major
+decays. An overview of the recently, but different, \(\alpha_s\) values can be
+seen in \cref{fig:historicAlphasComparison}.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{./images/historicAlphasComparison.eps}
+  \caption{}
+  \label{fig:historicAlphasComparison}
+\end{figure}
+Until today most of the applied \textsc{qcdsr} to \(\tau\) decays are based on
+the methodology developed in the early nineties by Braaten, Pich and Narison
+\cite{Braaten1991}. They gathered the at this time available perturbative and
+\textsc{np} contributions to extract the strong coupling from comparing their
+theoretical results to the known inclusive hadronic \(\tau\) decay ratio
+\(R_\tau\). Pich together with Le Diberger then formulated the fitting strategy
+of fitting multiple moments of different weights to extract \(\alpha_s\)
+parallel to Wilson coefficients of the \textsc{ope} \cite{LeDiberger1992}, which
+later has been applied as standard in the \textsc{aleph} \cite{Aleph1993} as
+well as the \textsc{opal} \cite{Opal1998} detectors. For the next ten year years
+the methodology of extracting the strong coupling did not experience any major
 changes until in the year 2011 when Boito, Cata, Golterman, Jamin, Osborn and
 Peris \cite{Boito2011a} applied a duality model to include known \textsc{dv}
 effects to the \textsc{qcd} analysis of \(\tau\) decays. The group around Boito
 and Pich have different opinions on the importance of the newly introduced
-duality model \cite{Pich2016,Boito2016,} and consequently we want to deliver a third,
-opinion on the subject, favouring fits without the duality model.
-
-
+duality model \cite{Pich2016,Boito2016,} and consequently we want to deliver a
+third, opinion on the subject, favouring fits without the duality model.
 
 
 \section{Fit Strategy}
-The objective of this work is to extract \(\alhpa_s\) and argue about the
+The objective of this work is to extract \(\alpha_s\) and argue about the
 importance of \textsc{dv}. Apart from the two main objectives we want to analyse
-the values of the \textsc{ope} Wilson coefficients up to dimension ten.
+the contribution of higher order \textsc{ope} contributions up to dimension ten.
 
 Our fitting strategy will be in choosing weights of lower and higher pinching.
 Lower pinched weights should be affected by \textsc{dv}, while higher pinched
@@ -54,13 +64,13 @@ vector and axial\-/vector channel in combination with pinched weights.
 Consequently we can extract parameters, like the strong coupling \(\alpha_s\)
 from \(\tau\) decays to high precision without a \textsc{dv} model.
 
-We will perform our analysis in the framework of \textsc{fopt}, but display our
-final results also in \textsc{cipt}. Consequently to define a fit we have to
-choose a weight \(\omega\) and a momentum \(s_0\). The only restriction from
-choosing a weight is, that the weight has to be analytic, leaving us with a
-variety of choices. For our strategy we have chosen three categories of weights,
-each of them containing fits with three or four different weights. A table with an
-overview of all used weights is given in \cref{table:fitCategories}
+We will perform our analysis in the framework of \textsc{fopt}. To
+define a fit we have to choose a weight \(\omega\) and a momentum \(s_0\). The
+only restriction from choosing a weight is, that the weight has to be analytic,
+leaving us with a variety of choices. For our strategy we have chosen three
+categories of weights, each of them containing fits with three or four different
+weights. A table with an overview of all used weights is given in
+\cref{table:fitCategories}
 \begin{table}
   \centering
   \begin{tabular}{ccccc}
@@ -147,10 +157,14 @@ results in \cref{table:fitWKinAlD6D8} and graphically in
 \cref{fig:fitWKinAlD6D8}.
 \begin{table}
   \centering
-  \begin{tabularx}{\textwidth}{ccYYYY}
+  \begin{tabularx}{\textwidth}{cccYYYY}
     \toprule
-    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(C_6\) & \(C_8\) & \(\chi^2/dof\)  \\
+    & \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(C_6\) & \(C_8\) & \(\chi^2/dof\)  \\
     \midrule
+    \parbox[t]{2mm}{\multirow{1}{*}{\rotatebox[origin=c]{90}{\textsc{bs}}}}
+    & 2.200 & 7 & 0.3274(42) & -0.82(21) & -1.08(40) & 0.21 \\
+    \midrule
+    \parbox[t]{2mm}{\multirow{5}{*}{\rotatebox[origin=c]{90}{\textsc{fopt}}}}
     % 1.500 & 23 & 0.3255(13) & -0.441(10) & -0.2909(34) & 2.00 \\
     % 1.525 & 22 & 0.3255(18) & -0.440(36) & -0.288(45) & 2.10 \\
     % 1.550 & 21 & 0.3265(16) & -0.478(36) & -0.343(50) & 1.81 \\
@@ -166,14 +180,11 @@ results in \cref{table:fitWKinAlD6D8} and graphically in
     % 1.900 & 11 & 0.3272(29) & -0.493(93) & -0.35(15) & 2.65 \\
     % 1.950 & 10 & 0.3232(32) & -0.31(11) & -0.01(18) & 1.13 \\
     % 2.000 & 9 & 0.3234(34) & -0.32(12) & -0.03(21) & 1.31 \\
-    2.100 & 8 & 0.3256(38) & -0.43(15) & -0.25(28) & 1.30 \\
-    \rowcolor{primary}
-    2.200 & 7 & 0.3308(44) & -0.72(20) & -0.85(38) & 0.19 \\
-    \rowcolor{primary}
-    2.300 & 6 & 0.3304(52) & -0.69(25) & -0.80(50) & 0.25 \\
-    \rowcolor{primary}
-    2.400 & 5 & 0.3339(70) & -0.91(39) & -1.29(83) & 0.10 \\
-    2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
+    & 2.100 & 8 & 0.3256(38) & -0.43(15) & -0.25(28) & 1.30 \\
+    & \cellcolor{primary}2.200 & \cellcolor{primary}7 & \cellcolor{primary}0.3308(44) & \cellcolor{primary}-0.72(20) & \cellcolor{primary}-0.85(38) & \cellcolor{primary}0.19 \\
+    & \cellcolor{primary}2.300 & \cellcolor{primary}6 & \cellcolor{primary}0.3304(52) & \cellcolor{primary}-0.69(25) & \cellcolor{primary}-0.80(50) & \cellcolor{primary}0.25 \\
+    & \cellcolor{primary}2.400 & \cellcolor{primary}5 & \cellcolor{primary}0.3339(70) & \cellcolor{primary}-0.91(39) & \cellcolor{primary}-1.29(83) & \cellcolor{primary}0.10 \\
+    & 2.600 & 4 & 0.3398(15) & -1.3(1.0) & -2.3(2.5) & 0.01  \\
     \bottomrule
   \end{tabularx}
   \caption{Table of our fitting values of \(\alpha_s(m_\tau^2), C_6\) and
@@ -225,6 +236,13 @@ values for \(C_6\) and \(C_8\) are larger than the values given in our final
 results from \cref{table:fitWKinAlD6D8}. This is explained with a smaller
 contribution from the strong coupling, which has to be compensated by larger
 \textsc{ope} contributions.
+
+Additionally we applied the \textsc{bs} for the fit below the \(\chi^2\)
+threshold containing seven \(s_0\)s. Even though we used a different framework
+than \textsc{fopt} the results are compatible. This further underlines the good
+results of the kinematic weight fit and can be seen as an indicator for
+\textsc{fopt} being the superior framework as compared to \textsc{cipt}. 
+
 
 \subsubsection{Cubic weight: \(\omega_{cube}(x) \equiv (1-x)^3(1+3x)\)}
 \label{sec:cubicWeight}
@@ -327,7 +345,7 @@ results for the quartic weight.
 To further solidate our hypothesis we want to probe some weights with a single
 pinching. If \textsc{dv} play a role then we should note deviating results to
 fits with higher pinchings. The advantage of these weights is that they only
-depend on one additional \textsc{ope} Wilson coefficients, thus leaving us with
+let one \textsc{ope} dimension contribute, thus leaving us with
 only two parameters per fit.
 
 \subsubsection{Second power monomial: \(\omega_{M2}(x) \equiv 1-x^2\)}
@@ -355,7 +373,11 @@ fit two parameters, the strong coupling \(\alpha_s\) and the dimension six
 \end{table}
 Note that we have again a jump of the \(\chi^2/dof\) value between if we fit
 with a too low \(s_{min}\). The values obtained for fitting six and seven
-\(s_0\)s moments are in agreement with good \(\chi^2\) values.
+\(s_0\)s moments are in agreement with good \(\chi^2\) values. The \(\chi^2\)
+per \textsc{dof} is like in the \(\omega_\tau\) and \(\omega_{cubic}\) fits good
+for \(s_{min}\leq \SI{2.2}{\giga\eV}\), but jumps to values \(\chi^2/dof>1.6\)
+for smaller \(s_{min}\). This is explained through resonances that appear in
+lower energies. 
 
 \subsubsection{Third power monomial: \(\omega_{M3}(x) \equiv 1-x^3\)}
 The second weight is defined as \(\omega_{M3}(x)\equiv 1-x^3\) and contains a
@@ -401,10 +423,7 @@ contributions from the \textsc{ope}. Our fitting results can be taken from
     in parenthesis after the observed value.}
   \label{table:fitWM3AlD8}
 \end{table}
-The \(\chi^2\) per \textsc{dof} is like in the \(\omega_\tau\) and
-\(\omega_{cubic}\) fits good for \(s_{min}\leq \SI{2.2}{\giga\eV}\), but jumps
-to values \(\chi^2/dof>1.4\) for smaller \(s_{min}\). This is explained through
-resonances that appear in lower energies. Due to the good \(\chi^2\) and the
+ Due to the good \(\chi^2\) and the
 internally compatible fitting values we averaged over all rows except the last
 one of \cref{table:fitWM3AlD8}. The last row, at \(s_{min}=\SI{2.8}{\giga\eV}\)
 has only one \textsc{dof} and thus high errors. The averaged values are given by
@@ -530,14 +549,14 @@ value, which could be connected to problems in the fit.
     % 2.000 & 9 & 0.3560(93) & -0.071(18) & 0.98 \\
     \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{\textsc{bs}}}}
     & 2.100 & 8  & 0.357(12) & -0.072(23) & 0.95 \\
-    & \cellcolor{primary}2.200 & \cellcolor{primary} 7  & \cellcolor{primary}
+    & \cellcolor{primary}2.200 & \cellcolor{primary} 7 & \cellcolor{primary}
     0.3593(97) & \cellcolor{primary} -0.079(19) & \cellcolor{primary} 0.2 \\
-    & \cellcolor{primary} 2.300 & \cellcolor{primary} 6  & \cellcolor{primary}
+    & \cellcolor{primary} 2.300 & \cellcolor{primary} 6 & \cellcolor{primary}
     0.3589(99) & \cellcolor{primary} -0.078(20) & \cellcolor{primary} 0.24 \\
     % 2.400 & 5 & 0.360(10) & -0.080(21) & 0.28 \\
     % 2.600 & 4 & 0.359(13) & -0.078(26) & 0.41 \\
     % 2.800 & 3 & 0.375(26) & -0.114(62) & 0.1 \\
-    \midrule     
+    \midrule
     \parbox[t]{2mm}{\multirow{3}{*}{\rotatebox[origin=c]{90}{\textsc{fopt}}}}
     & 2.100 & 8 & 0.3176(47) & -0.0134(48) & 1.62 \\
     & 2.200 & 7 & 0.3246(52) & -0.2262(59) & 1.91 \\
@@ -678,9 +697,12 @@ notable convergence problems.
 
 \section{Comparison}
 To create an overview of our previous results we have gathered the most
-compatible rows by hand. These are shown in \cref{table:fitCombinations}, which
-is composed of two parts. The upper four rows are fits using \textsc{fopt} and
-the lower two rows are fits using \textsc{bs}.
+compatible rows by hand. As in we noted in every weight a threshold for the
+\(\chi^2/dof\) value we selected always the fits with the most \(s_0\)s momenta
+included with the condition, that the fit is below the \(\chi^2\) threshold.
+These are shown in \cref{table:fitCombinations}, which is composed of two parts.
+The upper four rows are fits using \textsc{fopt} and the lower two rows are fits
+using \textsc{bs}.
 \begin{table}
   \centering \resizebox{\textwidth}{!}{
     \begin{tabular}{ccccccccc}
@@ -690,23 +712,25 @@ the lower two rows are fits using \textsc{bs}.
       \parbox[t]{2mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{\textsc{fopt}}}}
       & \(\omega_{\tau}\)    & 2.2 & 0.3308(44) & -            & -0.72(20) & -0.85(38) & - & 0.19 \\
       & \(\omega_{cube}\)    & 2.1 & 0.3302(40) & -            & -0.52(11) & -0.58(22) & -1.00(45) & 0.43 \\ 
-      % & \(\omega_{quartic}\) & 2.0 & 0.3290(11) & -            & -0.3030(46) & -0.1874(28) & 0.3678(45) & 0.67 \\
+      % & \(\omega_{quartic}\) & 2.0 & 0.3290(11) & - & -0.3030(46) &
+      % -0.1874(28) & 0.3678(45) & 0.67 \\
       & \(\omega_{M2}\)     & 2.2 & 0.3248(52) & -            &  -0.77(22) & - & - & 0.38 \\
       & \(\omega_{M3}\)     & 2.2 & 0.3214(49) & -            & - & -1.01(39) & - & 0.41 \\
-      % & \(\omega_{M4}\)     & 2.2 & 0.3203(48) & -            & - & - & -1.64(77) & 0.42 \\
+      % & \(\omega_{M4}\) & 2.2 & 0.3203(48) & - & - & - & -1.64(77) & 0.42 \\
       \midrule 
       \parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c]{90}{\textsc{bs}}}}
       & \(\omega_{X2}\)     & 2.2 & 0.3270(54) & -0.0254(61)  & -0.77(21)   & -          & -          & 0.74 \\
       & \(\omega_{X3}\)     & 2.1 & 0.3239(40) & -0.0212(42)  & -0.63(15)   & -0.74(29)  & -          & 0.46 \\
-      % & \(\omega_{X4}\)     & 2.1 & 0.3248(21) & -0.02230(47) & -0.6724(63) & -0.834(14) & -1.352(28) & 0.23 \\
+      % & \(\omega_{X4}\) & 2.1 & 0.3248(21) & -0.02230(47) & -0.6724(63) &
+      % -0.834(14) & -1.352(28) & 0.23 \\
       \bottomrule
     \end{tabular}
   }
-  \caption{Table of the best fits (selected by \(\chi^2/dof\) and compatibility of
-    the fitting values) for each weight including at least the strong coupling
-    \(\alpha_s(m_\tau^2)\) as a fitting variable. All fits have been performed
-    using \textsc{fopt}, except weights marked with a star \(\omega^*\), which
-    have been fitted using the \textit{Borel sum}.}
+  \caption{Table of the best fits (selected by \(\chi^2/dof\) and compatibility
+    of the fitting values) for each weight including at least the strong
+    coupling \(\alpha_s(m_\tau^2)\) as a fitting variable. All fits have been
+    performed using \textsc{fopt}, except weights marked with a star
+    \(\omega^*\), which have been fitted using the \textit{Borel sum}.}
   \label{table:fitCombinations}
 \end{table}
 The fits are in great agreement with each others. The strong coupling as the
@@ -714,8 +738,7 @@ The fits are in great agreement with each others. The strong coupling as the
 error ranges, which we have visualised in \cref{fig:comparisonAlC6C8}. The fits
 furthermore all have a good \(\chi^2/dof\).
 \begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{./images/comparisonAlC6C8.eps}
+  \centering \includegraphics[width=\textwidth]{./images/comparisonAlC6C8.eps}
   \caption{dies das}
   \label{fig:comparisonAlC6C8}
 \end{figure}
@@ -725,8 +748,8 @@ still in high agreement with the other higher pinched weights we conclude that
 \textsc{dv} only play a minor role, even for single pinched weights!
 
 As a result for \(\alpha_s\) we state the outcome of the \(\omega_\tau\) fit.
-The kinematic weight is double pinched, does not contain a monomial \(x\)
-term and has only three parameters to fit. The final value \(\alpha_s\) then reads
+The kinematic weight is double pinched, does not contain a monomial \(x\) term
+and has only three parameters to fit. The final value \(\alpha_s\) then reads
 \begin{tcolorbox}[ams equation,myformula]
   \alpha_s(m_\tau^2) = 0.3308 \pm 0.0044.
 \end{tcolorbox}
@@ -745,7 +768,7 @@ have a higher variation than the previous two parameters. Beginning from the
 \(D=10\) contribution we do not have enough good fits to compare the parameter
 with and cannot determine the goodness of the variable. Consequently we do not
 want to state a single value for \textsc{ope} parameters of dimension six and
-higher. 
+higher.
 
 
 \end{document}
