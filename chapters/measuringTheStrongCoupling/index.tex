@@ -26,7 +26,9 @@ seen in \cref{fig:historicAlphasComparison}.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/historicAlphasComparison.eps}
-  \caption{}
+  \caption{Recent values for \(\alpha_s(m_\tau^2)\) from hadronic \(\tau\)
+    decays. The values are taken from \cite{PDG2018, Boito2016, Pich2016,
+      Davier2014, Beneke2008}, from top to bottom.}
   \label{fig:historicAlphasComparison}
 \end{figure}
 Until today most of the applied \textsc{qcdsr} to \(\tau\) decays are based on
@@ -356,7 +358,7 @@ fit two parameters, the strong coupling \(\alpha_s\) and the dimension six
   \centering
   \begin{tabularx}{\textwidth}{ccYYY}
     \toprule
-    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(c_6\) &  \(\chi^2/dof\)  \\
+    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(C_6\) &  \(\chi^2/dof\)  \\
     \midrule
     2.100 & 8 & 0.3179(47) & -0.42(17) & 1.62 \\
     \rowcolor{primary}
@@ -371,13 +373,18 @@ fit two parameters, the strong coupling \(\alpha_s\) and the dimension six
     in parenthesis after the observed value.}
   \label{table:fitWM2AlD6}
 \end{table}
-Note that we have again a jump of the \(\chi^2/dof\) value between if we fit
-with a too low \(s_{min}\). The values obtained for fitting six and seven
-\(s_0\)s moments are in agreement with good \(\chi^2\) values. The \(\chi^2\)
-per \textsc{dof} is like in the \(\omega_\tau\) and \(\omega_{cubic}\) fits good
-for \(s_{min}\leq \SI{2.2}{\giga\eV}\), but jumps to values \(\chi^2/dof>1.6\)
-for smaller \(s_{min}\). This is explained through resonances that appear in
-lower energies. 
+Like in the \(\omega_\tau\) and \(\omega_{cubic}\) we obtain stable fits for
+\(s_{min}\leq \SI{2.2}{\giga\eV}\), but the \(\chi^2/dof\) jumps to values
+\(\chi^2/dof>1.6\) for smaller \(s_{min}\). The values obtained for fitting six
+and seven \(s_0\)s moments are in good agreement with each other and furthermore
+carry a acceptable \(\chi^2\) per \textsc{dof}. The averaged values for both
+parameters are
+\begin{equation}
+  \alpha_s(m_\tau^2) = 0.3254(40) \qquad \text{and} \qquad C_6 = -0.81(18)
+\end{equation}
+We note that the strong coupling obtained from the single pinched weight is
+similar to the one of the previous fits (\(\approx 3.33\)) which indicates, that
+even single pinched weights have sufficiently suppressed \textsc{dv}.
 
 \subsubsection{Third power monomial: \(\omega_{M3}(x) \equiv 1-x^3\)}
 The second weight is defined as \(\omega_{M3}(x)\equiv 1-x^3\) and contains a
@@ -388,7 +395,7 @@ contributions from the \textsc{ope}. Our fitting results can be taken from
   \centering
   \begin{tabularx}{\textwidth}{ccYYY}
     \toprule
-    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(c_8\) &  \(\chi^2/dof\)  \\
+    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(C_8\) &  \(\chi^2/dof\)  \\
     \midrule
     % 1.500 & 23 & 0.3160(28) & -0.523(65) & 2.4 \\
     % 1.525 & 22 & 0.3171(28) & -0.578(70) & 2.3 \\
@@ -423,31 +430,27 @@ contributions from the \textsc{ope}. Our fitting results can be taken from
     in parenthesis after the observed value.}
   \label{table:fitWM3AlD8}
 \end{table}
- Due to the good \(\chi^2\) and the
-internally compatible fitting values we averaged over all rows except the last
-one of \cref{table:fitWM3AlD8}. The last row, at \(s_{min}=\SI{2.8}{\giga\eV}\)
-has only one \textsc{dof} and thus high errors. The averaged values are given by
+Due to the good \(\chi^2\) and the internally compatible fitting values we
+averaged over all rows except the last one of \cref{table:fitWM3AlD8}. The last
+row, at \(s_{min}=\SI{2.8}{\giga\eV}\) has only one \textsc{dof} and consequently high
+errors. The averaged values are given by
 \begin{equation}
   \alpha(m_\tau^2) = 0.32382(42) \qquad \text{and} \qquad C_8=-1.33(67).
 \end{equation}
-We note that the strong coupling is smaller as our expected values from the
-previous fits of around \(3.33\), but the dimension eight contribution is in
-good agreement. This is a sign of appearing \textsc{dv}, although the parameters
-of the different fits do not vary by huge numbers.
 
 
-\subsubsection{Fourth power monomial: \(\omega_{m4}(x) \equiv 1-x^4\)}
+\subsubsection{Fourth power monomial: \(\omega_{M4}(x) \equiv 1-x^4\)}
 We already analysed the cubic and quartic weights, which depend on the dimension
 ten \textsc{ope} contribution, in \cref{sec:cubicWeight} and
 \cref{sec:quarticWeight} correspondingly. Now, even with the visible \textsc{dv}
-for fourth power monomial \(\omega_{m4}\equiv 1-x^4\) to study another single
+for fourth power monomial \(\omega_{M4}\equiv 1-x^4\) to study another single
 pinched moment and the dimension ten \textsc{ope} contribution. The results of
-the are given in \cref{table:wFitM4AlD10}.
+the are given in \cref{table:fitWM4AlD10}.
 \begin{table}
   \centering
   \begin{tabularx}{\textwidth}{ccYYY}
     \toprule
-    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(c_{10}\) & \(\chi^2/dof\)  \\
+    \(s_{min}\) & \#\(s_0\)s & \(\alpha_s(m_\tau^2)\) & \(C_{10}\) & \(\chi^2/dof\)  \\
     \midrule
     % 1.500 & 23 & 0.3144(27) & -0.572(80) & 2.44 \\
     % 1.525 & 22 & 0.3155(27) & -0.655(90) & 2.34 \\
@@ -480,15 +483,15 @@ the are given in \cref{table:wFitM4AlD10}.
     for the single pinched fourth power monomial weight \(\omega_{M4}(x)=1-x^4\)
     using \textsc{fopt} ordered by increasing \(s_{min}\). The errors are given
     in parenthesis after the observed value.}
-  \label{table:fitM4AlD10}
+  \label{table:fitWM4AlD10}
 \end{table}
 The fitting behaviour is very similar to the third power monomial
-(\cref{table:wFitM3AlD8}) and we will directly cite our obtained results:
+(\cref{table:fitWM3AlD8}) and we will directly cite our obtained results:
 \begin{equation}
-  \alpha_s(m_\tau^2) = 0.32277(40) \qquad \text{and} \qquad c_{10}=-2.4(3.6).
+  \alpha_s(m_\tau^2) = 0.32277(40) \qquad \text{and} \qquad C_{10}=-2.4(3.6).
 \end{equation}
-As before the values for the strong coupling are lower than the ones obtained by
-the fit kinematic and cubic weight fits. Furthermore the error on the tenth
+The values for the strong coupling are a little bit lower than the ones obtained by
+the kinematic and cubic weight fits. Furthermore the error on the tenth
 dimension contribution of the \textsc{ope} are large. All in all the usage of
 the single pinched fourth power monomial weight is questionable and does not
 deliver any additional insights.
@@ -498,7 +501,7 @@ deliver any additional insights.
 Next to the previously mentioned \textit{optimal weights} from Beneke and Jamin
 \cite{Beneke2012} there exist another type of \textit{optimal'
   weights}\footnote{Pich has a different definition of ``optimal'' moments than
-  Beneke and Jamin. We to differentiate the two definition we marked Pich's
+  Beneke and Jamin. To differentiate the two definition we marked Pich's
   optimal' moments with an apostrophe.} introduced by Pich \cite{LeDiberder1992}
 \begin{equation}
   \omega_{(n,m)}(x) = (1-x)^n\sum_{k=0}^m (k+1)x^k,
@@ -518,7 +521,7 @@ fits have been displayed in \cref{table:fitOpt10AlD4}. We note that the
 the problematic of the monomial in \(x\), appearing in the weight function. In
 general we trust the results of the \textsc{bs} more than those of
 \textsc{fopt}. This is further underlined while regarding the higher
-\(\chi^2/dof\) values of the \textsc{fopt} fits. Furthermore the values of the
+\(\chi^2/dof\) values of the \textsc{fopt} fits. Moreover the values of the
 \textsc{bs} fits agree with each other, whereas the fits of the \textsc{fopt}
 yield inconsistent values. Regarding explicitly the fits from the \textsc{bs} we
 note that the fits have good \(\chi^2/dof\) values, although a jump from \(0.2\)
@@ -578,14 +581,15 @@ invariant gluon\-/condensate we also had to fit the dimension six \textsc{ope}
 contribution. Our fits can be seen in \cref{table:fitOpt30AlD4D6}. If we compare
 the \textsc{bs} with the \textsc{fopt} fits we note, next to the before
 mentioned incompatibilities, a sign difference for the \(D=6\) contribution.
-From now we will skip the \textsc{fopt} discussion for weights containing
-monomial \(x\), and trust in the \textsc{bs} fits. In comparison to the previous
-fit with the single pinched weight we have higher \(\chi^2/dof\) values, a lower
-\(\alpha_s\) value and an \(\langle aGG \rangle_I\) numeric value similar to the
-value from the literature around \(0.21\), but with opposite sign. Consequently
-we note some tension between the single pinched weight and the double pinched
-weight, which could be caused by \textsc{dv} being not sufficiently suppressed
-by a single pinched weight containing a monomial \(x\).
+From now we will skip the \textsc{fopt} discussion for weights containing a
+monomial \(x\) term, and trust in the \textsc{bs} fits. In comparison to the
+previous fit with the single pinched weight we have higher \(\chi^2/dof\)
+values, a lower \(\alpha_s\) value and an \(\langle aGG \rangle_I\) numeric
+value similar to the value from the literature around \(0.21\), but with
+opposite sign. Consequently we note some tension between the single pinched
+weight and the double pinched weight, which could be caused by \textsc{dv} being
+not sufficiently suppressed by a single pinched weight containing a monomial
+\(x\).
 \begin{table}
   \centering
   \begin{tabularx}{\textwidth}{ccYYYYY}
@@ -635,9 +639,9 @@ by a single pinched weight containing a monomial \(x\).
 The fits with a triple and quadruple pinched weight do not give any further
 insights. We give the results in \cref{table:fitOpt30AlD4D6D8} and
 \cref{table:fitOpt40AlD4D6D8D10}. Both of the weights include similar values to
-the double pinched weights, which affirms the problems of the single pinched
-weights. The quadruple pinched weight contains five fitting parameters and has
-notable convergence problems.
+the double pinched weights, which affirms problems with the single pinched
+weight of this category. The quadruple pinched weight contains five fitting
+parameters and as a result has notable convergence problems.
 \begin{table}
   \centering
   \begin{tabular}{cccccccc}
@@ -697,12 +701,12 @@ notable convergence problems.
 
 \section{Comparison}
 To create an overview of our previous results we have gathered the most
-compatible rows by hand. As in we noted in every weight a threshold for the
-\(\chi^2/dof\) value we selected always the fits with the most \(s_0\)s momenta
-included with the condition, that the fit is below the \(\chi^2\) threshold.
-These are shown in \cref{table:fitCombinations}, which is composed of two parts.
-The upper four rows are fits using \textsc{fopt} and the lower two rows are fits
-using \textsc{bs}.
+compatible rows by hand. The fits have been selected by regarding the
+\(\chi^2/dof\) threshold. For every weight, which is we did not mark
+problematic, we have chosen a fit closest, but below the \(\chi^2/dof\)
+threshold. They are shown in \cref{table:fitCombinations}, which is composed of
+two parts. The upper four rows are fits using \textsc{fopt} and the lower two
+rows are fits using \textsc{bs}.
 \begin{table}
   \centering \resizebox{\textwidth}{!}{
     \begin{tabular}{ccccccccc}
@@ -726,17 +730,19 @@ using \textsc{bs}.
       \bottomrule
     \end{tabular}
   }
-  \caption{Table of the best fits (selected by \(\chi^2/dof\) and compatibility
-    of the fitting values) for each weight including at least the strong
-    coupling \(\alpha_s(m_\tau^2)\) as a fitting variable. All fits have been
-    performed using \textsc{fopt}, except weights marked with a star
-    \(\omega^*\), which have been fitted using the \textit{Borel sum}.}
+  \caption{Table of the best fits. The fits have been selected as being closest
+    to the previously discussed \(\chi^2/dof\) jump. Each weight includes the
+    strong coupling \(\alpha_s(m_\tau^2)\) as a fitting variable. The first four
+    fits have been performed using \textsc{fopt} and the last two have been
+    performed using \textsc{bs}. They are visually distinguished in the table by
+    a horizontal line.}
   \label{table:fitCombinations}
 \end{table}
 The fits are in great agreement with each others. The strong coupling as the
 \textsc{ope} contributions up to dimension eight are compatible within small
-error ranges, which we have visualised in \cref{fig:comparisonAlC6C8}. The fits
-furthermore all have a good \(\chi^2/dof\).
+error ranges. We have visualised the different values and errors in
+\cref{fig:comparisonAlC6C8} to underline their agreement. The fits furthermore
+all have a good \(\chi^2/dof\).
 \begin{figure}
   \centering \includegraphics[width=\textwidth]{./images/comparisonAlC6C8.eps}
   \caption{dies das}
@@ -754,8 +760,8 @@ and has only three parameters to fit. The final value \(\alpha_s\) then reads
   \alpha_s(m_\tau^2) = 0.3308 \pm 0.0044.
 \end{tcolorbox}
 
-The dimension six \textsc{ope} contribution is as the strong coupling parameter
-very stable. Stating the result from the kinetic weight fit yields
+The dimension six \textsc{ope} contribution is very stable. Stating the result
+from the kinetic weight fit yields
 \begin{tcolorbox}[ams equation,myformula]
   C_6 = -0.72 \pm 0.2.
 \end{tcolorbox}
@@ -765,10 +771,9 @@ which contribution needs to be compensated by the other parameters.
 
 The value of higher dimension \textsc{ope} parameters are still compatible, but
 have a higher variation than the previous two parameters. Beginning from the
-\(D=10\) contribution we do not have enough good fits to compare the parameter
-with and cannot determine the goodness of the variable. Consequently we do not
-want to state a single value for \textsc{ope} parameters of dimension six and
-higher.
+\(D=10\) contribution we do not have enough good fits to evaluate their
+contribution. Consequently we do not state a single value for \textsc{ope}
+parameters of dimension eight and higher.
 
 
 \end{document}
