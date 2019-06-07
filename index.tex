@@ -141,15 +141,48 @@
 
 
 \begin{document}
-  \title{
-    {The \textsc{QCD} strong coupling from hadronic $\tau$ decays}\\
-    {\large Universitat Autònoma de Barcelona}\\
-    % {\includegraphics{university.jpg}}
-  }
-  \author{Dirk Hornung}
-  \date{Day Month Year}
+  \begin{titlepage}
+    \begin{center}
+      \includegraphics[height=2.4cm]{./images/logo_UAB.eps}
+      \hfill
+      \includegraphics[height=2.4cm]{./images/logo_IFAE.eps}
+      \par
+
+      \vspace{0.3cm}
+      \large
+      A PhD Thesis in Physics
+      \makebox[\linewidth]{\rule{\textwidth}{2pt}}
+      \Huge
+      The \textsc{qcd} Strong Coupling from Hadronic \(\tau\) Decays
+      \makebox[\linewidth]{\rule{\textwidth}{2pt}}
+
+      \vspace{1.2cm}
+      \LARGE
+      Dirk Hornung
+
+      \vspace{0.9cm}
+      \begin{tkizpicture}
+        % Using the layered layout
+        \feynmandiagram [scale=1.3,transform shape][layered layout, horizontal=a to b] {
+          a [particle=\(\tau\)] -- [fermion] b -- [fermion] f1 [particle=\(\nu_{\tau}\)], b -- [boson, edge label'=\(W^{-}\)] c,
+          c -- [anti fermion] f2 [particle=\(\anti{q}\)],
+          c -- [fermion] f3 [particle=\(q\)],
+        };
+      \end{tkizpicture}
+
+      \Large
+      July 2019
+
+      \vfill
+      \makebox[\linewidth]{\rule{\textwidth}{1pt}}
+      \large
+      \textsc{Supervisors}: Matthias Jamin, Santiago Peris Rodríguez
+
+    \end{center}
+  \end{titlepage}
+
+  
   \pdfbookmark[0]{Titlepage}{title}
-  \maketitle
 
   \newpage
   \pdfbookmark[0]{Abstract}{abstract} % Sets a PDF bookmark for the abstract
