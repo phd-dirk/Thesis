@@ -59,7 +59,7 @@ derivation making use of the \textit{optical theorem}, as already mentioned in
 \cref{sec:twoPointFunction} can be taken from \cite{Schwab2002}. Notice that we
 used the standard Lorentz decomposition into transversal (\(J=1\)) and
 longitudinal (\(J=0\)) components of
-\cref{eq:eq:correlatorTransversalLongitudinalDecomposition} to display the
+\cref{eq:standardLorentzDecomposition} to display the
 hadronic decay ratio (\cref{eq:hadronicTauDecayRatio}).
 
 Applying Cauchy's theorem, as seen in \cref{eq:qcdSumRules}, to the
@@ -76,7 +76,7 @@ and longitudinal components \(\Pi^{(1+0)}\), which has been defined in
 \cref{eq:correlatorCombination} and is free of kinematic singularities. As a
 result we can further rewrite the hadronic \(\tau\) decay ratio into
 \begin{equation}
-  \label{eq:tauDecayRatioT+L}
+  \label{eq:tauDecayRatioTL}
   R_\tau = 6 \pi i \oint_{\abs{s}=m_\tau} \frac{\dif s}{m_\tau^2}
   \left( 1 - \frac{s}{m_\tau^2} \right)^2
   \left[ \left( 1 + 2 \frac{s}{m_\tau^2} \right) \Pi^{(1+0)}(s) - \left( \frac{2 s}{m_\tau^2} \right) \Pi^{(0)}(s) \right].
@@ -84,7 +84,7 @@ result we can further rewrite the hadronic \(\tau\) decay ratio into
 In the case of \(\tau\) decays we only have to consider vector and axial-vector
 contributions of decays into up, down and strange quarks.
 
-With \cref{eq:tauDecayRatioT+L} we have a suitable physical quantity that can be
+With \cref{eq:tauDecayRatioTL} we have a suitable physical quantity that can be
 theoretically calculated as experimentally measured. By using the \textsc{qcdsr}
 we apply a closed contour integral of radius \(s_0\). As a result we
 successfully avoided low energies at which the application of \textsc{pt} would
@@ -116,7 +116,7 @@ longitudinal contributions:
   \label{eq:adlerFunction}
   D^{(1+0)}(s) \equiv -s \od{}{s} \Pi^{(1+0)}(s), \qquad D^{(0)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(0)}(s)).
 \end{equation}
-The two\-/point functions in \cref{eq:tauDecayRationT+L} can now be replaced
+The two\-/point functions in \cref{eq:tauDecayRatioTL} can now be replaced
 with the help of partial integration
 \begin{equation}
   \int_a^b u(x) V(x) \dif x = \left[ U(x) V(x) \right]_a^b - \int_a^b U(x) v(x) \dif x.
@@ -257,7 +257,7 @@ The second loop can also be calculated by diagram techniques resulting in
 \begin{equation}
   \left. \Pi_V^{(1+0)}(s) \right\rvert^{2-loop} = -\frac{N_c}{12\pi^2} a_\mu \log(\frac{-s}{\mu^2}) + \cdots
 \end{equation}
-yielding \(c_{11} = 1\).
+yielding \(c_{1,1} = 1\).
 
 Beginning from three loop diagrams the algebra becomes exhausting and one has to
 use dedicated algorithms to compute the higher loops. The third loop
@@ -302,7 +302,7 @@ is then given by
   \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1},
 \end{tcolorbox}
 where we used \(\dif L^k/ \dif s=k\ln(-s/\mu^2)^{k-1}(-1/\mu^2)\). Applying the
-\textsc{rge} (\cref{eq:rge}) to the scale\-/invariant Adler function yields
+\textsc{rge} (\cref{eq:RGE}) to the scale\-/invariant Adler function yields
 \begin{equation}
   \label{eq:rgeAdler}
   -\mu \od{}{\mu} D_V^{(1+0)} = -\mu \od{}{\mu} \left( \pd{}{L} \dif L + \pd{}{a_s} \dif a_s \right) D_V^{(1+0)}
@@ -497,7 +497,7 @@ operators
     +\frac{3 m_i m_j^3}{7 \pi^2 a} \left\{ 1 - \frac{53}{24}a + \mathcal{O}(a^2) \right\},
 \end{align}
 where \(\gamma_0^{ij}(a) = -2 - 8/3 a\).
-During this work we will insert the known invariant quark condensates (see \cref{table:coefficients}) as
+During this work we will insert the known invariant quark condensates (see \cref{table:constants}) as
 constants and state our results for the invariant gluon condensate.
 
 
@@ -512,7 +512,7 @@ the operator will be six. The largest contributions comes from the 4\-/quark
 operators. The three\-/gluon condensate does not contribute at leading order
 \cite{Hubschmid1982} and is neglected. Operators proportional to the light quark
 masses will also be neglected. The resulting contribution of dimension six
-operators has been calculated in \cite{Laning1986} and leads to a large amount
+operators has been calculated in \cite{Lanin1986} and leads to a large amount
 of operators, which until today cannot be accurately determined by phenomenology
 methods. To reduce the number of operators we can make use of the
 \define{vsa}{vacuum saturation approach}
@@ -722,7 +722,7 @@ impossible to be represented by perturbative tools. For lower energies
 \textsc{dv} become too important to be neglected.
 
 \subsection{Total decay ratio from experimental data}
-The data has been last revised in 2014 \cite{Davier2014} and is publicly
+The data has been last revised in 2014 \cite{Davier2013} and is publicly
 available \cite{AlephData}. It consists of the mass squared bin center
 (\textit{sbin}), the bin size (\textit{dsbin}), the normalised invariant mass
 squared distribution (\textit{sfm2}), the total errors (\textit{derr}) and their

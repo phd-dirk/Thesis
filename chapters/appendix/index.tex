@@ -11,13 +11,13 @@
       \toprule
       Quantity & Value & Reference \\
       \midrule
-      \(V_{ud}\) & \(0.9742 \pm 0.00021\) & ? \\
-      \(S_{EW}\) & \(1.0198 \pm 0.0006\) & ? \\
+      \(V_{ud}\) & \(0.9742 \pm 0.00021\) & \cite{PDG2018} \\
+      \(S_{EW}\) & \(1.0198 \pm 0.0006\) & \cite{Marciano1988} \\
       \(B_e\) & \(17.815 \pm 0.023\) & ? \\
-      \(m_\tau\) & \(1.77686\) error? & ? \\
-      \(\langle  a GG \rangle_I\) & \SI{0.012}{\giga\eV^2} & ? \\
-      \(\langle \anti{q}_{u/d}q_{u/d} \rangle_I \) & \SI{-0.020123648}{\mega\eV} & ? \\
-      \(\langle \anti{q}_{s}q_{s} \rangle_I \) & \SI{-0.0160989184}{\mega\eV} & ? \\
+      \(m_\tau\) & \SI{1.77686 \pm 0.12}{\mega\eV} & \cite{PDG2018} \\
+      \(\langle  a GG \rangle_I\) & \SI{0.012}{\giga\eV^2} & \cite{Shifman1978a} \\
+      \(\langle \anti{q}_{u/d}q_{u/d} \rangle(m_\tau) \) & \SI{-272 \pm 15}{\mega\eV} & \cite{Jamin2002} \\
+      \( \anti{s}s / \langle \anti{q}q \rangle \) & 0.8 \pm 0.3 & \cite{Jamin2002} \\
       \bottomrule
     \end{tabular}
     \caption{Numerical values of used constants in our fitting routine.}
@@ -104,6 +104,44 @@
 
 
   \section{Adler function}
+  The the derivative of the two\-/point function can be expressed as the Adler
+  function, which can be written in terms of the Adler function coefficients
+  \begin{equation}
+    D_V^{(1+0)} =  \frac{N_c}{12 \pi^2}
+    \sum_{n=0}^\infty a_\mu^n \sum_{k=1}^{n+1} k c_{n,k} L^{k-1}.
+  \end{equation}
+  The coefficients are partly dependent on each other via the \textsc{rge} 
+  \begin{equation}
+    -\mu \od{}{\mu} D_V^{(1+0)} = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{(1+0)} = 0,
+  \end{equation}
+  which implies that per order there exists only one coefficient we have to know
+  to describe the Adler function. For completeness we will mention the necessary
+  coefficients up to order \(n = 5\) here once again
+  \begin{equation}
+    \begin{split}
+      c_{1,1} &= 1 \\
+      c_{2,1} &= \frac{365}{24} - 11 \zeta_3 - \left( \frac{11}{12} - \frac{2}{3}\zeta_3 \right) N_f \\
+      c_{3,1} &= \frac{87029}{288} - \frac{1103}{4} \zeta_3 + \frac{275}{6}\zeta_5 \\
+      &- \left( \frac{7847}{216} - \frac{262}{9} \zeta_3 + \frac{25}{9} \zeta_5 \right) N_f + \left( \frac{151}{162} - \frac{19}{27}\zeta_3\right)N_f^2 \\
+      c_{4,1} &= \frac{78631453}{20736} - \frac{1704247}{432}\zeta_3 +
+      \frac{4185}{8}\zeta_3^2 + \frac{34165}{96}\zeta_5 - \frac{1995}{16}\zeta_7.
+    \end{split}
+  \end{equation}
+  The rest of the coefficients are given by
+  \begin{equation}
+    \begin{split}
+      c_{2,2} &= -\frac{1}{4} \beta_1 c_{1,1} \\
+      c_{3,2} &= (-\beta_2 c_{1,1} - 2\beta_1 c_{2,1}), \quad c_{3,3} = \frac{1}{12}\beta_1^2c_{1,1} \\
+      c_{4,2} &= \frac{1}{4}(-\beta_3 c_{1,1} - 2\beta_2c_{2,1} - 3\beta_1 c_{3,1}), \\
+      c_{4,3} &= \frac{1}{24}(6 c_{2,1} \beta_1^2 + 5 \beta_2\beta_1 c_{1,1}), c_{4,4} = -\frac{1}{32}\beta_1^3 c_{1,1} \\
+      c_{5,2} &= \frac{1}{4}(-\beta_4 c_{1,1} - 2\beta_3 c_{2,1} - 3\beta_2 c_{3,1} - 4 \beta_1 c_{4,1}), \\
+      c_{5,3} &= \frac{1}{24}(12 c_{3,1} \beta_1^2 + 6 \beta_1 \beta_3 c_{1,1} + 14 \beta_2 \beta_1 c_{2,1} + 3 \beta_2^2 c_{1,1}), \\ 
+      c_{5,4} &= \frac{1}{96} (-12 \beta_1^3c_{2,1} - 13 \beta_2 \beta_1^2 c_{1,1}), \quad c_{5,5} = \frac{1}{80} \beta_1^4 c_{1,1}
+    \end{split}
+  \end{equation}
+  and all related to the previous stated Adler function coefficients \(c_{n, 1}\).
+  
+
 
 %   \chapter{Källén-Lehmann spectral representation}
 %   \label{ch:kallenLehmannSpectralRepresentation}
