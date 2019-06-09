@@ -187,11 +187,13 @@
 
   
 
+  \pagenumbering{gobble}
   \subfile{chapters/abstract/index}
   \subfile{chapters/acknowledgements/index}
-
-  \pagenumbering{arabic}
+  \tableofcontents
   \subfile{chapters/notation/index}
+  \newpage
+  \pagenumbering{arabic}
   \subfile{chapters/introduction/index}
   \subfile{chapters/qcdSumRules/index}
   \subfile{chapters/tauDecaysIntoHadrons/index}
