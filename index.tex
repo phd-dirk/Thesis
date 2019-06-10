@@ -55,6 +55,7 @@
 \usepackage{tabu}
 \usepackage{caption}
 \usepackage{titlesec}
+\usepackage{afterpage}
 
 % Headers
 \usepackage[Lenny]{fncychap}
@@ -156,10 +157,11 @@
 
 \begin{document}
 
+\pagenumbering{gobble}
 \pdfbookmark[0]{Titlepage}{title}
 \begin{titlepage}
   \begin{center}
-    \includegraphics[height=2.4cm]{./images/logo_UAB.eps} \hfill
+    \includegraphics[height=2.4cm]{./images/UAB_physics_department.eps} \hfill
     \includegraphics[height=2.4cm]{./images/logo_IFAE.eps}
     \par
 
@@ -185,10 +187,10 @@
     \vfill \makebox[\linewidth]{\rule{\textwidth}{1pt}} \large
     \textsc{Supervisors}: Matthias Jamin, Santiago Peris Rodríguez
 
+    \afterpage{\null\newpage}
   \end{center}
 \end{titlepage}
 
-\newpage
 
 \begin{center}
   \Large
@@ -225,7 +227,6 @@ Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
 
   
 
-\pagenumbering{gobble}
 \subfile{chapters/abstract/index}
 \subfile{chapters/acknowledgements/index}
 \setcounter{tocdepth}{1}
