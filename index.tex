@@ -156,63 +156,88 @@
 
 \begin{document}
 
-  \pdfbookmark[0]{Titlepage}{title}
-  \begin{titlepage}
-    \begin{center}
-      \includegraphics[height=2.4cm]{./images/logo_UAB.eps}
-      \hfill
-      \includegraphics[height=2.4cm]{./images/logo_IFAE.eps}
-      \par
+\pdfbookmark[0]{Titlepage}{title}
+\begin{titlepage}
+  \begin{center}
+    \includegraphics[height=2.4cm]{./images/logo_UAB.eps} \hfill
+    \includegraphics[height=2.4cm]{./images/logo_IFAE.eps}
+    \par
 
-      \vspace{0.5cm}
-      \Large
-      A PhD Thesis in Physics
-      \makebox[\linewidth]{\rule{\textwidth}{2pt}}
-      \Huge
-      The \textsc{qcd} Strong Coupling from Hadronic \(\tau\) Decays
-      \makebox[\linewidth]{\rule{\textwidth}{2pt}}
+    \vspace{0.5cm} \Large A PhD Thesis in Physics
+    \makebox[\linewidth]{\rule{\textwidth}{2pt}} \Huge The \textsc{qcd} Strong
+    Coupling from Hadronic \(\tau\) Decays
+    \makebox[\linewidth]{\rule{\textwidth}{2pt}}
 
-      \vspace{1.2cm}
-      \Large
-      Dirk Hornung
+    \vspace{1.2cm} \Large Dirk Hornung
 
-      \vspace{0.9cm}
-      \normalsize
-      \begin{tkizpicture}
-        % Using the layered layout
-        \feynmandiagram [scale=1.3,transform shape][layered layout, horizontal=a to b] {
-          a [particle=\(\tau\)] -- [fermion] b -- [fermion] f1 [particle=\(\nu_{\tau}\)], b -- [boson, edge label'=\(W^{-}\)] c,
-          c -- [anti fermion] f2 [particle=\(\anti{q}\)],
-          c -- [fermion] f3 [particle=\(q\)],
-        };
-      \end{tkizpicture}
+    \vspace{0.9cm} \normalsize
+    \begin{tkizpicture}
+      % Using the layered layout
+      \feynmandiagram [scale=1.3,transform shape][layered layout, horizontal=a
+      to b] { a [particle=\(\tau\)] -- [fermion] b -- [fermion] f1
+        [particle=\(\nu_{\tau}\)], b -- [boson, edge label'=\(W^{-}\)] c, c --
+        [anti fermion] f2 [particle=\(\anti{q}\)], c -- [fermion] f3
+        [particle=\(q\)], };
+    \end{tkizpicture}
 
-      \Large
-      July 2019
+    \Large July 2019
 
-      \vfill
-      \makebox[\linewidth]{\rule{\textwidth}{1pt}}
-      \large
-      \textsc{Supervisors}: Matthias Jamin, Santiago Peris Rodríguez
+    \vfill \makebox[\linewidth]{\rule{\textwidth}{1pt}} \large
+    \textsc{Supervisors}: Matthias Jamin, Santiago Peris Rodríguez
 
-    \end{center}
-  \end{titlepage}
+  \end{center}
+\end{titlepage}
+
+\newpage
+
+\begin{center}
+  \Large
+  The \textsc{qcd} Strong Coupling from Hadronic \(\tau\) Decays
+
+  \makebox[\linewidth]{\rule{\textwidth}{1pt}}
+
+  \vspace{2cm}
+
+  \includegraphics[height=2.4cm]{./images/logo_UAB.eps} \hfill
+  \includegraphics[height=2.4cm]{./images/logo_IFAE.eps}
+
+  \vspace{1cm}
+
+  \includegraphics[height=2.4cm]{./images/severo_ochoa.eps} \hfill
+  \includegraphics[height=2.4cm]{./images/bist.eps}
+
+  \vspace{3cm}
+\end{center}
+
+\large
+\textbf{Matthias Rudolf Jamin} and \textbf{Santiago Peris Rodríguez} we
+certify that the dissertation with title \textit{The \textsc{qcd} Strong Coupling from
+Hadronic \(\tau\) Decays} was written by \textbf{Dirk Hornung} under our
+supervision in partial fulfilment of the Doctoral degree in Physics.
+
+\vfill
+Bellaterra, June 2019, \par
+\vspace{0.2cm}
+Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
+\vspace{1cm}
+\normalsize
+
 
   
 
-  \pagenumbering{gobble}
-  \subfile{chapters/abstract/index}
-  \subfile{chapters/acknowledgements/index}
-  \setcounter{tocdepth}{1}
-  \tableofcontents
-  \subfile{chapters/notation/index}
-  \newpage
-  \pagenumbering{arabic}
-  \subfile{chapters/introduction/index}
-  \subfile{chapters/qcdSumRules/index}
-  \subfile{chapters/tauDecaysIntoHadrons/index}
-  \subfile{chapters/measuringTheStrongCoupling/index}
-  \subfile{chapters/conclusions/index}
+\pagenumbering{gobble}
+\subfile{chapters/abstract/index}
+\subfile{chapters/acknowledgements/index}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\subfile{chapters/notation/index}
+\newpage
+\pagenumbering{arabic}
+\subfile{chapters/introduction/index}
+\subfile{chapters/qcdSumRules/index}
+\subfile{chapters/tauDecaysIntoHadrons/index}
+\subfile{chapters/measuringTheStrongCoupling/index}
+\subfile{chapters/conclusions/index}
   \appendix
   \subfile{chapters/appendix/index}
   \printbibliography[heading=bibintoc]
