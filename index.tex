@@ -53,8 +53,15 @@
 \usepackage{tabularx}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage{tabu}
-\usepackage[Lenny]{fncychap}
 \usepackage{caption}
+\usepackage{titlesec}
+
+% Headers
+\usepackage[Lenny]{fncychap}
+% \titleformat{\section}[block]{\Large\bfseries\filcenter}{\thesection}{1em}{}
+% \titleformat{\subsection}[block]{\large\bfseries\filcenter}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\bfseries\filcenter}{}{1em}{}
+
 
 % hyperlink colours
 \newcommand\myshade{85}
