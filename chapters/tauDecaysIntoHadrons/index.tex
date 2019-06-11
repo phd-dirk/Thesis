@@ -33,7 +33,7 @@ energies at the scale of \(m_\tau^2\) we will achieve lower errors for the
 strong coupling at higher energies as the errors run with the strong coupling
 and get smaller with increasing energy.
 
-Summarising the \(\tau\) decays permit one of the most precise determinations of
+The \(\tau\) decays permit one of the most precise determinations of
 the strong coupling \(\alpha_s\). Building on the previously presented
 \textsc{qcdsr} we will now elaborate the needed theory to extract \(\alpha_s\)
 from the process of hadronic tau decays.
@@ -52,15 +52,14 @@ The theoretical expression of the inclusive hadronic decay ratio
 where \(S_{EW}\) is the electroweak correction, \(V_{ud}\) the corresponding
 \define{ckm}{Cabibbo-Kobayashi-Maskawa} matrix element and $\Ima \Pi$ the
 imaginary part of the two-point function we introduced in
-\cref{sec:twoPointFunction}. For brevity we will omit the electroweak
-\(S_{EW}\) and \textsc{ckm} factors from now on. \Cref{eq:hadronicTauDecayRatio}
-was first derived by \cite{Tsai1971}, using current algebra, a more recent
-derivation making use of the \textit{optical theorem}, as already mentioned in
-\cref{sec:twoPointFunction} can be taken from \cite{Schwab2002}. Notice that we
-used the standard Lorentz decomposition into transversal (\(J=1\)) and
-longitudinal (\(J=0\)) components of
-\cref{eq:standardLorentzDecomposition} to display the
-hadronic decay ratio (\cref{eq:hadronicTauDecayRatio}).
+\cref{sec:twoPointFunction}. For brevity we will omit the electroweak \(S_{EW}\)
+and \textsc{ckm} factors from now on. \Cref{eq:hadronicTauDecayRatio} was first
+derived by \cite{Tsai1971}, using current algebra, a more recent derivation
+making use of the \textit{optical theorem} can be taken from \cite{Schwab2002}.
+Notice that we used the standard Lorentz decomposition into transversal
+(\(J=1\)) and longitudinal (\(J=0\)) components of
+\cref{eq:standardLorentzDecomposition} to display the hadronic decay ratio
+(\cref{eq:hadronicTauDecayRatio}).
 
 Applying Cauchy's theorem, as seen in \cref{eq:qcdSumRules}, to the
 \cref{eq:hadronicTauDecayRatio} we can rewrite the line integral into a closed
@@ -101,7 +100,7 @@ yield valuable inclusive decay ratio values up to \SI{2}{\giga\eV}
 \subsection{Renormalisation Group Invariance}
 We have seen in \cref{sec:twoPointFunction}, that the two-point function is not
 a physical quantity, as the dispersion relation (\cref{eq:dispersionRelation})
-contains a unphysical polynom. Luckily for the vector correlator, appearing in
+contains an unphysical polynom. Luckily for the vector correlator, appearing in
 hadronic tau decays, the polynom is just a constant. Consequently we can take
 the derivative with respect to the momentum \(s\) to derive a physical quantity
 from the two\-/point function:
@@ -116,8 +115,8 @@ longitudinal contributions:
   \label{eq:adlerFunction}
   D^{(1+0)}(s) \equiv -s \od{}{s} \Pi^{(1+0)}(s), \qquad D^{(0)}(s) \equiv \frac{s}{m_\tau^2} \od{}{s} (s \Pi^{(0)}(s)).
 \end{equation}
-The two\-/point functions in \cref{eq:tauDecayRatioTL} can now be replaced
-with the help of partial integration
+The two\-/point functions in \cref{eq:tauDecayRatioTL} can now be replaced with
+the help of partial integration
 \begin{equation}
   \int_a^b u(x) V(x) \dif x = \left[ U(x) V(x) \right]_a^b - \int_a^b U(x) v(x) \dif x.
 \end{equation}
@@ -197,7 +196,7 @@ Note that the factor \(1/2\) comes from the fact, that in the chiral limit the
 vector and axial\-/vector contributions are equal. The dependence on the chosen
 weight function \(\omega\) is reflected in the upper indices.
 
-For the kinematic weight
+For the kinematic weight, which appears naturally in the \(tau\) decay ratio,
 \begin{equation}
   \omega_\tau \equiv (1-x)^2(1+2x),
 \end{equation}
@@ -338,11 +337,11 @@ function to the first order:
 
 We have used the \textsc{rge} to relate Adler function coefficients and thus
 only need to know coefficients of type \(c_{n,1}\). Unfortunately, as we will
-see in the following section the \textsc{rge} gives us two different choices in
+see in the following section, the \textsc{rge} gives us two different choices in
 the order of the computation of the perturbative contribution to the inclusive
 tau decay ratio.
 
-\subsubsection{Renormalization group summation}
+\subsubsection{Renormalisation group summation}
 By making use of the \textsc{rge} we have to decide about the order of
 mathematical operations we perform. As the all order perturbative contribution
 \(\delta_{pt}}\) is independent on the scale \(\mu\) we are confronted with two
@@ -403,7 +402,7 @@ on the integration variable \(x\).
 
 In general we have to decide if we want to perform a contour integration with a
 constant strong coupling parameter and variable logarithms (\textsc{fopt}) or
-``constant logarithms'' and a running coupling (\textsc{cipt}). To emphasize the
+``constant logarithms'' and a running coupling (\textsc{cipt}). To emphasise the
 differences in both approaches we can calculate the perturbative contribution
 \(\delta^{(0)}\) to \(R_\tau\) for the two different prescriptions yielding
 \cite{Beneke2008}
@@ -417,12 +416,10 @@ approach a different value. This discrepancy represents currently the biggest
 theoretical uncertainty for extracting the strong coupling.
 
 As today \textsc{fopt} or \textsc{cipt} are equally valid approaches to
-calculate the perturbative contributions. As a result there are currently three
-ways of stating results: Quoting the average of both results, quoting the
-\textsc{cipt} result or quoting the \textsc{fopt} result. We follow the approach
-of Beneke and Jamin \cite{Beneke2008} who prefere \textsc{fopt}, but also state
-their results in \textsc{cipt}.
-
+calculate the perturbative contributions, even though it has been
+argumented by Beneke et al. \cite{Beneke2008} to favour the former. Within this
+work we will further elaborate the consistency of \textsc{fopt} and do not
+state our results in \textsc{cipt}.
 
 \subsection{The Non-Perturbative OPE Contributions}
 The perturbative contribution to the sum rule is the dominant one, but
@@ -507,7 +504,7 @@ and has previously been calculated beyond leading order by \cite{Lanin1986}. The
 operators appearing are the masses to the power six (\(m^6\)), the four\-/quark
 condensates (\(\langle \anti q q \anti q q \rangle\)), the three-gluon
 condensates (\(\langle g^3 G^3 \rangle\)) and lower dimensional condensates
-multiplies by the corresponding masses, such that in total the mass dimension of
+multiplied by the corresponding masses, such that in total the mass dimension of
 the operator will be six. The largest contributions comes from the 4\-/quark
 operators. The three\-/gluon condensate does not contribute at leading order
 \cite{Hubschmid1982} and is neglected. Operators proportional to the light quark
@@ -570,19 +567,18 @@ we have to somehow include the corrections coming from \textsc{dv} and adapt
   R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{dv}^{\omega} \right),
 \end{equation}
 where we extracted \(\delta_{dv}\) from \(\delta_{npt}\), even though
-\textsc{dv} are an \textsc{np}. The \textsc{dv} correction has been modelled
-\cite{Cata2009} with the following ansatz
+\textsc{dv} are \textsc{np}. The \textsc{dv} correction has been modelled with
+the following ansatz \cite{Cata2009}
 \begin{equation}
   \label{eq:dvModel}
-  \rho_{V/A}^{DV}(s) = e^{-(\delta_{V/A}+\gamma_{V/A}s)} \sin(\alpha_{V/A} + \beta_{V/A}s).
+  \rho_{V/A}^{DV}(s) = e^{-(\delta_{V/A}+\gamma_{V/A}s)} \sin(\alpha_{V/A} + \beta_{V/A}s),
 \end{equation}
-Here the \textsc{dv} contributions have been parametrised by four parameters for
-the vector and another four parameters for the axial\-/vector contribution. Note
-that for fitting the kinematic weight in the \textsc{V}\-/channel, which is
-known to be sensible for \textsc{dv} at lower energies \cite{Boito2011a}, we
-would have seven parameters instead of only three. Making use of the model
-(\cref{eq:dvModel}) the \textsc{dv} then appear as an additional term in the
-inclusive tau decay ratio
+which contains four parameters for the vector and another four parameters for
+the axial\-/vector contribution. Note that for fitting the kinematic weight in
+the \textsc{V}\-/channel, which is known to be sensible for \textsc{dv} at lower
+energies \cite{Boito2011a}, we would have seven parameters instead of only
+three. Making use of the model (\cref{eq:dvModel}) the \textsc{dv} then appear
+as an additional term in the inclusive tau decay ratio
 \begin{equation}
   R_{\tau,V/A} = - \pi i \oint_{\abs{s}=m_\tau^2} \frac{\dif x}{x} (1 - x)^3 \left[ 3
     (1 + x) D^{(1+0)}(m_\tau^2 x) + 4 D^{(0)}(m_\tau^2 x) \right] +  \mathcal{D}_{V/A}(m_\tau^2),
@@ -595,14 +591,14 @@ where the \textsc{dv} would be given as
 \subsection{Pinched weights to avoid DVs}
 \label{sec:pinchedWeights}
 The general \textsc{qcdsr} (\cref{eq:qcdSumRules}) contain a weight function
-\(\omega\), which is used to weight higher order dimensions, but also to
-suppress \textsc{dv}. The weights that suppress \textsc{dv} are so\-/called
-pinched weights of the form
+\(\omega\), which is not only used to suppress higher order dimensions, but also
+to \textsc{dv}. The weights that suppress \textsc{dv} are so\-/called pinched
+weights of the form
 \begin{equation}
   \omega(s) = \left(1-\frac{s}{m_\tau^2}\right)^k,
 \end{equation}
 where \(k\) is the degree of the pinched weight. The higher the degree of the
-pinching, the lower the suppression of the critical region close to the real
+pinching, the lower the contribution of the critical region close to the real
 axis (see. \cref{fig:monomialWeightGraphs}). Thus for higher pinchings we are
 better protected from \textsc{dv} effects.
 \begin{figure}
@@ -673,7 +669,7 @@ V+A channel can be seen in \cref{fig:aleph}. The dominant modes in the vector
 case are \cite{Davier2006} decays into two (\(\tau^- \to \pi^-\pi^0 \nu_\tau\))
 or four (\(\tau^- \to \pi^- \pi^- \pi^+ \pi^0 \nu_\tau\)) pions. The first of
 these is produced by an intermediate \(\rho(770)\) meson, which in contrary to
-the pions carries angular momentum of one and clearly visible as peak around
+the pions carries angular momentum of one and is clearly visible as peak around
 \(\SI{770}{\giga\eV}\) in \cref{fig:alephV}. The dominant modes in the
 axial-vector case are decays into one (\(\tau^-\to \pi^-\nu_\tau\)) or three
 (\(\tau^-\to \pi^- \pi^0 \pi^0 \nu_\tau\) and \(\tau^- \to \pi^- \pi^-
@@ -811,7 +807,7 @@ of only a few parameters.
 
 It is also possible to increase the number of moments used by using multiple
 weights \(\omega\). Unfortunately using different weights leads to highly
-correlated moments, which leads to numerical complications by inverting the
+correlated moments, which cause numerical complications by inverting the
 covariance matrix in \cref{eq:ls}. To handle the high correlations we have to
 redefine our fit quality.
 
@@ -858,7 +854,10 @@ where
 % LocalWords:  correlatorCombination fitWKinAlD rTauCauchysTheorem SpecFunc ams
 % LocalWords:  cauchysTheorem fitWKinD twoPointFunction fitWCubicAlD fitWM acce
 % LocalWords:  fitWCubeAlpha fitWCubeAlD wKinResults cubicWeight quarticWeight
-% LocalWords:  correlatorTransversalLongitudinalDecomposition wFitM lllllll
-% LocalWords:  inclusiveRatio theoreticalBackground kinematicWeight dvModel
-% LocalWords:  qcdSumRules tauDecayRatioT dispersionRelation myformula
-% LocalWords:  tauDecayRationT perturbativeContributionFeynmanDiagrams
+% LocalWords:  correlatorTransversalLongitudinalDecomposition wFitM lllllll sfm
+% LocalWords:  inclusiveRatio theoreticalBackground kinematicWeight dvModel ij
+% LocalWords:  qcdSumRules tauDecayRatioT dispersionRelation myformula rgeAdler
+% LocalWords:  tauDecayRationT perturbativeContributionFeynmanDiagrams alephV
+% LocalWords:  standardLorentzDecomposition tauDecayRatioTL rTauFinal rTauDelta
+% LocalWords:  anomalousMassDimension alephA alephVPlusA sbin dsbin derr corerr
+% LocalWords:  spectralFunction
