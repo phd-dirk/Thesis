@@ -54,11 +54,11 @@
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \usepackage{tabu}
 \usepackage{caption}
-\usepackage{titlesec}
 \usepackage{afterpage}
 
 % Headers
 \usepackage[Lenny]{fncychap}
+\usepackage{titlesec}
 % \titleformat{\section}[block]{\Large\bfseries\filcenter}{\thesection}{1em}{}
 % \titleformat{\subsection}[block]{\large\bfseries\filcenter}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{\bfseries\filcenter}{}{1em}{}
@@ -235,8 +235,9 @@ Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
 \subfile{chapters/tauDecaysIntoHadrons/index}
 \subfile{chapters/measuringTheStrongCoupling/index}
 \subfile{chapters/conclusions/index}
-  \appendix
-  \subfile{chapters/appendix/index}
-  \printbibliography[heading=bibintoc]
-  \printnomenclature
+\appendix
+\subfile{chapters/appendix/index}
+\printnomenclature
+\printbibliography[heading=bibintoc]
+
 \end{document}
