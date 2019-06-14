@@ -15,7 +15,7 @@ with the hadron picture. To do so we will introduce the framework of
 
 We will start by setting up the foundations of strong interaction with
 introducing the \textsc{qcd} Lagrangian. The \textsc{qcd} Lagrangian is ruled by
-the abelian gauge group \(SU(3)\). The group implies a energy dependence of the
+the abelian gauge group \(SU(3)\). The group implies an energy dependence of the
 coupling and thus limits the applicability of \textsc{pt} for low energies,
 where the coupling is large. Next we will focus on the two\-/point function,
 which plays a major role in the framework of \textsc{qcdsr}. The two\-/point
@@ -37,13 +37,13 @@ or calculated with the help of \textsc{np} tools, like \textsc{lqcd}. Finally we
 will combine a dispersion relation and Cauchy's theorem to finalise the
 discussion on the \textsc{qcdsr} with developing the \define{fesr}{finite energy
   sum rules}, which we will apply to extract the strong coupling from
-tau decays into hadrons.
+\(\tau\) decays into hadrons.
 
 
 
 \section{Quantum\-/chromodynamics}
 \label{sec:quantumchromodynamics}
-Since the formulation of \textsc{qed} in the end of the 40's it had been
+Since the formulation of \textsc{qed} in the end of the forties it had been
 attempted to construct a \textsc{qft} of the strong nuclear force, which has
 been achieved in the 70's as \textsc{qcd}
 \cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}.
@@ -211,7 +211,7 @@ scales.
 \subsection{Renormalisation Group}
 Computing observables with the \textsc{qcd} Lagrangian (\cref{eq:qcdLagrangian})
 lead to divergencies, which have to be \textit{renormalised}. To render these
-divergent quantities finite we have to introducing a suitable parameter such
+divergent quantities finite we have to introduce a suitable parameter such
 that the ``original divergent theory'' corresponds to a certain value of that
 parameter. These procedure is referred to as \textit{regularisation} and there
 are various approaches:
@@ -239,7 +239,7 @@ are various approaches:
   A typical Feynman integral then has the following appearance:
   \begin{equation}
     \label{eq:dimRegFeynmanIntegral}
-    \int \fdif{p} \frac{1}{\vec p^2 + m^2} \to \mu^{2\epsilon} \int \frac{\dif^D p}{(2\pi)^D}\frac{1}{\vec p^2+m^2},
+    \int \fdif{p} \frac{1}{\vec p^2 + m^2} \to \mu^{2\epsilon} \int \frac{\dif^D p}{(2\pi)^D}\frac{1}{\vec p^2+m^2}.
   \end{equation}
   Dimensional regularisation preserves all symmetries and allows an easy
   identification of divergences and naturally leads to the \define{ms}{minimal
@@ -310,7 +310,7 @@ strong coupling:
   to take care of the scale \(\mu\), while comparing different values of
   \(\alpha_s\). In the literature (e.g. \cite{PDG2018}) \(\alpha_s\) is commonly
   compared at the \(Z\) boson scale of around \SI{91}{\giga\eV}. As we are
-  extracting the strong coupling at the mass of the tau lepton, around
+  extracting the strong coupling at the mass of the \(\tau\) lepton, around
   \SI{1.776}{\giga\eV} we need to run the strong coupling up to the desired
   scale. While running the coupling, we have to take care of the quark
   thresholds. Each quark gets active at a certain energy scale, which leads to a
@@ -473,7 +473,7 @@ appear if the initial and final states where given by hadrons
 help of the \textit{optical theorem} can be used to derive the total decay width
 of hadronic tau decays.
 
-\subsection{Short\-/Distances vs. Long\-/Distances}
+\subsection{Short Distances vs. Long Distances}
 If we want to calculate the two\-/point function in \textsc{qcd} we have to
 differentiate short and long distances (large or small momenta). In
 general when we talk about small distances we refer to large momenta. Large
@@ -541,7 +541,7 @@ combinations of the light quarks \(u, d\) and \(s\) is given in
 The correlator is materialising into a spectrum of hadrons. Thus if we insert a
 complete set of states of hadrons we can make use of the unitary relation
 \begin{equation}
-  \langle\Omega\vert J_\mu(x)\J_\nu(0) \vert\Omega\rangle = \sum_X \langle\Omega\vert J_\mu(x) \vert X\rangle \langle X\vert J_\nu(0) \vert\Omega\rangle.
+  \langle\Omega\vert J_\mu(x)\J_\nu(0) \vert\Omega\rangle = \sum_X \langle\Omega\vert J_\mu(x) \vert X\rangle \langle X\vert J_\nu(0) \vert\Omega\rangle
 \end{equation}
 to represent the two\-/point correlator via a spectral function \(\rho(t)\)
 \begin{tcolorbox}[ams equation,myformula]
@@ -553,14 +553,14 @@ The above relation is referred to as \textit{Källén-Lehmann spectral
 It relates the two\-/point function to the spectral function \(\rho\), which can
 be represented as sum over all possible hadronic states
 \begin{equation}
-  \rho(s) = (2\pi)^3 sum_X \int \dif \Pi_X \abs{\langle\Omega\vert J_{\mu}(0) \vert X\rangle}^2 \delta^4(s-p_X),
+  \rho(s) = (2\pi)^3 sum_X \int \dif \Pi_X \abs{\langle\Omega\vert J_{\mu}(0) \vert X\rangle}^2 \delta^4(s-p_X).
 \end{equation}
 Note that the analytic properties of the two\-/point are in one\-/to\-/one
 correspondence with the newly introduced spectral function and thus determined
 by the possible hadrons states, which only form on the positive real axis. A
 full derivation of the \textit{Källén\-/Lehmann spectral representation} can be
 found in \cite{Rafael1997}. The spectral function is interesting to us for two
-reasons. First it is experimentally measurable and second it carries a ``branch
+reasons. First, it is experimentally measurable and second it carries a ``branch
 cut'', which we want to discuss now.
 
 \subsection{Analytic Structure of the Two\-/Point Function}
@@ -639,7 +639,7 @@ scalar function of spin \(1\)
 \end{equation}
 In case of a current of different quark flavours, the current will not be
 conserved and we cannot apply the Ward identity. Consequently the standard
-lorentz decomposition into transversal and longitudinal components reads
+Lorentz decomposition into transversal and longitudinal components reads
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:standardLorentzDecomposition}
   \Pi^{\mu\nu}(q^2) = (q^\mu q^\nu - g^{\mu\nu}q^2) \Pi^{(1)}(q^2) + q^\mu q^\nu
@@ -647,7 +647,7 @@ lorentz decomposition into transversal and longitudinal components reads
 \end{tcolorbox}
 
 \subsubsection{Transversal and Longitudinal Relations}
-By comparing the standard lorentz decomposition
+By comparing the standard Lorentz decomposition
 (\cref{eq:standardLorentzDecomposition}) with the decomposition into
 \textsc{v}/\textsc{a} and \textsc{s}/\textsc{p} parts we can identify the
 longitudinal components of the correlator as being purely scalar. The latter
@@ -736,7 +736,7 @@ operators. Applying the \textsc{ope} to the two\-/point function we get a sum
 over the vacuum expectation values
 \begin{equation}
   \Pi_{OPE}(q^2) = -\frac{1}{3 q^2} \sum_n \langle\Omega\vert \mathcal{O}_n(0) \vert\Omega\rangle
-  \int \dif^4 x e^{iqx} C_n(x)
+  \int \dif^4 x e^{iqx} C_n(x).
   \label{eq:opeTwoPointFunction}
 \end{equation}
 
@@ -744,7 +744,7 @@ The form of the composite operators are dictated by gauge- and Lorentz symmetry.
 For the two\-/point function in \cref{eq:opeTwoPointFunction} we only have to
 consider operators \(\mathcal{O}_n\) of dimension
 \begin{equation}
-  d \left( \mathcal{O}_n \right) \leq (D - 4) + 2N
+  d \left( \mathcal{O}_n \right) \leq (D - 4) + 2N.
 \end{equation}
 The scalar operators up to dimension six are then given by \cite{Pascual1984}
 \begin{equation}
@@ -758,7 +758,7 @@ The scalar operators up to dimension six are then given by \cite{Pascual1984}
                         & :f_{abc} G_a^{\mu\nu} G_b^{\nu\delta} G_c^{\delta\mu}:,
   \end{array}
 \end{equation}
-where \(\Gamma\) stands for one of possible dirac matrices (as seen
+where \(\Gamma\) stands for one of the possible dirac matrices (as seen
 \cref{eq:qcdCurrent}). Note, that the \(D=2\) operator violates gauge symmetry
 and is consequently excluded from our list. Within \textsc{pt} only the unit
 operator would exist, as the higher dimensional operators would appear as normal
@@ -771,7 +771,7 @@ quark-condensate \(m_i\langle \anti{q} q \rangle\) and the gluon-condensate
 \(\langle GG \rangle\).
 
 As long as working with dimensionless functions (e.g. the correlator \(\Pi\) in
-\cref{eq:opeTwoPointFunction}), the \define{rhs}{right\-/hand side}. of
+\cref{eq:opeTwoPointFunction}), the \define{rhs}{right\-/hand side} of
 \cref{eq:ope} has to be dimensionless. As a result the Wilson coefficients have
 to cancel the dimension of the operator with their inverse mass dimension. To
 account for the dimensions we can make the inverse momenta explicit
@@ -784,7 +784,7 @@ Thus the \textsc{ope} should converge with increasing dimension for sufficiently
 large momenta \(s\).
 
 \subsection{A practical example}
-Let's show how the \textsc{ope} contributions are calculated with a standard
+Let us show how the \textsc{ope} contributions are calculated with a standard
 example \cite{Shifman1978, Pascual1984}. We will compute the perturbative and
 quark condensate Wilson coefficients for the \(\rho\) meson. To do so we have to
 evaluate Feynman diagrams using standard \textsc{pt}.
@@ -826,7 +826,7 @@ contract all of the fields, which represents the lowest order of the
 perturbative contribution. The calculation is only using standard \textsc{pt}
 and we will restrict ourselves in displaying the result and omitting the
 calculation\footnote{The interested reader can follow \cite{Pascual1984} for a
-  detailed calculation.}.
+  detailed calculation.}
 \begin{equation}
   \begin{split}
     \Pi(q^2) &= \frac{i}{4q^2(D-1)} (\gamma^\mu)_{ij} (\gamma_\mu)_{kl} \int \dif^D x e^{iqx} \\
@@ -901,14 +901,14 @@ perturbatively but the coefficients with dimension \(D>0\) correspond to
 external, \textsc{np} methods.
 
 Now that we have a tool to deal with the \textsc{qcd} vacuum and \textsc{npt}
-effects we are left with two problems. First we still do not know how to deal
+effects we are left with two problems. First, we still do not know how to deal
 with hadronic states in the quark\-/gluon picture. This will be tackled by
-duality. Secondly we have seen that we can access the two\-/point function
+duality. Secondly, we have seen that we can access the two\-/point function
 theoretically on the physical sheet except for the positive real axis, due to
 its analytic properties. Unfortunately the experimental measurable spectral
 function is solely be defined on this positive real axis, which is theoretically
 not accessible. To match the theory with the experiment we will have to apply
-Cauchy's theorem. In the final section of this chapter we will bring together
+Cauchy's theorem. In the final section of this chapter we will combine
 the two\-/point function, the \textsc{ope}, duality and Cauchy's theorem to
 formulate the \textsc{qcdsr}.
 
@@ -995,7 +995,7 @@ A detailed discussion of duality has been given by the author of the
 
 
 \subsection{Finite Energy Sum Rules}
-To theoretical calculate the two\-/point function we have to integrate the
+To theoretically calculate the two\-/point function we have to integrate the
 experimental data \(\rho_{exp}(s)\) from zero to infinity. No experiment will ever
 take data for an infinite momentum \(s\). For \(\tau\) decays we are limited to
 energies around the \(\tau\) mass of \SI{1.776}{\giga\eV}. To deal with the
@@ -1027,7 +1027,7 @@ and mathematically we can express it as
 \begin{equation}
   \label{eq:sumRulesCauchysTheorem}
   \oint \Pi(s) = \int_0^{s_0} \Pi(s+i\epsilon)-\Pi(s-i\epsilon)\dif s
-  + \int_{0+\alpha(\epsilon)}^{2\pi-\alpha(\epsilon)}\Pi(s_0e^{i\theta})\dif \theta + \int_{3\pi/2}^{\pi/2}\Pi(\epsilon e^{i\theta})\dif \theta 
+  + \int_{0+\alpha(\epsilon)}^{2\pi-\alpha(\epsilon)}\Pi(s_0e^{i\theta})\dif \theta + \int_{3\pi/2}^{\pi/2}\Pi(\epsilon e^{i\theta})\dif \theta.
 \end{equation}
 If we make to use of \textit{Schwartz reflection principle}:
 \begin{equation}
@@ -1121,7 +1121,7 @@ weight is given by
   (1 - x)^2 (1 + 2x) = \underbrace{1}_{D=2} - 3\underbrace{x^2}_{D=6} + 2\underbrace{x^3}_{D=8},
 \end{equation}
 where the underbraced monomials express the active dimensions. A list of
-monomials and their corresponding Dimensions up to dimension 14 can be found in
+monomials and their corresponding dimensions up to dimension 14 can be found in
 \cref{table:monomialDimensions}.
 \begin{table}
   \centering
@@ -1137,7 +1137,7 @@ monomials and their corresponding Dimensions up to dimension 14 can be found in
   \label{table:monomialDimensions}
 \end{table}
 This behaviour enables us to bring out different dimensions of the \textsc{ope}
-and suppress contributions of higher order (\(D\geq10\) for which less is known.
+and suppress contributions of higher order (\(D\geq10\)) for which less is known.
 
 
 For the interested reader we gathered several introduction texts to the

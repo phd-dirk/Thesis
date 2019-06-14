@@ -13,10 +13,10 @@
     \toprule
     \addlinespace[1.5ex]
     1991 & \cite{Braaten1991}: Systematic description, including \textsc{np} corrections to extract \(\alpha_s\) from \(R_\tau\). \\
-    1992 & \cite{LeDiberder1992}: Introducing weights and fit methodology \\
-    1993 & \cite{Aleph1993} \textsc{aleph} measures the strong coupling constant \(\alpha_s\)\\
-    1998 & \cite{Opal1998} \textsc{opal} measures the strong coupling constant \(\alpha_s\)\\
-    2005 & \cite{Aleph2005} \textsc{aleph} improves their data \\
+    1992 & \cite{LeDiberder1992}: Introducing weights and fit methodology. \\
+    1993 & \cite{Aleph1993} \textsc{aleph} measures the strong coupling constant \(\alpha_s\).\\
+    1998 & \cite{Opal1998} \textsc{opal} measures the strong coupling constant \(\alpha_s\).\\
+    2005 & \cite{Aleph2005} \textsc{aleph} improves their data. \\
     2011 & \cite{Boito2011a,Boito2010}: Include \textsc{dv}. Discover inconsistencies in \textsc{aleph} data. \\
     2014 & \cite{Davier2013} \textsc{aleph} updates their data. \\
   \end{tabular}
@@ -74,7 +74,7 @@ only restriction from choosing a weight is, that the weight has to be analytic,
 leaving us with a variety of choices. For our strategy we have chosen three
 categories of weights, each of them containing fits with three or four different
 weights. A table with an overview of all used weights is given in
-\cref{table:fitCategories}
+\cref{table:fitCategories}.
 \begin{table}
   \centering
   \begin{tabular}{ccccc}
@@ -100,14 +100,14 @@ weights. A table with an overview of all used weights is given in
     contributions the fitted integral momentum will be sensitive to.}
   \label{table:fitCategories}
 \end{table}
-To test for the stability of the fitted values and have enough \textsc{dof} to
+To test the stability of the fitted values and have enough \textsc{dof} to
 fit the higher \textsc{ope} contributions we furthermore fit every weight for
 various momenta \(s_0\).
 
 
 
 \section{Fits}
-In the following we will give the results of each of the three previously
+In the following we will show the results of each of the three previously
 mentioned fit categories.
 
 The first category contains the \textit{pinched weights without a monomial term x}. The
@@ -138,6 +138,21 @@ unreliable in the framework of \textsc{fopt} and we have to apply the
 \define{bs}{Borel sum}. Following the logic of the second and first category we
 then can compare the result to analyse the role of \textsc{dv} and compare the
 Wilson coefficients.
+
+For performing the fits we had to restrict ourselves to the following
+approximations
+\begin{itemize}
+  \item We used the \textsc{pt} expansion of the Adler function up to fifth
+    order, including the educated guess of \(c_{5,1}\).
+  \item We ignore the dimension two \textsc{ope} contribution as they are
+    proportional to the quark masses and we work in the chiral limit.
+  \item For the higher dimensions of the \textsc{ope} \(D=6,8,\dots\) we
+    parametrise their contributions as a constant divided by the corresponding
+    power in \(s\)
+    \begin{equation}
+      \left D_{V/A}^{(1+0)}\right\vert_{D=d} \equiv \frac{\rho^{(d)}}{s^{d/2}}.
+    \end{equation}
+\end{itemize}
 
 \subsection{Pinched Weights without a Monomial term \(x\)}
 
@@ -214,7 +229,7 @@ noted a jump between the \(s_{min}=\SI{2.1}{\giga\eV}\) and
 We consequently discarded fits with a \(s_{min}<\SI{2.2}{\giga\eV}\), as fits
 lower \(s_{min}\) behave more stable\footnote{As will be seen by comparing the
   kinematic weight with the cubic and quartic weight}. The values for the less
-momenta are preferred by us due to two reasons. First below energies of
+momenta are preferred by us due to two reasons. First, below energies of
 \SI{2.2}{\giga\eV} we have to face the problematic influence of increasing
 resonances. Second, we will see, that the values obtained from the lower moment
 fits are more compatible with our other fits series. We further discarded the
@@ -335,7 +350,7 @@ results for , with a \(\chi^2\) per \textsc{dof} of \(0.67\) are given by:
 \begin{equation}
   \begin{split}
     \alpha_s(m_\tau^2) &= 0.3290(11), \quad \rho^{(6)}=-0.3030(46), \quad \rho^{(8)}=-0.1874(28), \\
-    \rho^{(10)} &= 0.3678(45) \quad \text{and} \quad \rho_{(12)}=-0.4071(77)
+    \rho^{(10)} &= 0.3678(45) \quad \text{and} \quad \rho_{(12)}=-0.4071(77).
   \end{split}
 \end{equation}
 Due to the problematic of the fitting routing, which is caused by too many
@@ -381,7 +396,7 @@ in good agreement with each other and furthermore carry a acceptable \(\chi^2\)
 per \textsc{dof}. The best fit, chosen to be closest to the \(\chi^2/dof\)
 threshold, then yields the following parameter values
 \begin{equation}
-  \alpha_s(m_\tau^2) = 0.3248(52) \qquad \text{and} \qquad \rho^{(6)} = -0.77(22)
+  \alpha_s(m_\tau^2) = 0.3248(52) \qquad \text{and} \qquad \rho^{(6)} = -0.77(22).
 \end{equation}
 We note that the strong coupling obtained from the single pinched weight is
 similar to the one of the previous fits (\(\approx 3.33\)) which indicates, that
@@ -579,7 +594,7 @@ fit.
 
 
 \subsubsection{\(\omega_{2,0} \equiv (1-x)^2\)}
-The next weight is double pinched. Additionally to the strong coupling and the
+The next weight is double pinched. Additional to the strong coupling and the
 invariant gluon\-/condensate we also had to fit the dimension six \textsc{ope}
 contribution. Our fits can be seen in \cref{table:fitOpt30AlD4D6}. If we compare
 the \textsc{bs} with the \textsc{fopt} fits we note, next to the before
@@ -748,12 +763,12 @@ For the weights with a monomial term in \(x\) we only included fits, which used
 the \textsc{bs}. Fits applying \textsc{fopt} result in deviating parameter
 values in comparison with fit results from weights without a monomial term in
 \(x\). This behaviour has already been illustrated in \cite{Beneke2012} and is
-further supported by this work. Consequently we for fits including weights
+further supported by this work. Consequently for fits including weights
 without a monomial term in \(x\) we can apply \textsc{fopt}, but for fits
 including weights with a monomial term in \(x\) the \textsc{bs} is needed.
 
 The fits of \cref{table:fitCombinations} are in great agreement with each
-others. The strong coupling as the \textsc{ope} contributions up to dimension
+other. The strong coupling as the \textsc{ope} contributions up to dimension
 eight are compatible within small error ranges. We have visualised the different
 values and errors in \cref{fig:comparisonAlC6C8} to underline their agreement.
 The fits furthermore all have a good \(\chi^2/dof\).

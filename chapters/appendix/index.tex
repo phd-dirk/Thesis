@@ -114,7 +114,7 @@
   \begin{equation}
     -\mu \od{}{\mu} D_V^{(1+0)} = \left( 2\pd{}{L} + \beta \pd{}{a_s} \right) D_V^{(1+0)} = 0,
   \end{equation}
-  which implies that per order there exists only one coefficient we have to know
+  which implies, that for every order, there exists only one coefficient we have to know
   to describe the Adler function. For completeness we will mention the necessary
   coefficients up to order \(n = 5\) here once again
   \begin{equation}
@@ -140,14 +140,29 @@
     \end{split}
   \end{equation}
   and all related to the previous stated Adler function coefficients \(c_{n, 1}\).
+
+
+
+% \chapter{Program}
+% \section{C++}
+% C++ is a general-purpose programming language was created starting in 1979 by
+% Bjarne Stroustrup \cite{Stroustrup1986}. As the name indicates\footnote{++ is
+%   the increment operator in C} it is an extension of the C programming language,
+% also referred to as ``C with Classes''. It has the reputation of being a complex
+% programming language and is focused on performance and efficiency. The fitting
+% routine we implemented is written in C++ and can be found on Github
+% \cite{Hornung2019}.
+
+% The generation of a C++ executable is divided into three stages: preprocessing,
+% compilation and linking. The preprocessing 
   
 
 
-%   \chapter{Källén-Lehmann spectral representation}
-%   \label{ch:kallenLehmannSpectralRepresentation}
-% In the second quantisation we applied latter operators $a_o^\dagger$ on the free
-% vacuum $\vert 0 \rangle$ to obtain single particle states, carrying a momentum
-% $p$
+% \chapter{Källén-Lehmann spectral representation}
+% \label{ch:kallenLehmannSpectralRepresentation}
+% In the second quantisation we applied latter operators $a_o^\dagger$ on the
+% free vacuum $\vert 0 \rangle$ to obtain single particle states, carrying a
+% momentum $p$
 % \begin{equation}
 %   a_p^\dagger \vert 0 \rangle = \frac{1}{\sqrt{2 E_p}}\vert \vec p \rangle,
 % \end{equation}
@@ -171,8 +186,8 @@
 % \begin{equation}
 %   \dif \Pi_X \equiv \prod_{i \in X} \int \frac{\dif^3 p_i}{(2\pi)^3} \frac{1}{2 E_j}.
 % \end{equation}
-% To get to the desired spectral decomposition we have to translate the Heisenberg
-% operator $\phi(x)$ to its origin, like
+% To get to the desired spectral decomposition we have to translate the
+% Heisenberg operator $\phi(x)$ to its origin, like
 % \begin{equation}
 %   \begin{split}
 %     \langle \Omega \vert \phi(x) \vert X \rangle
@@ -194,7 +209,7 @@
 %     &= \intsum_X \dif \Pi_X e^{-i p_X (x-y)} \abs{\langle \Omega \vert \phi(0) \vert X \rangle}^2  \\
 %     &= \int \frac{\dif^4 p}{(2\pi)^4} e^{-i p (x-y)} (2\pi)^3 \left[ \intsum_X
 %       \dif \Pi_X 2\pi \delta^{(4)}(p-p_X) \abs{\langle \Omega \vert \phi(0)
-%         \vert X \rangle}^2 \right],
+%       \vert X \rangle}^2 \right],
 %   \end{split}
 % \end{equation}
 % where the term in the bracket is Lorentz invariant, implying that it depends
@@ -220,21 +235,21 @@
 %     m^2).
 %   \end{split}
 % \end{equation}
-% $\rho(p^2)$ \textit{spectral density}, $\rho(p^2) > 0$. The spectral function is
-% a non\-/negative function, describing physically measurable particle states.
-% Until now we have given the spectral function for our ``simple'' two\-/point
-% function (\cref{eq:simpleTwoPointFunction}), but we can generalise the
-% decomposition to the \define{FT}{Fourier transform} of the
+% $\rho(p^2)$ \textit{spectral density}, $\rho(p^2) > 0$. The spectral function
+% is a non\-/negative function, describing physically measurable particle
+% states. Until now we have given the spectral function for our ``simple''
+% two\-/point function (\cref{eq:simpleTwoPointFunction}), but we can generalise
+% the decomposition to the \define{FT}{Fourier transform} of the
 % \textit{time\-/ordered two\-/point function}
 % \begin{equation}
 %   \Pi(p^2) = i\int\fdif{x} e^{-ixp}\langle\Omega\vert T\{\phi(x)\phi(0) \} \vert\Omega\rangle,
 % \end{equation}
 % where we made use of the translation invariance of the correlator\footnote{
-%   $\langle\Omega\vert\phi(x)\phi(y)\vert\Omega\rangle = \langle\Omega\vert
-%   e^{i\hat P y}\underbrace{e^{-i\hat P y}\phi(x)e^{i\hat P
-%       y}}_{x-y}\underbrace{e^{-i\hat P y}\phi(y)e^{i \hat P y}}_{=\phi(0)}e^{-i
-%     \hat P y} \vert\Omega\rangle =
-%   \langle\Omega\vert\phi(x-y)\phi(0)\vert\Omega\rangle$}. The time\-/ordered
+% $\langle\Omega\vert\phi(x)\phi(y)\vert\Omega\rangle = \langle\Omega\vert
+% e^{i\hat P y}\underbrace{e^{-i\hat P y}\phi(x)e^{i\hat P
+% y}}_{x-y}\underbrace{e^{-i\hat P y}\phi(y)e^{i \hat P y}}_{=\phi(0)}e^{-i \hat
+% P y} \vert\Omega\rangle =
+% \langle\Omega\vert\phi(x-y)\phi(0)\vert\Omega\rangle$}. The time\-/ordered
 % scalar correlator can then be expressed as
 % \begin{equation}
 %   \
@@ -246,14 +261,14 @@
 %     \frac{i}{p^2 - q^2 - i\epsilon}e^{ipx}
 %   \end{split}
 % \end{equation}
-% by making use of the mathematical identity\footnote{The identity should be known
-%   to the reader from the derivation of the Feynman propagator.}
+% by making use of the mathematical identity\footnote{The identity should be
+% known to the reader from the derivation of the Feynman propagator.}
 % \begin{equation}
 %   \theta(x^0-y^0)D(x,y,q^2) + \theta(y^0-x^0)D(y,x,q^2) = \int \fdif{p} \frac{i}{p^2-q^2-i\epsilon}e^{ip(x-y)}.
 % \end{equation}
 % The last line of is given by two cancelling Fourier transforms. Thus we
-% recognise the Källén-Lehmann spectral decomposition of the scalar time\-/ordered
-% two\-/point function
+% recognise the Källén-Lehmann spectral decomposition of the scalar
+% time\-/ordered two\-/point function
 % \begin{equation}
 %   \Pi(p^2) = \int_0^\infty \dif q^2 \frac{i\rho(q^2)}{p^2-q^2-i\epsilon}.
 % \end{equation}
@@ -262,7 +277,8 @@
 %   \label{eq:cuttingRules}
 %   \Ima \frac{1}{p^2-q^2+i\epsilon} = -\pi \delta(p^2-q^2)
 % \end{equation}
-% that the spectral function can be given by the imaginary part of the correlator
+% that the spectral function can be given by the imaginary part of the
+% correlator
 % \begin{equation}
 %   \rho(p^2) = -\frac{1}{\pi} \Ima\Pi(p^2).
 % \end{equation}
@@ -276,7 +292,8 @@
 
 
  
-% \chapter{Analytic Structure of the Spectral Function \(\phi^4\)\-/theory Example}
+% \chapter{Analytic Structure of the Spectral Function \(\phi^4\)\-/theory
+% Example}
 % To analyse the singularities contained in the spectral function $\rho(s)$ we
 % have a look at the following Lagrangian
 % \begin{equation}
