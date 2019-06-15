@@ -37,7 +37,7 @@
 \usepackage{colortbl} % \rowcolor in tables
 \usepackage{adjustbox}
 \usepackage{wrapfig}
-\usepackage[refpage]{nomencl}
+\usepackage{nomencl}
 \usepackage{slashed} % Feynman slash notation
 \usepackage{tikz}
 \usepackage[most]{tcolorbox}
@@ -153,8 +153,7 @@
 
 \begin{document}
 
-\pagenumbering{gobble}
-\pdfbookmark[0]{Titlepage}{title}
+\pagenumbering{gobble} \pdfbookmark[0]{Titlepage}{title}
 \begin{titlepage}
   \begin{center}
     \includegraphics[height=2.4cm]{./images/UAB_physics_department.eps} \hfill
@@ -162,7 +161,10 @@
     \par
 
     \vspace{0.5cm} \Large A PhD Thesis in Physics
-    \makebox[\linewidth]{\rule{\textwidth}{2pt}} \Huge The \textsc{qcd} Strong
+    \makebox[\linewidth]{\rule{\textwidth}{2pt}}
+    \par
+    \vspace{0.2cm}
+    \Huge The \textsc{qcd} Strong
     Coupling from Hadronic \(\tau\) Decays
     \makebox[\linewidth]{\rule{\textwidth}{2pt}}
 
@@ -189,8 +191,7 @@
 
 
 \begin{center}
-  \Large
-  The \textsc{qcd} Strong Coupling from Hadronic \(\tau\) Decays
+  \Large The \textsc{qcd} Strong Coupling from Hadronic \(\tau\) Decays
 
   \makebox[\linewidth]{\rule{\textwidth}{1pt}}
 
@@ -207,18 +208,17 @@
   \vspace{3cm}
 \end{center}
 
-\large
-\textbf{Matthias Rudolf Jamin} and \textbf{Santiago Peris Rodríguez} we
-certify that the dissertation with title \textit{The \textsc{qcd} Strong Coupling from
-Hadronic \(\tau\) Decays} was written by \textbf{Dirk Hornung} under our
-supervision in partial fulfilment of the Doctoral degree in Physics.
+\begin{large}
+  \textbf{Matthias Rudolf Jamin} and \textbf{Santiago Peris Rodríguez} we
+  certify that the dissertation with title \textit{The \textsc{qcd} Strong
+    Coupling from Hadronic \(\tau\) Decays} was written by \textbf{Dirk Hornung}
+  under our supervision in partial fulfilment of the doctoral degree in physics.
 
-\vfill
-Bellaterra, June 2019, \par
-\vspace{0.2cm}
-Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
-\vspace{1cm}
-\normalsize
+  \vfill Bellaterra, 18. June 2019 \par
+  \vspace{4cm}
+  Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
+  \vspace{1cm}
+\end{large}
 
 
   
@@ -241,3 +241,8 @@ Dr. Matthias Rudolf Jamin \hfill Dr. Santiago Peris Rodríguez
 \printbibliography[heading=bibintoc]
 
 \end{document}
+% LocalWords:  Titlepage LaTeX's rgb tocdepth arabic Im sfm cref colorlinks
+% LocalWords:  myurlcolor urlcolor mycitecolor citecolor mylinkcolor linkcolor
+% LocalWords:  YellowOrange math boxsep colframe colback myformula subfigures
+% LocalWords:  smallcaps Palatino qcdSumRules tauDecaysIntoHadrons bibintoc
+% LocalWords:  measuringTheStrongCoupling LocalWords
