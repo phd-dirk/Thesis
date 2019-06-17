@@ -22,22 +22,22 @@ which plays a major role in the framework of \textsc{qcdsr}. The two\-/point
 function is defined as vacuum\-/expectation values of the time ordered product
 of two local fields
 \begin{equation}
-  \Pi(q^2) = \int\fdif{q} e^{iqx} \langle\Omega\vert T\{ \anti{q}(x)q(0) \} \vert\Omega\rangle.
+  \Pi_{\mu\nu}(q^2) = \int\fdif{q} e^{iqx} \langle\Omega\vert T\{ J_\mu(x) J_\nu(0) \} \vert\Omega\rangle,
 \end{equation}
-We can use it to theoretically describe processes, like \(\tau\) decays into
-hadrons, by matching the quantum numbers of the fields, we choose in specifying
-the two\-/point function, to the outgoing hadrons. We will see, that the
-two\-/point function \(\Pi(q^2)\) is related to hadronic states, by poles for
-\(q^2> 0\). Here \textsc{np} effects become important and we need to introduce
-the \textsc{ope}, which handles \textsc{np} parts through the \textsc{qcd}
-condensates. The condensates form part of the full physical vacuum and would not
-exist regarding the perturbative vacuum solely. Consequently the condensates are
-not accessible trough \textsc{pt} methods and have to be fitted from experiment
-or calculated with the help of \textsc{np} tools, like \textsc{lqcd}. Finally we
-will combine a dispersion relation and Cauchy's theorem to finalise the
-discussion on the \textsc{qcdsr} with developing the \define{fesr}{finite energy
-  sum rules}, which we will apply to extract the strong coupling from
-\(\tau\) decays into hadrons.
+where \(J_\mu\) is the Noether current. We can use it to theoretically describe
+processes, like \(\tau\) decays into hadrons, by matching the quantum numbers of
+the fields, we choose in specifying the two\-/point function, to the outgoing
+hadrons. We will see, that the two\-/point function \(\Pi(q^2)\) is related to
+hadronic states, by poles for \(q^2> 0\). Here \textsc{np} effects become
+important and we need to introduce the \textsc{ope}, which handles \textsc{np}
+parts through the \textsc{qcd} condensates. The condensates form part of the
+full physical vacuum and would not exist regarding the perturbative vacuum
+solely. Consequently the condensates are not accessible trough \textsc{pt}
+methods and have to be fitted from experiment or calculated with the help of
+\textsc{np} tools, like \textsc{lqcd}. Finally we will combine a dispersion
+relation and Cauchy's theorem to finalise the discussion on the \textsc{qcdsr}
+with developing the \define{fesr}{finite energy sum rules}, which we will apply
+to extract the strong coupling from \(\tau\) decays into hadrons.
 
 
 
@@ -46,15 +46,14 @@ discussion on the \textsc{qcdsr} with developing the \define{fesr}{finite energy
 Since the formulation of \textsc{qed} in the end of the forties it had been
 attempted to construct a \textsc{qft} of the strong nuclear force, which has
 been achieved in the 70's as \textsc{qcd}
-\cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}.
-The fundamental fields of \textsc{qcd} are given by dirac spinors of
-spin\-/\(1/2\), the so\-/called quarks, with a fractional electric charge of
-\(\pm 1/3\) or \(\pm 2/3\). The theory furthermore contains gauge fields of spin
-1. These gauge fields are called gluons, do not carry electric charge and are
-massless. They are the force mediators, which interact with quarks and
-themselves, because they carry colour charge, in contrast to photons of
-\textsc{qed}, which interact only with
-fermions. %(see \cref{fig:qcdFeynmanDiagrams}).
+\cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}. The
+fundamental fields of \textsc{qcd} are given by dirac spinors of spin\-/\(1/2\),
+the so\-/called quarks, with a fractional electric charge of \(\pm 1/3\) or
+\(\pm 2/3\). The theory furthermore contains gauge fields of spin 1. These gauge
+fields are called gluons, do not carry electric charge and are massless. They
+are the force mediators, which interact with quarks and themselves, because they
+carry colour charge, in contrast to photons of \textsc{qed}, which interact only
+with fermions. %(see \cref{fig:qcdFeynmanDiagrams}).
 
 The corresponding gauge group of \textsc{qcd} is the non\-/abelian group
 \(SU(3)\). Each of the quark flavours \(u,d,c,s,t\) and \(b\) belongs to the
@@ -98,13 +97,13 @@ of fields and can be expressed using the Gell-Mann matrices \(\lambda_a\)
     \captionsetup{format=plain}
     \caption{List of quarks and their masses. The masses of the up, down and
       strange quark are quoted in the four\-/flavour theory (\(N_f=2+1+1\)) at
-      the scale \(\mu=\SI{2}{\giga\eV}\) in the \(\overline{MS}\) scheme. The charm and
-      bottom quark are also taken in the four\-/flavour theory and in the
-      \(\overline{MS}\) scheme, but at the scales \(\mu=m_c\) and \(\mu=m_b\)
-      correspondingly. All quarks except for the top quark are taken from the
-      \defien{FLAG}{Flavour Lattice Averaging Group} \cite{FLAG2019}. The mass of the
-      top quark is not discussed in \cite{FLAG2019} and has been taken
-      from direct observations of top events \cite{PDG2018}.}
+      the scale \(\mu=\SI{2}{\giga\eV}\) in the \(\overline{MS}\) scheme. The
+      charm and bottom quark are also taken in the four\-/flavour theory and in
+      the \(\overline{MS}\) scheme, but at the scales \(\mu=m_c\) and
+      \(\mu=m_b\) correspondingly. All quarks except for the top quark are taken
+      from the \defien{FLAG}{Flavour Lattice Averaging Group} \cite{FLAG2019}.
+      The mass of the top quark is not discussed in \cite{FLAG2019} and has been
+      taken from direct observations of top events \cite{PDG2018}.}
   \end{minipage}
   \label{table:quarkList}
 \end{table}
@@ -196,23 +195,21 @@ given by
         \phi}_b(y)} \equiv \langle 0 \vert T\{ \phi_a(x) \anti{\phi}_b(y) \}
     \vert 0 \rangle
     = i \delta_{ab} \int \fdif{q} \frac{-1}{q^2 + i\epsilon} e^{-q(x-y)} \\
-    &\equiv i \delta_{ab} \int \fdif{q} \widetilde{D}^{(0)}(q)
-    e^{-iq(x-y)},
+    &\equiv i \delta_{ab} \int \fdif{q} \widetilde{D}^{(0)}(q) e^{-iq(x-y)},
   \end{split}
 \end{equation}
 
 The previously introduced Feynman rules and propagators all make use of the
-perturbative vacuum \(\vert 0 \rangle\) and thus count as tools of
-\textsc{pt}. Consequently they need a small coupling to approximate excitations
-of full \textsc{qcd} vacuum. We will see in the following section, that the
-strong coupling runs with energy and unfortunately is large for small energy
-scales.
+perturbative vacuum \(\vert 0 \rangle\) and thus count as tools of \textsc{pt}.
+Consequently they need a small coupling to approximate excitations of full
+\textsc{qcd} vacuum. We will see in the following section, that the strong
+coupling runs with energy and unfortunately is large for small energy scales.
 
 \subsection{Renormalisation Group}
 Computing observables with the \textsc{qcd} Lagrangian (\cref{eq:qcdLagrangian})
 lead to divergencies, which have to be \textit{renormalised}. To render these
-divergent quantities finite we have to introduce a suitable parameter such
-that the ``original divergent theory'' corresponds to a certain value of that
+divergent quantities finite we have to introduce a suitable parameter such that
+the ``original divergent theory'' corresponds to a certain value of that
 parameter. These procedure is referred to as \textit{regularisation} and there
 are various approaches:
 \begin{itemize}
@@ -257,7 +254,8 @@ external momentum q, the renormalised coupling \(a_s\equiv\alpha_s/\pi\) and the
 renormalised quark mass \(m\) can then be expressed as
 \begin{equation}
   \label{eq:RGE}
-  \mu \od{}{\mu}R(q, a_s, m) = \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{m} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
+  \mu \od{}{\mu}R(q, a_s, m) =
+  \left[ \mu \pd{}{\mu} + \mu \od{a_s}{\mu} \pd{}{a_s} + \mu \od{m}{\mu} \pd{}{m} \right] R(q, a_s, m) = 0.
 \end{equation}
 \Cref{eq:RGE} is referred to as a \define{rge}{renormalisation group equation}
 and is the basis for defining the two \textit{renormalisation group functions}:
@@ -336,9 +334,9 @@ strong coupling:
   separation. Consequently the energy needed to separate quarks is proportional
   to the distance between them and at some point there is enough energy to
   favour the creation of a new quark pair. Thus before separating two quarks we
-  create a quark\-/antiquark pair. We will probably never be able to
-  observe an isolated quark. This phenomenon is referred to as colour
-  confinement or simply confinement.
+  create a quark\-/antiquark pair. We will probably never be able to observe an
+  isolated quark. This phenomenon is referred to as colour confinement or simply
+  confinement.
 \item With the first \(\beta\) coefficient being positive we notice that for
   increasing scales (\(\mu_2>\mu_1\)) the coupling decreases logarithmically.
   This leads to asymptotic freedom, which states, that for high energies (small
@@ -374,8 +372,8 @@ currently known up to the 5\textsuperscript{th} order and listed in the appendix
 \ref{sec:betaCoefficients}.
 
 We will make use of the anomalous dimension while running the quark masses for
-\textsc{np} contributions, which include the quark masses at different
-energy scales.
+\textsc{np} contributions, which include the quark masses at different energy
+scales.
 
 \textsc{qcd} in general has a precision problem caused by uncertainties and
 largeness of the strong coupling constant \(\alpha_s\). The fine-structure
@@ -398,8 +396,8 @@ the following section.
 
 \section{Two-Point Function}
 \label{sec:twoPointFunction}
-In analogy to the Green's function for elemental fields we can define a propagator
-for composite currents, referred to as \textit{two\-/point function}
+In analogy to the Green's function for elemental fields we can define a
+propagator for composite currents, referred to as \textit{two\-/point function}
 \begin{equation}
   \Pi(x) = \langle\Omega\vert T\{J(x)J(y)\} \vert\Omega\rangle,
 \end{equation}
@@ -419,13 +417,13 @@ In this work we are especially concerned about the vacuum expectation value of
 the Fourier transform of two time\-/ordered \textsc{qcd} quark Noether currents
 \begin{tcolorbox}[ams equation,myformula]
   \label{eq:qcdCorrelator}
-  \Pi_{\mu\nu}(p^2) \equiv \int \fdif{x} e^{ipx} \langle\Omega\vert
-  T\left\{J_\mu(x)J_\nu(0)\right\} \vert\Omega\rangle,
+  \Pi_{\Gamma}(p^2) \equiv \int \fdif{x} e^{ipx} \langle\Omega\vert
+  T\left\{J_\Gamma(x)J_\Gamma(0)\right\} \vert\Omega\rangle,
 \end{tcolorbox}
 where the Noether current is given by
 \begin{equation}
   \label{eq:qcdCurrent}
-  J_\mu(x) = \anti{q}(x) \Gamma q(x).
+  J_\Gamma(x) = \anti{q}(x) \Gamma q(x).
 \end{equation}
 Here, \(\Gamma\) can be any of the following dirac matrices \(\Gamma \in \{ 1,
 i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}\), specifying the quantum number of
@@ -454,26 +452,26 @@ as quark\-/antiquark pair, which is produced by an external source, e.g. the
 virtual \(W\) boson of \(\tau\anti{\tau}\) annihilation as seen in
 \cref{fig:tauAntiTauAnnihilation}. Here the quarks are propagating at
 \textit{short distances}, which implies that we can make use of \textsc{pt},
-thus avoiding \textit{long\-/distance} (\textsc{npt}) effects, that would
-appear if the initial and final states where given by hadrons
-\cite{Colangelo2000}. It is interesting to note, that the same process with the
-help of the \textit{optical theorem} can be used to derive the total decay width
-of hadronic tau decays.
+thus avoiding \textit{long\-/distance} (\textsc{npt}) effects, that would appear
+if the initial and final states where given by hadrons \cite{Colangelo2000}. It
+is interesting to note, that the same process with the help of the
+\textit{optical theorem} can be used to derive the total decay width of hadronic
+tau decays.
 
 \subsection{Short Distances vs. Long Distances}
 If we want to calculate the two\-/point function in \textsc{qcd} we have to
-differentiate short and long distances (large or small momenta). In
-general when we talk about small distances we refer to large momenta. Large
-momenta implies a small strong coupling. Consequently we can use
-\textsc{pt} for short distances without problems. On the contrary long
-distances involve small momenta, which implies a large coupling constant. Thus
-for long distances the \textsc{np} effects become important and have to be dealt
-with. To apply \textsc{pt} to the case of the \(\tau\anti{\tau}\) annihilation
-we need the quark\-/antiquark pair of \cref{fig:tauAntiTauAnnihilation} to be
-highly virtual\footnote{Which is the same of saying, that the quark\-/antiquark
-  pair needs a high external momentum \(q\).}. To roughly separate
-long distances from short distances using a length scale we can say that the
-length scale should be smaller than the radius of a hadron.
+differentiate short and long distances (large or small momenta). In general when
+we talk about small distances we refer to large momenta. Large momenta implies a
+small strong coupling. Consequently we can use \textsc{pt} for short distances
+without problems. On the contrary long distances involve small momenta, which
+implies a large coupling constant. Thus for long distances the \textsc{np}
+effects become important and have to be dealt with. To apply \textsc{pt} to the
+case of the \(\tau\anti{\tau}\) annihilation we need the quark\-/antiquark pair
+of \cref{fig:tauAntiTauAnnihilation} to be highly virtual\footnote{Which is the
+  same of saying, that the quark\-/antiquark pair needs a high external momentum
+  \(q\).}. To roughly separate long distances from short distances using a
+length scale we can say that the length scale should be smaller than the radius
+of a hadron.
 
 \subsection{Relating the Two\-/Point Function to Hadrons}
 The two\-/point function can be interpreted physically as the amplitude of
@@ -496,8 +494,7 @@ combinations of the light quarks \(u, d\) and \(s\) is given in
     \toprule
     Symbol & Quark content & Isospin & \(J\) & Current \\
     \midrule
-    \(\pi^+\)  & \(u\anti{d}\) & \(1\) & \(0\)
-                                             & \(:u\gamma_\mu\gamma_5\anti{d}:\) \\
+    \(\pi^+\)  & \(u\anti{d}\) & \(1\) & \(0\) & \(:\anti{u}\gamma_\mu\gamma_5 d:\) \\
     \(\pi^0\)  & \(\frac{u\anti{u} - d\anti{d}}{2}\) & \(1\) & \(0\)
                                              & \(:\anti{u}\gamma_\mu\gamma_5 u + \anti{d}\gamma_\mu\gamma_5 d:\) \\
     \(\eta\)   & \(\frac{u\anti{u} + d\anti{d} - 2s\anti{s}}{\sqrt{6}}\) & \(0\)
@@ -508,14 +505,10 @@ combinations of the light quarks \(u, d\) and \(s\) is given in
                                              \anti{d}\gamma_\mu\gamma_5 d + \anti{s}\gamma_\mu\gamma_5 s:\) \\
     \(\rho^0\) & \(\frac{u\anti{u} - d\anti{d}}{\sqrt{2}}\) & \(1\) & \(1\)
                                              & \(:\anti{u}\gamma_\mu u - \anti{d}\gamma_\mu d:\) \\
-    \(\omega\) & \(\frac{u\anti{u}+d\anti{d}}{\sqrt{2}}\) & \(0\) & \(1\)
-                                             & \(:\anti{u}\gamma_\mu u + \anti{d}\gamma_\mu d:\) \\
-    \(\phi\) & \(s \anti{s}\) & \(0\) & \(1\)
-                                             & \(:\anti{s}\gamma_\mu\gamma_5 s\): \\                                        
-    \(K^+\) & \(u \anti{s}\) &  \(\frac{1}{2}\) & \(0\) &
-                                                          \(:u\gamma_\mu\gamma_5\anti{s}:\) \\
-    \(K^0\) & \(d \anti{s}\) &  \(\frac{1}{2}\) & \(0\) &
-                                                          \(:d\gamma_\mu\gamma_5\anti{s}:\) \\
+    \(\omega\) & \(\frac{u\anti{u}+d\anti{d}}{\sqrt{2}}\) & \(0\) & \(1\) & \(:\anti{u}\gamma_\mu u + \anti{d}\gamma_\mu d:\) \\
+    \(\phi\) & \(s \anti{s}\) & \(0\) & \(1\) & \(:\anti{s}\gamma_\mu\gamma_5 s\): \\                                        
+    \(K^+\) & \(u \anti{s}\) &  \(\frac{1}{2}\) & \(0\) & \(:\anti{u}\gamma_\mu\gamma_5 s:\) \\
+    \(K^0\) & \(d \anti{s}\) &  \(\frac{1}{2}\) & \(0\) & \(:\anti{d} \gamma_\mu\gamma_5 s:\) \\
     \bottomrule
   \end{tabular*}
   \caption{Ground\-/state vector and pseudoscalar mesons for the light quarks
@@ -552,9 +545,9 @@ second it carries a ``branch cut'', which we want to discuss now.
 
 \subsection{Analytic Structure of the Two\-/Point Function}
 The general two\-/point function \(\rho(s)\) has some interesting analytic
-properties. It has poles for single particle states and a continuous branch
-cut for multi particle states. The single and multi particle states, for a
-general correlator, can mathematically be separated by
+properties. It has poles for single particle states and a continuous branch cut
+for multi particle states. The single and multi particle states, for a general
+correlator, can mathematically be separated by
 \begin{equation}
   \rho(s) = Z \delta(s-m^2) + \theta(s-s_0)\sigma(s),
 \end{equation}
@@ -562,9 +555,9 @@ where the second term is the contribution from multi particle states.
 \(\sigma(s)\) is zero till we reach the threshold, where we have sufficient
 energy to form multi particle states. The analytic structure is depicted by
 \cref{fig:analyticStructureCorrelator} and we can see that the spectral function
-has \(\delta\) spikes for single particle states and a continuous
-contribution for \(s\geq 4m\) resulting from multi particle states. These lead
-to poles and a continuous branch cut of the two\-/point function.
+has \(\delta\) spikes for single particle states and a continuous contribution
+for \(s\geq 4m\) resulting from multi particle states. These lead to poles and a
+continuous branch cut of the two\-/point function.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/analyticStructureCorrelator.eps}
@@ -667,10 +660,10 @@ leading to
 \end{equation}
 Note that all appearing mass terms are related to the longitudinal component.
 
-As the \(\tau\) decays, with the limiting factor of the tau mass, can only decay into
-light quarks we will often neglect the quark masses and work in the so\-/called
-\textit{chiral limit} (\(m_q \to 0\)), in which the longitudinal component is
-going to vanish.
+As the \(\tau\) decays, with the limiting factor of the tau mass, can only decay
+into light quarks we will often neglect the quark masses and work in the
+so\-/called \textit{chiral limit} (\(m_q \to 0\)), in which the longitudinal
+component is going to vanish.
 
 By defining a combination of the transversal and longitudinal correlator
 \begin{tcolorbox}[ams equation,myformula]
@@ -690,14 +683,14 @@ such that
 \begin{equation}
   \Pi^{(V,A)}(s) = \Pi^{(1)}(s) + \Pi^{(0)}(s) = \Pi^{(1+0)}(s),
 \end{equation}
-where the vector/axial\-/vector component of the correlator is now related to the
-newly defined transversal and longitudinal combination of the correlator.
+where the vector/axial\-/vector component of the correlator is now related to
+the newly defined transversal and longitudinal combination of the correlator.
 
 Having dealt exclusively with the perturbative part of the theory, we have to
 discuss \textsc{np} contributions. These arise due to non negligible long
 distance effects. Thus to complete the needed ingredients for the \textsc{qcdsr}
-we need a final ingredient the \textsc{ope}, which
-treats the \textsc{np} contributions of our theory.
+we need a final ingredient the \textsc{ope}, which treats the \textsc{np}
+contributions of our theory.
 
 
 
@@ -791,12 +784,12 @@ quantum numbers with the current
   \label{fig:OPEFeynmanDiagram}
 \end{figure}
 Pictorial the dimension zero contribution is given by the quark\-/antiquark loop
-Feynman diagram in \cref{fig:OPEFeynmanDiagram}. The higher dimension contributions
-are given by the same Feynman diagram, but with non contracted fields. These non
-contracted fields contain the condensates. Thus not contracting the
-quark\-/antiquark field (see. \cref{fig:OPEFeynmanDiagram} b) will give us
-access to the Wilson coefficient of the dimension four quark condensate \(m_i
-\langle \anti{q}q \rangle\).
+Feynman diagram in \cref{fig:OPEFeynmanDiagram}. The higher dimension
+contributions are given by the same Feynman diagram, but with non contracted
+fields. These non contracted fields contain the condensates. Thus not
+contracting the quark\-/antiquark field (see. \cref{fig:OPEFeynmanDiagram} b)
+will give us access to the Wilson coefficient of the dimension four quark
+condensate \(m_i \langle \anti{q}q \rangle\).
 
 The perturbative part (the Wilson coefficient of dimension zero) can than be
 taken from the mathematical expression for the scalar correlator
@@ -872,9 +865,9 @@ following expression
   \Pi_{(\rho)}(q^2) = \frac{1}{2} \frac{1}{\left(Q\right)^2}
   \left[ m_u\langle \anti{u} u \rangle + m_d \langle \anti{d} d \rangle\right],
 \end{equation}
-where we defined \(Q \equiv -q^2\). Here we can clearly see that for dimension four we
-get a factor of \(1/(Q)^2\), which is responsible for the suppression of the
-series. The condensates \(\langle\anti{u}u\rangle\) and
+where we defined \(Q \equiv -q^2\). Here we can clearly see that for dimension
+four we get a factor of \(1/(Q)^2\), which is responsible for the suppression of
+the series. The condensates \(\langle\anti{u}u\rangle\) and
 \(\langle\anti{d}d\rangle\) are numbers, that have to be derived by
 phenomenological fits or computed from \textsc{lqcd}. Fortunately once found,
 the value of the condensate can be used for any process.
@@ -895,8 +888,8 @@ theoretically on the physical sheet except for the positive real axis, due to
 its analytic properties. Unfortunately the experimental measurable spectral
 function is solely be defined on this positive real axis, which is theoretically
 not accessible. To match the theory with the experiment we will have to apply
-Cauchy's theorem. In the final section of this chapter we will combine
-the two\-/point function, the \textsc{ope}, duality and Cauchy's theorem to
+Cauchy's theorem. In the final section of this chapter we will combine the
+two\-/point function, the \textsc{ope}, duality and Cauchy's theorem to
 formulate the \textsc{qcdsr}.
 
 
@@ -1090,13 +1083,16 @@ interest to us we can write
 \begin{equation}
   \label{eq:monomialInclusiveRatio}
   \begin{split}
-    \left. R^\prime(x) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \dif x \frac{x^k}{x^{\frac{D}{2}}}C^{D}(x) \\
-    &= \oint_{\abs{x}=1} \dif x \,x^{k-D/2} \,C^{D}(x),
+    \left. R^\prime(x) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \dif x \frac{x^k}{x^{\frac{D}{2}}}C^{D} \\
+    &= \oint_{\abs{x}=1} \dif x \,x^{k-D/2} \,C^{D},
   \end{split}
 \end{equation}
-where \(C^{D}\) are the \(D\) dimensional Wilson coefficients. Thus combining
-\cref{eq:monomialWeights} with \cref{eq:monomialInclusiveRatio} we see that only
-Dimension which fulfil
+where \(C^{D}\) are the \(D\) dimensional Wilson coefficients. We can make use
+of \cref{eq:monomialInclusiveRatio} as we neglect the logarithmic corrections of
+dimension four \text{ope} contributions and use an simple ansatz for the higher
+order \textsc{ope} dimension, which treat the Wilson coefficients as a constant.
+Thus combining \cref{eq:monomialWeights} with \cref{eq:monomialInclusiveRatio}
+we see that only Dimension which fulfil
 \begin{equation}
   k - D/2 = -1 \quad \implies \quad  D = 2(k+1)
 \end{equation}
@@ -1104,7 +1100,7 @@ contribute to the \textsc{ope}. For example the polynomial of the kinematic
 weight
 \begin{equation}
   \label{eq:kinematicWeight}
-  \omega_\tau(s) \equiv \left( 1 - \frac{s}{m_\tau^2} \right) \left( 1 + 2 frac{s}{m_\tau^2} \right)
+  \omega_\tau(s) \equiv \left( 1 - \frac{s}{m_\tau^2} \right) \left( 1 + 2 \frac{s}{m_\tau^2} \right)
 \end{equation},
 which will appear naturally in the context of the total \(\tau\) decay ratio,
 is given by

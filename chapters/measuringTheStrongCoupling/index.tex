@@ -83,13 +83,14 @@ vector and axial\-/vector channel in combination with pinched weights.
 Consequently we can extract parameters, like the strong coupling \(\alpha_s\)
 from \(\tau\) decays to high precision without a \textsc{dv} model.
 
-We will perform our analysis in the framework of \textsc{fopt}. To define a fit
-we have to choose a weight \(\omega\) and a momentum \(s_0\). The only
-restriction from choosing a weight is, that the weight has to be analytic,
-leaving us with a variety of choices. For our strategy we have chosen three
-categories of weights, each of them containing fits with three or four different
-weights. A table with an overview of all used weights is given in
-\cref{table:fitCategories}.
+We will perform our analysis of the \textsc{dv} in framework of \textsc{fopt}
+for weights without a monomial term \(x\). For weights including a monomial term
+\(x\) we will apply the \textsc{bs}. To define a fit we have to choose a weight
+\(\omega\) and a momentum \(s_0\). The only restriction from choosing a weight
+is, that it has to be analytic, leaving us with a variety of choices. For our
+strategy we have chosen three categories of weights, each of them containing
+fits with three or four different weights. A table with an overview of all used
+weights is given in \cref{table:fitCategories}.
 \begin{table}
   \centering
   \begin{tabular}{ccccc}
@@ -119,6 +120,12 @@ To test the stability of the fitted values and have enough \textsc{dof} to fit
 the higher \textsc{ope} contributions we furthermore fit every weight for
 various momenta \(s_0\).
 
+To probe the validity of \textsc{fopt} we apply the \textsc{bs} for weights
+without a monomial term \(x\). If \textsc{fopt} is valid the parameters obtained
+from the Borel model should be similar. As \textsc{cipt} in general yields
+different results for the strong coupling and higher order contributions as
+\textsc{fopt}, it should be the worse framework if \textsc{bs} and \textsc{fopt}
+lead to similar parameter values.
 
 
 \section{Fits}
