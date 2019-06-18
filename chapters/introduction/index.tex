@@ -49,8 +49,8 @@ forces:
   charge and the photon field.
 \item[\(\bm{SU(2)}\)] Is the \textit{non\-/abelian} symmetry group responsible
   for the weak interaction. It introduces the \(W^+,W^-\) and \(Z\) bosons and
-  the weak charge. The gauge groups \(U(1)\) and \(SU(2)\) have been combined
-  into the \textit{electroweak interaction}.
+  the weak charge. The gauge group \(U(1)\) has been merged with \(SU(2)\) to
+  form the \textit{electroweak interaction}.
 \item[\(\bm{SU(3)}\)] The \(SU(3)\) group is also non-abelian and governs the
   strong interactions, which are summarised in the theory of \textsc{qcd}. The
   group yields the three colour charges and due to its eight\-/dimensional
@@ -73,10 +73,10 @@ predictions. One of the major error inputs of every theoretical output are
 uncertainties in these parameters. In this work, we will focus on one of the
 parameters, namely the strong coupling \(\alpha_s\).
 
-\begin{wrapfigure}{r}{0.35\textwidth}
+\begin{wrapfigure}{r}{0.40\textwidth}
   \centering \vspace{-0.75cm}
-  \includegraphics[width=0.33\textwidth]{./images/alphasDetermination.eps}
-  \captionsetup{format=plain}
+  \includegraphics[width=0.32\textwidth]{./images/alphasDetermination.eps}
+  \captionsetup{format=plain,font=footnotesize}
   \caption{The six different subfields and their results for measuring the
     strong coupling \(\alpha_s\) \cite{PDG2018}.}
   \label{fig:alphaSDetermination}
@@ -96,7 +96,7 @@ is an elementary particle it decays via the weak interaction with a lifetime of
 \(\SI{1776.86\pm0.12}{\mega\electronvolt}\)\cite{PDG2018}. It is furthermore the
 only lepton massive enough to decay into hadrons, thus of interest for our
 \textsc{qcd} analysis. The final states of a decay are limited by conservation
-laws. In case of the \(\tau\), decay they must conserve the electric charge
+laws. In case of the \(\tau\) decay, they must conserve the electric charge
 (\(q_e=-1\)) and invariant mass of the system. Thus, we can see from the
 corresponding Feynman diagram \cref{fig:tauDecay}\footnote{The \(\tau\) particle
   can also decay into strange quarks or charm quarks, but these decays are
@@ -105,17 +105,17 @@ corresponding Feynman diagram \cref{fig:tauDecay}\footnote{The \(\tau\) particle
 into pairs of \((e^-, \bar\nu_e), (\mu^-, \bar\nu_\mu)\) or \((q, \bar q)\).
 \begin{figure}
   \centering \includegraphics[width=0.4\textwidth]{images/tauDecay.eps}
-  \caption{Feynman diagram of common decay of a \(\tau\)-lepton into pairs of
+  \caption{Feynman diagram of common decay of a \(\tau\) lepton into pairs of
     lepton-antineutrino or quark-antiquark by the emission of a \textit{W
       boson}.}
   \label{fig:tauDecay}
 \end{figure}
 We are foremost interested in the hadronic decay channels, meaning \(\tau\)
 decays that have quarks in their final states. Quarks have never been measured
-isolated. Due to its mass of \(m_\tau \approx \SI{1.8}{\giga\electronvolt}\) the
-\(\tau\) particle decays into light mesons (pions (\(\pi\)), kaons (\(K\)), and
-eta (\(\eta\)), see \cref{table:lightMesons}), which can be experimentally
-detected.
+isolated. Due to the \(\tau\) mass of \(m_\tau \approx
+\SI{1.8}{\giga\electronvolt}\) the \(\tau\) particle decays into light mesons
+(pions (\(\pi\)), kaons (\(K\)), and eta (\(\eta\)), see
+\cref{table:lightMesons}), which can be experimentally detected.
 \begin{table}
   \centering
   \begin{tabular}{lccc}
@@ -153,34 +153,33 @@ decreases for high energies\footnote{In contrast to the electromagnetic force,
 The first one states, that for low energies the coupling is too strong for
 isolated quarks to exist. Until now we have not been able to observe an isolated
 quark and all experiments can only measure quark compositions. These bound
-states are called \textit{hadrons} and consist of two or three quarks
-\footnote{There exist also so\-/called \textit{exotic hadrons}, which have more
-  than three valence quarks.}, which are referred to as
+states are called \textit{hadrons} and consist of two or three
+quarks\footnote{There exist also so\-/called \textit{exotic hadrons}, which have
+  more than three valence quarks.}, which are referred to as
 mesons\footnote{Composite of a quark and an antiquark.} or
-baryons\footnote{Composite of three quarks or three antiquarks.}
-respectively. This phenomenon, of quarks sticking together as hadrons, is
-referred to as \textit{confinement}. As the fundamental degrees of freedom of
-\textsc{qcd} are given by quarks and gluons, but the observed particles are
-hadrons we need to introduce the assumption of \textit{quark\-/hadron duality}
-to match the theory to the experiment. This means that a physical quantity
-should be similarly describable in the hadronic or quark\-/gluon picture and
-that both descriptions are equivalent. Quark\-/hadron duality is in general
-violated. These so\-/called \textsc{dv} have an impact on our strong coupling
-determinations and can be dealt with either suppression or the inclusion of a
-model \cite{Cata2008}. Throughout this work, we will favour the former approach.
-The second implication, of the running of \(\alpha_s\), concerns
-\define{pt}{perturbation theory}. The lower the energies we deal with, the
-higher the value of the strong coupling and the contributions of
-\define{np}{non\-/perturbative} effects. Currently, there are three solutions to
-deal with \define{np} effects:
+baryons\footnote{Composite of three quarks or three antiquarks.} respectively.
+This phenomenon, of quarks sticking together as hadrons, is referred to as
+\textit{confinement}. As the fundamental degrees of freedom of \textsc{qcd} are
+given by quarks and gluons, but the observed particles are hadrons we need to
+introduce the assumption of \textit{quark\-/hadron duality} to match the theory
+to the experiment. This means that a physical quantity should be similarly
+describable in the hadronic or quark\-/gluon picture and that both descriptions
+are equivalent. Quark\-/hadron duality is in general violated. These so\-/called
+\textsc{dv} have an impact on our strong coupling determinations and can be
+dealt with either suppression or the inclusion of a model \cite{Cata2008}.
+Throughout this work, we will favour the former approach. The second
+implication, of the running of \(\alpha_s\), concerns \define{pt}{perturbation
+  theory}. The lower the energies we deal with, the higher the value of the
+strong coupling and the contributions of \define{np}{non\-/perturbative}
+effects. Currently, there are three solutions to deal with \textsc{np} effects:
 \begin{itemize}
 \item \textbf{\textit{Chiral Perturbation Theory}}
   (\textsc{chpt}\nomenclature{\textsc{chpt}}{Chiral Perturbation Theory}):
   Introduced by Weinberg \cite{Weinberg1978} in the late seventies.
   \textsc{chpt} is an effective field theory constructed with a Lagrangian
   symmetric under a chiral transformation in the limit of massless quarks. Its
-  limitations are based in the chiral symmetry, which is only a good
-  approximation for the light quarks \(u\), \(d\) and in some cases \(s\).
+  limitations are based on chiral symmetry, which is only a good approximation
+  for the light quarks \(u\), \(d\) and in some cases \(s\).
 \item \textbf{\textit{Lattice QCD}}
   (\textsc{lqcd}\nomenclature{\textsc{lqcd}}{Lattice Quantum Chromodynamics}):
   Is the numerical approach to the strong force. Based on the Wilson Loops
@@ -189,12 +188,12 @@ deal with \define{np} effects:
   limited due to its computational expensive calculations.
 \item \textbf{\textit{QCD Sum Rules}}
   (\textsc{qcdsr}\nomenclature{\textsc{qcdsr}}{Quantum Chromodynamics Sum
-    Rules}): Was also introduced in the late seventies by Shifman, Vainstein and
-  Zakharov \cite{Shifman1978,Shifman1978a}. It relates the observed hadronic
+    Rules}): Were also introduced in the late seventies by Shifman, Vainstein and
+  Zakharov \cite{Shifman1978,Shifman1978a}. They relates the observed hadronic
   picture to quark\-/gluon parameters through a dispersion relation and the use
   of the \textsc{ope}, which treats \textsc{np} effect through the definition of
   vacuum expectation values, the so\-/called \textsc{qcd} \textit{condensates}.
-  It is a precise method for extracting the strong coupling \(\alpha_s\) at low
+  They are a precise method for extracting the strong coupling \(\alpha_s\) at low
   energies, although limited to the unknown higher order contributions of the
   \textsc{ope}.
 \end{itemize}
@@ -226,27 +225,27 @@ contains three major issues.
   include every necessary \textsc{ope} term.
 
 \item Finally, there are known \textsc{dv} leading to an ongoing discussion of
-  the importance of contributions from \textsc{dv}. Currently, there are two main
-  approaches: Either we neglect \textsc{dv}, arguing that they are sufficiently
-  suppressed due to \textit{pinched weights} \cite{Pich2016} or model
-  \textsc{dv} with a sinusoidal exponentially suppressed function
+  the importance of contributions from \textsc{dv}. Currently, there are two
+  main approaches: Either we neglect \textsc{dv}, arguing that they are
+  sufficiently suppressed due to \textit{pinched weights} \cite{Pich2016} or
+  model \textsc{dv} with a sinusoidal exponentially suppressed function
   \cite{Cata2008,Boito2011a,Boito2014} introducing extra fitting parameters. We
   will argue for the former method, implementing pinched weights that
   sufficiently suppress \textsc{dv} contributions such that \textsc{dv} have
   only a negligible effect on our analysis.
 \end{enumerate}
 
-In the following chapter of this work, we want to summarise the necessary
+In the following chapter, we want to summarise the necessary
 theoretical background for working with the \textsc{qcdsr}. Starting with the
 basics of \textsc{qcd} we want to motivate the \define{rge}{renormalisation
   group equation}, which is responsible for the running of the strong coupling.
 We then continue with the two\-/point function and its usage in the dispersion
 relation, which connects the hadronic picture with the quark\-/gluon picture.
-Then we introduce the \textsc{ope} to treat the \textsc{np} part of
-\textsc{qcd} before we combine everything to formulate the \textsc{qcdsr}. In
-the third chapter, we will apply the theory gathered in the second chapter to
-\(\tau\) decays. In the fourth chapter, we will state and interpret our fitting
-results before concluding in the last chapter.
+Then we introduce the \textsc{ope} to treat the \textsc{np} part of \textsc{qcd}
+before we combine everything to formulate the \textsc{qcdsr}. In the third
+chapter, we will apply the theory, gathered in the second chapter to \(\tau\)
+decays. In the fourth chapter, we will state and interpret our fitting results
+before concluding in the last chapter.
 
 
 \end{document}

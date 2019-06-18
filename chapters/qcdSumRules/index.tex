@@ -13,7 +13,7 @@ the strong coupling) from hadrons we need to connect the quark\-/gluon picture
 with the hadron picture. To do so we will introduce the framework of
 \textsc{qcdsr}.
 
-We will start by setting up the foundations of strong interaction with
+We will start by setting up the foundations of strong interactions with
 introducing the \textsc{qcd} Lagrangian. The \textsc{qcd} Lagrangian is ruled by
 the abelian gauge group \(SU(3)\). The group implies an energy dependence of the
 coupling and thus limits the applicability of \textsc{pt} for low energies,
@@ -41,13 +41,13 @@ to extract the strong coupling from \(\tau\) decays into hadrons.
 
 
 
-\section{Quantum\-/Chromodynamics}
+\section{Quantum Chromodynamics}
 \label{sec:quantumchromodynamics}
 Since the formulation of \textsc{qed} at the end of the forties, it had been
 attempted to construct a \textsc{qft} of the strong nuclear force, which has
 been achieved in the seventies as \textsc{qcd}
 \cite{GellMann1972,Fritzsch1973,Gross1973,Politzer1973,Weinberg1973}. The
-fundamental fields of \textsc{qcd} are given by Dirac spinors of spin\-/\(1/2\),
+fundamental fields of \textsc{qcd} are given by Dirac spinors of spin \(1/2\),
 the so\-/called quarks, with a fractional electric charge of \(\pm 1/3\) or
 \(\pm 2/3\). The theory furthermore contains gauge fields of spin 1. These gauge
 fields are called gluons, do not carry an electric charge and are massless. They
@@ -101,7 +101,7 @@ of fields and can be expressed using the Gell-Mann matrices \(\lambda_a\)
       charm and bottom quark are also taken in the four\-/flavour theory and in
       the \(\overline{MS}\) scheme, but at the scales \(\mu=m_c\) and
       \(\mu=m_b\) correspondingly. All quarks except for the top quark are taken
-      from the \defien{FLAG}{Flavour Lattice Averaging Group} \cite{FLAG2019}.
+      from the \define{FLAG}{Flavour Lattice Averaging Group} \cite{FLAG2019}.
       The mass of the top quark is not discussed in \cite{FLAG2019} and has been
       taken from direct observations of top events \cite{PDG2018}.}
   \end{minipage}
@@ -203,7 +203,7 @@ The previously introduced Feynman rules and propagators all make use of the
 perturbative vacuum \(\vert 0 \rangle\) and thus count as tools of \textsc{pt}.
 Consequently, they need a small coupling to approximate excitations of full
 \textsc{qcd} vacuum. We will see in the following section, that the strong
-coupling runs with energy and unfortunately is large for small energy scales.
+coupling runs with energy and is large for small energy scales.
 
 \subsection{Renormalisation Group}
 Computing observables with the \textsc{qcd} Lagrangian (\cref{eq:qcdLagrangian})
@@ -224,8 +224,8 @@ are various approaches:
   \begin{equation}
     (\vec p^2 + m^2)^{-1} \to (\vec p^2 + m^2)^{-1} - (\vec p^2 + M^2)^{-1},
   \end{equation}
-  where \(M\) acts similar to the previously presented
-  cut\-/off, but conserves translational invariance.
+  where \(M\) acts similar to the previously presented cut\-/off, but conserves
+  translational invariance.
 \item \textbf{Dimensional regularisation:}
   \cite{Bollini1972,tHooft1972,tHooft1973} Dimensional regularisation has been
   introduced at the beginning of the seventies to regularise non\-/abelian gauge
@@ -246,12 +246,14 @@ In all of the three regularisation schemes, we introduced an arbitrary parameter
 to regularise the divergence. This parameter causes scale dependence of the
 strong coupling and the quark masses. As we are mainly concerned with the
 non\-/abelian gauge theory \textsc{qcd} we will focus on dimensional
-regularisation, which introduced the parameter \(\mu\). Measurable observables
-(\textit{physical quantities}) cannot depend on the renormalisation scale
-\(\mu\). Therefore the derivative by \(\mu\) of a general physical quantity has
-to yield zero. A physical quantity \(R(q, a_s, m)\), that depends on the
-external momentum q, the renormalised coupling \(a_s\equiv\alpha_s/\pi\) and the
-renormalised quark mass \(m\) can then be expressed as
+regularisation, which introduced the parameter \(\mu\).
+
+Measurable observables (\textit{physical quantities}) cannot depend on the
+renormalisation scale \(\mu\). Therefore the derivative by \(\mu\) of a general
+physical quantity has to yield zero. A physical quantity \(R(q, a_s, m)\), that
+depends on the external momentum q, the renormalised coupling
+\(a_s\equiv\alpha_s/\pi\) and the renormalised quark mass \(m\) can then be
+expressed as
 \begin{equation}
   \label{eq:RGE}
   \mu \od{}{\mu}R(q, a_s, m) =
@@ -270,10 +272,11 @@ the anomalous mass dimension describes the running of the quark masses. We have
 a special interest in the running of the strong coupling, but will also shortly
 sum up the running of the quark masses.
 
-\subsubsection{Running gauge coupling}
-Regarding the \(\beta\)-function, we notice, that \(a_s(\mu)\) is not a constant,
-but that it \textit{runs} by varying its scale \(\mu\). To better understand the
-running of the strong coupling we integrate the \(\beta\)\-/function
+\subsubsection{Running Gauge Coupling}
+Regarding the \(\beta\)-function, we notice, that \(a_s(\mu)\) is not a
+constant, but that it \textit{runs} by varying its scale \(\mu\). To better
+understand the running of the strong coupling we integrate the
+\(\beta\)\-/function
 \begin{equation}
   \int_{a_s(\mu_1)}^{a_s(\mu_2)}\frac{\dif a_s}{\beta(a_s)} = - \int_{\mu_1}^{\mu_2} \frac{\dif \mu}{\mu} = \log \frac{\mu_1}{\mu_2}.
 \end{equation}
@@ -347,7 +350,7 @@ strong coupling:
 From the \textsc{rge}, we have seen, that not only the coupling but also the
 masses carry an energy dependency.
 
-\subsubsection{Running quark mass}
+\subsubsection{Running Quark Mass}
 The mass dependence on energy is governed by the \textit{anomalous mass
   dimension} \(\gamma(a_s)\). Its properties of the running quark mass can be
 derived similarly to the gauge coupling. Starting from integrating the
@@ -355,8 +358,8 @@ derived similarly to the gauge coupling. Starting from integrating the
 \begin{equation}
   \log \frac{m(\mu_2)}{m(\mu_1)} = \int_{a_s(\mu_1)}^{a_s(\mu_2)} \dif a_s \frac{\gamma(a_s)}{\beta(a_s)}
 \end{equation}
-we can approximate the \textit{anomalous mass dimension} to first order and
-solve the integral analytically \cite{Schwab2002}
+we can solve the integral analytically by approximating the \textit{anomalous
+  mass dimension} to first order
 \begin{equation}
   m(\mu_2) = m(\mu_1)\left( \frac{a(\mu_2)}{a(\mu_1)} \right)^{\frac{\gamma_1}{\beta_1}} \left( 1 + \mathcal{O}(\beta_2, \gamma_2) \right).
 \end{equation}
@@ -383,10 +386,10 @@ strong coupling constant is much larger than the fine-structure constant. E.g.
 at the \(Z\) mass, the standard mass to compare the strong coupling, we have an
 \(\alpha_s\) of \(0.11\), whereas the fine structure constant would be around
 \(0.007\). Consequently to use \textsc{pt} we have to calculate our results to
-higher orders, including tens of thousands of Feynman diagrams, in
-\textsc{qcd} to achieve a precision equal to \textsc{qed}. For even lower
-energies, around \SI{1}{\giga\eV}, the strong coupling reaches a critical value
-of around \(0.5\) leading to a break down of \textsc{pt}.
+higher orders, including tens of thousands of Feynman diagrams, in \textsc{qcd}
+to achieve a precision equal to \textsc{qed}. For even lower energies, around
+\SI{1}{\giga\eV}, the strong coupling reaches a critical value of around \(0.5\)
+leading to a break down of \textsc{pt}.
 
 In this work, we try to achieve higher precision in the value of \(\alpha_s\).
 The framework we use to measure the strong coupling constant is the
@@ -430,11 +433,12 @@ i\gamma_5, \gamma_\mu, \gamma_\mu\gamma_5\}\), specifying the quantum number of
 the current (\define{s}{scalar}, \define{p}{pseudo-scalar}, \define{v}{vector}
 and \define{a}{axial\-/vector}, respectively). By choosing the right quantum
 numbers we can theoretically represent the processes we want to study, which
-will be important when we want to theoretically describe the hadrons produced in
-\(\tau\) decays.
+will be important when we want to describe the hadrons produced in \(\tau\)
+decays.
 
-\begin{wrapfigure}{r}{4cm}
+\begin{wrapfigure}[6]{r}{4cm}
   \centering
+  \vspace{-0.7cm}
   \begin{tkizpicture}
     \feynmandiagram [small, vertical=a to b] { i1 [particle=\(\anti\tau\)] --
       [anti fermion] a -- [anti fermion] i2 [particle=\(\anti\nu_\tau\)], a --
@@ -443,7 +447,7 @@ will be important when we want to theoretically describe the hadrons produced in
       [particle=\(\tau\)]-- [fermion] d -- [fermion] f2 [particle=\(\nu_\tau\)],
     };
   \end{tkizpicture}
-  \captionsetup{format=plain}
+  \captionsetup{format=plain,font=footnotesize}
   \caption{\(\tau\anti{\tau}\)\-/annihilation with a quark\-/antiquark pair.}
   \label{fig:tauAntiTauAnnihilation}
 \end{wrapfigure}
@@ -452,7 +456,7 @@ as quark\-/antiquark pair, which is produced by an external source, e.g. the
 virtual \(W\) boson of \(\tau\anti{\tau}\) annihilation as seen in
 \cref{fig:tauAntiTauAnnihilation}. Here the quarks are propagating at
 \textit{short distances}, which implies that we can make use of \textsc{pt},
-thus avoiding \textit{long\-/distance} (\textsc{npt}) effects, that would appear
+thus avoiding \textit{long\-/distance}/\textsc{npt} effects, that would appear
 if the initial and final states where given by hadrons \cite{Colangelo2000}. It
 is interesting to note, that the same process with the help of the
 \textit{optical theorem} can be used to derive the total decay width of hadronic
@@ -545,9 +549,9 @@ second it carries a ``branch cut'', which we want to discuss now.
 
 \subsection{Analytic Structure of the Two\-/Point Function}
 The general two\-/point function \(\rho(s)\) has some interesting analytic
-properties. It has poles for single\-/particle states and a continuous branch cut
-for multi\-/particle states. The single and multi\-/particle states, for a general
-correlator, can mathematically be separated by
+properties. It has poles for single\-/particle states and a continuous branch
+cut for multi\-/particle states. The single\-/ and multi\-/particle states, for a
+general correlator, can mathematically be separated by
 \begin{equation}
   \rho(s) = Z \delta(s-m^2) + \theta(s-s_0)\sigma(s),
 \end{equation}
@@ -556,24 +560,24 @@ where the second term is the contribution from multi\-/particle states.
 energy to form multi\-/particle states. The analytic structure is depicted by
 \cref{fig:analyticStructureCorrelator} and we can see that the spectral function
 has \(\delta\) spikes for single\-/particle states and a continuous contribution
-for \(s\geq 4m\) resulting from multi\-/particle states. These lead to poles and a
-continuous branch cut of the two\-/point function.
+for \(s\geq 4m\) resulting from multi\-/particle states. These lead to poles and
+a continuous branch cut of the two\-/point function.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{./images/analyticStructureCorrelator.eps}
   \caption{Analytic structure in the complex \(q^2\)-plane of the Fourier
     transform of the two-point function. The hadronic final states are
-    responsible for poles appearing on the real-axis. The single\-/particle states
-    contribute as an isolated pole and the multi\-/particle states contribute as
-    bound states poles or a continues ``discontinuity cut''
+    responsible for poles appearing on the real-axis. The single\-/particle
+    states contribute as an isolated pole and the multi\-/particle states
+    contribute as bound states poles or a continues ``discontinuity cut''
     \cite{Peskin1995,Zwicky2016}.}
   \label{fig:analyticStructureCorrelator}
 \end{figure}
 
 \subsection{Decompositions}
-Apart from the spectral decomposition we can also Lorentz decompose the two\-/point
-function or write it in terms of \textsc{v}, \textsc{a}, \textsc{s} and
-\textsc{p} contributions.
+Apart from the spectral decomposition we can also Lorentz decompose the
+two\-/point function or write it in terms of \textsc{v}, \textsc{a}, \textsc{s}
+and \textsc{p} contributions.
 
 \subsubsection{Lorentz decomposition}
 Due to the Lorentz invariance of the two\-/point function, and by assuming the
@@ -688,9 +692,9 @@ the newly defined transversal and longitudinal combination of the correlator.
 
 Having dealt exclusively with the perturbative part of the theory, we have to
 discuss \textsc{np} contributions. These arise due to non\-/negligible long
-distance\-/effects. Thus to complete the needed ingredients for the \textsc{qcdsr}
-we need a final ingredient the \textsc{ope}, which treats the \textsc{np}
-contributions of our theory.
+distance\-/effects. Thus to complete the needed ingredients for the
+\textsc{qcdsr} we need a final ingredient the \textsc{ope}, which treats the
+\textsc{np} contributions of our theory.
 
 
 
@@ -730,10 +734,10 @@ The scalar operators up to dimension six are then given by \cite{Pascual1984}
 \begin{equation}
   \begin{array}{ll}
     \text{Dimension 0:} & \mathbb{1} \\
-    \text{Dimension 2:} & m_i^2 \\
+    % \text{Dimension 2:} & m_i^2 \\
     \text{Dimension 4:} & :m_i \anti{q} q: \\
                         & :G_a^{\mu\nu}(x) G_{\mu\nu}^a(x): \\
-                        & m_i^4 \\
+                        % & m_i^4 \\
     \text{Dimension 6:} & :\anti{q} \Gamma q \anti{q} \Gamma q: \\
                         & :\anti{q} \Gamma \frac{\lambda^a}{2} q_\beta(x) \anti{q} \Gamma \frac{\lambda^a}{2} q: \\
                         & :m_i \anti{q} \frac{\lambda^a}{2} \sigma_{\mu\nu} q G^{\mu\nu}_a: \\
@@ -746,7 +750,7 @@ and is consequently excluded from our list. Within \textsc{pt} only the unit
 operator would exist, as the higher dimensional operators would appear as normal
 ordered products of fields and vanish by being sandwiched into the perturbative
 vacuum. On the contrary, in \textsc{np qcd}, they appear as \textit{condensates}.
-Condensates are the vacuum expectation values of non\-/vanishing normal ordered
+Condensates are the vacuum expectation values of non\-/vanishing, normal ordered,
 fields by applying the full \textsc{qcd} vacuum, which contribute to all strong
 processes. For example, the condensates of dimension four are the
 quark-condensate \(m_i\langle \anti{q} q \rangle\) and the gluon-condensate
@@ -930,7 +934,7 @@ which accounts for the fact, that the two\-/point function increases for large
 example the vector correlator carries only a constant and the scalar correlator
 a linear polynom. The two\-/point function is, in general, an unphysical quantity,
 whereas the spectral function \(\rho(s)\) is a physical quantity. As a result,
-the polynomial accounts carry the unphysical scale dependency of the
+the polynomial accounts for the unphysical scale dependency of the
 two\-/point function.
 
 \subsection{Duality}
@@ -940,7 +944,7 @@ confinement, we are only ever able to observe hadrons. The mechanism that
 connects the two worlds is the \textit{quark\-/hadron duality} (or simply
 duality), which implies that physical quantities can be described equally good
 in the hadronic as in the quark-gluon picture. Thus we can connect experimental
-detected with theoretically calculated values from the two\-/point function in
+detected values with theoretically calculated values from the two\-/point function in
 the dispersion relation \cref{eq:dispersionRelation} as
 \begin{equation}
   \Pi_{th}(s) = \int_0^\infty \frac{\rho(s^\prime)_{exp}}{s^\prime-s-i\epsilon} + P(s),
@@ -1094,7 +1098,7 @@ of \cref{eq:monomialInclusiveRatio} as we neglect the logarithmic corrections of
 dimension four \text{ope} contributions and use a simple ansatz for the higher
 order \textsc{ope} dimension, which treats the Wilson coefficients as a constant.
 Thus combining \cref{eq:monomialWeights} with \cref{eq:monomialInclusiveRatio}
-we see that only Dimension which fulfil
+we see that only dimensions which fulfil
 \begin{equation}
   k - D/2 = -1 \quad \implies \quad  D = 2(k+1)
 \end{equation}
