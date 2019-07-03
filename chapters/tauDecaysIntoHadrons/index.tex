@@ -573,7 +573,7 @@ Experimental data show an oscillating behaviour that cannot be reproduced by the
 to include the corrections coming from \textsc{dv} and adapt
 \cref{eq:rTauContributions}, leading to
 \begin{equation}
-  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{dv}^{\omega} \right),
+  R_{\tau,V/A}^\omega = \frac{N_c}{2}S_{EW} \abs{V_{ud}}^2 \left( 1 + \delta_{pt}^{\omega} + \delta_{npt}^{\omega} + \delta_{DV}^{\omega} \right),
 \end{equation}
 where we extracted \(\delta_{dv}\) from \(\delta_{npt}\), even though
 \textsc{dv} are \textsc{np}. The \textsc{dv} corrections have been modelled with
@@ -594,7 +594,7 @@ in the inclusive \(\tau\) decay ratio
 \end{equation}
 where the \textsc{dv} contributions would be given as
 \begin{equation}
-  \mathcal{D}_\omega(m_\tau^2) = -12 \pi^2 \int_{m_\tau^2}^\infty \frac{\dif s}{m_\tau^2} \omega(s) \rho_{V/A}.
+  \mathcal{D}_\omega(m_\tau^2) = -12 \pi^2 \int_{m_\tau^2}^\infty \frac{\dif s}{m_\tau^2} \omega(s) \rho_{V/A}^{DV}.
 \end{equation}
 
 \subsection{Pinched Weights to avoid DVs}
@@ -887,13 +887,13 @@ We apply the \define{ls}{method of least squares} to fit the parameters
 expressed as
 \begin{equation}
   \label{eq:ls}
-  \chi^2 = \left( I_i^{exp} - I_i^{th}(\vec\alpha) \right) \left(C^{exp}_{ij}\right)^{-1} \left( I_j^{exp} - I_j^{th}(\vec\alpha) \right),
+  \chi^2 = \left( I_i^{exp} - I_i^{th}(\vec\alpha) \right) C_{ij}^{-1} \left( I_j^{exp} - I_j^{th}(\vec\alpha) \right),
 \end{equation}
 where \(I^{exp}\)/\(I^{th}\) is a vector of experimental moments/theoretical
 moments with the same weight, but different energy cutoffs \(s_0\), labelled by
-the indeces \(i\) and \(j\). \(C^{exp}\) is the covariance matrix describing the
+the indeces \(i\) and \(j\). \(C\) is the covariance matrix describing the
 correlation of the different experimental moments
-\(C_{ij}^{exp}=cov[I_i^{exp}I_j^{exp}]\), which can be computed by the given
+\(C_{ij}=cov[I_i^{exp}I_j^{exp}]\), which can be computed by the given
 correlation matrix of the \textsc{aleph} data.
 
 We aim to minimise the value of \(\chi^2\), which will fix the parameter vector

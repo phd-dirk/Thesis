@@ -114,7 +114,7 @@ The classical \textit{Lagrange density} of \textsc{qcd} is given by
   \label{eq:qcdLagrangian}
   \mathcal{L}_{QCD}(x) = -\frac{1}{4}G_{\mu\nu}^a(x)G^{\mu\nu a}(x) + \sum_A
   \left[ \frac{i}{2} \bar{q}^A(x) \gamma^\mu \overleftrightarrow{D}_\mu q^A(x) -
-    m_A\bar{q}^A(x) a^A(x) \right],
+    m_A\bar{q}^A(x) q^A(x) \right],
 \end{tcolorbox}
 with \(q^A(x)\) representing the quark fields and \(G_{\mu\nu}^a\) being the
 \textit{gluon field strength tensor} given by:
@@ -1090,7 +1090,7 @@ interest to us we can write
   \label{eq:monomialInclusiveRatio}
   \begin{split}
     \left. R^\prime(x) \right\rvert_{D=0,2,4\dots} &= \oint_{\abs{x}=1} \dif x \frac{x^k}{x^{\frac{D}{2}}}C^{D} \\
-    &= \oint_{\abs{x}=1} \dif x \,x^{k-D/2} \,C^{D},
+    &= \oint_{\abs{x}=1} \dif x \,x^{k-D/2} \,C^{(D)},
   \end{split}
 \end{equation}
 where \(C^{D}\) are the \(D\) dimensional Wilson coefficients. We can make use
